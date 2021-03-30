@@ -1,0 +1,21 @@
+﻿@using FelixWebsite.Core.App_GlobalResources
+@model FelixWebsite.Bdo.Models.Acquisition.UserDataTakeOver
+
+<div id="tweedehandsboekje-status" class="form-group">
+    <label for="logbook-state">@FelixResources._2dehands_manual: <span class="requiredColor">*</span></label>
+    @Html.DropDownListFor(m => m.Manual,
+    Model.PossibleManualStates,
+    FelixResources.general_selectOption,
+    new { @class = "form-control paddingDropdowns", tabindex = Model.TabIndex++ }
+    )
+    @Html.ValidationMessageFor(m => m.Manual, "", new { @class = "text-danger" })
+</div>
+<div id="bandenstatus" class="form-group">
+    <label for="tyre-state">@FelixResources._2dehands_tyrestate: <span class="requiredColor">*</span></label>
+    @Html.DropDownListFor(m => m.TyreState,
+    Model.PossibleTyreStates,
+    FelixResources.general_selectOption,
+    new { @class = "form-control paddingDropdowns", tabindex = Model.TabIndex++ }
+    )
+    @Html.ValidationMessageFor(m => m.TyreState, "", new { @class = "text-danger" })
+</div>

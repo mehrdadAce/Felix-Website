@@ -1,0 +1,208 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<Joboffer>
+@using FelixWebsite.Core.Helpers;
+@using FelixWebsite.Core.Models
+@using FelixWebsite.Bdo.Models.JobOffer
+@using FelixWebsite.Shared.enums
+@{
+    Layout = "Shared/Master.cshtml";
+    var business = Model.Content.Business.FirstOrDefault().OfType<IBusiness>();
+    var businessJobSettings = Model.Content.Business.FirstOrDefault().OfType<IBusinessJobSettings>();
+    Brand brand = null;
+    if (business is BusinessBrand)
+    {
+        brand = (business as BusinessBrand).Brand.FirstOrDefault().OfType<Brand>();
+    }
+    if (brand == null)
+    {
+        var home = Umbraco.AssignedContentItem.AncestorOrSelf(1).OfType<GroupHome>();
+        brand = home.Children.OfType<Brands>().First().Children.OfType<Brand>().First();
+    }
+        
+    var jobApplicationForm = new JobApplicationForm()
+    {
+        BrandTitle = brand.Title,
+        JobTitle = Model.Content.Name,
+        BusinessName = business.BusinessName,
+        BusinessLocation = business.BusinessLocation,
+        PageUrl = Request.Url.ToString()
+    };
+}
+<link rel="stylesheet" type="text/css" href="~/css/felix-joboffers.css">
+<style>
+    .@("br" + brand.Id).text {
+        color: #@brand.Color.Color;
+    }
+    .@("br" + brand.Id).background :hover {
+        color: #fff;
+        background-color: #@brand.Color.Color;
+    }
+    .@("br" + brand.Id).title {
+        border-bottom: 2px solid #@brand.Color.Color;
+    }
+    .@("br" + brand.Id).overlay {
+        background-color: @brand.Color.Color.ConvertHexToRgba(5);
+    }
+</style>
+
+<section id="joboffer" class="margin-top-120">
+    <div class="header-img" style="background-image: url('@(Model.Content.Img.Src + Model.Content.Img.GetCropUrl("Vacature banner"))');"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 margin-top-60 margin-bottom-40">
+                <div class="section-title">
+                    <h1>@Model.Content.Name</h1>
+                </div>
+            </div>
+            <div class="col-sm-4 margin-top-60 margin-bottom-40">
+                @if (!businessJobSettings.JobEmail.IsNullOrWhiteSpace())
+                {
+                    <div class="section-title">
+                        <a href="mailto:@businessJobSettings.JobEmail" class="link-button"><i class="fas fa-envelope" style="margin-right:15px;"></i>@businessJobSettings.JobEmail</a>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8 margin-bottom-40 competences">
+                <div id="jobdescription" class="margin-bottom-40">
+                    <h3 class="felix-red">Functieomschrijving</h3>
+                    @Html.Raw(@Model.Content.JobDescription.ToHtmlString())
+                </div>
+                <div id="qualifications" class="margin-bottom-40">
+                    <h3 class="felix-red">Profiel</h3>
+                    @Html.Raw(@Model.Content.RequiredQualifications.ToHtmlString())
+                </div>
+                <div id="job-competences" class="margin-bottom-40">
+                    <h4>Jobgerelateerde competenties</h4>
+                    <ul>
+                        @if (Model.Content.CompetenceSearch != null)
+                        {
+                            var competencePattern = Json.Decode<CompetencePattern>(Model.Content.CompetenceSearch.ToString());
+
+                            if (competencePattern.competences != null)
+                            {
+                                foreach (var competence in competencePattern.competences)
+                                {
+                                    <li id="@competence.Id">@competence.Beschrijving</li>
+                                }
+                            }
+                        }
+                    </ul>
+                </div>
+                <div id="renumeration" class="margin-bottom-40">
+                    <h3 class="felix-red">Vergoeding</h3>
+                    @Html.Raw(@Model.Content.RenumerationDescription.ToHtmlString())
+                </div>
+                <div id="btn-jobapplication-modal" class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <a class="link-button margin-bottom-40" data-toggle="modal" data-target="#modal"><i class="fas fa-file-alt" style="margin-right:15px;"></i>soliciteer nu</a>
+                    </div>
+                </div>
+                <div id="job-location" class="margin-bottom-40">
+                    <h3 class="felix-red margin-bottom-30">Plaats tewerkstelling</h3>
+                    <div class="col-md-12 no-padding">
+                        <div class="row contact-icons">
+                            <div class="col-sm-6 margin-bottom-20 no-padding">
+                                <div class="img">
+                                    <img class="img-responsive set-height" src="@(business.BusinessImage.Url + "?width=800&height=533&mode=crop&anchor=center")" alt="@business.BusinessName @business.BusinessLocation">
+                                    <a target="_blank" href="@business.Url" class="over @("br" + brand.Id) overlay">
+                                        <div class="img-desc section-title">
+                                            <h1 class="white @("br" + brand.Id) title">@brand.Title @business.BusinessName</h1>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 margin-bottom-20 no-padding">
+                                <div style="width: 100%; height: 100%;">
+                                    <iframe width="100%" height="260" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=@(business.BusinessStreetName)%20@(business.BusinessBuildingNumber)%2C%20@(business.BusinessPostalCode)%20@(business.BusinessMunicipality)+(Felix%20groep%20vestiging%20naam)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row contact-icons">
+                            <div class="col-sm-12">
+                                <h3 class="text-uppercase">
+                                    @if (!businessJobSettings.JobEmail.IsNullOrWhiteSpace() && !business.BusinessPhone.IsNullOrWhiteSpace())
+                                    {
+                                        <b class="felix-red @("br" + brand.Id) text">@business.BusinessLocation</b>
+                                        <span>
+                                            <a href="mailto:@businessJobSettings.JobEmail" class="@("br" + brand.Id) background">
+                                                <i class="fas fa-envelope @("br" + brand.Id) text"></i>
+                                            </a>
+                                            <a href="tel:@business.BusinessPhone" class="@("br" + brand.Id) background">
+                                                <i class="fas fa-phone @("br" + brand.Id) text"></i>
+                                            </a>
+                                        </span>
+                                    }
+                                </h3>
+                            </div>
+                            <div class="col-sm-12">
+                                <h3 class="text-uppercase">@brand.Title @business.BusinessName</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-sm-4 margin-bottom-40">
+                <ul id="diploma" class="list-group">
+                    <li class="list-group-item active"><h4 class="no-margin">Vereiste studies</h4></li>
+                    @if (Model.Content.DiplomaSelector != null)
+                    {
+                        var studies = Json.Decode<List<Study>>(Model.Content.DiplomaSelector.ToString());
+                        foreach (var study in studies)
+                        {
+                            <li id="@study.Code " class="list-group-item">@study.Beschrijving</li>
+                        }
+                    }
+                </ul>
+                <ul id="experience" class="list-group">
+                    <li class="list-group-item active"><h4 class="no-margin">Werkervaring</h4></li>
+                    @if (Model.Content.ExperienceInMonths == null)
+                    {
+                        <li id="0" class="list-group-item">Geen ervaring nodig.</li>
+                    }
+                    else
+                    {
+                        <li id="experience" class="list-group-item">@Model.Content.ExperienceInMonths.ConvertToYearsAndMonths()</li>
+                    }
+                </ul>
+                <ul id="driversLicense" class="list-group">
+                    <li class="list-group-item active"><h4 class="no-margin">Rijbewijs</h4></li>
+                    @if (Model.Content.DriversLicense != null)
+                    {
+                        var licenses = Json.Decode<List<DriversLicense>>(Model.Content.DriversLicense.ToString());
+                        foreach (var license in licenses)
+                        {
+                            <li id="@license.Code " class="list-group-item">@license.Beschrijving</li>
+                        }
+                    }
+                </ul>
+                <ul id="languages" class="list-group">
+                    <li class="list-group-item active"><h4 class="no-margin">Talenkennis</h4></li>
+                    @if (Model.Content.Languages != null)
+                    {
+                        var languages = Json.Decode<List<LanguageCompetence>>(Model.Content.Languages.ToString());
+                        foreach (var language in languages)
+                        {
+                            if (language.Selected == true)
+                            {
+                                <li class="list-group-item">@language.Name (@language.Score.GetText())</li>
+                            }
+                        }
+                    }
+                </ul>
+                <ul id="laborarrangement" class="list-group">
+                    <li class="list-group-item active"><h4 class="no-margin">Contract</h4></li>
+                    @if (Model.Content.LaborArrangement != null && Model.Content.LaborContract != null)
+                    {
+                        var arrangement = Json.Decode<LaborArrangement>(Model.Content.LaborArrangement.ToString());
+                        var contract = Json.Decode<LaborContract>(Model.Content.LaborContract.ToString());
+                        <li id="@arrangement.Code " class="list-group-item">@arrangement.Beschrijving, @contract.Beschrijving</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+@Html.Partial("Modals/JobApplication/JobApplication", jobApplicationForm)

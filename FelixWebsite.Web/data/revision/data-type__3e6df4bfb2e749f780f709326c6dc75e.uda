@@ -1,0 +1,14 @@
+{
+  "EditorAlias": "Umbraco.MultipleTextstring",
+  "DatabaseType": 0,
+  "PreValues": {
+    "0": "{\"Minimum\":1,\"Maximum\":0}"
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/3e6df4bfb2e749f780f709326c6dc75e",
+  "Dependencies": [],
+  "Name": "_ListModels",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

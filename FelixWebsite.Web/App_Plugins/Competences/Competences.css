@@ -1,0 +1,55 @@
+﻿.textbox-container {
+    padding-bottom: 20px;
+}
+    .textbox-container > input {
+        min-width: calc(66.6% - 72.91px);
+    }
+
+i {
+    font-size: 20px;
+}
+
+.icon-add {
+    top: 3px;
+    position: relative;
+}
+
+.nav.nav-pills {
+    height: 250px;
+    overflow: auto;
+    width: 66.5%;
+}
+
+.list-item {
+    display: inline-block;
+    padding: 0px 18px;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: middle;
+    background: #e9e9eb;
+    color: #000;
+    border: none;
+    box-shadow: none;
+    border-radius: 3px;
+    width: 95%;
+    margin-bottom: 5px;
+}
+
+
+    .list-item:hover {
+        background: #e9e9eb;
+        color: #68676b;
+        background-position: 0 -15px;
+        text-decoration: none;
+        transition: background-position .1s linear;
+    }
+
+    .list-item h5 {
+        display: inline-block;
+    }
+
+    .list-item button {
+        float: right;
+        margin-top: 7px;
+    }

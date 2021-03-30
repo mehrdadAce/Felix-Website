@@ -1,0 +1,35 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using FelixWebsite.Core.Helpers;
+@{
+    var businessPage = Umbraco.AssignedContentItem as BusinessCombined;
+    List<BusinessBrand> list = businessPage.BusinessItems.OfType<BusinessBrand>().ToList();
+    List<BusinessBrand> distinctList = list.DistinctBy(x => x.Brand.OfType<Brand>().FirstOrDefault().Id).ToList();
+    var distribution = distinctList.DistributeInColumns(3, 2);
+}
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="configModalLabel" id="configModal">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title felix"><i class="fas fa-info-circle felix-red"></i> Gelieve een merk te selecteren</h3>
+            </div>
+            <div class="modal-body no-padding">
+                <div class="row no-margin">
+                    @foreach (BusinessBrand item in distinctList)
+                    {
+                        <div class="@distribution.GetBootstrapClassesForItem(item) no-padding">
+                            <div class="img">
+                                <img class="img-responsive" src="@(item.Brand.OfType<Brand>().FirstOrDefault().Image.Url + "?width=768&height=550&mode=crop&anchor=center")" alt="@(item.Brand.OfType<Brand>().FirstOrDefault().Title)">
+                                <a target="_blank" href="@(item.Brand.OfType<Brand>().FirstOrDefault().ConfigLink.FirstOrDefault().Link)" class="over visible" style="background-color:@(item.Brand.OfType<Brand>().FirstOrDefault().Color.Color.ConvertHexToRgba(5))">
+                                    <div class="img-desc visible">
+                                        <img class="img-responsive" src="@(item.Brand.OfType<Brand>().FirstOrDefault().Logo.Url + "?width=2000&height=1500&mode=crop&anchor=center")" alt="@(item.Brand.OfType<Brand>().FirstOrDefault().Title)">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

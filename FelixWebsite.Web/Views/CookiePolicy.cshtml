@@ -1,0 +1,26 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.CookiePolicy>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "Shared/Master.cshtml";
+}
+<link rel="stylesheet" type="text/css" href="~/css/felix-joboffers.css">
+<section class="margin-top-120">
+    <div class="container">
+        <div class="row margin-bottom-40">
+            <div class="col-sm-12 section-title margin-top-20 text-center">
+                <h1 class="text-center">@Model.Content.Title</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8  col-sm-offset-2 section-title margin-bottom-20">
+                <h4>@Model.Content.Subtitle</h4>
+                <p>@Model.Content.Description</p>
+            </div>
+        </div>
+        <div class="row margin-bottom-40">
+            <div class="col-sm-8 col-sm-offset-2 section-title">
+                <p>@Model.Content.Policy</p>
+            </div>
+        </div>
+    </div>
+</section>

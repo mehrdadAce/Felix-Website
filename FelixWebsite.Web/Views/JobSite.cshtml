@@ -1,0 +1,18 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Joboffers>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "Shared/Master.cshtml";
+}
+<link rel="stylesheet" type="text/css" href="~/css/felix-joboffers.css">
+
+<div class="margin-top-120">
+    @Html.Partial("Slider/Slider", Model.Content)
+</div>
+
+@Html.Partial("JobSite/Articles/Collection", Model)
+
+@Html.Partial("JobSite/Offers/Collection", Model)
+
+@Html.Partial("CallToAction/CallToAction", Model)
+
+@Html.Partial("JobSite/Stories/Collection", Model)

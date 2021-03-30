@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/CookiePolicy.cshtml",
+  "Master": null,
+  "Udi": "umb://template/87735fe4ec574d6ab45bf3adeae4f3f3",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/CookiePolicy.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Cookie Policy",
+  "Alias": "CookiePolicy",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "2.0.14"
+}

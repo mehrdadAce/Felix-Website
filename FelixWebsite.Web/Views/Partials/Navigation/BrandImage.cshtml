@@ -1,0 +1,67 @@
+﻿@model IPublishedContent
+@{
+    var home = Model.AncestorOrSelf(1).OfType<GroupHome>();
+    var logo = "";
+    var color = "";
+    if (Model is Brand)
+    {
+        var current = Model as Brand;
+        logo = current.Logo.Url;
+        color = current.Color.Color;
+        <style>
+            #navbar > .nav > li.active > a, #navbar > .nav > li:hover > a  {
+                color: #@color;
+            }
+        </style>
+    }
+    else if (Model is BusinessBrand)
+    {
+        var businessbrand = Model as BusinessBrand;
+        var current = businessbrand.Brand.FirstOrDefault() as Brand;
+        logo = current.Logo.Url;
+        color = current.Color.Color;
+        <style>
+            #navbar > .nav > li.active > a, #navbar > .nav > li:hover > a  {
+                color: #@color;
+            }
+        </style>
+    }
+}
+
+@if (Model is Brand)
+{
+    var brand = Model as Brand;
+    <img class="brand" src="@logo" alt="@brand.Name" style="background-color: #@color;">
+
+    if (brand.SecondLogo != null)
+    {
+        <img class="logo second" src="@brand.SecondLogo.Url" alt="@brand.Name">
+    }
+    else
+    {
+        <img class="logo" src="@home.NavLogo.Url" alt="@brand.Name">
+    }
+}
+else if (Model is BusinessBrand)
+{
+    var business = Model as BusinessBrand;
+    <img src="@logo" class="brand brandLogo" alt="@business.BusinessName @business.BusinessLocation" style="background-color: #@color;">
+
+    if (business.Logo != null)
+    {
+        <img class="logo second" src="@business.Logo.Url" alt="@business.BusinessName @business.BusinessLocation">
+    }
+    else
+    {
+        <img class="logo" src="@home.NavLogo.Url" alt="@business.BusinessName @business.BusinessLocation">
+    }
+}
+else if (Model is BusinessCombined)
+{
+    var current = Model as BusinessCombined;
+    <img class="logo second" src="@current.Logo.Url" alt="@current.Name" style="background-color: #@current.Color.Color">
+}
+else
+{
+    <img class="logo" src="@home.NavLogo.Url" alt="Felix Groep Logo">
+}

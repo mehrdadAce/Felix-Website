@@ -1,0 +1,24 @@
+﻿@using FelixWebsite.Core.App_GlobalResources
+@model FelixWebsite.Core.Models.ContactForm
+@using (Html.BeginUmbracoForm("SubmitForm", "Contact", FormMethod.Post))
+{
+    <div class="form-group contact_bg2 wow animated fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+        
+        <h4>@FelixResources.contact_send_a_message</h4>
+
+        <div class="form-group">
+            @Html.EditorFor(m => m.Name, new {htmlAttributes = new {@class = "form-control custom-placeholder", placeholder = FelixResources.general_firstname + " " + FelixResources.general_lastname}})
+            @Html.ValidationMessageFor(m => m.Name, "", new {@class = "text-danger"})
+        </div>
+        <div class="form-group">
+            @Html.EditorFor(m => m.Email, new {htmlAttributes = new {@class = "form-control custom-placeholder", placeholder = FelixResources.general_email}})
+            @Html.ValidationMessageFor(m => m.Email, "", new {@class = "text-danger"})
+        </div>
+        <div class="form-group">
+            @Html.TextAreaFor(m => m.Message, new {@class = "form-control message_text custom-placeholder", placeholder = FelixResources.general_yourMessage})
+            @Html.ValidationMessageFor(m => m.Message, "", new {@class = "text-danger"})
+        </div>
+        <button id="btn-submit" type="submit" class="contact_btn">@FelixResources.general_completeAction</button>
+    </div>
+}
+

@@ -1,0 +1,87 @@
+.recent-work{
+    padding-top: 50px;
+}
+.project-full-width-row{
+    text-align: center;
+}
+ .no-paddding{
+    padding: 0px; 
+}
+ .no-margin{
+    margin: 0px; 
+}
+.img-desc {
+    display: inline-block;
+    width: 100%;
+    padding: 5px 13px;
+    position: relative;
+    z-index: 6;
+}
+.img-desc>img {
+    width: 75%;
+    margin: auto;
+}
+.img:hover .img-desc h5 {
+    color: #fff;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.img:hover .img-desc p {
+    color: #fff;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.over.peugeot>div>h1{
+    border-bottom: 2px solid #9198f9;
+}
+.peugeot>h3 {
+    color: #0d2544;
+}
+.contact-icons.peugeot a i:hover {
+    color: #fff;
+    background-color: #0d2544;
+}
+.contact-icons.peugeot a i {
+    color: #0d2544;
+}
+.img-desc {
+    top: 0;
+}
+.img-desc h2 {
+    font-size: 22px;
+    line-height: 30px;
+    font-style: normal;
+    width: 100%;
+    color:#fff;
+    display: inline-block;
+    text-align: center;
+    font-weight: 300;
+}
+.img-desc h2 {
+    position: absolute;
+    right: -100%;
+}
+.img-desc h2 span {
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    font-weight: 300;
+    font-family: 'Arimo', sans-serif;
+    font-style: italic;
+    font-size: 13px;
+}
+.img:hover .over .img-desc h2 {
+    right: 0%;
+    -webkit-transition: all 1.5s;
+    -moz-transition: all 1.5s;
+    -o-transition: all 1.5s;
+    transition: all 1.5s;
+}
+.more-works{
+    text-align: center;
+    padding: 60px 0;
+}

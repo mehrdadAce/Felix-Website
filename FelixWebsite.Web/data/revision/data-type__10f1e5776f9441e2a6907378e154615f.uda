@@ -1,0 +1,19 @@
+{
+  "EditorAlias": "Umbraco.NestedContent",
+  "DatabaseType": 0,
+  "PreValues": {
+    "confirmDeletes": "1",
+    "contentTypes": "[\r\n  {\r\n    \"ncAlias\": \"emailSetting\",\r\n    \"ncTabAlias\": \"General\",\r\n    \"nameTemplate\": \"\"\r\n  }\r\n]",
+    "hideLabel": "0",
+    "maxItems": "1",
+    "minItems": "1",
+    "showIcons": "1"
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/10f1e5776f9441e2a6907378e154615f",
+  "Dependencies": [],
+  "Name": "_EmailSetting",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

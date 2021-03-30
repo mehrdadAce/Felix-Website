@@ -1,0 +1,74 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-right-double-arrow color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Een actie die gebruikt kan worden op de merken pagina & vestiging pagina.",
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": "umb://document-type-container/e9def2683d284c8c83393846d9d63b78",
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "e58e586b-9617-49b8-8fcd-29e6ae42ecae",
+      "Name": "Actie",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "1997bc73-d1fc-4847-87ca-762ee041ee34",
+          "Alias": "text",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De tekst van de actie.",
+          "Mandatory": true,
+          "Name": "Tekst",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "af8f6e7e-92a8-40a5-80db-cb9787ca0221",
+          "Alias": "icon",
+          "DataType": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+          "Description": "Icoon dat wordt getoond op de actie.",
+          "Mandatory": true,
+          "Name": "Icoon",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "c0569ea6-5f3e-4ec9-9564-238e8eeee915",
+          "Alias": "title",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel van de actie.",
+          "Mandatory": true,
+          "Name": "Titel",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/e0c67bdeddb24d9996da97815ace7880",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/e9def2683d284c8c83393846d9d63b78",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Actie",
+  "Alias": "actionItem",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

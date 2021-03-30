@@ -1,0 +1,172 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-company color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Alle vestigingen die onder Felix Groep vallen.",
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": null,
+  "AllowedChildContentTypes": [
+    "umb://document-type/c4528050815147eb9fc6f9eda444d0be",
+    "umb://document-type/c62a998a51f44b7ab64d14f177181f8b",
+    "umb://document-type/ec5fb244580142f6940b805092e24492"
+  ],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "36b457ce-c976-4d7d-8631-07505e283ab3",
+      "Name": "Acties",
+      "SortOrder": 1,
+      "PropertyTypes": [
+        {
+          "Key": "019df367-3455-42cf-a979-8f6028f8aaf2",
+          "Alias": "actionDashboard",
+          "DataType": "umb://data-type/25a5ed117c7b41a8ba9f5d99348c3f5b",
+          "Description": "Actie voor mijn Felix dashboard.",
+          "Mandatory": true,
+          "Name": "Mijn Felix dashboard",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "722a948b-bd23-4f3a-aa52-1a4e9d1388c9",
+          "Alias": "actionBody",
+          "DataType": "umb://data-type/25a5ed117c7b41a8ba9f5d99348c3f5b",
+          "Description": "Actie voor carrosserie.",
+          "Mandatory": true,
+          "Name": "Carrosserie",
+          "SortOrder": 0,
+          "Validation": null
+        },
+        {
+          "Key": "e708ea98-5263-4b2d-b04e-d04f309ecfc3",
+          "Alias": "actionRent",
+          "DataType": "umb://data-type/25a5ed117c7b41a8ba9f5d99348c3f5b",
+          "Description": "Actie voor autoverhuur.",
+          "Mandatory": true,
+          "Name": "Autoverhuur",
+          "SortOrder": 1,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "a44b4fa0-2f79-4bb2-b74e-3d41fad34f50",
+      "Name": "Footer",
+      "SortOrder": 2,
+      "PropertyTypes": [
+        {
+          "Key": "633253ae-6f5c-4e54-a655-66fc988bfcb8",
+          "Alias": "footerContactTitle",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel die getoond wordt boven de contact gegevens.",
+          "Mandatory": true,
+          "Name": "Titel Contact",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "94b5f919-1500-47eb-b7b2-04f26f024dd7",
+          "Alias": "footerLogoText",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Tekst die in de footer onder het logo wordt getoond.",
+          "Mandatory": true,
+          "Name": "Logo tekst",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "c515386b-09ca-4c48-b77f-6095d4279cc3",
+      "Name": "Navigatie",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "240b96f1-0853-4bc6-8073-028e83d0b4c3",
+          "Alias": "navBusinesses",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Navigatie item dat verwijst naar de vestigingen (enkel bij gecombineerde vestigingen)",
+          "Mandatory": true,
+          "Name": "Vestigingen",
+          "SortOrder": 4,
+          "Validation": null
+        },
+        {
+          "Key": "3d5e54ae-dc95-4dd7-be11-3fe073cf5eaf",
+          "Alias": "navContact",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Navigatie item dat verwijst naar het contact onderdeel.",
+          "Mandatory": true,
+          "Name": "Contact",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "46532fef-8a50-4215-965b-e9bf8c0ab4d1",
+          "Alias": "navReview",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Navigatie item dat verwijst naar het reviews onderdeel",
+          "Mandatory": true,
+          "Name": "Reviews",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "dfc3999c-a405-4f8b-b525-ebf3c4527455",
+          "Alias": "navNews",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Navigatie item dat verwijst naar het nieuws onderdeel.",
+          "Mandatory": true,
+          "Name": "Nieuws",
+          "SortOrder": 3,
+          "Validation": null
+        },
+        {
+          "Key": "e485dd75-cb1d-4663-8b92-b0e62a7b8d16",
+          "Alias": "navActions",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Navigatie item dat verwijst naar de acties.",
+          "Mandatory": true,
+          "Name": "Acties",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/9cbe6a8ec81641d3b91127d910478450",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/25a5ed117c7b41a8ba9f5d99348c3f5b",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/c4528050815147eb9fc6f9eda444d0be",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/c62a998a51f44b7ab64d14f177181f8b",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/ec5fb244580142f6940b805092e24492",
+      "Ordering": false,
+      "Mode": 0
+    }
+  ],
+  "Name": "Handelszaken",
+  "Alias": "businesses",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

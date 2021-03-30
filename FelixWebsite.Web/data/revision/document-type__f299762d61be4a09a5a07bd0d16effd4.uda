@@ -1,0 +1,49 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-slideshow color-red",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "894afbb5-dc6a-44bc-a4f8-3aa2fe267670",
+      "Name": "Slides",
+      "SortOrder": 2,
+      "PropertyTypes": [
+        {
+          "Key": "058242dc-fbdd-4e58-8595-cfd71420d76f",
+          "Alias": "slides",
+          "DataType": "umb://data-type/edc946860737499f957ecdf5d53b49fb",
+          "Description": "De verzameling de slides op deze pagina.",
+          "Mandatory": true,
+          "Name": "Slides",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/f299762d61be4a09a5a07bd0d16effd4",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/edc946860737499f957ecdf5d53b49fb",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Slider",
+  "Alias": "slider",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

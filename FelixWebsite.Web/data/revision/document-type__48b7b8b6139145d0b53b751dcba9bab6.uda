@@ -1,0 +1,74 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-crosshair color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Call to action",
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "0435d2ef-1c0c-442f-8881-cee05cb0baa8",
+      "Name": "Call to action",
+      "SortOrder": 5,
+      "PropertyTypes": [
+        {
+          "Key": "45080e5a-efda-4a1e-ae05-aa118f9f8633",
+          "Alias": "ctaTitle",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Titel",
+          "SortOrder": 0,
+          "Validation": null
+        },
+        {
+          "Key": "df7649c9-9376-473f-850e-3eafc8e87bb9",
+          "Alias": "ctaLink",
+          "DataType": "umb://data-type/43c470bd01ce4d2b983715cb21174541",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Button link",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "e5d8017d-2430-4d2f-a58a-109bd5274cfb",
+          "Alias": "ctaSubtitle",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Ondertitel",
+          "SortOrder": 1,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/48b7b8b6139145d0b53b751dcba9bab6",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/43c470bd01ce4d2b983715cb21174541",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "CallToAction",
+  "Alias": "callToAction",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

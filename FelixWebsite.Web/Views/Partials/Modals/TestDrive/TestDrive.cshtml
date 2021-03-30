@@ -1,0 +1,14 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using FelixWebsite.Core.Models
+@using FelixWebsite.Bdo.Enums
+<div id="testDriveModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="testDriveModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title felix"><i class="fas fa-vial felix-red"></i> boek uw testrit</h3>
+            </div>
+            @Html.Partial("Modals/Shared/Form", new ActionForm(Umbraco.AssignedContentItem, ActionType.TestDrive))
+        </div>
+    </div>
+</div>

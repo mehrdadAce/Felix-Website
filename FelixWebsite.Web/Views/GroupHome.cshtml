@@ -1,0 +1,18 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.GroupHome>
+@using FelixWebsite.Bll.Helpers
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@using FelixWebsite.Core.Models;
+@{
+    Layout = "Shared/Master.cshtml";
+}
+<link rel="stylesheet" type="text/css" href="~/css/felix-groep.css">
+@Html.Partial("Slider/Slider", Model.Content)
+@Html.Partial("Felix Group/Services", Model)
+@Html.Partial("Felix Group/brands", Model)
+@Html.Partial("Stores/Stores", Model)
+@Html.Partial("Felix Group/WorkAtFelix", Model)
+@Html.Partial("Felix Group/WhoAreWe", Model)
+@Html.Partial("News/News", Model)
+@Html.Partial("Modals/Contact/Contact", new ContactForm())
+@Scripts.Render("~/Js/GoogleMaps")
+<script async defer type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=@ConfigHelper.GoogleMapsApiKey&callback=initGoogleMap'></script>

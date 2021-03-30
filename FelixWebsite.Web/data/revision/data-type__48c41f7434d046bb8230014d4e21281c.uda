@@ -1,0 +1,14 @@
+{
+  "EditorAlias": "Umbraco.ImageCropper",
+  "DatabaseType": 0,
+  "PreValues": {
+    "crops": "[\r\n  {\r\n    \"width\": 280,\r\n    \"height\": 208,\r\n    \"alias\": \"Article thumbnail\"\r\n  }\r\n]"
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/48c41f7434d046bb8230014d4e21281c",
+  "Dependencies": [],
+  "Name": "_ImageNewsCropper",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

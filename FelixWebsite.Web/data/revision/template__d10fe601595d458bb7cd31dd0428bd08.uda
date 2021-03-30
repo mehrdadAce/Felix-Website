@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/HandelszaakGecombineerd.cshtml",
+  "Master": null,
+  "Udi": "umb://template/d10fe601595d458bb7cd31dd0428bd08",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/HandelszaakGecombineerd.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Handelszaak - gecombineerd",
+  "Alias": "HandelszaakGecombineerd",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "2.0.14"
+}

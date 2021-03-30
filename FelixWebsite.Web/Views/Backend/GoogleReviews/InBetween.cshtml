@@ -1,0 +1,8 @@
+﻿<body onload="startAuth()">
+    <a id="authTag" href="@Url.Action("StartAuth", "GoogleAuth")" target="_top"></a>
+</body>
+<script>
+    startAuth = new function() {
+        document.getElementById("authTag").click();
+    }
+</script>

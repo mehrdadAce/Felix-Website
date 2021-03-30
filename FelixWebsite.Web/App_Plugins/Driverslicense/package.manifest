@@ -1,0 +1,17 @@
+﻿{   
+    propertyEditors: [      
+        {
+            alias: "Felix.Driverslicense",
+            name: "Driverslicense",
+            editor: {
+                view: "~/App_Plugins/Driverslicense/Driverslicense.html", "valueType": "JSON"
+            }
+        }
+    ],
+    javascript: [
+        '~/App_Plugins/Driverslicense/Driverslicense.controller.js'
+    ],
+		css:[
+		'~/App_Plugins/Driverslicense/Driverslicense.css'
+	]
+}

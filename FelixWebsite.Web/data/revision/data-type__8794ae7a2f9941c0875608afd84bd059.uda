@@ -1,0 +1,15 @@
+{
+  "EditorAlias": "Umbraco.ContentPicker2",
+  "DatabaseType": 1,
+  "PreValues": {
+    "showOpenButton": "0",
+    "startNodeId": "umb://document/c3e0444ca8074b789fa862011c3c7ed8"
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/8794ae7a2f9941c0875608afd84bd059",
+  "Dependencies": [],
+  "Name": "_OptionalBrandPicker",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

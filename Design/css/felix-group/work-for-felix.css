@@ -1,0 +1,66 @@
+section#work-for-felix {
+    background: linear-gradient(0deg,rgba(245, 245, 245, 0.95),rgba(245, 245, 245, 0.95)),url("../../images/werken-bg.jpg") center no-repeat;
+    background-size: cover;
+    padding: 100px 0 0px;
+}
+section#work-for-felix img{
+    width: 100%;
+}
+.werk-info-rechts{
+    padding: 0px;
+}
+.werk-info-rechts h3 small{
+    color: #cf0227;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 20px;
+    display: block;
+}
+.werk-info-rechts h3 {
+    color: #22313f;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    padding-bottom: 22px;
+}
+.werk-info-rechts span{
+    color: #cf0227;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+}
+.werk-info-rechts p {
+    color: #5b6e80;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 25px;
+}
+.werk-info-rechts a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    background: #cf0227;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 140px;
+    padding: 13px 35px;
+    border-radius: 2px;
+    transition: all 0.65s;
+}
+.werk-info-rechts a:hover{
+    background: #cf0227;
+}
+
+@media only screen and (max-width: 991px) {
+    section#work-for-felix img {
+        display: none;
+    }
+    section#work-for-felix {
+        padding: 60px 0 0px;
+    }
+}

@@ -1,0 +1,98 @@
+{
+  "DefaultTemplate": "umb://template/87735fe4ec574d6ab45bf3adeae4f3f3",
+  "AllowedTemplates": [
+    "umb://template/87735fe4ec574d6ab45bf3adeae4f3f3"
+  ],
+  "Icon": "icon-cupcake color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Beschrijving cookie policy",
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": null,
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [
+    "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "7286e815-7b7e-4af7-85a4-fb3de842499e",
+      "Name": "Overeenkomst",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "0b2822d3-97b9-487e-84ac-a37977b09f4d",
+          "Alias": "title",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel bovenaan de pagina.",
+          "Mandatory": true,
+          "Name": "Titel",
+          "SortOrder": 0,
+          "Validation": null
+        },
+        {
+          "Key": "45bbfcbb-6aba-4c3c-a740-1f693a90d468",
+          "Alias": "description",
+          "DataType": "umb://data-type/7f26211f741043c1aa7325fc7b4f7cf6",
+          "Description": "Een korte uitleg van wat de cookie overeenkomst juist inhoud.",
+          "Mandatory": true,
+          "Name": "Beschrijving",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "ba09dec1-a604-454e-b209-a2bfec4c4911",
+          "Alias": "policy",
+          "DataType": "umb://data-type/92731df5d2864093be6027d09b6db518",
+          "Description": "De cookie overeenkomst.",
+          "Mandatory": true,
+          "Name": "Overeenkomst",
+          "SortOrder": 3,
+          "Validation": null
+        },
+        {
+          "Key": "c4b55366-a1ce-49d4-818e-972f02790730",
+          "Alias": "subtitle",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel onderaan de titel bovenaan de pagina.",
+          "Mandatory": true,
+          "Name": "Subtitel",
+          "SortOrder": 1,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/6214261833424639957365027cdc2776",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/7f26211f741043c1aa7325fc7b4f7cf6",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/92731df5d2864093be6027d09b6db518",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/87735fe4ec574d6ab45bf3adeae4f3f3",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Cookie overeenkomst",
+  "Alias": "cookiePolicy",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

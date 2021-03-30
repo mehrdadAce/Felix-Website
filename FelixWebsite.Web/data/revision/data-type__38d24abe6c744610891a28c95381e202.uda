@@ -1,0 +1,12 @@
+{
+  "EditorAlias": "Felix.SoftSkills",
+  "DatabaseType": 0,
+  "PreValues": {},
+  "Parent": null,
+  "Udi": "umb://data-type/38d24abe6c744610891a28c95381e202",
+  "Dependencies": [],
+  "Name": "_Softskills",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

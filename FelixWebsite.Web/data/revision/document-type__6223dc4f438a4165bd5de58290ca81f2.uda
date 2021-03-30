@@ -1,0 +1,104 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-rate color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Review afkomstig van Facebook of Google.",
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": "umb://document-type-container/e9def2683d284c8c83393846d9d63b78",
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "4c22f539-b784-493f-a659-ae9ce2cc2c15",
+      "Name": "Algemeen",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "413c05c9-d4fa-4b13-bfa5-381dbb222def",
+          "Alias": "username",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "De gebruikersnaam van de gebruiker",
+          "Mandatory": true,
+          "Name": "Gebruikersnaam",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "67fcdad3-9108-472b-8a80-28c554e89837",
+          "Alias": "userPictureUrl",
+          "DataType": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+          "Description": "De url die naar de profielfoto van de gebruiker verwijst.",
+          "Mandatory": true,
+          "Name": "UserPictureUrl",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "7684b161-1f8d-4853-8d5d-e4e95c91a009",
+          "Alias": "text",
+          "DataType": "umb://data-type/7f26211f741043c1aa7325fc7b4f7cf6",
+          "Description": "De boodschap die de gebruiker heeft achtergelaten.",
+          "Mandatory": true,
+          "Name": "Boodschap",
+          "SortOrder": 3,
+          "Validation": null
+        },
+        {
+          "Key": "d15ce39d-4e3e-4b6f-8180-bbffcc3371e7",
+          "Alias": "rating",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Een rating voor een review. (Min. 3 & Max. 5)",
+          "Mandatory": true,
+          "Name": "rating",
+          "SortOrder": 4,
+          "Validation": "^[3-5]*$"
+        },
+        {
+          "Key": "dfe66c4a-b16d-4359-8b06-f002bf3b42eb",
+          "Alias": "userId",
+          "DataType": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+          "Description": "Het unieke id van de user dat deze review heeft achtergelaten. Er is maar 1 review per user toegestaan.",
+          "Mandatory": true,
+          "Name": "UserId",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/6223dc4f438a4165bd5de58290ca81f2",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/7f26211f741043c1aa7325fc7b4f7cf6",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/e9def2683d284c8c83393846d9d63b78",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Review",
+  "Alias": "review",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

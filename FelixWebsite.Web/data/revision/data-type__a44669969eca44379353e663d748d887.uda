@@ -1,0 +1,12 @@
+{
+  "EditorAlias": "Felix.Diploma",
+  "DatabaseType": 0,
+  "PreValues": {},
+  "Parent": null,
+  "Udi": "umb://data-type/a44669969eca44379353e663d748d887",
+  "Dependencies": [],
+  "Name": "_DiplomaSelector",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

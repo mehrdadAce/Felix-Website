@@ -1,0 +1,12 @@
+{
+  "EditorAlias": "Felix.LaborSystems",
+  "DatabaseType": 0,
+  "PreValues": {},
+  "Parent": null,
+  "Udi": "umb://data-type/f67345d7357e44ffbcca6efeeaf5a8fd",
+  "Dependencies": [],
+  "Name": "_LaborSystem",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

@@ -1,0 +1,171 @@
+﻿@using FelixWebsite.Bdo.Models.Acquisition
+@using FelixWebsite.Core.Constants
+@using FelixWebsite.Core.Helpers;
+@using FelixWebsite.Core.App_GlobalResources
+@model FelixWebsite.Bdo.Models.Acquisition.OverviewDamageModel
+
+<section id="transfer" class="margin-top-40">
+    <div class="container">
+        <div class="row">
+            <!-- Buitenkant -->
+            <div id="panel-outside" class="panel panel-default">
+                <div class="panel-body checkboxes">
+                    <div class="col-sm-12 text-center margin-bottom-20 margin-top-20">
+                        <div class="section-title">
+                            <h1 class="center">@FelixResources.general_overview</h1>
+                        </div>
+                        <div>
+                            @Html.Raw(Model.OverviewText)
+                        </div>
+                        @Html.Partial("Acquisition/OverviewUserInformation", Model)
+                        <h3 class="display-flex justify-center">
+
+                            @FelixResources._2dehands_overview_scheme_title
+
+                            <span id="edit-scheme-overview">
+                                <i class="fas fa-edit"></i>
+                            </span>
+                        </h3>
+                        <!--<div class="row collapse" id="collapse-scheme">-->
+                        <div>
+                            <div id="scheme-in-overview" class="scheme-body">
+
+                            </div>
+                            @foreach (var schemePictureModel in Model.SchemePictures)
+                            {
+                                var pictureCount = 0;
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <p class="font-weight-bold">@schemePictureModel.ImageType</p>
+                                    </div>
+                                    <div class="col-md-9"></div>
+                                </div>
+                                <div class="row scheme-picture-row">
+                                    @foreach (var picture in schemePictureModel.SchemePictures)
+                                    {
+                                        <div class="col-md-3 scheme-picture">
+                                            @Html.Partial("Acquisition/UpdateAndDeleteUploader", new UpdateModel(
+                                                  picture.MediaUrl + "?width=230&height=154&mode=crop&anchor=center",
+                                                  picture.MediaName,
+                                                  picture.MediaId,
+                                                  pictureCount
+                                                  ))
+                                        </div>
+                                        pictureCount++;
+                                    }
+                                </div>
+                            }
+                        </div>
+
+                        <!-- 4 -->
+                        <div class="row">
+                            <div class="col-md-6 overview-outside">
+                                <div class="col-md-12 margin-bottom-10 margin-top-10">
+                                    <h3>@FelixResources._2dehands_overview_scheme_photosOutside</h3>
+                                </div>
+                                <div class="col-md-6 ">
+                                    @Html.Partial("Acquisition/UpdateImageLoader", new UpdateModel(
+                                        Model.LeftFrontUrl + "?width=230&height=154&mode=crop&anchor=center",
+                                        AcquisitionImageTypes.LEFT_FRONT
+                                        ))
+                                </div>
+
+                                <div class="col-md-6">
+                                    @Html.Partial("Acquisition/UpdateImageLoader", new UpdateModel(
+                                        Model.RightFrontUrl + "?width=230&height=154&mode=crop&anchor=center",
+                                        AcquisitionImageTypes.RIGHT_FRONT
+                                        ))
+                                </div>
+                                <div class="col-md-6">
+                                    @Html.Partial("Acquisition/UpdateImageLoader", new UpdateModel(
+                                        Model.LeftBackUrl + "?width=230&height=154&mode=crop&anchor=center",
+                                        AcquisitionImageTypes.LEFT_BACK
+                                        ))
+                                </div>
+                                <div class="col-md-6">
+                                    @Html.Partial("Acquisition/UpdateImageLoader", new UpdateModel(
+                                        Model.RightBackUrl + "?width=230&height=154&mode=crop&anchor=center",
+                                        AcquisitionImageTypes.RIGHT_BACK
+                                        ))
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 overview-inside">
+                                <div class="col-md-12 margin-bottom-10 margin-top-10">
+                                    <h3>@FelixResources._2dehands_overview_scheme_photosInside</h3>
+                                </div>
+                                <div class="col-md-6">
+                                    @Html.Partial("Acquisition/UpdateImageLoader", new UpdateModel(
+                                        Model.ChassisNumberUrl + "?width=230&height=154&mode=crop&anchor=center",
+                                        AcquisitionImageTypes.CHASSIS_NUMBER
+                                        ))
+                                </div>
+                                <div class="col-md-6">
+                                    @Html.Partial("Acquisition/UpdateImageLoader", new UpdateModel(
+                                        Model.KmUrl + "?width=230&height=154&mode=crop&anchor=center",
+                                        AcquisitionImageTypes.KM_DAMAGES
+                                        ))
+                                </div>
+
+                            </div>
+                        </div>
+                        @if (Model.IsInsured)
+                        {
+                            <div class="row">
+                                <div class="col-md-12 overview-doc">
+                                    <div class="col-md-12 margin-bottom-10 margin-top-10">
+                                        <h3>@FelixResources._2dehands_overview_scheme_photosDocs</h3>
+                                    </div>
+                                    <div class="col-md-3">
+                                        @Html.Partial("Acquisition/UpdateImageLoader", new UpdateModel(
+                                         Model.EnrollmentFrontUrl + "?width=230&height=154&mode=crop&anchor=center",
+                                         AcquisitionImageTypes.ENROLLMENT_FRONT_DAMAGES
+                                         ))
+                                    </div>
+                                    <div class="col-md-3">
+                                        @Html.Partial("Acquisition/UpdateImageLoader", new UpdateModel(
+                                         Model.EnrollmentBackUrl + "?width=230&height=154&mode=crop&anchor=center",
+                                         AcquisitionImageTypes.ENROLLMENT_BACK_DAMAGES
+                                         ))
+                                    </div>
+                                    <div class="col-md-3">
+                                        @Html.Partial("Acquisition/UpdateImageLoader", new UpdateModel(
+                                         Model.ProofOfInsuranceUrl + "?width=230&height=154&mode=crop&anchor=center",
+                                         AcquisitionImageTypes.PROOF_OF_INSURANCE
+                                         ))
+                                    </div>
+                                    <div class="col-md-3">
+                                        @Html.Partial("Acquisition/UpdateImageLoader", new UpdateModel(
+                                         Model.ExaminationUrl + "?width=230&height=154&mode=crop&anchor=center",
+                                         AcquisitionImageTypes.EXAMINATION
+                                         ))
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="col-md-12 margin-bottom-10 margin-top-10">
+                                    <h3>@FelixResources.acquisition_overview_remarksTitle</h3>
+                                </div>
+                                <div class="col-md-12">
+                                    <textarea id="userRemarks" class="form-control textareaStyle robotoStyle" name="message" value="message"></textarea>
+                                    <p class="robotoStyle">@FelixResources.acquisition_overview_remarksText</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-6 margin-top-40">
+                                <div class="form-group">
+                                    <button id="finishOverviewButton" type="submit" class="btn felix red" tabindex="8">@FelixResources.general_completeAction</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<input id="amountOfDamagePicturesOverview" type="hidden" name="amountOfDamagePicturesOverview" value="@Model.AmountOfDamagePictures" />

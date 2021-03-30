@@ -1,0 +1,22 @@
+.cart-inner {
+    background: #f4f4f4;
+    margin-top: 80px;
+}
+.breadcrumb_cart {
+    padding: 15px 15px;
+    margin-bottom: 0;
+    list-style: none;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+li.cart-item {
+    display: inline-block;
+}
+li.cart-item a {
+    color: #565656;
+    font-family: 'Roboto', 'sans-serif';
+}
+li.cart-item.active a {
+    color: #202020;
+    font-weight: 600;
+}

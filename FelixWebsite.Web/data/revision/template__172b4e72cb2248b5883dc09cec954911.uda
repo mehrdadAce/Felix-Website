@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/Errorpage.cshtml",
+  "Master": null,
+  "Udi": "umb://template/172b4e72cb2248b5883dc09cec954911",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/Errorpage.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Error page",
+  "Alias": "Errorpage",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "2.0.14"
+}

@@ -1,0 +1,84 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-newspaper-alt color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Dit is een artikel dat afkomstig is van sociale media.",
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": "umb://document-type-container/e9def2683d284c8c83393846d9d63b78",
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "37e7f01f-dc28-4e99-bb96-505cff8078ed",
+      "Name": "Inhoud",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "2ab10777-cc2f-4d10-9015-67cfcc7cf1d5",
+          "Alias": "text",
+          "DataType": "umb://data-type/7f26211f741043c1aa7325fc7b4f7cf6",
+          "Description": "De tekst van een artikel.",
+          "Mandatory": false,
+          "Name": "Tekst",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "796b23eb-eddb-4fbf-8087-5a6507d4f83b",
+          "Alias": "imgUrl",
+          "DataType": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+          "Description": "De link naar de afbeelding, gebruikt bij de Facebook post.",
+          "Mandatory": false,
+          "Name": "Afbeelding Link",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "85eb4b1f-d19d-4a15-b075-c6250696f5bd",
+          "Alias": "author",
+          "DataType": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+          "Description": "Auteur van het geposte bericht. (pagina waarvan bericht afkomstig is.)",
+          "Mandatory": false,
+          "Name": "Auteur",
+          "SortOrder": 3,
+          "Validation": null
+        },
+        {
+          "Key": "e2faf01e-d756-4f46-8323-470bab10cf9f",
+          "Alias": "postId",
+          "DataType": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+          "Description": "Het unieke Id van een post.",
+          "Mandatory": true,
+          "Name": "Post Id",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/91ddfd531c4c4e938ce084fe566ba1e7",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/7f26211f741043c1aa7325fc7b4f7cf6",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/e9def2683d284c8c83393846d9d63b78",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Artikel",
+  "Alias": "socialMediaArticle",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

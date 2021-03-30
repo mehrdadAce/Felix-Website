@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Wij helpen u om de geschikte tweedehandswagen te vinden">
+        <meta name="keywords" content="Tweedehandswagens, Felix, Brecht, Herentals, Kapellen">
+        <meta name="author" content="Felix Groep">
+        <title>Felix Groep | Overname</title>
+        <!-- favicon -->
+        <link rel="icon" type="image/png" href="images/favicon.png" sizes="16x16">
+        <!-- font awesome --> 
+        <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+        <!-- bootstrap --> 
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+        <!-- ionic icons (footer) --> 
+        <link rel="stylesheet" type="text/css" href="ion-icons/css/ionicons.min.css">    
+        <!-- from x to y slider -->
+        <link rel="stylesheet" type="text/css" href="css/felix-second-hand/nouislider.min.css">
+        <!-- revolution slider settings -->
+        <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css">  
+        <!-- css animations -->    
+        <link rel="stylesheet" type="text/css" href="css/animate.css">                 
+        <!-- google fonts --> 
+        <link rel='stylesheet' type='text/css' href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900">
+        <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Arimo:300,400,700'>
+        <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Oswald:400,300'>
+        <!-- page css --> 
+        <link rel="stylesheet" type="text/css" href="css/shared.css">
+        <link rel="stylesheet" type="text/css" href="css/navigation.css">
+        <link rel="stylesheet" type="text/css" href="css/felix-second-hand/breadcrumb.css">
+        <link rel="stylesheet" type="text/css" href="css/felix-second-hand/transfer.css">
+        <link rel="stylesheet" type="text/css" href="css/footer.css">
+    </head>
+    <body>
+        <header id="header">
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html"><img src="images/felix-logo.svg" alt=""></a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">                
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="second-hand-master.html">OVERNAME WAGEN</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div id="transfer-progress" class="navbar-fixed-top cart-inner margin-top-60">
+            <div class="container margin-top-20 margin-bottom-20">
+                <div class="row">
+                    <div class="col-sm-4 col-xs-4">
+                        <p class="text-center completed">1.&nbsp;gegevens</p> 
+                    </div>
+                    <div class="col-sm-4 col-xs-4">
+                        <p class="text-center active">2.&nbsp;foto's</p> 
+                    </div>
+                    <div class="col-sm-4 col-xs-4">
+                        <p class="text-center">3.&nbsp;overzicht</p> 
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="33.333" aria-valuemin="0" aria-valuemax="100" style="width: 33.333%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="transfer" class="margin-top-40">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-12">
+                        
+                        <!-- 4 Buitenkant -->
+                        <div id="panel-outside" class="panel panel-default">
+                            <div class="panel-body checkboxes">
+                                <div class="col-sm-12 text-center margin-bottom-20 margin-top-20">
+                                    <div class="section-title">
+                                        <h1 class="center">Buitenkant</h1>
+                                    </div>
+                                </div>
+
+                                <div id="slider-outside" class="carousel slide margin-bottom-40" data-ride="carousel" data-interval="false">                            
+                                    <!-- Indicators -->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#slider-outside" class="active"></li>
+                                        <li data-target="#slider-outside"></li>
+                                        <li data-target="#slider-outside"></li>
+                                        <li data-target="#slider-outside"></li>
+                                    </ol>
+
+                                    <div class="carousel-inner" role="listbox">
+                                        <div class="slider-outside item active">
+                                            <img id="img-linksvoor" src="images/transfer/linksvoor.png" alt="linksvoor">
+                                            <div class="overlay">
+                                                <div class="text">                      
+                                                    <input id="linksvoor" type="file" class="inputfile" accept=".png,.gif,.jpg,.jpeg">
+                                                    <label for="linksvoor"><i class="fas fa-plus"></i></label>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-caption">
+                                                <h3>Foto linksvooraan</h3>
+                                                <p>Volg bovenstaande afbeelding en druk erop om de foto te uploaden.</p>
+                                            </div>
+                                        </div>
+                                        <div class="slider-outside item">
+                                            <img id="img-rechtsvoor" src="images/transfer/rechtsvoor.png" alt="rechtsvoor">
+                                            <div class="overlay">
+                                                <div class="text">                      
+                                                    <input id="rechtsvoor" type="file" class="inputfile" accept=".png,.gif,.jpg,.jpeg">
+                                                    <label for="rechtsvoor"><i class="fas fa-plus"></i></label>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-caption">
+                                                <h3>Foto rechtsvooraan</h3>
+                                                <p>Dit is ook tekst die erbij hoort maar iets meer beschrijft</p>
+                                            </div>
+                                        </div>
+                                        <div class="slider-outside item">
+                                            <img id="img-linksachter" src="images/transfer/linksachter.png" alt="linksachter">
+                                            <div class="overlay">
+                                                <div class="text">                      
+                                                    <input id="linksachter" type="file" class="inputfile" accept=".png,.gif,.jpg,.jpeg">
+                                                    <label for="linksachter"><i class="fas fa-plus"></i></label>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-caption">
+                                                <h3>Foto linksachteraan</h3>
+                                                <p>Dit is ook tekst die erbij hoort maar iets meer beschrijft</p>
+                                            </div>
+                                        </div>
+                                        <div class="slider-outside item">
+                                            <img id="img-rechtsachter" src="images/transfer/rechtsachter.png" alt="rechtsachter">
+                                            <div class="overlay">
+                                                <div class="text">                      
+                                                    <input id="rechtsachter" type="file" class="inputfile" accept=".png,.gif,.jpg,.jpeg">
+                                                    <label for="rechtsachter"><i class="fas fa-plus"></i></label>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-caption">
+                                                <h3>Foto rechtsachteraan</h3>
+                                                <p>Dit is ook tekst die erbij hoort maar iets meer beschrijft</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4 Binnenkant -->
+                        <div id="panel-inside" class="panel panel-default hid">
+                            <div class="panel-body checkboxes">
+                                <div class="col-sm-12 text-center margin-bottom-20 margin-top-20">
+                                    <div class="section-title">
+                                        <h1 class="center">Binnenkant</h1>
+                                    </div>
+                                </div>
+                                <div id="slider-inside" class="carousel slide margin-bottom-40" data-ride="carousel" data-interval="false">                            
+                                    <!-- Indicators -->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#slider-inside" class="active"></li>
+                                        <li data-target="#slider-inside"></li>
+                                        <li data-target="#slider-inside"></li>
+                                        <li data-target="#slider-inside"></li>
+                                    </ol>
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner" role="listbox">
+                                        <div class="slider-inside item active">
+                                            <img id="img-voorzetels" src="images/transfer/seats.png" alt="linksvoor">
+                                            <div class="overlay">
+                                                <div class="text">                      
+                                                    <input id="voorzetels" type="file" class="inputfile" accept=".png,.gif,.jpg,.jpeg">
+                                                    <label for="voorzetels"><i class="fas fa-plus"></i></label>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-caption">
+                                                <h3>Foto voorzetels</h3>
+                                                <p>Gelieve een foto te nemen van de voorzetels.</p>
+                                            </div>
+                                        </div>
+                                        <div class="slider-inside item">
+                                            <img id="img-achterzetels" src="images/transfer/backseat.png" alt="rechtsvoor">
+                                            <div class="overlay">
+                                                <div class="text">                      
+                                                    <input id="achterzetels" type="file" class="inputfile" accept=".png,.gif,.jpg,.jpeg">
+                                                    <label for="achterzetels"><i class="fas fa-plus"></i></label>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-caption">
+                                                <h3>Foto achterzetels</h3>
+                                                <p>Gelieve een foto te nemen van de achterzetels</p>
+                                            </div>
+                                        </div>
+                                        <div class="slider-inside item">
+                                            <img id="img-dashboard" src="images/transfer/dash.png" alt="linksachter">
+                                            <div class="overlay">
+                                                <div class="text">                      
+                                                    <input id="dashboard" type="file" class="inputfile" accept=".png,.gif,.jpg,.jpeg">
+                                                    <label for="dashboard"><i class="fas fa-plus"></i></label>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-caption">
+                                                <h3>Dashboard</h3>
+                                                <p>Gelieve een foto te nemen van het dashboard.</p>
+                                            </div>
+                                        </div>
+                                        <div class="slider-inside item">
+                                            <img id="img-km" src="images/transfer/km.png" alt="rechtsachter">
+                                            <div class="overlay">
+                                                <div class="text">                      
+                                                    <input id="km" type="file" class="inputfile" accept=".png,.gif,.jpg,.jpeg">
+                                                    <label for="km"><i class="fas fa-plus"></i></label>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-caption">
+                                                <h3>Kilometerstand</h3>
+                                                <p>Gelieve een foto te nemen van de kilometerstand.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2 Schade -->
+                        <div id="panel-damage" class="panel panel-default hid">
+                            <div class="panel-body checkboxes">
+                                <div class="col-sm-12 text-center margin-bottom-20 margin-top-20">
+                                    <div class="section-title">
+                                        <h1 class="center">Schade</h1>
+                                    </div>
+                                </div>
+                                <div id="slider-damage" class="carousel slide margin-bottom-40" data-ride="carousel" data-interval="false">                            
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#slider-damage" class="active"></li>
+                                        <li data-target="#slider-damage"></li>
+                                    </ol>
+
+                                    <!-- Controls -->                          
+                                    <i id="next-slide" class="fas fa-angle-right felix-red"></i>
+
+                                    <div class="carousel-inner" role="listbox">
+                                        
+                                        <div class="slider-damage item active">
+                                            <div class="img-container scrollable">
+                                                <div id="damage-outside-uploads">
+                                                    <div class="img-item upload">
+                                                        <input id="dmgoutside" type="file" class="inputfile" accept=".png,.gif,.jpg,.jpeg">
+                                                    </div>                                                  
+                                                </div>                                                 
+                                            </div>
+
+                                            <div class="carousel-caption">
+                                                <h3 class="margin-bottom-30">Schade buitenkant</h3>                                       
+                                                <p style="width: 70%;margin: auto;">
+                                                    Gelieve een foto te nemen van de schade aan de buitenkant.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="slider-damage item">
+                                            <div class="img-container scrollable">
+                                                <div id="damage-inside-uploads">
+                                                    <div class="img-item upload">
+                                                        <input id="dmginside" type="file" class="inputfile" accept=".png,.gif,.jpg,.jpeg">
+                                                    </div>                                                  
+                                                </div>                                                 
+                                            </div>
+                                            <div class="carousel-caption">
+                                                <h3>Schade binnenkant</h3>
+                                                <p>Gelieve een foto te nemen van de schade aan de binnenkant.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2 Docs -->
+                        <div id="panel-docs" class="panel panel-default hid">
+                            <div class="panel-body checkboxes">
+                                <div class="col-sm-12 text-center margin-bottom-20 margin-top-20">
+                                    <div class="section-title">
+                                        <h1 class="center">Documenten</h1>
+                                    </div>
+                                </div>
+                                <div id="slider-docs" class="carousel slide margin-bottom-40" data-ride="carousel" data-interval="false">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#slider-docs" class="active"></li>
+                                        <li data-target="#slider-docs"></li>
+                                    </ol>
+
+                                    <div class="carousel-inner" role="listbox">
+                                        <div class="slider-docs item active">
+                                            <img id="img-inschrijving" src="images/transfer/inschrijving.png" alt="linksvoor">
+                                            <div class="overlay">
+                                                <div class="text">                      
+                                                    <input id="inschrijving" type="file" class="inputfile" accept=".png,.gif,.jpg,.jpeg">
+                                                    <label for="inschrijving"><i class="fas fa-plus"></i></label>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-caption">
+                                                <h3>Inschrijvingsbewijs</h3>
+                                                <p>Gelieve een foto te uploaden van het inschrijvingsbewijs.</p>
+                                            </div>
+                                        </div>
+                                        <div class="slider-docs item">
+                                            <img id="img-keuringsbewijs" src="images/transfer/keuring.png" alt="rechtsvoor">
+                                            <div class="overlay">
+                                                <div class="text">           
+                                                    <input id="keuringsbewijs" type="file" class="inputfile" accept=".png,.gif,.jpg,.jpeg">
+                                                    <label for="keuringsbewijs"><i class="fas fa-plus"></i></label>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-caption">
+                                                <h3>Keuringsbewijs</h3>
+                                                <p>Gelieve een foto te uploaden van het keuringsbewijs</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <!-- Socials -->
+                    <div class="col-sm-4 margin-bottom-30">
+                        <div class="footer-inner">
+                            <h3><a href="index.html"><img src="images/felix-logo.svg" alt="Logo Felix Groep"></a></h3> 
+                            <p class="margin-bottom-30">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+                            <ul class="social list-inline">
+                                <li><a href="#" class="facebook"><i class="ion-social-facebook"></i></a></li>
+                                <li><a href="#" class="google-plus"><i class="ion-social-googleplus"></i></a></li> 
+                                <li><a href="#" class="linked-in"><i class="ion-social-linkedin"></i></a></li>         
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Establishments -->
+                    <div class="col-sm-4 margin-bottom-30">
+                        <div class="footer-inner">
+                            <h3>Vestigingen</h3>
+                            <a href="store.html"><p>Citroën Felix | Brecht</p></a>
+                            <a href="store.html"><p>Citroën Felix | Herentals</p></a>
+                            <a href="store.html"><p>Citroën Meyvis | Kapellen</p></a>
+                            <a href="store.html"><p>Carressorie Felix | Brecht</p></a>  
+                            <a href="store.html"><p>Peugeot Lavrijsen | Herentals</p></a>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="col-sm-4 margin-bottom-30">
+                        <div class="footer-inner">
+                            <h3>Nieuwsbrief</h3>
+                            <p>Ontvang de Felix Car nieuwsbrief in uw mailbox.</p>
+                            <form role="form" class="subscribe-form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Voeg uw e-mailadres in">
+                                    <button class="btn btn-default" data-toggle="tooltip" title="" data-original-title="Subscribe" type="submit"><i class="ion-ios-paperplane"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <span class="clearfix copyright">&copy; Felix groep <script>document.write(new Date().getFullYear());</script>. Alle rechten voorbehouden.</span>
+            </div>
+        </footer>
+
+      
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Neem de volgende foto van uw wagen</h4>
+                </div>
+                <div class="modal-body">
+                    <img id="modal-image" class="img-responsive" src="images/transfer/linksvoor.png"/>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- template: base scripts -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>        
+        <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/wow.min.js"></script> 
+        <!-- custom: scroll to section -->
+        <script type="text/javascript" src="js/smoothscroll.js"></script>
+        <!-- custom: toggle nav .active & close menu on mobile after selecting -->
+        <script type="text/javascript" src="js/nav-menu-collapser.js"></script>
+        <!-- custom: felix transfer tool (📱 mobile) -->
+        <script type="text/javascript" src="js/felix-transfer-tool.js"></script>  
+    </body>
+</html>

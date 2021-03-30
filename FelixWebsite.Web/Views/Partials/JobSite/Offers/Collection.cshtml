@@ -1,0 +1,105 @@
+﻿@using FelixWebsite.Core.Helpers
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<Joboffers>
+@{
+    var currentPage = Umbraco.AssignedContentItem;
+    var businesses = Umbraco.AssignedContentItem.AncestorOrSelf(1).OfType<GroupHome>().Children.OfType<Businesses>().FirstOrDefault().Children().OfType<IBusiness>();
+    var joboffers = currentPage.Children().OfType<Vacancies>()?.FirstOrDefault()?.Children()?.OfType<Joboffer>()?.ToList() ?? new List<Joboffer>();
+    var filteredJoboffers = new List<Joboffer>();
+    var showAllJobOffers = false;
+
+    var root = Session.GetBreadcrumbRoot(Umbraco.AssignedContentItem);
+    if (root is Brand)
+    {
+        var brand = root as Brand;
+        filteredJoboffers = joboffers.FindAll(x => x.Business.FirstOrDefault()?.OfType<BusinessBrand>()?.Brand?.FirstOrDefault()?.OfType<Brand>()?.Id == brand.Id);
+    }
+    else if (root is BusinessBrand)
+    {
+        var business = root as BusinessBrand;
+        filteredJoboffers = joboffers.FindAll(x => x.Business.FirstOrDefault()?.OfType<BusinessBrand>()?.Id == business.Id);
+    }
+    else if (root is BusinessCombined)
+    {
+        var businessCombined = root as BusinessCombined;
+        filteredJoboffers = joboffers.FindAll(x => businessCombined.BusinessItems.Select(b => b.Id).Contains(x.Business.FirstOrDefault()?.OfType<BusinessBrand>()?.Id ?? -1));
+    }
+    else
+    {
+        showAllJobOffers = true;
+        filteredJoboffers = joboffers;
+    }
+}
+<section id="joboffers" class="margin-bottom-20">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 margin-top-40 margin-bottom-40">
+                <div class="section-title">
+                    <h1>@Model.Content.Title</h1>
+                    <p>@Model.Content.Text</p>
+                </div>
+            </div>
+            @if (!filteredJoboffers.Any())
+            {
+                <div class="col-sm-12">
+                    <h4><i>@Model.Content.NoResult</i></h4>
+                </div>
+            }
+            else
+            {
+                <div class="joboffer-cards">
+                    @if (showAllJobOffers)
+                    {
+                        foreach (IBusiness business in businesses)
+                        {
+                            <div class="col-sm-12">
+                                @{
+                                    filteredJoboffers = joboffers.FindAll(x => x.Business.FirstOrDefault().OfType<IBusiness>().Id == business.Id);
+                                    if (filteredJoboffers.Any())
+                                    {
+                                        if (business is BusinessBrand)
+                                        {
+                                            var brand = (business as BusinessBrand).Brand.FirstOrDefault().OfType<Brand>();
+                                            if (brand != null)
+                                            {
+                                                <h4 style="text-transform: uppercase;">@brand.Title @business.BusinessName, <span class="felix-red">@business.BusinessLocation</span></h4>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <h4 style="text-transform: uppercase;">@business.BusinessName, <span class="felix-red">@business.BusinessLocation</span></h4>
+                                        }
+                                        foreach (var joboffer in filteredJoboffers)
+                                        {
+                                            if (joboffer != null)
+                                            {
+                                                @Html.Partial("JobSite/Offers/Item", joboffer)
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                        @*
+                                            <div class="col-sm-12" style="min-height: 257px;">
+                                                <h4><i style="font-weight: 300;">@Model.Content.NoResult</i></h4>
+                                            </div>
+                                        *@
+                                    }
+                                }
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        foreach (var joboffer in filteredJoboffers)
+                        {
+                            if (joboffer != null)
+                            {
+                                @Html.Partial("JobSite/Offers/Item", joboffer)
+                            }
+                        }
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</section>

@@ -1,0 +1,12 @@
+{
+  "EditorAlias": "Felix.Contracts",
+  "DatabaseType": 0,
+  "PreValues": {},
+  "Parent": null,
+  "Udi": "umb://data-type/84f9fd9fd1b247fb906d9edc6cc80b1e",
+  "Dependencies": [],
+  "Name": "_Contact",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

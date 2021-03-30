@@ -1,0 +1,128 @@
+.dropdown-menu {
+    width: 100%;
+}
+.fuel-type {
+    font-weight: normal;    
+    position: absolute;
+    top: 10px;
+}
+.fuel-type i {
+    padding-right: 8px;
+}
+a {
+    color: #cf0227;
+}
+span {
+    font-family: 'Roboto', sans-serif;
+}
+.navbar-default {
+    border: 1px solid#e7e7e7;
+}
+.search-form {
+    border: 1px solid rgba(204, 204, 204, .6);
+}
+.search-form input.form-control {
+    padding: 10px;
+    margin: 0 auto;
+    height: auto;
+    position: relative;
+    border-radius: 0;
+    border: 0;
+}
+button.search-btn {
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    background: transparent;
+    border: 0;
+    border: 1px solid rgba(204, 204, 204, .6);
+    padding: 10px 12px;
+    color: rgba(204, 204, 204, .6);
+}
+.category {
+    font-weight: 500;
+    font-family: 'Roboto', 'sans-serif';
+}
+.LPG, .diesel, .benzine {
+    font-weight: 800;
+    width: auto;
+    font-size: x-small;
+    padding: 5px;
+    border-radius: 7%;
+    font-family: 'Roboto', 'sans-serif';
+    line-height: 1;
+    margin-bottom: initial;
+}
+.LPG {
+    color: #000;
+    background: Yellow;
+    border: 1px solid #000; 
+}
+.diesel {
+    color: white;
+    background: black;
+    border: 1px solid #fff;  
+}
+.benzine {
+    color: white;
+    background: green;
+    border: 1px solid #fff;  
+}
+.thumbnail img {
+    width: 100%;
+}
+.btn-red {
+    font-family: 'Roboto', 'Sans-serif';
+    color: #fff;
+    background-color: #cf0227;
+    border-radius: 0px;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 13px;
+}
+.model-name {
+    color:#cf0227;
+    height: 25px;
+    margin-top: 10px;
+    margin-bottom: 13px;
+    overflow: hidden;
+}
+.thumbnail {
+    padding: 0;
+}
+.thumbnail p {
+    margin-bottom: 10px;
+}
+.radio i {
+    font-size: xx-large;
+}
+.dropdown.sort button {
+    padding: 10px;
+    background-color: white;
+    color: #939393;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+.caption .row {
+    height: 55px;
+}
+.caption .row .col-sm-6{
+    padding-right: 0;
+}
+.datepicker.datepicker-dropdown.dropdown-menu {
+    width: auto;
+}
+
+label {
+    font-family: 'Roboto', 'sans-serif';
+    font-weight: 100;
+    font-size: 15px;
+}
+
+input, textarea {
+    font-family: 'Roboto','sans-serif';
+    color: #000 !important;
+    padding: 17px !important;
+    border-radius: inherit !important;
+    font-size: 15px !important;
+}

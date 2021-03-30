@@ -1,0 +1,144 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-browser-window color-red",
+  "Thumbnail": "folder.png",
+  "Description": "De footer onderaan een pagina.",
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "ff664a14-edf6-4bd0-945d-627d72661b8b",
+      "Name": "Footer",
+      "SortOrder": 98,
+      "PropertyTypes": [
+        {
+          "Key": "0af8cb72-0835-4e85-bc14-84a7eb80db16",
+          "Alias": "linkLinkedIn",
+          "DataType": "umb://data-type/43c470bd01ce4d2b983715cb21174541",
+          "Description": "De link naar de linkedIn pagina.",
+          "Mandatory": true,
+          "Name": "LinkedIn",
+          "SortOrder": 5,
+          "Validation": null
+        },
+        {
+          "Key": "0cfd30ec-7639-42c3-88a8-97d0964747ba",
+          "Alias": "linkGoogle",
+          "DataType": "umb://data-type/43c470bd01ce4d2b983715cb21174541",
+          "Description": "De link naar de Google +\npagina.",
+          "Mandatory": true,
+          "Name": "Google +",
+          "SortOrder": 4,
+          "Validation": null
+        },
+        {
+          "Key": "231c4dc8-58c7-4285-9f26-d927351e8884",
+          "Alias": "linkFacebook",
+          "DataType": "umb://data-type/43c470bd01ce4d2b983715cb21174541",
+          "Description": "De link naar de Facebook pagina.",
+          "Mandatory": true,
+          "Name": "Facebook",
+          "SortOrder": 3,
+          "Validation": null
+        },
+        {
+          "Key": "6ccbdc9b-ee39-4be1-9f57-98e191b9397e",
+          "Alias": "footerTitleNews",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel die bovenaan het invulveld van nieuwsbrief staat.",
+          "Mandatory": true,
+          "Name": "Nieuwsbrief titel",
+          "SortOrder": 7,
+          "Validation": null
+        },
+        {
+          "Key": "731346e6-33cb-42e2-a6bf-e3544963e9ce",
+          "Alias": "footerLogoTitle",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel die onder het logo wordt getoond.",
+          "Mandatory": true,
+          "Name": "Ondertitel logo",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "996bfbd2-55f0-4c95-b63f-7d09d5802314",
+          "Alias": "footerTitleEstablishments",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel die bovenaan de lijst van vestigingen staat.",
+          "Mandatory": true,
+          "Name": "Vestigingen titel",
+          "SortOrder": 6,
+          "Validation": null
+        },
+        {
+          "Key": "ac4464b5-0d86-442c-992e-2f58bc77ed2d",
+          "Alias": "footerLogoText",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De tekst die onder de ondertitel van het logo staat.",
+          "Mandatory": true,
+          "Name": "Tekst logo",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "e0278334-b945-4409-8a1c-289e8a9281e3",
+          "Alias": "footerTextNews",
+          "DataType": "umb://data-type/7f26211f741043c1aa7325fc7b4f7cf6",
+          "Description": "De tekst boven het invulveld van nieuwsbrief staat.",
+          "Mandatory": true,
+          "Name": "Nieuwsbrief tekst",
+          "SortOrder": 8,
+          "Validation": null
+        },
+        {
+          "Key": "e6874931-cd05-4b95-b3fb-aa8874fab161",
+          "Alias": "footerLogo",
+          "DataType": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+          "Description": "Het logo onderaan de pagina.",
+          "Mandatory": true,
+          "Name": "Logo",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/a251528e8ae949b0984f3cea6c2a8451",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/43c470bd01ce4d2b983715cb21174541",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/7f26211f741043c1aa7325fc7b4f7cf6",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Footer",
+  "Alias": "footer",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

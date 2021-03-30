@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Wij helpen u om de geschikte tweedehandswagen te vinden">
+        <meta name="keywords" content="Tweedehandswagens, Felix, Brecht, Herentals, Kapellen">
+        <meta name="author" content="Felix Groep">
+        <title>Felix Groep | proefrit Citroen C4 Picasso</title>
+        <!-- favicon -->
+        <link rel="icon" type="image/png" href="images/favicon.png" sizes="16x16">
+        <!-- font awesome --> 
+        <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+        <!-- bootstrap --> 
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+        <!-- bootstrap date picker -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+        <!-- ionic icons (footer) --> 
+        <link rel="stylesheet" type="text/css" href="ion-icons/css/ionicons.min.css">    
+        <!-- from x to y slider -->
+        <link rel="stylesheet" type="text/css" href="css/felix-second-hand/nouislider.min.css">
+        <!-- revolution slider settings -->
+        <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css">  
+        <!-- css animations -->    
+        <link rel="stylesheet" type="text/css" href="css/animate.css">                 
+        <!-- google fonts --> 
+        <link rel='stylesheet' type='text/css' href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900">
+        <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Arimo:300,400,700'>
+        <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Oswald:400,300'>
+        <!-- page css --> 
+        <link rel="stylesheet" type="text/css" href="css/shared.css">
+        <link rel="stylesheet" type="text/css" href="css/navigation.css">
+        <link rel="stylesheet" type="text/css" href="css/felix-second-hand/detail.css">
+        <link rel="stylesheet" type="text/css" href="css/felix-second-hand/breadcrumb.css">
+        <link rel="stylesheet" type="text/css" href="css/felix-second-hand/shop.css">
+        <link rel="stylesheet" type="text/css" href="css/footer.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        
+    </head>
+    <body>
+        <header id="header">
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html"><img src="images/felix-logo.svg" alt=""></a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">                
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="second-hand-master.html">Home</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div id="breadcrumbs" class="navbar-fixed-top cart-inner">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb_cart">
+                        <li class="cart-item"><a href="second-hand-master.html">tweedehandswagens</a> &nbsp; <i class="fa fa-angle-right"></i> &nbsp; </li>
+                        <li class="cart-item"><a href="second-hand-detail.html">Product Name Demo</a> &nbsp; <i class="fa fa-angle-right"></i> &nbsp; </li>
+                        <li class="cart-item active"><a href="second-hand-testdrive.html">Proefrit</a> </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+ 
+        <section id="reservation" class="margin-top-40" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3"> 
+                        <div class="thumbnail">
+                            <a href="second-hand-detail.html">
+                                <img src="images/tweedehands/2d-2.jpg" class="img-responsive">
+                                <div class="pro-overlay">
+                                    <div class="fuel-type col-sm-6">
+                                        <span class="diesel"><i class="fas fa-gas-pump"></i>DIESEL</span>
+                                    </div>
+                                </div>
+                                <div class="caption">
+                                    <a href="second-hand-detail.html"><h4 class="model-name">Citroen C4 Picasso</h4></a>
+                                    <div class="row margin-bottom-20">
+                                        <div class="col-sm-6 col-xs-6">
+                                            <p><i class="fas fa-car-alt" aria-hidden="true"></i> &nbsp;Citroën</p>
+                                            <p><i class="fas fa-road" aria-hidden="true"></i> &nbsp;0&nbsp;Km</p>
+                                        </div>
+                                        <div class="col-sm-6 col-xs-6">
+                                            <p><i class="far fa-calendar" aria-hidden="true"></i> &nbsp;00/00/0000</p>
+                                            <p><i class="fas fa-horse" aria-hidden="true"></i> &nbsp;115&nbsp;Pk</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-8" id="datepicker">
+                        <div class="panel panel-default">
+                            <div class="panel-body" >
+                                <div class="col-sm-6" >
+                                    <div class="form-group">
+                                        <label for="name" class="control-label">Voornaam:</label>
+                                        <input id="name" type="text" class="form-control" placeholder="Voornaam"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="streetname" class="control-label">Straat:</label>
+                                        <input id="streetname" type="text" class="form-control" placeholder="Straatnaam"/>
+                                    </div>                                    
+                                    <div class="form-group">
+                                        <label for="location" class="control-label">Woonplaats:</label>
+                                        <input id="location" type="text" class="form-control" placeholder="Woonplaats"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="mail" class="control-label">E-mailadres:</label>
+                                        <input id="mail" type="text" class="form-control" placeholder="mail@adres.com"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="private-phone" class="control-label">Privé telefoonnummer:</label>
+                                        <input id="private-phone" type="text" class="form-control" placeholder="03 000 00 00"/>
+                                    </div>
+                                    <div class="form-group" >
+                                        <label for="date" class="control-label">Date</label>
+                                        <input id="date" type="text" class="form-control" placeholder="dd/mm/yyyy"/>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="lastname">Achternaam:</label>
+                                        <input id="lastname" type="text" class="form-control" placeholder="Achternaam">
+                                    </div>
+                                    <div class="col-sm-6 no-padding">
+                                        <div class="form-group">
+                                            <label for="nr">Huisnummer:</label>
+                                            <input id="nr" type="text" class="form-control" placeholder="Nr">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6" style="padding-right: 0">
+                                        <div class="form-group">
+                                            <label for="nr-extra">Toevoeging:</label>
+                                            <input id="nr-extra" type="text" class="form-control" placeholder="-">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 no-padding">
+                                        <div class="form-group ">
+                                            <label for="postal-code">Postcode:</label>
+                                            <input id="postal-code" type="text" class="form-control" placeholder="0000">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 no-padding">
+                                        <div class="form-group">
+                                            <label for="mobile-phone">GSM-nummer:</label>
+                                            <input id="mobile-phone" type="text" class="form-control" placeholder="+ 32 4 00 00 00 00">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="corporate-phone">Zakelijk telefoonnummer:</label>
+                                        <input id="corporate-phone" type="text" class="form-control" placeholder="03 000 00 00">
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="g-recaptcha" data-sitekey="6LcsxYYUAAAAABI9lOPWa0QHbghisxR3fi89f7mQ"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12" >
+                                    <div class="form-group">
+                                        <textarea id="remarks" class="form-control" rows="5" placeholder="Opmerkingen"></textarea>
+                                    </div>   
+                                </div>
+                                <div class="col-sm-12" >
+                                    <button class="btn btn-red">proefrit Aanvragen</button>
+                                </div>        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <!-- Socials -->
+                    <div class="col-sm-4 margin-bottom-30">
+                        <div class="footer-inner">
+                            <h3><a href="index.html"><img src="images/felix-logo.svg" alt="Logo Felix Groep"></a></h3> 
+                            <p class="margin-bottom-30">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+                            <ul class="social list-inline">
+                                <li><a href="#" class="facebook"><i class="ion-social-facebook"></i></a></li>
+                                <li><a href="#" class="google-plus"><i class="ion-social-googleplus"></i></a></li> 
+                                <li><a href="#" class="linked-in"><i class="ion-social-linkedin"></i></a></li>         
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Establishments -->
+                    <div class="col-sm-4 margin-bottom-30">
+                        <div class="footer-inner">
+                            <h3>Vestigingen</h3>
+                            <a href="store.html"><p>Citroën Felix | Brecht</p></a>
+                            <a href="store.html"><p>Citroën Felix | Herentals</p></a>
+                            <a href="store.html"><p>Citroën Meyvis | Kapellen</p></a>
+                            <a href="store.html"><p>Carressorie Felix | Brecht</p></a>  
+                            <a href="store.html"><p>Peugeot Lavrijsen | Herentals</p></a>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="col-sm-4 margin-bottom-30">
+                        <div class="footer-inner">
+                            <h3>Nieuwsbrief</h3>
+                            <p>Ontvang de Felix Car nieuwsbrief in uw mailbox.</p>
+                            <form role="form" class="subscribe-form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Voeg uw e-mailadres in">
+                                    <button class="btn btn-default" data-toggle="tooltip" title="" data-original-title="Subscribe" type="submit"><i class="ion-ios-paperplane"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <span class="clearfix copyright">&copy; Felix groep <script>document.write(new Date().getFullYear());</script>. Alle rechten voorbehouden.</span>
+            </div>
+        </footer>
+    
+        <!-- template: base scripts -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>        
+        <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/wow.min.js"></script> 
+        <!-- custom: scroll to section -->
+        <script type="text/javascript" src="js/smoothscroll.js"></script>
+        <!-- custom: toggle nav .active & close menu on mobile after selecting -->
+        <script type="text/javascript" src="js/nav-menu-collapser.js"></script>
+        <!-- Bootstrap Date-Picker Plugin -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+        <script type="text/javascript" src="js/date-picker.js"></script>
+        <!-- Captcha -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    </body>
+</html>

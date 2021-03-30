@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/JobStory.cshtml",
+  "Master": null,
+  "Udi": "umb://template/78e14319065e46cfaeb7cc057de941a0",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/JobStory.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "JobStory",
+  "Alias": "JobStory",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "2.0.14"
+}

@@ -1,0 +1,22 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<Joboffers>
+@{
+    var articles = Umbraco.AssignedContentItem.Children().OfType<Articles>().FirstOrDefault().Children().OfType<JobArticle>();
+}
+<section id="jobarticles" class="margin-top-40 margin-bottom-20">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 margin-top-40 margin-bottom-40">
+                <div class="section-title">
+                    <h1>@Model.Content.ArticleTitle</h1>
+                    <p>@Model.Content.ArticleText</p>
+                </div>
+            </div>
+            @foreach (var jobarticle in articles)
+            {
+                <div class="col-sm-4 margin-bottom-30">
+                    @Html.Partial("JobSite/Articles/Item", jobarticle)
+                </div>
+            }
+        </div>
+    </div>
+</section>

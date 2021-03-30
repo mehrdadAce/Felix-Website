@@ -1,0 +1,107 @@
+{
+  "DefaultTemplate": "umb://template/b432a24afaf34d8e837f7c8e83b199e3",
+  "AllowedTemplates": [
+    "umb://template/b432a24afaf34d8e837f7c8e83b199e3"
+  ],
+  "Icon": "icon-binoculars color-red",
+  "Thumbnail": "folder.png",
+  "Description": "De overname maar voor schade aangifte",
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": null,
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [
+    "umb://document-type/38dd2539e3d6439f9a2f6d249c5875c0",
+    "umb://document-type/4bdcaa3263c14e3aab4ff0e25cd95298",
+    "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "5fe1f3d3-6560-4a8f-8281-31914236a865",
+      "Name": "Algemeen",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "cf0c7fe9-39cc-41ab-9dae-344cccae785a",
+          "Alias": "amountOfDamagePhotos",
+          "DataType": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+          "Description": "De maximum hoeveelheid foto's die bij het schade schema kan worden opgeladen per onderdeel. Een nul in dit veld betekent dat er geen foto's kunnen worden opgeladen.",
+          "Mandatory": true,
+          "Name": "Aantal schade foto's",
+          "SortOrder": 4,
+          "Validation": ""
+        }
+      ]
+    },
+    {
+      "Key": "f178e8a5-ce4a-49ea-95f7-28ba7bfa9971",
+      "Name": "Pop up bij schema",
+      "SortOrder": 100,
+      "PropertyTypes": [
+        {
+          "Key": "c2d7595c-1293-45bd-82a1-cf067a1173b6",
+          "Alias": "schemeTitle",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "De titel van de popup",
+          "Mandatory": true,
+          "Name": "Titel",
+          "SortOrder": 0,
+          "Validation": null
+        },
+        {
+          "Key": "f590bb0b-5024-4d4b-9c15-58d798fc2bc9",
+          "Alias": "schemeText",
+          "DataType": "umb://data-type/ca90c9500aff4e72b976a30b1ac57dad",
+          "Description": "De tekst van de popup",
+          "Mandatory": true,
+          "Name": "Tekst",
+          "SortOrder": 1,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/11d52f4987d94d5399f51219aed0dfc0",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/ca90c9500aff4e72b976a30b1ac57dad",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/38dd2539e3d6439f9a2f6d249c5875c0",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/4bdcaa3263c14e3aab4ff0e25cd95298",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/b432a24afaf34d8e837f7c8e83b199e3",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Schade aangifte",
+  "Alias": "damage",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

@@ -1,0 +1,756 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="general_firstname" xml:space="preserve">
+    <value>Voornaam</value>
+  </data>
+  <data name="general_lastname" xml:space="preserve">
+    <value>Achternaam</value>
+  </data>
+  <data name="general_email" xml:space="preserve">
+    <value>E-mailadres</value>
+  </data>
+  <data name="2dehands_licenseplate" xml:space="preserve">
+    <value>Nummerplaat</value>
+  </data>
+  <data name="2dehands_tyrestate" xml:space="preserve">
+    <value>Bandenstatus</value>
+  </data>
+  <data name="general_data" xml:space="preserve">
+    <value>Uw gegevens</value>
+  </data>
+  <data name="general_cellNumber" xml:space="preserve">
+    <value>Telefoonnummer</value>
+  </data>
+  <data name="2dehands_tyrestate1" xml:space="preserve">
+    <value>Goed (&gt; 8mm)</value>
+  </data>
+  <data name="2dehands_tyrestate2" xml:space="preserve">
+    <value>Middelmatig</value>
+  </data>
+  <data name="2dehands_tyrestate3" xml:space="preserve">
+    <value>Slecht (&lt; 4mm)</value>
+  </data>
+  <data name="2dehands_manual" xml:space="preserve">
+    <value>Onderhoudsboekje</value>
+  </data>
+  <data name="general_selectOption" xml:space="preserve">
+    <value>Selecteer uw optie</value>
+  </data>
+  <data name="2dehands_manual1" xml:space="preserve">
+    <value>Volledig</value>
+  </data>
+  <data name="2dehands_manual2" xml:space="preserve">
+    <value>Gedeeltelijk</value>
+  </data>
+  <data name="2dehands_manual3" xml:space="preserve">
+    <value>Niet beschikbaar</value>
+  </data>
+  <data name="general_continue" xml:space="preserve">
+    <value>Verder</value>
+  </data>
+  <data name="2dehands_progression_photos" xml:space="preserve">
+    <value>Foto's</value>
+  </data>
+  <data name="general_overview" xml:space="preserve">
+    <value>Overzicht</value>
+  </data>
+  <data name="2dehands_overview_photosOutside" xml:space="preserve">
+    <value>Foto overzicht wagen</value>
+  </data>
+  <data name="2dehands_overview_photosInside" xml:space="preserve">
+    <value>Foto's binnenkant</value>
+  </data>
+  <data name="2dehands_overview_photosDamage" xml:space="preserve">
+    <value>Schade</value>
+  </data>
+  <data name="2dehands_overview_photosDocuments" xml:space="preserve">
+    <value>Documenten</value>
+  </data>
+  <data name="general_completeAction" xml:space="preserve">
+    <value>Verzenden</value>
+  </data>
+  <data name="general_success" xml:space="preserve">
+    <value>Succes!</value>
+  </data>
+  <data name="2dehands_success_successMessage" xml:space="preserve">
+    <value>Uw verzoek tot overname werd succesvol aan ons bezorgd.</value>
+  </data>
+  <data name="2dehands_success_successMessageContinue" xml:space="preserve">
+    <value>Uw verzoek wordt momenteel verwerkt, we sturen u spoedig een antwoord op volgend adres:</value>
+  </data>
+  <data name="general_skip" xml:space="preserve">
+    <value>Overslaan</value>
+  </data>
+  <data name="acquisition_photos_outside" xml:space="preserve">
+    <value>Buitenkant</value>
+  </data>
+  <data name="acquisition_photos_leftFrontTitle" xml:space="preserve">
+    <value>Linksvooraan</value>
+  </data>
+  <data name="acquisition_photos_text" xml:space="preserve">
+    <value>Volg bovenstaande afbeelding en druk erop om de foto te uploaden.</value>
+  </data>
+  <data name="acquisition_photos_rightFrontTitle" xml:space="preserve">
+    <value>Rechtsvooraan</value>
+  </data>
+  <data name="acquisition_photos_leftBackTitle" xml:space="preserve">
+    <value>Linksachter</value>
+  </data>
+  <data name="acquisition_photos_rightBackTitle" xml:space="preserve">
+    <value>Rechtsachter</value>
+  </data>
+  <data name="acquisition_photos_inside" xml:space="preserve">
+    <value>Binnenkant</value>
+  </data>
+  <data name="acquisition_photos_frontseatsTitle" xml:space="preserve">
+    <value>Voorzetels</value>
+  </data>
+  <data name="acquisition_photos_backseatsTitle" xml:space="preserve">
+    <value>Achterzetels</value>
+  </data>
+  <data name="acquisition_photos_dashTitle" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="acquisition_photos_kmTitle" xml:space="preserve">
+    <value>Kilometerstand</value>
+  </data>
+  <data name="acquisition_photos_damage" xml:space="preserve">
+    <value>Schade</value>
+  </data>
+  <data name="acquisition_photos_damageOutsideTitle" xml:space="preserve">
+    <value>Schade buitenkant</value>
+  </data>
+  <data name="acquisition_photos_damageInsideTitle" xml:space="preserve">
+    <value>Schade binnenkant</value>
+  </data>
+  <data name="acquisition_photos_docs" xml:space="preserve">
+    <value>Documenten</value>
+  </data>
+  <data name="acquisition_photos_frontEnrollmentTitle" xml:space="preserve">
+    <value>Inschrijvingsbewijs voorkant</value>
+  </data>
+  <data name="acquisition_photos_backEnrollmentTitle" xml:space="preserve">
+    <value>Inschrijvingbewijs achterkant</value>
+  </data>
+  <data name="acquisition_photos_examinationProofTitle" xml:space="preserve">
+    <value>Keuringsbewijs</value>
+  </data>
+  <data name="overname_errormessage_firstname" xml:space="preserve">
+    <value>Vul dit veld in.</value>
+  </data>
+  <data name="overname_errormessage_lastname" xml:space="preserve">
+    <value>Vul dit veld in.</value>
+  </data>
+  <data name="overname_errormessage_email" xml:space="preserve">
+    <value>Vul dit veld in.</value>
+  </data>
+  <data name="overname_errormessage_licenseplate" xml:space="preserve">
+    <value>Vul dit veld in.</value>
+  </data>
+  <data name="overname_errormessage_gsm" xml:space="preserve">
+    <value>Vul dit veld in.</value>
+  </data>
+  <data name="overname_errormessage_wheelstate" xml:space="preserve">
+    <value>Kies een optie.</value>
+  </data>
+  <data name="overname_errormessage_manual" xml:space="preserve">
+    <value>Kies een optie.</value>
+  </data>
+  <data name="acquisition_overview_remarksTitle" xml:space="preserve">
+    <value>Opmerkingen</value>
+  </data>
+  <data name="acquisition_overview_remarksText" xml:space="preserve">
+    <value>Als u nog mogelijke opmerkingen heeft, kan u die hier oplijsten.</value>
+  </data>
+  <data name="general_complete" xml:space="preserve">
+    <value>Voltooid</value>
+  </data>
+  <data name="acquisition_overview_photosDamageInside" xml:space="preserve">
+    <value>Schade binnenkant</value>
+  </data>
+  <data name="acquisition_overview_photosDamageOutside" xml:space="preserve">
+    <value>Schade buitenkant</value>
+  </data>
+  <data name="general_newsletterSuccess" xml:space="preserve">
+    <value>U bent succesvol ingeschreven op onze nieuwsbrief.</value>
+  </data>
+  <data name="general_felixGroup" xml:space="preserve">
+    <value>Felix Groep</value>
+  </data>
+  <data name="general_allRightsReserved" xml:space="preserve">
+    <value>Alle rechten voorbehouden.</value>
+  </data>
+  <data name="openingsHours_reception" xml:space="preserve">
+    <value>Openingsuren Receptie</value>
+  </data>
+  <data name="openingsHours_workplace" xml:space="preserve">
+    <value>Openingsuren Werkplaats</value>
+  </data>
+  <data name="openingsHours_showroom" xml:space="preserve">
+    <value>Openingsuren toonzaal</value>
+  </data>
+  <data name="openingsHours_closed" xml:space="preserve">
+    <value>Gesloten</value>
+  </data>
+  <data name="mails_mailsubject_acquisitionclient" xml:space="preserve">
+    <value>Uw overname is correct opgenomen</value>
+  </data>
+  <data name="mails_mailbody_acquisitionclient" xml:space="preserve">
+    <value>We zorgen ervoor dat u spoedig antwoord krijgt.</value>
+  </data>
+  <data name="general_readmore" xml:space="preserve">
+    <value>Lees meer</value>
+  </data>
+  <data name="acquisition_notification_error" xml:space="preserve">
+    <value>Er is iets misgegaan. Probeer nogmaals.</value>
+  </data>
+  <data name="action_model_success" xml:space="preserve">
+    <value>Uw aanvraag werd succesvol verzonden!</value>
+  </data>
+  <data name="talenkennis_basic" xml:space="preserve">
+    <value>Basis</value>
+  </data>
+  <data name="general_yourMessage" xml:space="preserve">
+    <value>Uw bericht</value>
+  </data>
+  <data name="talenkennis_excellent" xml:space="preserve">
+    <value>Uitstekend</value>
+  </data>
+  <data name="talenkennis_good" xml:space="preserve">
+    <value>Goed</value>
+  </data>
+  <data name="talenkennis_nvt" xml:space="preserve">
+    <value>Niet van toepassing</value>
+  </data>
+  <data name="talenkennis_unnecessary" xml:space="preserve">
+    <value>Niet noodzakelijk</value>
+  </data>
+  <data name="talenkennis_verygood" xml:space="preserve">
+    <value>Zeer goed</value>
+  </data>
+  <data name="contact_message" xml:space="preserve">
+    <value>Uw heeft een bericht ontvangen van</value>
+  </data>
+  <data name="experience_month" xml:space="preserve">
+    <value>maand</value>
+  </data>
+  <data name="experience_months" xml:space="preserve">
+    <value>maanden</value>
+  </data>
+  <data name="experience_none" xml:space="preserve">
+    <value>Geen ervaring nodig.</value>
+  </data>
+  <data name="experience_years" xml:space="preserve">
+    <value>jaar</value>
+  </data>
+  <data name="general_cancel" xml:space="preserve">
+    <value>Annuleren</value>
+  </data>
+  <data name="jobapplication_success" xml:space="preserve">
+    <value>Bedankt voor uw sollicitatie!</value>
+  </data>
+  <data name="modal_error" xml:space="preserve">
+    <value>Er liep iets fout bij het valideren van uw data.</value>
+  </data>
+  <data name="modal_error_check" xml:space="preserve">
+    <value>Gelieve uw data na te kijken en opnieuw in te sturen.</value>
+  </data>
+  <data name="general_goToPreviousPage" xml:space="preserve">
+    <value>Terug</value>
+  </data>
+  <data name="reviews_header" xml:space="preserve">
+    <value>Waarom mensen ons kiezen</value>
+  </data>
+  <data name="general_HomePage" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="acquisition_mailFelix_heading" xml:space="preserve">
+    <value>Er is een overname toegevoegd</value>
+  </data>
+  <data name="acquisition_mailFelix_linkText" xml:space="preserve">
+    <value>U vindt de overname op volgende link:</value>
+  </data>
+  <data name="general_mailClient_heading" xml:space="preserve">
+    <value>Uw aanvraag werd succesvol verzonden</value>
+  </data>
+  <data name="general_mailClient_body" xml:space="preserve">
+    <value>uw aanvraag werd succesvol verzonden en wordt zo snel mogelijk behandeld.</value>
+  </data>
+  <data name="general_salutation" xml:space="preserve">
+    <value>Beste</value>
+  </data>
+  <data name="mailOfferte_heading" xml:space="preserve">
+    <value>Er is een offerte aangevraagd door</value>
+  </data>
+  <data name="mailTestrit_heading" xml:space="preserve">
+    <value>Er is een testrit aangevraagd door</value>
+  </data>
+  <data name="general_modelName" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="mailOfferte_body" xml:space="preserve">
+    <value>Informatie offerte aanvraag</value>
+  </data>
+  <data name="mailTestrit_body" xml:space="preserve">
+    <value>Informatie testrit aanvraag</value>
+  </data>
+  <data name="general_answer" xml:space="preserve">
+    <value>Beantwoord</value>
+  </data>
+  <data name="general_fullName" xml:space="preserve">
+    <value>Naam</value>
+  </data>
+  <data name="mailContact_heading" xml:space="preserve">
+    <value>Bericht van</value>
+  </data>
+  <data name="mailContact_body" xml:space="preserve">
+    <value>stuurde u het volgende bericht</value>
+  </data>
+  <data name="general_error_header" xml:space="preserve">
+    <value>Er is iets misgelopen</value>
+  </data>
+  <data name="general_error_body" xml:space="preserve">
+    <value>Probeer het later nog eens</value>
+  </data>
+  <data name="general_close" xml:space="preserve">
+    <value>Sluiten</value>
+  </data>
+  <data name="googlemapsContactForm_modal_title" xml:space="preserve">
+    <value>Contact formulier</value>
+  </data>
+  <data name="notification_contact_error_message" xml:space="preserve">
+    <value>Er is iets fout gelopen bij het verzenden van uw ingevoerde data. Wijzig uw data &amp; probeer het opnieuw.</value>
+  </data>
+  <data name="notification_contact_success_message" xml:space="preserve">
+    <value>Uw bericht werd succesvol doorgestuurd &amp; is momenteel in behandeling.</value>
+  </data>
+  <data name="notification_error_title" xml:space="preserve">
+    <value>Oeps!</value>
+  </data>
+  <data name="notification_jobapplication_error_message" xml:space="preserve">
+    <value>Er liep iets fout bij het indienden van uw sollicitatie. Controleer de ingevoerde data &amp; probeer opnieuw.</value>
+  </data>
+  <data name="notification_jobapplication_success_message" xml:space="preserve">
+    <value>Uw sollicitatie werd succesvol ingediend en is momenteel in behandeling.</value>
+  </data>
+  <data name="notification_quotation_error_message" xml:space="preserve">
+    <value>Er liep iets fout bij het aanvragen van uw offerte. Controleer de ingevoerde data &amp; probeer opnieuw.</value>
+  </data>
+  <data name="notification_quotation_success_message" xml:space="preserve">
+    <value>Uw offerte werd succesvol aangevraagd en is momenteel in behandeling. Gelieve uw mailbox in de gaten te houden.</value>
+  </data>
+  <data name="notification_success_title" xml:space="preserve">
+    <value>Succes!</value>
+  </data>
+  <data name="notification_testdrive_error_message" xml:space="preserve">
+    <value>Er liep iets fout bij het aanvragen van uw testrit. Controleer de ingevoerde data &amp; probeer opnieuw.</value>
+  </data>
+  <data name="notification_testdrive_success_message" xml:space="preserve">
+    <value>Uw testrit werd succesvol aangevraagd en is momenteel in behandeling.</value>
+  </data>
+  <data name="temp_is_contact_success" xml:space="preserve">
+    <value>TempIsContactSuccess</value>
+  </data>
+  <data name="temp_is_jobapplication_success" xml:space="preserve">
+    <value>TempIsJobApplicationSuccess</value>
+  </data>
+  <data name="temp_is_quotation_success" xml:space="preserve">
+    <value>TempIsQuotationSuccess</value>
+  </data>
+  <data name="temp_is_testdrive_success" xml:space="preserve">
+    <value>TempIsTestDriveSuccess</value>
+  </data>
+  <data name="car_rental_subject_business" xml:space="preserve">
+    <value>Nieuwe huur aanvraag autoverhuur door</value>
+  </data>
+  <data name="car_rental_subject_customer" xml:space="preserve">
+    <value>Uw huur aanvraag werd succesvol verzonden!</value>
+  </data>
+  <data name="car_rental_body" xml:space="preserve">
+    <value>Doorgestuurde data van klant</value>
+  </data>
+  <data name="car_rental_heading" xml:space="preserve">
+    <value>Aanvraag voor het huren van een wagen door</value>
+  </data>
+  <data name="car_rental_timeperiod" xml:space="preserve">
+    <value>Huurtermijn</value>
+  </data>
+  <data name="car_rental_time_day" xml:space="preserve">
+    <value>Dag(en)</value>
+  </data>
+  <data name="car_rental_time_week" xml:space="preserve">
+    <value>Week(en)</value>
+  </data>
+  <data name="notification_carrental_error_message" xml:space="preserve">
+    <value>Er liep iets fout bij het aanvragen van uw huuraanvraag. Controleer de ingevoerde data &amp; probeer opnieuw.</value>
+  </data>
+  <data name="notification_carrental_succes_message" xml:space="preserve">
+    <value>Uw aanvraag voor het huren van een wagen werd succesvol verstuurd &amp; is momenteel in behandeling</value>
+  </data>
+  <data name="temp_is_carrental_success" xml:space="preserve">
+    <value>TempIsCarRentalSuccess</value>
+  </data>
+  <data name="car_rental_from" xml:space="preserve">
+    <value>Vanaf</value>
+  </data>
+  <data name="general_day" xml:space="preserve">
+    <value>dag</value>
+  </data>
+  <data name="general_week" xml:space="preserve">
+    <value>week</value>
+  </data>
+  <data name="general_month" xml:space="preserve">
+    <value>maand</value>
+  </data>
+  <data name="car_rental_included_in_price" xml:space="preserve">
+    <value>inbegrepen in de prijs</value>
+  </data>
+  <data name="contact_send_a_message" xml:space="preserve">
+    <value>Stuur een bericht</value>
+  </data>
+  <data name="mailContact_newContactMessage1" xml:space="preserve">
+    <value>Er is een nieuw bericht verstuurd in verband met een</value>
+  </data>
+  <data name="mailContact_newMessageContinued3" xml:space="preserve">
+    <value>voor alle details van de wagen.</value>
+  </data>
+  <data name="mailContact_newContactMessage2" xml:space="preserve">
+    <value>wagen van type</value>
+  </data>
+  <data name="mailContact_newMessageContinued1" xml:space="preserve">
+    <value>klik</value>
+  </data>
+  <data name="mailContact_newMessageContinued2" xml:space="preserve">
+    <value>hier</value>
+  </data>
+  <data name="mailContact_newMessageContinued1_withUppercase" xml:space="preserve">
+    <value>Klik</value>
+  </data>
+  <data name="secondhand_simple" xml:space="preserve">
+    <value>tweedehands</value>
+  </data>
+  <data name="general_news" xml:space="preserve">
+    <value>Nieuws</value>
+  </data>
+  <data name="overname_agent_cellphone" xml:space="preserve">
+    <value>Makelaar: telefoon nummer</value>
+  </data>
+  <data name="overname_agent_city" xml:space="preserve">
+    <value>Makelaar: gemeente</value>
+  </data>
+  <data name="overname_agent_email" xml:space="preserve">
+    <value>Makelaar: email</value>
+  </data>
+  <data name="overname_agent_name" xml:space="preserve">
+    <value>Makelaar: naam</value>
+  </data>
+  <data name="overname_errormessage_agent_cellphone" xml:space="preserve">
+    <value>Vul dit veld in.</value>
+  </data>
+  <data name="overname_errormessage_agent_city" xml:space="preserve">
+    <value>Vul dit veld in.</value>
+  </data>
+  <data name="overname_errormessage_agent_email" xml:space="preserve">
+    <value>Vul dit veld in.</value>
+  </data>
+  <data name="overname_errormessage_agent_name" xml:space="preserve">
+    <value>Vul dit veld in.</value>
+  </data>
+  <data name="acquisition_pdf_header_text" xml:space="preserve">
+    <value>Deze PDF bevat de foto's die u heeft doorgestuurd naar ons.</value>
+  </data>
+  <data name="acquisition_photos_chassisNumberTitle" xml:space="preserve">
+    <value>Chassisnummer</value>
+  </data>
+  <data name="acquisition_photos_proofOfInsuranceTitle" xml:space="preserve">
+    <value>Verzekeringsbewijs</value>
+  </data>
+  <data name="overname_agent_cellphone_readable" xml:space="preserve">
+    <value>GSM-nummer makelaar</value>
+  </data>
+  <data name="overname_agent_city_readable" xml:space="preserve">
+    <value>Gemeente makelaar</value>
+  </data>
+  <data name="overname_agent_email_readable" xml:space="preserve">
+    <value>Email makelaar</value>
+  </data>
+  <data name="overname_agent_name_readable" xml:space="preserve">
+    <value>Naam makelaar</value>
+  </data>
+  <data name="overname_errormessage_hoeveelheid_schade_fotos" xml:space="preserve">
+    <value>Het minimum aantal foto's is: </value>
+  </data>
+  <data name="overname_errormessage_insurance" xml:space="preserve">
+    <value>Kies een optie.</value>
+  </data>
+  <data name="overname_insurance" xml:space="preserve">
+    <value>Verzekeraar</value>
+  </data>
+  <data name="overname_insurance_readable" xml:space="preserve">
+    <value>Verzekeraar</value>
+  </data>
+  <data name="overname_field_is_empty_readable" xml:space="preserve">
+    <value>Dit veld is leeggelaten.</value>
+  </data>
+  <data name="general_date_created" xml:space="preserve">
+    <value>Aangemaakt op</value>
+  </data>
+  <data name="pdf_title" xml:space="preserve">
+    <value>Overzicht van doorgestuurde informatie</value>
+  </data>
+  <data name="acquisition_mailFelix_heading_damages" xml:space="preserve">
+    <value>Er is een schadeaangifte toegevoegd</value>
+  </data>
+  <data name="acquisition_mailFelix_linkText_damages" xml:space="preserve">
+    <value>U vindt de schadeaangifte op volgende link:</value>
+  </data>
+  <data name="overname_scheme_client_cost" xml:space="preserve">
+    <value>Ten laste van de klant</value>
+  </data>
+  <data name="overname_scheme_costs" xml:space="preserve">
+    <value>Kosten</value>
+  </data>
+  <data name="overname_scheme_damage" xml:space="preserve">
+    <value>deuk</value>
+  </data>
+  <data name="overname_scheme_hail_damage" xml:space="preserve">
+    <value>hagel of stormschade</value>
+  </data>
+  <data name="overname_scheme_local" xml:space="preserve">
+    <value>Localisatie</value>
+  </data>
+  <data name="overname_scheme_marks" xml:space="preserve">
+    <value>lakschade</value>
+  </data>
+  <data name="overname_scheme_remarks" xml:space="preserve">
+    <value>Heeft u nog opmerkingen over dit geselecteerd onderdeel</value>
+  </data>
+  <data name="overname_scheme_bumper_back" xml:space="preserve">
+    <value>Achterbumper</value>
+  </data>
+  <data name="overname_scheme_bumper_front" xml:space="preserve">
+    <value>Voorbumper</value>
+  </data>
+  <data name="overname_scheme_hood" xml:space="preserve">
+    <value>Motorkap</value>
+  </data>
+  <data name="overname_scheme_left_door_back" xml:space="preserve">
+    <value>Linker achterdeur</value>
+  </data>
+  <data name="overname_scheme_left_door_front" xml:space="preserve">
+    <value>Linker voordeur</value>
+  </data>
+  <data name="overname_scheme_left_wheel_back" xml:space="preserve">
+    <value>Linker achterwiel</value>
+  </data>
+  <data name="overname_scheme_left_wheel_cap_back" xml:space="preserve">
+    <value>Linker achtervleugel</value>
+  </data>
+  <data name="overname_scheme_left_wheel_cap_front" xml:space="preserve">
+    <value>Linker voorvleugel</value>
+  </data>
+  <data name="overname_scheme_left_wheel_front" xml:space="preserve">
+    <value>Linker voorwiel</value>
+  </data>
+  <data name="overname_scheme_right_door_back" xml:space="preserve">
+    <value>Rechter achterdeur</value>
+  </data>
+  <data name="overname_scheme_right_door_front" xml:space="preserve">
+    <value>Rechter voordeur</value>
+  </data>
+  <data name="overname_scheme_right_wheel_back" xml:space="preserve">
+    <value>Rechter achterwiel</value>
+  </data>
+  <data name="overname_scheme_right_wheel_cap_back" xml:space="preserve">
+    <value>Rechter achtervleugel</value>
+  </data>
+  <data name="overname_scheme_right_wheel_cap_front" xml:space="preserve">
+    <value>Rechter voorvleugel</value>
+  </data>
+  <data name="overname_scheme_right_wheel_front" xml:space="preserve">
+    <value>Rechter voorwiel</value>
+  </data>
+  <data name="overname_scheme_roof" xml:space="preserve">
+    <value>Dak</value>
+  </data>
+  <data name="overname_scheme_trunk" xml:space="preserve">
+    <value>Kofferdeksel</value>
+  </data>
+  <data name="overname_scheme_windshield" xml:space="preserve">
+    <value>Voorruit</value>
+  </data>
+  <data name="overname_scheme_inside" xml:space="preserve">
+    <value>Interieur</value>
+  </data>
+  <data name="overname_scheme_underneath" xml:space="preserve">
+    <value>Onderkant</value>
+  </data>
+  <data name="2dehands_overview_scheme_photosDamage" xml:space="preserve">
+    <value>Schade</value>
+  </data>
+  <data name="2dehands_overview_scheme_photosDocs" xml:space="preserve">
+    <value>Inschrijvingsbewijs voorzijde, inschrijvingsbewijs achterzijden, verzekeringsbewijs</value>
+  </data>
+  <data name="2dehands_overview_scheme_photosInside" xml:space="preserve">
+    <value>Foto km-stand , Chassisnummer</value>
+  </data>
+  <data name="2dehands_overview_scheme_photosOutside" xml:space="preserve">
+    <value>Foto overzicht wagen</value>
+  </data>
+  <data name="overname_errormessage_chassisnumber" xml:space="preserve">
+    <value>Gelieve een chassisnummer in te vullen</value>
+  </data>
+  <data name="_2dehands_chassisnumber" xml:space="preserve">
+    <value>Chassis nummer</value>
+  </data>
+  <data name="overname_is_insured" xml:space="preserve">
+    <value>Schade is verzekerd</value>
+  </data>
+  <data name="_2dehands_success_successMessageContinue_damage" xml:space="preserve">
+    <value>Uw verzoek wordt momenteel verwerkt, we sturen u spoedig een antwoord op volgend adres:</value>
+  </data>
+  <data name="_2dehands_success_successMessage_damage" xml:space="preserve">
+    <value>Uw verzoek tot schade aangifte werd succesvol aan ons bezorgd.</value>
+  </data>
+  <data name="_2dehands_overview_scheme_title" xml:space="preserve">
+    <value>Schade overzicht</value>
+  </data>
+  <data name="general_empty_field" xml:space="preserve">
+    <value>Niets ingegeven</value>
+  </data>
+  <data name="general_first_lastname" xml:space="preserve">
+    <value>Voor- en achternaam</value>
+  </data>
+  <data name="overname_errormessage_first_lastname" xml:space="preserve">
+    <value>Vul dit veld in.</value>
+  </data>
+  <data name="overname_scheme_damage_heavy" xml:space="preserve">
+    <value>zwaar beschadigd</value>
+  </data>
+  <data name="overname_scheme_damage_light" xml:space="preserve">
+    <value>lichte schade</value>
+  </data>
+  <data name="overname_scheme_title" xml:space="preserve">
+    <value>Duid alle beschadigde onderdelen aan</value>
+  </data>
+  <data name="overname_your_insurance" xml:space="preserve">
+    <value>Uw verzekering</value>
+  </data>
+</root>

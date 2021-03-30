@@ -1,0 +1,28 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-newspaper-alt color-red",
+  "Thumbnail": "folder.png",
+  "Description": "De node waaronder artikels worden ingeladen.",
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": null,
+  "AllowedChildContentTypes": [
+    "umb://document-type/fedffca41ef547bc912fc6fded952a8e"
+  ],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/d0928d520a5f4336a38d3307e64a789b",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/fedffca41ef547bc912fc6fded952a8e",
+      "Ordering": false,
+      "Mode": 0
+    }
+  ],
+  "Name": "Artikels",
+  "Alias": "articles",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

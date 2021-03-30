@@ -1,0 +1,50 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Tweedehandswagens>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "Shared/Master.cshtml";
+}
+
+@*<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="https://cfmapistorp01.blob.core.windows.net/resources/Styles/bootstrap/slider.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/second-hand/shop.css" />
+
+    <section id="collection" class="margin-top-80 margin-bottom-60">
+        <div class="container">
+            <div class="row margin-top-60 margin-bottom-20">
+                <div class="col-md-9">
+                    <div class="row" id="vehicle-list"></div>
+                </div>
+                <div class="col-md-3" id="vehicle-search"></div>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://cfmapistorp01.blob.core.windows.net/resources/Scripts/Utils.min.js"></script>
+    <script type="text/javascript" src="https://cfmapistorp01.blob.core.windows.net/resources/Scripts/plugin.ui.min.js"></script>
+    <script type="text/javascript" src="https://cfmapistorp01.blob.core.windows.net/resources/Scripts/bootstrap/bootstrap-slider.min.js"></script>
+
+    <script type="text/javascript" src="https://cfmapistorp01.blob.core.windows.net/resources/Scripts/Stock.min.js"></script>
+    <script type="text/javascript" src="https://cfmapistorp01.blob.core.windows.net/resources/Scripts/Search.min.js"></script>
+    <script type="text/javascript" src="https://cfmapistorp01.blob.core.windows.net/resources/Scripts/CarComparer.min.js"></script>*@
+
+@*@Scripts.Render("~/Js/CarStock")*@
+
+<style>
+    .iframe-container {
+        margin-top: 119px;
+        height: calc(100vh - 145px);
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        background-color: #f0f1f3;
+    }
+</style>
+<div class="iframe-container">
+    <iframe id="used-cars"
+            src="https://www.felix-usedcars.be"
+            frameborder="0">
+    </iframe>
+</div>

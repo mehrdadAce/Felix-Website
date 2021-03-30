@@ -1,0 +1,12 @@
+{
+  "EditorAlias": "Felix.LaborArrangements",
+  "DatabaseType": 0,
+  "PreValues": {},
+  "Parent": null,
+  "Udi": "umb://data-type/b3b7d5034b674d398cc6da892af881c3",
+  "Dependencies": [],
+  "Name": "_LaborArrangements",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

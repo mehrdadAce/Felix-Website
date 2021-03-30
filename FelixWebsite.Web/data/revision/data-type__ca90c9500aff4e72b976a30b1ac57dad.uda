@@ -1,0 +1,14 @@
+{
+  "EditorAlias": "Umbraco.TinyMCEv3",
+  "DatabaseType": 0,
+  "PreValues": {
+    "0": ",code,undo,redo,cut,copy,mcepasteword,stylepicker,bold,italic,bullist,numlist,outdent,indent,mcelink,unlink,mceinsertanchor,mceimage,umbracomacro,mceinserttable,umbracoembed,mcecharmap,|1|1,2,3,|0|500,400|1049,|true|"
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/ca90c9500aff4e72b976a30b1ac57dad",
+  "Dependencies": [],
+  "Name": "Richtext editor",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

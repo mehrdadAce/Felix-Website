@@ -1,0 +1,25 @@
+﻿.vehicle-row > td {
+    border-top: 0px !important;
+}
+
+
+.title {
+    text-transform: uppercase;
+}
+
+td,th {
+    padding: 15px !important;
+}
+
+.price > td::before {
+    content: "€ ";
+}
+
+.highlight > td {
+    color: #cf0227;
+    font-weight: 600;
+}
+
+th {
+    text-transform: uppercase;
+}

@@ -1,0 +1,28 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-users color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Oplijsting van vacatures",
+  "AllowedAtRoot": false,
+  "IsContainer": true,
+  "Parent": null,
+  "AllowedChildContentTypes": [
+    "umb://document-type/98ef09d225974f64b9618177e0429082"
+  ],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/23a723beaab54205b02827761836dd67",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/98ef09d225974f64b9618177e0429082",
+      "Ordering": false,
+      "Mode": 0
+    }
+  ],
+  "Name": "Vacatures",
+  "Alias": "vacancies",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

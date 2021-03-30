@@ -1,0 +1,70 @@
+﻿#slider {
+
+}
+.slide-title {
+    font-weight: 400;
+    color: #fff;
+    font-size: 50px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+.slider-btn .btn-theme-border {
+    background-color: transparent;
+    color: #cf0227;
+}
+
+.slider-btn .btn-theme-border:hover {
+    color: #fff;
+    background-color: #cf0227;
+}
+
+.slider-btn .btn-white:hover {
+    color: #cf0227;
+}
+
+.slider-btn .btn-white {
+    color: #fff;
+}
+
+.slide-caption {
+    color: #fff;
+    font-weight: 300;
+}
+
+.full-width-banner-container {
+    padding: 0px;
+    overflow: hidden;
+}
+
+caption.slider-title, .slider-title {
+    font-size: 50px;
+    line-height: 70px;
+    font-weight: 300;
+    color: rgb(255,255,255);
+    text-decoration: none;
+    padding: 0px;
+    background-color: transparent;
+    border-width: 0px;
+    letter-spacing: 0.1em;
+    border-color: rgb(255,255,255);
+    border-style: none;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+.small_text-1 {
+    line-height: 65px;
+    text-shadow: none;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 300 !important;
+    text-transform: capitalize;
+}
+
+.slider-title2 {
+    color: #eee;
+    font-size: 17px;
+    font-weight: 400;
+    font-family: 'Arimo', sans-serif;
+}

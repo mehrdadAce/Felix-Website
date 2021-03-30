@@ -1,0 +1,35 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.GroupHome>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@using FelixWebsite.Core.Helpers;
+@{
+    Brands brands = Model.Content.Children().OfType<Brands>().FirstOrDefault();
+    List<Brand> brandList = brands.Children().OfType<Brand>().ToList();
+    var distribution = brandList.DistributeInColumns(4, 2);
+}
+<section id="brands" class="margin-bottom-80" style="background:linear-gradient(0deg,rgba(245, 245, 245, 0.78),rgba(245, 245, 245, 0.95)),url('@Model.Content.BackgroundBrands.Url') no-repeat center">
+    <div class="container-fluid no-padding">
+        <div class="row no-margin">
+            @foreach (var brand in brandList)
+            {
+                <div class="@distribution.GetBootstrapClassesForItem(brand) no-paddding">
+                    <div class="img">
+                        @if (brandList.Count() == 2)
+                        {
+                            <img class="img-responsive" src="@(brand.Image.Url + "?width=952&height=550&mode=crop&anchor=center")" alt="@brand.Title">
+                        }
+                        else
+                        {
+                            <img class="img-responsive" src="@(brand.Image.Url + "?width=768&height=550&mode=crop&anchor=center")" alt="@brand.Title">
+                        }
+
+                        <a href="@brand.Url" class="over" style="background-color:@brand.Color.Color.ConvertHexToRgba(5)">
+                            <div class="img-desc">
+                                <img class="img-responsive" src="@(brand.Logo.Url + "?width=2000&height=1500&mode=crop&anchor=center")" alt="@brand.Title">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

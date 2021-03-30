@@ -1,0 +1,173 @@
+﻿
+<head>
+
+    <link rel="stylesheet" type="text/css" href="../ion-icons/css/ionicons.css">
+
+</head>
+<body>
+
+    <div class="umb-panel umb-editor-wrapper" ng-controller="DamageToolController" ng-init="startup()">
+        <div class="umb-editor-header umb-panel-header">
+            <div class="umb-panel-header-content-wrapper">
+                <div class="umb-panel-header-content">
+                    <div class="umb-panel-header-left-side">
+                        <div class="umb-panel-header-title-wrapper">
+                            <div class="umb-panel-header-name">Schade aangifte tool</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="umb-editor-container umb-panel-body">
+            <div class="umb-pane">
+                <div class="form-horizontal tab-content">
+                    <div class="umb-tab-pane tab-pane active">
+                        <div class="umb-tab-pane-inner">
+                            <div class="umb-box information-box">
+                                <div class="umb-box-header">
+                                    <div class="umb-box-header-title">
+                                        Informatie
+                                    </div>
+                                </div>
+                                <div class="box-form umb-box-content">
+                                    <div class="umb-property">
+                                        <div class="umb-control-group control-group">
+                                            <div class="umb-el-wrap">
+                                                <label>Naam:</label>
+                                                <span>{{ acquisitionData.Name}}</span>
+                                            </div>
+                                            <div class="umb-el-wrap">
+                                                <label>Email:</label>
+                                                <span>{{ acquisitionData.Email }}</span>
+                                            </div>
+                                            <div class="umb-el-wrap">
+                                                <label>Gsm-nummer:</label>
+                                                <span>{{ acquisitionData.Gsm }}</span>
+                                            </div>
+                                            <div class="umb-el-wrap">
+                                                <label>Nummerplaat:</label>
+                                                <span>{{ acquisitionData.LicensePlate }}</span>
+                                            </div>
+                                            <div class="umb-el-wrap">
+                                                <label>Chassisnummer:</label>
+                                                <span>{{ acquisitionData.Chassisnumber }}</span>
+                                            </div>
+                                            <div ng-if="acquisitionData.IsInsured">
+                                                <div class="umb-el-wrap">
+                                                    <label>Makelaarnaam:</label>
+                                                    <span>{{ acquisitionData.AgentName}}</span>
+                                                </div>
+                                                <div class="umb-el-wrap">
+                                                    <label>Makelaar email:</label>
+                                                    <span>{{ acquisitionData.AgentEmail }}</span>
+                                                </div>
+                                                <div class="umb-el-wrap">
+                                                    <label>Makelaar gemeente:</label>
+                                                    <span>{{ acquisitionData.AgentCity }}</span>
+                                                </div>
+                                                <div class="umb-el-wrap">
+                                                    <label>Makelaar gsm-nummer:</label>
+                                                    <span>{{ acquisitionData.AgentCellphone }}</span>
+                                                </div>
+                                                <div class="umb-el-wrap">
+                                                    <label>Verzekeraar:</label>
+                                                    <span>{{ acquisitionData.Insurance }}</span>
+                                                </div>
+                                            </div>
+                                            <div class="umb-el-wrap" ng-if="acquisitionData.Remarks != string.Empty">
+                                                <label>Opmerkingen:</label>
+                                                <span>{{ acquisitionData.Remarks }}</span>
+                                            </div>
+                                            <div class="umb-el-wrap">
+                                                <label>Aangemaakt op:</label>
+                                                <span>{{ acquisitionData.CreatedDate | date:'yyyy-MM-dd HH:mm' }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="scheme-background margin-left-27">
+                                <div id="scheme-in-overview" class="scheme-body">
+
+                                </div>
+                            </div>
+                            <div class="wrapper">
+                                <div class="scheme-background">
+                                    <div ng-repeat="schemePictureModel in overviewModel.SchemePictures">
+                                        <div class="row">
+                                            <div class="col-md-3 title">
+                                                <h3 class="margin-left-10">{{schemePictureModel.ImageType}}</h3>
+                                            </div>
+                                            <div class="col-md-9"></div>
+                                        </div>
+                                        <div class="row scheme-picture-row">
+                                            <span ng-repeat="picture in schemePictureModel.SchemePictures track by $index">
+                                                <img src="{{ picture.MediaUrl }}" alt="Schade {{schemePictureModel.ImageType}}: {{$index + 1}}" class="imgSettings dmgSettings scheme-img" />
+                                                <!-- class="containerTemplate damageContainer" -->
+                                                <!--  -->
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="columnLeft">
+                                    <div class="columnContainer columnLeft">
+                                        <div class=" title">
+                                            <h3 class="margin-left-10">Buitenkant</h3>
+                                        </div>
+
+                                        <img src="{{ overviewModel.LeftFrontUrl }}" alt="Linksvoor" class="imgSettings containerTemplate mainContainer" />
+                                        <img src="{{ overviewModel.RightFrontUrl }}" alt="Rechtsvoor" class="imgSettings containerTemplate mainContainer" />
+                                        <img src="{{ overviewModel.LeftBackUrl }}" alt="Linksachter" class="imgSettings containerTemplate mainContainer" />
+                                        <img src="{{ overviewModel.RightBackUrl }}" alt="Rechtsachter" class="imgSettings containerTemplate mainContainer" />
+
+                                    </div>
+                                    <div class="columnContainer columnRight">
+                                        <div class=" title">
+                                            <h3 class="margin-left-10">Km-stand , Chassisnummer</h3>
+                                        </div>
+                                        <img src="{{ overviewModel.KmUrl }}" alt="Kilometerstand" class="imgSettings containerTemplate mainContainer" />
+                                        <img src="{{ overviewModel.ChassisNumberUrl }}" alt="Chassisnummer" class="imgSettings containerTemplate mainContainer" />
+
+                                    </div>
+                                </div>
+                                <div class="rowContainer" ng-if="acquisitionData.IsInsured">
+                                    <div class=" title">
+                                        <h3 class="margin-left-10">Documenten</h3>
+                                    </div>
+                                    <img src="{{ overviewModel.EnrollmentFrontUrl }}" alt="Voorkant inschrijvingsbewijs" class="imgSettings documentsContainer-damage" />
+                                    <img src="{{ overviewModel.EnrollmentBackUrl }}" alt="Achterkant inschrijvingsbewijs" class="imgSettings documentsContainer-damage" />
+                                    <img src="{{ overviewModel.ProofOfInsuranceUrl }}" alt="Verzekeringsbewijs" class="imgSettings documentsContainer-damage" />
+                                    <img src="{{ overviewModel.ExaminationUrl }}" alt="Keuringsbewijs" class="imgSettings documentsContainer-damage" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal" class="modal" tabindex="0" ng-keydown="checkKeycode($event)">
+            <span class="close">&times;</span>
+            <h3 class="angle angleLeft" ng-click="arrowLeft($event,0)"><span class="close">&lt;</span></h3>
+            <img class="modal-content" id="image" />
+            <h3 class="angle angleRight" ng-click="arrowRight($event,1)"><span class="close">&gt;</span></h3>
+            <div id="caption"></div>
+        </div>
+
+        <div class="umb-tab-buttons umb-editor-drawer">
+            <div class="umb-editor-drawer-content">
+                <div class="umb-editor-drawer-content__left-side"></div>
+                <div class="umb-editor-drawer-content__right-side">
+                    <div class="btn-group umb-button-group">
+                        <button type="button" class="btn umb-button__button btn-success" ng-click="downloadFiles()">
+                            <span class="umb-button__content">
+                                Alle bestanden downloaden
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>

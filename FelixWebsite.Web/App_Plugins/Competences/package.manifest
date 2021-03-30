@@ -1,0 +1,19 @@
+﻿{   
+    propertyEditors: [      
+        {
+            alias: "Felix.Competences",
+            name: "Competences",
+            editor: {
+                view: "~/App_Plugins/Competences/Competences.html",
+				"valueType": "JSON"
+            }
+        }
+    ]
+    ,
+    javascript: [
+        '~/App_Plugins/Competences/Competences.controller.js'
+    ],
+	css:[
+		'~/App_Plugins/Competences/Competences.css',
+	]
+}

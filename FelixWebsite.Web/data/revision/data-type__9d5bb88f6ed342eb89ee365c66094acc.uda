@@ -1,0 +1,15 @@
+{
+  "EditorAlias": "Umbraco.TrueFalse",
+  "DatabaseType": 2,
+  "PreValues": {
+    "default": "0",
+    "labelOn": null
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/9d5bb88f6ed342eb89ee365c66094acc",
+  "Dependencies": [],
+  "Name": "_Vacatures",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

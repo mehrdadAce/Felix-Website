@@ -1,0 +1,71 @@
+﻿@using FelixWebsite.Core.App_GlobalResources
+
+@* Contact feedback (contact) *@
+@if (TempData[FelixResources.temp_is_contact_success] != null)
+{
+    if ((bool)TempData[FelixResources.temp_is_contact_success] == true)
+    {
+        <script>toastr.success('@FelixResources.notification_contact_success_message', '@FelixResources.notification_success_title')</script>
+    }
+    else
+    {
+        <script>toastr.error('@FelixResources.notification_contact_error_message', '@FelixResources.notification_error_title')</script>
+    }
+    TempData[FelixResources.temp_is_contact_success] = null;
+}
+
+@* Testdrive feedback (testrit) *@
+@if (TempData[FelixResources.temp_is_testdrive_success] != null)
+{
+    if ((bool)TempData[FelixResources.temp_is_testdrive_success] == true)
+    {
+        <script>toastr.success('@FelixResources.notification_testdrive_success_message', '@FelixResources.notification_success_title')</script>
+    }
+    else
+    {
+        <script>toastr.error('@FelixResources.notification_testdrive_error_message', '@FelixResources.notification_error_title')</script>
+    }
+    TempData[FelixResources.temp_is_testdrive_success] = null;
+}
+
+@* Quotation feedback (offerte) *@
+@if (TempData[FelixResources.temp_is_quotation_success] != null)
+{
+    if ((bool)TempData[FelixResources.temp_is_quotation_success] == true)
+    {
+        <script>toastr.success('@FelixResources.notification_quotation_success_message', '@FelixResources.notification_success_title')</script>
+    }
+    else
+    {
+        <script>toastr.error('@FelixResources.notification_quotation_error_message', '@FelixResources.notification_error_title')</script>
+    }
+    TempData[FelixResources.temp_is_quotation_success] = null;
+}
+
+@* Job Application feedback (sollicitatie) *@
+@if (TempData[FelixResources.temp_is_jobapplication_success] != null)
+{
+    if ((bool)TempData[FelixResources.temp_is_jobapplication_success] == true)
+    {
+        <script>toastr.success('@FelixResources.notification_jobapplication_success_message', '@FelixResources.notification_success_title')</script>
+    }
+    else
+    {
+        <script>toastr.error('@FelixResources.notification_jobapplication_error_message', '@FelixResources.notification_error_title')</script>
+    }
+    TempData[FelixResources.temp_is_jobapplication_success] = null;
+}
+
+@* Job Application feedback (sollicitatie) *@
+@if (TempData[FelixResources.temp_is_carrental_success] != null)
+{
+    if ((bool)TempData[FelixResources.temp_is_carrental_success] == true)
+    {
+        <script>toastr.success('@FelixResources.notification_carrental_succes_message', '@FelixResources.notification_success_title')</script>
+    }
+    else
+    {
+        <script>toastr.error('@FelixResources.notification_carrental_error_message', '@FelixResources.notification_error_title')</script>
+    }
+    TempData[FelixResources.temp_is_carrental_success] = null;
+}

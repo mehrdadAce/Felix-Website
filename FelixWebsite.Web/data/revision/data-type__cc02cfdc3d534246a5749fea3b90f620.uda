@@ -1,0 +1,15 @@
+{
+  "EditorAlias": "Umbraco.TrueFalse",
+  "DatabaseType": 2,
+  "PreValues": {
+    "default": "0",
+    "labelOn": null
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/cc02cfdc3d534246a5749fea3b90f620",
+  "Dependencies": [],
+  "Name": "_Breadcrumb",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

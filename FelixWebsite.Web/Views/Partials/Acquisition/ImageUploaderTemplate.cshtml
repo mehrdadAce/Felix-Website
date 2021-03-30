@@ -1,0 +1,77 @@
+﻿@using FelixWebsite.Bdo.Models.Acquisition
+@using FelixWebsite.Core.App_GlobalResources
+
+@{
+    PhotoModel photoModel = (PhotoModel)Model;
+}
+
+    <form id="imageUploader" class="slider-@photoModel.EncompassingDiv item @(photoModel.Active ? "active" : string.Empty) photos" enctype="multipart/form-data" action="@Url.Action("PostPhotos", "AcquisitionTool")" method="POST">
+        @if (!photoModel.Multiple)
+        {
+            @Html.Partial("Acquisition/ImageUploader")
+        }
+        else
+        {
+            @Html.Partial("Acquisition/ImageUploaderMultiple")
+
+        }
+        <div class="carousel-caption @(photoModel.CanSkip ? "overlayUnderButtonSkip" : string.Empty)">
+            <h3 class="robotoStyle">@photoModel.TitleText </h3>
+            <p class="robotoStyle">@photoModel.Text</p>
+        </div>
+
+        @if (photoModel.Multiple && photoModel.CanSkip)
+        {
+            <div class="buttongroupSkip">
+                <div class="@(!string.IsNullOrEmpty(photoModel.TooltipText) ? "tooltip opacity-1" : string.Empty)">
+                    <button type="button" class="btn btn-success skipCurrent hideOnLoad extraMarginContinue btnContinue-@(photoModel.Value) ">
+                        @FelixResources.general_continue
+                        @if (!string.IsNullOrEmpty(photoModel.TooltipText))
+                        {
+                            <span class="tooltiptext">@(photoModel.TooltipText)</span>
+                        }
+                    </button>
+                </div>
+                <div class="@(!string.IsNullOrEmpty(photoModel.TooltipText) ? "tooltip opacity-1" : string.Empty)">
+                    <button type="button" class="btn btn-danger skipCurrent btnSkip-@(photoModel.Value)">
+                        @FelixResources.general_skip
+                        @if (!string.IsNullOrEmpty(photoModel.TooltipText))
+                        {
+                            <span class="tooltiptext">@(photoModel.TooltipText)</span>
+                        }
+                    </button>
+                </div>
+            </div>
+        }
+        else if (photoModel.CanSkip)
+        {
+            <div class="@(!string.IsNullOrEmpty(photoModel.TooltipText) ? "tooltip opacity-1" : string.Empty)">
+                <button type="button" class="btn btn-danger buttonSkip skipCurrent btnSkip-@(photoModel.Value)">
+                    @FelixResources.general_skip
+                    @if (!string.IsNullOrEmpty(photoModel.TooltipText))
+                    {
+                        <span class="tooltiptext">@(photoModel.TooltipText)</span>
+                    }
+                </button>
+            </div>
+        }
+        else if (photoModel.Multiple)
+        {
+            <div class="buttongroupSkip">
+                <div class="@(!string.IsNullOrEmpty(photoModel.TooltipText) ? "tooltip opacity-1" : string.Empty)">
+                    <button type="button" class="btn btn-success skipCurrent extraMarginContinue btnContinue-@(photoModel.Value) disabled">
+                        @FelixResources.general_continue
+                        @if (!string.IsNullOrEmpty(photoModel.TooltipText))
+                        {
+                            <span class="tooltiptext">@(photoModel.TooltipText)</span>
+                        }
+                    </button>
+                </div>
+            </div>
+        }
+
+        <input type="hidden" name="imageType" value="@photoModel.Value" class="imageType" />
+        <input type="hidden" name="licensePlate" class="inputUserLicensePlate" />
+        <input type="hidden" name="id" class="inputUserId" />   
+        <input type="hidden" name="name" class="inputUserName" />
+    </form>

@@ -1,0 +1,27 @@
+﻿@using FelixWebsite.Core.Helpers
+@model Joboffer
+<div class="col-md-6 col-sm-12 wow animated fadeInUp margin-bottom-30" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+    @if (Model.Img != null && Model.Name != null && Model.JobDescription != null)
+    {
+        <div class="col-sm-12 joboffer-card" style="padding: 1px;">
+            <div class="col-sm-6">
+                <img class="img-responsive full-img margin-top-20 margin-bottom-20" alt="@Model.Name" src="@(Model.Img.Src + Model.Img.GetCropUrl("Vacature"))" width="100%" />
+            </div>
+            <div class="col-sm-6">
+                <div class="c-desc margin-top-20">
+                    <h3>@Model.Name</h3>
+                    <h4 class="felix-red">@(Model.Business.FirstOrDefault().OfType<IBusiness>().BusinessLocation)</h4>
+                    @if (Model.JobDescription.ToString().Length >= 120)
+                    {
+                        @Html.Raw(Model.JobDescription.ToString().TruncateHtml(120, "..."))
+                    }
+                    else
+                    {
+                        @Html.Raw(Model.JobDescription.ToString())
+                    }
+                </div>
+                <a href="@Model.Url" class="link-button margin-bottom-20">bekijk vacature</a>
+            </div>
+        </div>
+    }
+</div>

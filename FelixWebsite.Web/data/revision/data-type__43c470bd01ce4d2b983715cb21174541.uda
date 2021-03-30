@@ -1,0 +1,14 @@
+{
+  "EditorAlias": "Umbraco.RelatedLinks2",
+  "DatabaseType": 0,
+  "PreValues": {
+    "max": "1"
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/43c470bd01ce4d2b983715cb21174541",
+  "Dependencies": [],
+  "Name": "_1RelatedLink",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

@@ -1,0 +1,123 @@
+{
+  "DefaultTemplate": "umb://template/8d9a155e50f744cc8cc65614e7efa6ed",
+  "AllowedTemplates": [
+    "umb://template/8d9a155e50f744cc8cc65614e7efa6ed"
+  ],
+  "Icon": "icon-article color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Artikel op de vacature pagina.",
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": null,
+  "AllowedChildContentTypes": [
+    "umb://document-type/fedffca41ef547bc912fc6fded952a8e"
+  ],
+  "CompositionContentTypes": [
+    "umb://document-type/48b7b8b6139145d0b53b751dcba9bab6",
+    "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "38a2f7ed-0e41-4332-90ca-dddda44811c3",
+      "Name": "Artikel",
+      "SortOrder": 1,
+      "PropertyTypes": [
+        {
+          "Key": "a97231ca-8b03-4b2a-9a36-d80f6a5ce3c1",
+          "Alias": "article",
+          "DataType": "umb://data-type/23eacfd117bf4e1b8cd276bae2cff33b",
+          "Description": "Het artikel van de pagina.",
+          "Mandatory": true,
+          "Name": "Artikel",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "bb22b753-faa4-456b-a7f2-f73602f30a35",
+          "Alias": "img",
+          "DataType": "umb://data-type/28e7752d754248fbb98ea58af870e41d",
+          "Description": "Deze afbeelding wordt weergegeven op de vacature.",
+          "Mandatory": true,
+          "Name": "Afbeelding",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "8fa92b05-ba6a-4d99-bc8b-4d0051961bef",
+      "Name": "Navigatie",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "07163e37-839c-43cb-a579-9a82855ee780",
+          "Alias": "titleInNav",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Titel die wordt getoond wanneer een artikel in de navigatie getoond mag worden op de jobsite",
+          "Mandatory": false,
+          "Name": "Titel in navigatie",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "67aa9660-cc01-4e36-9d7f-8ef22bc1208e",
+          "Alias": "showInNav",
+          "DataType": "umb://data-type/c330408705334683a0fbdc562abed0a9",
+          "Description": "Toon dit artikel in de navigatie op de jobsite.",
+          "Mandatory": false,
+          "Name": "Toon in navigatie",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/fedffca41ef547bc912fc6fded952a8e",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/23eacfd117bf4e1b8cd276bae2cff33b",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/28e7752d754248fbb98ea58af870e41d",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/c330408705334683a0fbdc562abed0a9",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/48b7b8b6139145d0b53b751dcba9bab6",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/fedffca41ef547bc912fc6fded952a8e",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/8d9a155e50f744cc8cc65614e7efa6ed",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Artikel",
+  "Alias": "jobArticle",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

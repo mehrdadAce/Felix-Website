@@ -1,0 +1,16 @@
+﻿@model string
+@using FelixWebsite.Core.App_GlobalResources
+@{ 
+    var x = TempData[Model];
+}
+@if (TempData[Model] != null && TempData[Model].ToString() != "")
+{
+    <div class="modal-body">
+        <div class="row margin-top-40 text-center">
+            <h1 class="margin-bottom-30"><i class="fas fa-exclamation-circle icon-error"></i></h1>
+            <h3>@FelixResources.modal_error</h3>
+            <h4 class="margin-bottom-30">@FelixResources.modal_error_check</h4>
+            <a href="." class="link-button modal-reload-button" style="width: 70% !important;"><i class="fas fa-sync-alt" style="margin-right:15px"></i>Herlaad</a>
+        </div>
+    </div>
+}

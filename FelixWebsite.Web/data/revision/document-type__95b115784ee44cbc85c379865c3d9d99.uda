@@ -1,0 +1,84 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-message-unopened color-red",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": "umb://document-type-container/e9def2683d284c8c83393846d9d63b78",
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "8c8ef94e-c972-420b-8aa4-5f0e937989e1",
+      "Name": "General",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "6a57ec39-961a-425b-a688-8de058701214",
+          "Alias": "cC",
+          "DataType": "umb://data-type/b4988869d382481986bdec479204f27d",
+          "Description": "CC emails",
+          "Mandatory": false,
+          "Name": "CC",
+          "SortOrder": 3,
+          "Validation": ""
+        },
+        {
+          "Key": "7012f2f0-65b6-463a-96d5-ccc620b0ab00",
+          "Alias": "fromName",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De naam van de afzender",
+          "Mandatory": true,
+          "Name": "Van (Naam)",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "af9eb86d-d8a6-44e4-b83b-fa48b75fcced",
+          "Alias": "To",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Email van de interne ontvanger",
+          "Mandatory": true,
+          "Name": "Naar",
+          "SortOrder": 2,
+          "Validation": "[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+"
+        },
+        {
+          "Key": "c93a2050-2d43-4516-9fca-bf2edf52a962",
+          "Alias": "from",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Email van de afzender",
+          "Mandatory": true,
+          "Name": "Van",
+          "SortOrder": 0,
+          "Validation": "[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/95b115784ee44cbc85c379865c3d9d99",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/b4988869d382481986bdec479204f27d",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/e9def2683d284c8c83393846d9d63b78",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "EmailSetting",
+  "Alias": "emailSetting",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

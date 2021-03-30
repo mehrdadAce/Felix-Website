@@ -1,0 +1,204 @@
+﻿@using FelixWebsite.Core.Helpers
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    var home = Umbraco.AssignedContentItem.AncestorOrSelf(1).OfType<GroupHome>();
+    var page = Umbraco.AssignedContentItem;
+    var rootBreadcrumb = Session.GetBreadcrumbRoot(Umbraco.AssignedContentItem);
+}
+@*
+    Navigation:
+    -----------
+    The shown navigation items are based on 2 values:
+    1.) The first page visited by the user.
+    2.) The page the user is currently visiting.
+*@
+<header id="header">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button id="brandLogo" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand navbar-brand brand" href="@rootBreadcrumb.UrlAbsolute()">
+                    <div class="row">
+                        @Html.Partial("Navigation/BrandImage", rootBreadcrumb)
+                    </div>
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    @if (page is GroupHome)
+                    {
+                        var homepage = page as GroupHome;
+
+                        <li class="active">
+                            <a class="scroll" target="slider">Home</a>
+                        </li>
+                        <li>
+                            <a class="scroll" target="establishments">@homepage.NavItem1</a>
+                        </li>
+                        <li>
+                            <a class="scroll" target="work-for-felix">@homepage.NavItem2</a>
+                        </li>
+                        <li>
+                            <a class="scroll" target="who-we-are">@homepage.NavItem3</a>
+                        </li>
+                        <li id="contact">
+                            <a data-toggle="modal" data-target="#modal">@homepage.NavItem5</a>
+                        </li>
+                    }
+                    else if (page is Brand)
+                    {
+                        var brands = home.Children().OfType<Brands>().FirstOrDefault();
+
+                        <li class="active">
+                            <a class="scroll" target="slider">Home</a>
+                        </li>
+                        <li>
+                            <a class="scroll" target="establishments">@brands.NavBusinesses</a>
+                        </li>
+                        <li>
+                            <a class="scroll" target="services">@brands.NavActions</a>
+                        </li>
+                    }
+                    else if (page is BusinessBrand || rootBreadcrumb is BusinessBrand)
+                    {
+                        var businesses = home.Children().OfType<Businesses>().FirstOrDefault();
+                        var isBusinessBrand = page is BusinessBrand;
+
+                        var activeClass = isBusinessBrand ? "class='active'" : "";
+                        var linkslider = !isBusinessBrand ? $"href={rootBreadcrumb.Url}" : "target='slider'";
+                        var linkContact = !isBusinessBrand ? $"href={rootBreadcrumb.Url}#contact" : "target='contact'";
+                        var linkService = !isBusinessBrand ? $"href={rootBreadcrumb.Url}#services" : "target='services'";
+
+                        <li @Html.Raw(activeClass)>
+                            <a class="scroll" @Html.Raw(linkslider)>Home</a>
+                        </li>
+                        <li>
+                            <a class="scroll" @Html.Raw(linkService)>@businesses.NavActions</a>
+                        </li>
+
+                        @Html.Partial("Navigation/AdditionalNavigation", page)
+
+                        <li>
+                            <a class="scroll" @Html.Raw(linkContact)>@businesses.NavContact</a>
+                        </li>
+                    }
+                    else if (page is BusinessCombined || rootBreadcrumb is BusinessCombined)
+                    {
+                        var businesses = home.Children().OfType<Businesses>().FirstOrDefault();
+                        var isBusinessCombined = page is BusinessCombined;
+
+                        var activeClass = isBusinessCombined ? "class='active'" : "";
+                        var linkslider = !isBusinessCombined ? $"href={rootBreadcrumb.Url}" : "target='slider'";
+                        var linkService = !isBusinessCombined ? $"href={rootBreadcrumb.Url}#services" : "target='services'";
+                        var linkBusinesses = !isBusinessCombined ? $"href={rootBreadcrumb.Url}#establishments" : "target='establishments'";
+
+                        <li @Html.Raw(activeClass)>
+                            <a class="scroll" @Html.Raw(linkslider)>Home</a>
+                        </li>
+                        <li>
+                            <a class="scroll" @Html.Raw(linkService)>@businesses.NavActions</a>
+                        </li>
+                        <li>
+                            <a class="scroll" @Html.Raw(linkBusinesses)>@businesses.NavBusinesses</a>
+                        </li>
+
+                        @Html.Partial("Navigation/AdditionalNavigation", page)
+
+                    }
+                    else if (page is Joboffers || page is Joboffer || page is JobArticle || page is Story)
+                    {
+                        var articles = home.Children().OfType<Joboffers>().FirstOrDefault().Children.OfType<Articles>().FirstOrDefault().Children.OfType<JobArticle>().ToList();
+
+                        <li>
+                            <a href="@home.Url">Home</a>
+                        </li>
+
+                        foreach (JobArticle article in articles)
+                        {
+                            if (article.ShowInNav && !article.TitleInNav.IsNullOrWhiteSpace())
+                            {
+                                if (article.Children.OfType<JobArticle>().Any(x => x.ShowInNav && !x.TitleInNav.IsNullOrWhiteSpace()))
+                                {
+                                    @childPages(article, article.Children().OfType<IPublishedContent>().ToList(), 1)
+                                }
+                                else
+                                {
+                                    <li>
+                                        <a href="@article.Url">@article.TitleInNav</a>
+                                    </li>
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        @Html.Partial("Navigation/AdditionalNavigation", page)
+                    }
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+@helper childPages(JobArticle parentArticle, List<IPublishedContent> jobArticles, int ancestorLevel)
+{
+    if (jobArticles.Any())
+    {
+        @(ancestorLevel == 1 ? Html.Raw("<li class='dropdown root'>") : Html.Raw("<li class='dropdown dropdown-submenu'>"))
+        <a href="@parentArticle.Url" class="dropdown-toggle" role="button" aria-haspopup="true">@parentArticle.TitleInNav</a>
+        <ul class="dropdown-menu">
+            @foreach (var jobArticle in jobArticles.OfType<IPublishedContent>())
+            {
+                var article = jobArticle as JobArticle;
+                if (article.ShowInNav == true && !article.TitleInNav.IsNullOrWhiteSpace())
+                {
+                    if (article.Children.OfType<JobArticle>().Where(x => x.ShowInNav == true && !x.TitleInNav.IsNullOrWhiteSpace()).Any())
+                    {
+                        @childPages(article, article.Children().OfType<IPublishedContent>().ToList(), ancestorLevel + 1)
+                    }
+                    else
+                    {
+                        <li><a href="@article.Url">@article.TitleInNav</a></li>
+                    }
+                }
+            }
+        </ul>
+        @Html.Raw("</li>")
+    }
+}
+
+<script type="text/javascript">
+    $('.navbar-brand img').each(function () {           // Note: {.post-thumb img} is css selector of the image tag
+        var t = $(this),
+            s = 'url(' + t.attr('src') + ')',
+            bg = t.css('background-color'),
+            p = t.parent(),
+            d = $('<div></div>'),
+            sd = $('<div></div>');
+        t.hide();
+        p.append(d);
+        d.append(sd);
+        d.css({
+            'display': 'inline-block',
+            'height': 80,
+            'width': 120,
+            'padding': '9px',
+            'margin-top': '20px',
+            'background-color': bg
+        });
+        sd.css({
+            'display': 'inline-block',
+            'height': 62,
+            'width': 102,
+            'background-repeat': 'no-repeat',
+            'background-position': 'center',
+            'background-image': s,
+            'background-size': 'contain',
+        });
+    });
+</script>

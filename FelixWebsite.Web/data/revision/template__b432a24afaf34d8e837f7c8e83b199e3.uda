@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/SchadeAangifte.cshtml",
+  "Master": null,
+  "Udi": "umb://template/b432a24afaf34d8e837f7c8e83b199e3",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/SchadeAangifte.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Schade aangifte",
+  "Alias": "SchadeAangifte",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "2.0.14"
+}

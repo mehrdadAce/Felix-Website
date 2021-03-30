@@ -1,0 +1,3 @@
+﻿<div ng-controller="DropdownController" ng-init="GetData('/umbraco/backoffice/PositionValues/GetPositionScheduleType')">
+    <select class="umb-editor umb-dropdown" name="dropDownList" ng-model="selected" ng-options="laborArrangement as laborArrangement.Beschrijving for laborArrangement in data track by laborArrangement.Code"></select>
+</div>

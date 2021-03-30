@@ -1,0 +1,18 @@
+﻿{
+  "propertyEditors": [
+    {
+      "alias": "Felix.LaborSystems",
+      "name": "LaborSystems",
+      "editor": {
+        "view": "~/App_Plugins/LaborSystems/LaborSystems.html",
+        "valueType": "JSON"
+      }
+    }
+  ],
+  "javascript": [
+    "~/App_Plugins/Shared/Dropdown/Dropdown.controller.js"
+  ],
+  "css": [
+    "~/App_Plugins/Shared/Dropdown/Dropdown.css"
+  ]
+}

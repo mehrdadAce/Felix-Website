@@ -1,0 +1,12 @@
+{
+  "EditorAlias": "Felix.LaborContracts",
+  "DatabaseType": 0,
+  "PreValues": {},
+  "Parent": null,
+  "Udi": "umb://data-type/41b9cfbbd78b410bbc6a7f0b09529977",
+  "Dependencies": [],
+  "Name": "_LaborContracts",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

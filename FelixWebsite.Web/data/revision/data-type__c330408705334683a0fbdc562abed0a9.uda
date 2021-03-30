@@ -1,0 +1,15 @@
+{
+  "EditorAlias": "Umbraco.TrueFalse",
+  "DatabaseType": 2,
+  "PreValues": {
+    "default": "0",
+    "labelOn": ""
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/c330408705334683a0fbdc562abed0a9",
+  "Dependencies": [],
+  "Name": "_Checkbox",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

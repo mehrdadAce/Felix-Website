@@ -1,0 +1,14 @@
+﻿@model string
+@using FelixWebsite.Core.Models
+@using FelixWebsite.Core.App_GlobalResources
+@if (TempData[Model] != null && TempData[Model].ToString() != "")
+{
+    var message = (MessageVM)TempData[Model];
+    TempData[Model] = "";
+    <div class="modal-body">
+        <div class="row margin-top-40 text-center">
+            <h1 class="margin-bottom-30"><i class="fas fa-check-circle icon-success"></i></h1>
+            <h2 class="margin-bottom-30 text-success">@FelixResources.action_model_success</h2>
+        </div>
+    </div>
+}

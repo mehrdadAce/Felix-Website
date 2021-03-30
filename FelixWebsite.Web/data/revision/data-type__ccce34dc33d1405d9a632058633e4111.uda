@@ -1,0 +1,12 @@
+{
+  "EditorAlias": "Felix.Competences",
+  "DatabaseType": 0,
+  "PreValues": {},
+  "Parent": null,
+  "Udi": "umb://data-type/ccce34dc33d1405d9a632058633e4111",
+  "Dependencies": [],
+  "Name": "_Competences",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

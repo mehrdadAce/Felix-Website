@@ -1,0 +1,17 @@
+﻿{   
+    propertyEditors: [      
+        {
+            alias: "Felix.SoftSkills",
+            name: "Softskills",
+            editor: {
+                view: "~/App_Plugins/Softskills/Softskills.html", "valueType": "JSON"
+            }
+        }
+    ],
+    javascript: [
+        '~/App_Plugins/Softskills/Softskills.controller.js'
+    ],
+		css:[
+		'~/App_Plugins/Softskills/Softskills.css'
+	]
+}

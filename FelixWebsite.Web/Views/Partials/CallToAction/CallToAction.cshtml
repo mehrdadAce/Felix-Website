@@ -1,0 +1,20 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ICallToAction>
+@if (!Model.Content.CtaTitle.IsNullOrWhiteSpace() && !Model.Content.CtaSubtitle.IsNullOrWhiteSpace())
+{
+    <div class="cta-dark padding-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h2>@Model.Content.CtaTitle</h2>
+                    <p>@Model.Content.CtaSubtitle</p>
+                </div>
+                <div class="col-sm-4">
+                    @if (Model.Content.CtaLink != null && Model.Content.CtaLink.FirstOrDefault().Link != null && Model.Content.CtaLink.FirstOrDefault().Caption != null)
+                    {
+                        <a href="@Model.Content.CtaLink.FirstOrDefault().Link" class="btn btn-white btn-lg">@Model.Content.CtaLink.FirstOrDefault().Caption</a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+}

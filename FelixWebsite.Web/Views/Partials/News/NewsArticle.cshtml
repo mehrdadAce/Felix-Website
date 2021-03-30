@@ -1,0 +1,32 @@
+﻿@model SocialMediaArticle
+<div class="news-post-container">
+    <div class="row">
+        @if (!string.IsNullOrWhiteSpace(Model.ImgUrl))
+        {
+            <div class="col-md-4 col-sm-12 col-xs-12 post-thumbnail">
+                <a href="javascript:void(false);">
+                    <img src="@Model.ImgUrl" class="img-responsive" alt="@Model.Name" width="100%" />
+                </a>
+            </div>
+        }
+        else
+        {
+            <div class="col-md-4 col-sm-12 col-xs-12 post-thumbnail news-no-image">
+                <div class="news-brand-background">
+                    <h3 class="text-center">
+                        <a href="javascript:void(false);">
+                            <i class="far fa-newspaper margin-top-40 margin-bottom-40"></i>
+                        </a>
+                    </h3>
+                </div>
+            </div>
+        }
+
+        <div class="col-md-8 col-sm-12 col-xs-12">
+            <div class="article-text">
+                <h3 class="post-title"><a href="javascript:void(false);">@Model.Name <br/> <small>op @Model.CreateDate.ToString("dd/MM/yyyy")</small></a></h3>
+                <p>@Model.Text</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+.navbar-default {
+    margin-bottom: 0px;
+    background-color: #fff;
+    border:0;
+    padding: 15px 0;
+    -webkit-box-shadow: 2px 2px 4px -1px rgba(0,0,0,0.07);
+    -moz-box-shadow: 2px 2px 4px -1px rgba(0,0,0,0.07);
+    box-shadow: 2px 2px 4px -1px rgba(0, 0, 0, 0.07);
+}
+.navbar-default .navbar-nav>li>a{
+    font-size: 15px;
+    font-weight: 400;
+    color:#666;
+    transition: none;
+    cursor: pointer;
+    -webkit-transition: none;
+    -moz-transition: none;
+}
+.navbar-default .navbar-nav>li>a:hover{
+    color:#cf0227; 
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #cf0227; 
+    background-color: transparent;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: #fff;
+    background-color: rgba(0,0,0,0.9);
+}
+.navbar-brand img{
+    margin-top: -2px;
+    width: 120px;
+    height: auto;
+}
+.brand.navbar-brand>.row {
+    margin-top: -50px;
+}
+.brand.citroën {
+    background-color: #cf0227; 
+}
+.brand.peugeot {
+    background-color: #153b6b;
+}
+.brand.kia {
+    background-color: #f3f3f3;
+}
+@media only screen and (max-width: 767px) {
+    .brand.navbar-brand img {
+        height: 75px;
+        width: auto;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .navbar-brand img.logo {
+        margin-top: 25px;
+        height: 25px;
+    }
+}
+@media only screen and (min-width: 768px){
+    .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+}

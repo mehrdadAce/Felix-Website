@@ -1,0 +1,284 @@
+.dropdown-menu {
+    width: 100%;
+}
+.fuel-type {
+    font-weight: normal;    
+    position: absolute;
+    top: 10px;
+}
+.fuel-type i {
+    padding-right: 8px;
+}
+a {
+    color: #cf0227;
+}
+span {
+    font-family: 'Roboto', sans-serif;
+}
+.navbar-default {
+    border: 1px solid#e7e7e7;
+}
+.search-form {
+    border: 1px solid rgba(204, 204, 204, .6);
+}
+.search-form input.form-control {
+    padding: 10px;
+    margin: 0 auto;
+    height: auto;
+    position: relative;
+    border-radius: 0;
+    border: 0;
+}
+button.search-btn {
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    background: transparent;
+    border: 0;
+    border: 1px solid rgba(204, 204, 204, .6);
+    padding: 10px 12px;
+    color: rgba(204, 204, 204, .6);
+}
+.category {
+    font-weight: 500;
+    font-family: 'Roboto', 'sans-serif';
+}
+.fuel-type-indicator, .LPG, .diesel, .benzine {
+    font-weight: 800;
+    width: auto;
+    font-size: x-small;
+    padding: 5px;
+    border-radius: 7%;
+    font-family: 'Roboto', 'sans-serif';
+    line-height: 1;
+    margin-bottom: initial;
+}
+.LPG {
+    color: #000;
+    background: Yellow;
+    border: 1px solid #000; 
+}
+.diesel, .Diesel {
+    color: white;
+    background: black;
+    border: 1px solid #fff;  
+}
+.benzine, .Benzine {
+    color: white;
+    background: green;
+    border: 1px solid #fff;  
+}
+.thumbnail img {
+    width: 100%;
+}
+#clearFilters {
+    border: none;
+    font-weight: 500;
+    padding: 8px !important;
+    font-size: 14px;
+}
+.btn-red, #toggle-highlighted-items, #clearFilters, #car-compare-btn {
+    font-family: 'Roboto', 'Sans-serif';
+    color: #fff;
+    background-color: #cf0227;
+    border-radius: 0px;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 13px;
+    font-weight: 500;
+    border: none;
+}
+.btn-red:disabled, #clearFilters:disabled, #car-compare-btn:disabled {
+    opacity: 0.6;
+    border:none;
+}
+.model-name {
+    color:#cf0227;
+    height: 25px;
+    margin-top: 10px;
+    margin-bottom: 13px;
+    overflow: hidden;
+}
+.thumbnail {
+    padding: 0;
+}
+.thumbnail p {
+    margin-bottom: 10px;
+}
+.radio i {
+    font-size: xx-large;
+}
+.dropdown.sort button {
+    padding: 10px;
+    background-color: white;
+    color: #939393;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+.caption .row {
+    height: 55px;
+}
+.caption .row .col-sm-6{
+    padding-right: 0;
+}
+.datepicker.datepicker-dropdown.dropdown-menu {
+    width: auto;
+}
+
+label {
+    font-family: 'Roboto', 'sans-serif';
+    font-weight: 100;
+    font-size: 15px;
+}
+
+input, textarea {
+    font-family: 'Roboto','sans-serif';
+    color: #000 !important;
+    padding: 17px !important;
+    border-radius: inherit !important;
+    font-size: 15px !important;
+}
+.Omnisearch {
+    width: 100%;
+     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075); 
+     box-shadow: inset 0 1px 1px rgba(0,0,0,.075); 
+     -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s; 
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; 
+    padding: 10px !important;
+    position: relative;
+    border: 0;
+}
+.slider-selection {
+    background-image: -webkit-gradient(linear, left 0%, left 100%, from(rgb(207, 2, 39)), to(rgb(207, 2, 39))) !important;
+    background-image: -webkit-linear-gradient(top, rgb(207, 2, 39), 0%, rgb(207, 2, 39), 100%) !important;
+    background-image: -moz-linear-gradient(top, rgb(207, 2, 39) 0%, rgb(207, 2, 39) 100%) !important;
+    background-image: linear-gradient(to bottom, rgb(207, 2, 39) 0%, rgb(207, 2, 39) 100%) !important;
+}
+.search-form {
+    margin-bottom: 20px;
+}
+
+.list-group-item > ul, .list-group-item > li, .list-group-item > li > ul {
+    list-style-type: none;
+}
+.list-group-item > ul, .list-group-item > li > ul {
+    padding-left: 10px;
+}
+.list-group-item  li {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.slider-handle {
+    background-image: -webkit-gradient(linear, left 0%, left 100%, from(rgb(207, 2, 39)), to(rgb(207, 2, 39)));
+    background-image: -webkit-linear-gradient(top, rgb(207, 2, 39), 0%, rgb(207, 2, 39), 100%);
+    background-image: -moz-linear-gradient(top, rgb(207, 2, 39) 0%, rgb(207, 2, 39) 100%);
+    background-image: linear-gradient(to bottom, rgb(207, 2, 39) 0%, rgb(207, 2, 39) 100%);
+}
+.slider.slider-horizontal {
+    width: 200px;
+    margin-left: 12px;
+}
+
+ins {
+    text-decoration: none;
+}
+#pagination {
+    text-align:center;
+}
+.vehicleDataPagerCtn {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+    .vehicleDataPagerCtn > a, .vehicleDataPagerCtn > span {
+        position: relative;
+        float: left;
+        padding: 6px 12px;
+        margin-left: -1px;
+        line-height: 1.42857143;
+        color: #cf0227;
+        text-decoration: none;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        cursor: pointer;   
+    }
+.pagerCurrent {
+font-weight: 600;
+}
+.vehicleDataPagerCtn > span:first-child {
+    display: none;
+}
+a:hover, a:focus {
+    color: #333;
+}
+#sortingOptions {
+    height: 43px;
+    width: 93%;
+    padding: 10px;
+    color: #857d7d;    
+    margin-bottom: 20px;
+    border: 1px solid #dadada;
+    background-color:#fff;
+}
+.Electrisch {
+    color: white;
+    background: #00f2f7;
+    border: 1px solid #fff;
+}
+#pagination {
+    margin-top: 50px;
+}
+
+.compare_container {
+    width: 93%;
+}
+.customCheckbox {
+    float: right;
+    position: relative;
+    width: 26px;
+    height: 26px;
+    background: #ffffff;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.2);
+    margin-right: 5px;
+    overflow: hidden;
+}
+
+    .customCheckbox.customCheckboxChecked {
+        background: #cf0227;
+        border: 1px solid #cf0227;
+    }
+
+    .customCheckbox.customCheckboxDisabled {
+        display: none;
+    }
+
+    .customCheckbox input {
+        opacity: 0;
+        cursor: pointer;
+        z-index: 5;
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .customCheckbox span {
+        display: none;
+        text-align: center;
+        line-height: 20px;
+        font-size: 90%;
+        color: #fff;
+    }
+
+    .customCheckbox.customCheckboxChecked span {
+        display: block;
+    }
+

@@ -1,0 +1,12 @@
+﻿<head>
+    <link rel="stylesheet" href="loader.css"/>
+</head>
+<body onload="startAuth()">
+<a id="authTag" href="@Url.Action("StartAuth", "FacebookAuth")" target="_top"></a>
+<div class="lds-dual-ring"></div> 
+</body>
+<script>
+    startAuth = new function () {
+        document.getElementById("authTag").click();
+    }
+</script>

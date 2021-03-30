@@ -1,0 +1,15 @@
+{
+  "EditorAlias": "Umbraco.DropDown.Flexible",
+  "DatabaseType": 1,
+  "PreValues": {
+    "0": "value 1",
+    "multiple": "1"
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/c8c94597ed7c4196acda4852c9b760fa",
+  "Dependencies": [],
+  "Name": "Vacature - study - Dropdown",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

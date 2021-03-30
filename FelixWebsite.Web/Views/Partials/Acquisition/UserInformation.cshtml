@@ -1,0 +1,98 @@
+﻿@using FelixWebsite.Core.App_GlobalResources
+@model FelixWebsite.Bdo.Models.Acquisition.UserData
+@{
+    var isTakeOver = Request.RawUrl.ToLower().Contains("overname");
+    var tabIndex = 1;
+}
+
+
+<section id="transfer" class="margin-top-60">
+    <div class="container">
+        <div class="row panel panel-default">
+            <div class="panel-body">
+                @using (Html.BeginForm("PostInformation", "AcquisitionTool", FormMethod.Post, new { id = "formUserInformation" }))
+                {
+                    <div class="col-sm-12 text-center margin-bottom-20 margin-top-20">
+                        <div class="section-title">
+                            <h1 class="center">@FelixResources.general_data</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            @*<div class="form-group">
+                        <label for="name" class="control-label"> @FelixResources.general_firstname: <span class="requiredColor">*</span></label>
+                        @Html.EditorFor(m => m.Firstname, new { htmlAttributes = new { id = "name", @class = "form-control", placeholder = FelixResources.general_firstname, tabindex = "1" } })
+                        @Html.ValidationMessageFor(m => m.Firstname, "", new { @class = "text-danger" })
+                    </div>*@
+                            <div class="form-group">
+                                <label for="name">@FelixResources.general_first_lastname: <span class="requiredColor">*</span></label>
+                                @Html.EditorFor(m => m.Name, new { htmlAttributes = new { id = "name", @class = "form-control", placeholder = FelixResources.general_first_lastname, tabindex = tabIndex++ } })
+                                @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                <label for="mail" class="control-label">@FelixResources.general_email: <span class="requiredColor">*</span></label>
+                                @Html.EditorFor(m => m.Email, new { htmlAttributes = new { id = "mail", @class = "form-control", placeholder = FelixResources.general_email, tabindex = tabIndex++ } })
+                                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="form-group">
+                                <label for="mobile-phone">@FelixResources.general_cellNumber: <span class="requiredColor">*</span></label>
+                                @Html.EditorFor(m => m.Gsm, new { htmlAttributes = new { id = "mobile-phone", @class = "form-control", placeholder = FelixResources.general_cellNumber, tabindex = tabIndex++ } })
+                                @Html.ValidationMessageFor(m => m.Gsm, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="license-plate" class="control-label">@FelixResources._2dehands_licenseplate: <span class="requiredColor">*</span></label>
+                                <div class="input-group licenseplate">
+                                    <span class="input-group-addon licenseplate-input-field">
+                                        <img class="eu-logo" src="~/img/acquisition/license-plate-logo.png" alt="eu-logo" />
+                                        @*<br />
+                                <span class="eu-logo-b">B</span>*@
+                                    </span>
+                                    @Html.EditorFor(m => m.LicensePlate, new { htmlAttributes = new { id = "license-plate", @class = "form-control", placeholder = FelixResources._2dehands_licenseplate, tabindex = tabIndex++ } })
+                                </div>
+                                @Html.ValidationMessageFor(m => m.LicensePlate, "", new { @class = "text-danger" })
+                            </div>
+                            @if (!isTakeOver)
+                            {
+                                <div id="chassis-number" class="form-group">
+                                    <label for="license-plate" class="control-label">@FelixResources._2dehands_chassisnumber: </label>
+                                    @Html.EditorFor(m => m.ChassisNumber, new { htmlAttributes = new { id = "chassis-number", @class = "form-control", placeholder = FelixResources._2dehands_chassisnumber, tabindex = tabIndex++ } })
+                                    @Html.ValidationMessageFor(m => m.ChassisNumber, "", new { @class = "text-danger" })
+                                </div>
+                            }
+                            @if (isTakeOver)
+                            {
+                                var model = new FelixWebsite.Bdo.Models.Acquisition.UserDataTakeOver() { TabIndex = tabIndex };
+                                @Html.Partial("Acquisition/UserInformationTakeOver", model);
+                                tabIndex = model.TabIndex;
+                            }
+                        </div>
+                        @if (!isTakeOver)
+                        {
+                            var model = new FelixWebsite.Bdo.Models.Acquisition.UserDataDamage() { TabIndex = tabIndex };
+                            @Html.Partial("Acquisition/UserInformationDamage", model);
+                            tabIndex = model.TabIndex;
+                        }
+                    </div>
+                    <div class="row margin-top-20">
+                        <div class="col-md-6 col-md-offset-6 margin-left-25-percent">
+                            <div class="form-group">
+                                <button id="userdataButton" class="btn felix red" type="submit" tabindex="@tabIndex">@FelixResources.general_continue <i class="fas fa-angle-right"></i></button>
+                            </div>
+                            <div class="form-group hidden">
+                                <button id="go-back-to-overview" class="btn felix red" type="submit" tabindex="@tabIndex">@FelixResources.general_continue <i class="fas fa-angle-right"></i></button>
+                            </div>
+                            @*<div class="form-group">
+                        <button id="generate-pdf" class="btn felix red" type="button">Genereer PDF <i class="fas fa-angle-right"></i></button>
+                    </div>*@
+                        </div>
+                    </div>
+                    <input id="hasBeenSubmitted" type="hidden" name="hasBeenSubmitted" value="false" />
+                }
+
+            </div>
+        </div>
+    </div>
+</section>

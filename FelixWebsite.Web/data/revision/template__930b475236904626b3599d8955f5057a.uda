@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/InformatiePagina.cshtml",
+  "Master": null,
+  "Udi": "umb://template/930b475236904626b3599d8955f5057a",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/InformatiePagina.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Informatie pagina",
+  "Alias": "InformatiePagina",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "2.0.14"
+}

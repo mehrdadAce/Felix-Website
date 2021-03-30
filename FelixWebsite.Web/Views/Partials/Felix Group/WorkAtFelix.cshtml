@@ -1,0 +1,30 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.GroupHome>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    var workAtFelixButton = Model.Content.ButtonLink.FirstOrDefault();
+}
+
+<section id="work-for-felix" style="background:linear-gradient(0deg,rgba(245, 245, 245, 0.95),rgba(245, 245, 245, 0.95)),url('@Model.Content.Background.Url') no-repeat center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img class="img-responsive" src="@(Model.Content.Image.Url + "?width=550&height=515&mode=crop&anchor=center")" alt="Werk bij Felix" />
+            </div>
+            <div class="col-md-6">
+                <div class="werk-info-rechts">
+                    <h3><small>@Model.Content.Subtitle</small>@Model.Content.Title</h3>
+                    <span>
+                        @Model.Content.Intro
+                    </span>
+                    <p>
+                        @Model.Content.Text
+                    </p>
+                    @if (workAtFelixButton != null)
+                    {
+                        <a href="@workAtFelixButton.Link" @(workAtFelixButton.NewWindow == true ? Html.Raw("target='_blank'") : Html.Raw(""))>@workAtFelixButton.Caption</a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

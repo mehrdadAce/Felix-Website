@@ -1,0 +1,64 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-globe color-red",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "d9b5141d-3eb4-431c-be32-17a8b417660a",
+      "Name": "Site",
+      "SortOrder": 99,
+      "PropertyTypes": [
+        {
+          "Key": "88488bd5-2397-40b0-8c2f-c6e9012c909d",
+          "Alias": "scripts",
+          "DataType": "umb://data-type/7f26211f741043c1aa7325fc7b4f7cf6",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Scripts",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "99a71b75-4324-4d11-8c70-cf8f63d417fc",
+          "Alias": "favicon",
+          "DataType": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Favicon",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/d60a0c7f9d03423fbf62df6682128c81",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/7f26211f741043c1aa7325fc7b4f7cf6",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Homepage",
+  "Alias": "homepage",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

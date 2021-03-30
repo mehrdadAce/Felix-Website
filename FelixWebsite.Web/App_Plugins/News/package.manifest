@@ -1,0 +1,10 @@
+﻿{
+  "javascript": [
+    "~/App_Plugins/Shared/Sections/Services/SocialMediaService.js",
+    "~/App_Plugins/Shared/Sections/Controllers/ReviewController.js",
+    "~/App_Plugins/News/backoffice/Controllers/FacebookController.js"
+  ],
+  "css": [
+    "~/App_Plugins/Shared/Sections/Css/Reviews.css"
+  ]
+}

@@ -1,0 +1,52 @@
+﻿@using FelixWebsite.Core.App_GlobalResources
+@{
+
+}
+
+<div id="transfer-progress" class="navbar-fixed-top cart-inner marginTopProgressBar">
+    <div class="container margin-top-20 margin-bottom-20">
+        <div id="wideScreenProgress" class="row">
+            <div class="col-sm-3 col-xs-3">
+                <p id="progressInformation" class="text-center active progress-element">1.&nbsp;@FelixResources.general_data</p>
+            </div>
+            <div class="col-sm-3 col-xs-3">
+                <p id="progressPhotos" class="text-center progress-element">2.&nbsp;@FelixResources._2dehands_progression_photos</p>
+            </div>
+            <div class="col-sm-3 col-xs-3">
+                <p id="progressOverview" class="text-center progress-element">3.&nbsp;@FelixResources.general_overview</p>
+            </div>
+            <div class="col-sm-3 col-xs-3">
+                <p id="progressComplete" class="text-center progress-element">4.&nbsp;@FelixResources.general_complete</p>
+            </div>
+        </div>
+        <div id="smallScreenProgress" class="row">
+            <div class="col-sm-3 col-xs-3">
+                <p id="ssProgressInformation" class="text-center active progress-element">1.&nbsp;@FelixResources.general_data</p>
+                <p id="ssProgressInformationShort" class="text-center progressPartHide">1.</p>
+            </div>
+            <div class="col-sm-3 col-xs-3">
+                <p id="ssProgressPhotos" class="text-center progressPartHide progress-element">2.&nbsp;@FelixResources._2dehands_progression_photos</p>
+                <p id="ssProgressPhotosShort" class="text-center ">2.</p>
+            </div>
+            <div class="col-sm-3 col-xs-3">
+                <p id="ssProgressOverview" class="text-center progressPartHide progress-element">3.&nbsp;@FelixResources.general_overview</p>
+                <p id="ssProgressOverviewShort" class="text-center">3.</p>
+            </div>
+            <div class="col-sm-3 col-xs-3">
+                <p id="ssProgressComplete" class="text-center progressPartHide progress-element">4.&nbsp;@FelixResources.general_complete</p>
+                <p id="ssProgressCompleteShort" class="text-center">4.</p>
+            </div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+            </div>
+        </div>
+    </div>
+    <div class="userinformation-data hidden hidden-on-mobile">
+        <span class="bold">Uw gegevens: </span>
+        <span class="userinformation-info"></span>
+        <br />
+        <span class="bold userinformation-insurance-text">Verzekerd via: </span>
+        <span class="userinformation-insurance"></span>
+    </div>
+</div>

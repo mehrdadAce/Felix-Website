@@ -1,0 +1,29 @@
+﻿@using Umbraco.Core.Models;
+@using Umbraco.Core.Services;
+
+@{
+    var mediaService = ApplicationContext.Current.Services.MediaService;
+
+    SaveMedias(mediaService.GetRootMedia().ToList());
+}
+
+@functions
+{
+    public void SaveMedias(List<IMedia> medias)
+    {
+        var _mediaService = ApplicationContext.Current.Services.MediaService;
+
+        if (medias == null || !medias.Any())
+            return;
+
+        foreach (IMedia media in medias)
+        {
+            _mediaService.Save(media);
+
+            SaveMedias(media.Children().ToList());
+
+            Response.Write(media.Name + " saved at:" + media.UpdateDate + "<br />");
+
+        }
+    }
+}

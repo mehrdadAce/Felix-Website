@@ -1,0 +1,11 @@
+﻿<div ng-controller="LanguageController">
+    <label class="language-item" ng-repeat="language in languages">
+        <input name="{{language.name}}" type="checkbox" name="selectedLanguages[]" value="{{language.name}}" ng-model="language.selected" />
+        <label for="{{language.name}}">{{language.name}}</label>
+        
+        <div ng-if="language.selected">
+            <select class="umb-editor umb-dropdown" data-ng-model="language.score" ng-options="score.value as score.alias for score in scores"></select>
+        </div>
+        
+    </label>
+</div>

@@ -1,0 +1,79 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-search color-red",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "68d235a8-bdbd-4a70-bc5b-861f06785d69",
+      "Name": "SEO",
+      "SortOrder": 99,
+      "PropertyTypes": [
+        {
+          "Key": "0c751cdb-09f1-48ce-95ad-d93a0616ef53",
+          "Alias": "metaTags",
+          "DataType": "umb://data-type/b6b73142b9c14bf8a16de1c23320b549",
+          "Description": "Tags die door zoekmachine's gebruikt worden om de pagina te vinden.",
+          "Mandatory": false,
+          "Name": "Meta tags",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "bb178481-5318-49ec-9269-06f3bf111c4b",
+          "Alias": "metaDescription",
+          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+          "Description": "Beschrijving van de pagina die wordt getoond bij het delen van de site.",
+          "Mandatory": false,
+          "Name": "Meta beschrijving",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "c499214d-c222-4300-92c6-ab96490d37f2",
+          "Alias": "metaTitle",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Titel van de pagina die wordt getoond bij het delen van de site.",
+          "Mandatory": false,
+          "Name": "Meta titel",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/b6b73142b9c14bf8a16de1c23320b549",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "SEO",
+  "Alias": "sEO",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

@@ -1,0 +1,35 @@
+{
+  "DefaultTemplate": "umb://template/00ff8d441c10465fb6c399c552f8eb8d",
+  "AllowedTemplates": [
+    "umb://template/00ff8d441c10465fb6c399c552f8eb8d"
+  ],
+  "Icon": "icon-traffic-alt color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Pagina die gebruikt wordt om wagens met elkaar te vergelijken.",
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": null,
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [
+    "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/ec10c2b39c274ade8c1705e133af424e",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/00ff8d441c10465fb6c399c552f8eb8d",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Tweedehandswagen - vergelijk",
+  "Alias": "carcomparsion",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

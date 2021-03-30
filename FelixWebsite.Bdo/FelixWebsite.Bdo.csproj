@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2B39BE38-B0D2-48FF-9DEA-D1B131A9B5DB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FelixWebsite.Bdo</RootNamespace>
+    <AssemblyName>FelixWebsite.Bdo</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Web.base.config|AnyCPU'">
+    <OutputPath>bin\Web.base.config\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Umbraco.Core">
+      <HintPath>..\FelixWebsite.Web\Bin\Umbraco.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\DamageDeclaration.cs" />
+    <Compile Include="Enums\ActionType.cs" />
+    <Compile Include="Enums\LogoType.cs" />
+    <Compile Include="Models\Acquisition\MediaValuesModel.cs" />
+    <Compile Include="Models\Acquisition\OverviewDamageModel.cs" />
+    <Compile Include="Models\Acquisition\OverviewModel.cs" />
+    <Compile Include="Models\Acquisition\PdfHeaderDimensions.cs" />
+    <Compile Include="Models\Acquisition\PdfModel.cs" />
+    <Compile Include="Models\Acquisition\PdfSchemeModel.cs" />
+    <Compile Include="Models\Acquisition\PdfUserInformation.cs" />
+    <Compile Include="Models\Acquisition\PhotoInfo.cs" />
+    <Compile Include="Models\Acquisition\PhotoModel.cs" />
+    <Compile Include="Models\Acquisition\PhotosModel.cs" />
+    <Compile Include="Models\Acquisition\SchemeDamage.cs" />
+    <Compile Include="Models\Acquisition\SchemeDamageData.cs" />
+    <Compile Include="Models\Acquisition\SchemeImage.cs" />
+    <Compile Include="Models\Acquisition\SchemePictureModel.cs" />
+    <Compile Include="Models\Acquisition\TakeOverModel.cs" />
+    <Compile Include="Models\Acquisition\UpdateModel.cs" />
+    <Compile Include="Models\Acquisition\UserData.cs" />
+    <Compile Include="Models\Acquisition\UserDataDamage.cs" />
+    <Compile Include="Models\Acquisition\UserDataTakeOver.cs" />
+    <Compile Include="Models\Base\BaseModel.cs" />
+    <Compile Include="Models\Acquisition\UserInformation.cs" />
+    <Compile Include="Models\JobOffer\CompanyInfo.cs" />
+    <Compile Include="Models\JobOffer\Umbraco Properties\Base\BaseProperty.cs" />
+    <Compile Include="Models\JobOffer\Umbraco Properties\Competence.cs" />
+    <Compile Include="Models\JobOffer\Umbraco Properties\CompetencePattern.cs" />
+    <Compile Include="Models\JobOffer\Umbraco Properties\DriversLicense.cs" />
+    <Compile Include="Models\JobOffer\ConvertedUmbracoJobOffer.cs" />
+    <Compile Include="Models\JobOffer\Umbraco Properties\LaborArrangement.cs" />
+    <Compile Include="Models\JobOffer\Umbraco Properties\LaborContract.cs" />
+    <Compile Include="Models\JobOffer\Umbraco Properties\LaborContractDuration.cs" />
+    <Compile Include="Models\JobOffer\Umbraco Properties\LaborSystem.cs" />
+    <Compile Include="Models\JobOffer\Umbraco Properties\LanguageCompetence.cs" />
+    <Compile Include="Models\JobOffer\Umbraco Properties\PositionClassification.cs" />
+    <Compile Include="Models\JobOffer\Umbraco Properties\PositionSchedule.cs" />
+    <Compile Include="Models\JobOffer\Umbraco Properties\SoftSkill.cs" />
+    <Compile Include="Models\JobOffer\Umbraco Properties\Study.cs" />
+    <Compile Include="Models\Notification.cs" />
+    <Compile Include="Models\Validation\RequiredIfAttribute.cs" />
+    <Compile Include="Models\VDAB XML\ErrorResponse.cs" />
+    <Compile Include="Models\VDAB XML\PositioningOpening.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FelixWebsite.Shared\FelixWebsite.Shared.csproj">
+      <Project>{3dbe5d85-3290-423a-afd3-80c88cd20e56}</Project>
+      <Name>FelixWebsite.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>XCOPY /s /y "$(TargetDir)$(ProjectName).*" "$(ProjectDir)\..\$(SolutionName).Web\bin\"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,72 @@
+﻿
+    <div class="umb-panel umb-editor-wrapper" ng-controller="GoogleController" data-ng-init="initFunction()">
+        <div class="umb-editor-header umb-panel-header">
+            <div class="umb-panel-header-content-wrapper">
+                <div class="umb-panel-header-content">
+                    <div class="umb-panel-header-left-side">
+                        <div class="umb-panel-header-title-wrapper">
+                            <div class="umb-panel-header-name">Google reviews</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="umb-editor-container umb-panel-body">
+            <div class="umb-pane">
+                <div class="form-horizontal tab-content">
+                    <div class="umb-tab-pane tab-pane active">
+                        <div class="umb-tab-pane-inner" ng-if="dataIsLoaded">
+                            <!--<div class="umb-box" ng-repeat="review in data track by $index">
+                                <div class="umb-box-header">
+                                    <div class="umb-box-header-title">
+                                        {{review.Reviewer.DisplayName}}
+                                    </div>
+                                </div>
+                                <div class="box-form umb-box-content">
+                                    <div class="umb-property">
+                                        <div class="umb-control-group control-group">
+                                            <div class="umb-el-wrap">
+                                                <input type="checkbox" ng-model="review.Selected" ng-click="changeSelected($event)" />
+                                                {{review.Comment}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>-->
+                            <div ng-repeat="review in data track by $index">
+                                <div class="box" ng-class="review.Selected ? 'selected' : 'unselected'">
+                                    <input type="checkbox" ng-model="review.Selected" ng-click="changeSelected($event)" />
+                                    {{ review.Reviewer.DisplayName }}
+                                    <p>{{ review.Comment }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="umb-tab-buttons umb-editor-drawer">
+            <div class="umb-editor-drawer-content">
+                <div class="umb-editor-drawer-content__left-side"></div>
+                <div class="umb-editor-drawer-content__right-side">
+                    <div class="btn-group umb-button-group">
+                        <div class="umb-button">
+                            <div ng-if="!dataIsBeingSaved">
+                                <button class="btn umb-button__button btn-success" ng-click="sendDataToServer($event)">
+                                    <span class="umb-button__content">Opslaan</span>
+                                </button>
+                            </div>
+                            <div ng-if="dataIsBeingSaved">
+                                <button class="btn umb-button__button btn-success">
+                                    <span class="umb-button__content"><img style="width: 60px; height: 20px;" src="/img/sections/LoadingIcon.svg" /></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+

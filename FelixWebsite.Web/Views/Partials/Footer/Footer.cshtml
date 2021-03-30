@@ -1,0 +1,220 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using FelixWebsite.Core.App_GlobalResources
+@using System.Configuration;
+@using FelixWebsite.Core.Helpers
+@{
+    var home = Umbraco.AssignedContentItem.AncestorOrSelf(1).OfType<GroupHome>();
+    var stores = home.Children.OfType<Businesses>().FirstOrDefault();
+    var root = Session.GetBreadcrumbRoot(Umbraco.AssignedContentItem);
+}
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            @* Business page *@
+            @if (root is BusinessBrand)
+            {
+                var businessBrand = root.OfType<BusinessBrand>();
+                @* socials *@
+                <div class="col-sm-4 margin-bottom-30">
+                    <div class="footer-inner">
+                        <h3>
+                            <a href="@root.UrlAbsolute()">
+                                @if (businessBrand.Logo != null)
+                                {
+                                    <img class="margin-bottom-10" src="@businessBrand.Logo.Url" width="160" alt="@businessBrand.BusinessName @businessBrand.BusinessLocation">
+                                }
+                                else
+                                {
+                                    <img class="logo margin-bottom-10" src="@home.FooterLogo.Url" width="160" alt="@businessBrand.BusinessName @businessBrand.BusinessLocation">
+                                }
+                            </a>
+                            <br>@businessBrand.BusinessLocation
+                        </h3>
+                        <p class="margin-bottom-30">@stores.FooterLogoText</p>
+                        <ul class="social list-inline">
+                            @if (businessBrand.FooterFacebookLink != null)
+                            {
+                                <li><a href="@businessBrand.FooterFacebookLink.FirstOrDefault().Link" @(businessBrand.FooterFacebookLink.FirstOrDefault().NewWindow == true ? Html.Raw("target='_blank'") : Html.Raw("")) class="facebook"><i class="ion-social-facebook"></i></a></li>
+                            }
+                            @if (businessBrand.FooterGoogleLink != null)
+                            {
+                                <li><a href="@businessBrand.FooterGoogleLink.FirstOrDefault().Link" @(businessBrand.FooterGoogleLink.FirstOrDefault().NewWindow == true ? Html.Raw("target='_blank'") : Html.Raw("")) class="google-plus"><i class="ion-social-googleplus"></i></a></li>
+                            }
+                            @if (businessBrand.FooterLinkedInLink != null)
+                            {
+                                <li><a href="@businessBrand.FooterLinkedInLink.FirstOrDefault().Link" @(businessBrand.FooterLinkedInLink.FirstOrDefault().NewWindow == true ? Html.Raw("target='_blank'") : Html.Raw("")) class="linked-in"><i class="ion-social-linkedin"></i></a></li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+                @* businesses *@
+                <div class="col-sm-4 margin-bottom-30">
+                    <div class="footer-inner">
+                        <h3>@stores.FooterContactTitle</h3>
+                        <a><p><i class="fas fa-map-marker-alt icon" style="width:14px"></i> @businessBrand.BusinessStreetName @businessBrand.BusinessBuildingNumber, @businessBrand.BusinessMunicipality @businessBrand.BusinessPostalCode</p></a>
+                        <a><p><i class="fas fa-phone icon" style="width:14px"></i> @businessBrand.BusinessPhone</p></a>
+                        <a href="mailto:@businessBrand.BusinessMail"><p><i class="fas fa-envelope icon" style="width:14px"></i> @businessBrand.BusinessMail</p></a>
+                    </div>
+                </div>
+            }
+            @* Business Combined page *@
+            else if (root is BusinessCombined)
+            {
+                var businessCombined = root as BusinessCombined;
+                @* socials *@
+                <div class="col-sm-4 margin-bottom-30">
+                    <div class="footer-inner">
+                        <h3>
+                            <a href="@root.UrlAbsolute()">
+                                <img src="@businessCombined.Logo.Url" width="160" alt="Logo Felix Groep" class="margin-bottom-10">
+                            </a>
+                        </h3>
+
+                        <p class="margin-bottom-30">@(businessCombined.FooterLogoText != null ? Html.Raw(businessCombined.FooterLogoText) : Html.Raw(home.FooterLogoText))</p>
+
+                        <ul class="social list-inline">
+                            @if (businessCombined.FooterFacebookLink != null && businessCombined.FooterFacebookLink.Any())
+                            {
+                                <li><a href="@businessCombined.FooterFacebookLink.FirstOrDefault().Link" @(businessCombined.FooterFacebookLink.FirstOrDefault().NewWindow == true ? Html.Raw("target='_blank'") : Html.Raw("")) class="facebook"><i class="ion-social-facebook"></i></a></li>
+                            }
+                            @if (businessCombined.FooterGoogleLink != null && businessCombined.FooterGoogleLink.Any())
+                            {
+                                <li><a href="@businessCombined.FooterGoogleLink.FirstOrDefault().Link" @(businessCombined.FooterGoogleLink.FirstOrDefault().NewWindow == true ? Html.Raw("target='_blank'") : Html.Raw("")) class="google-plus"><i class="ion-social-googleplus"></i></a></li>
+                            }
+                            @if (businessCombined.FooterLinkedInLink != null && businessCombined.FooterLinkedInLink.Any())
+                            {
+                                <li><a href="@businessCombined.FooterLinkedInLink.FirstOrDefault().Link" @(businessCombined.FooterLinkedInLink.FirstOrDefault().NewWindow == true ? Html.Raw("target='_blank'") : Html.Raw("")) class="linked-in"><i class="ion-social-linkedin"></i></a></li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+                @* businesses *@
+                <div class="col-sm-4 margin-bottom-30">
+                    <div class="footer-inner">
+                        @* vestigingen tonen *@
+                        <h3>@businessCombined.FooterTitleBusinesses @(businessCombined.FooterTitleBusinesses != null ? Html.Raw(businessCombined.FooterTitleBusinesses) : Html.Raw(home.FooterTitleEstablishments))</h3>
+
+                        @foreach (BusinessBrand item in businessCombined.BusinessItems)
+                        {
+                            <a href="@item.Url" target="_blank"><p>@(item.Brand.FirstOrDefault().OfType<Brand>().Title) @item.BusinessName | @item.BusinessLocation</p></a>
+                        }
+                    </div>
+                </div>
+            }
+            @* Default page *@
+            else
+            {
+                var storeList = stores.Children().ToList();
+                if (Umbraco.AssignedContentItem is Brand)
+                {
+                    var brand = Umbraco.AssignedContentItem as Brand;
+                    storeList = stores.Children().OfType<BusinessBrand>().ToList().FindAll(x => x.Brand.FirstOrDefault().Id == brand.Id).ToList<IPublishedContent>();
+                }
+                @* socials *@
+                <div class="col-sm-4 margin-bottom-30">
+                    <div class="footer-inner">
+                        <h3>
+                            <a href="@root.UrlAbsolute()">
+                                <img src="@(home.FooterLogo.Url)" alt="Logo Felix Groep" width="160" class="margin-bottom-10">
+                            </a><br>@home.FooterLogoTitle
+                        </h3>
+                        <p class="margin-bottom-30">@home.FooterLogoText</p>
+                        <ul class="social list-inline">
+                            @if (home.LinkFacebook != null)
+                            {
+                                <li><a href="@home.LinkFacebook.FirstOrDefault().Link" @(home.LinkFacebook.FirstOrDefault().NewWindow == true ? Html.Raw("target='_blank'") : Html.Raw("")) class="facebook"><i class="ion-social-facebook"></i></a></li>
+                            }
+                            @if (home.LinkGoogle != null)
+                            {
+                                <li><a href="@home.LinkGoogle.FirstOrDefault().Link" @(home.LinkGoogle.FirstOrDefault().NewWindow == true ? Html.Raw("target='_blank'") : Html.Raw("")) class="google-plus"><i class="ion-social-googleplus"></i></a></li>
+                            }
+                            @if (home.LinkLinkedIn != null)
+                            {
+                                <li><a href="@home.LinkLinkedIn.FirstOrDefault().Link" @(home.LinkLinkedIn.FirstOrDefault().NewWindow == true ? Html.Raw("target='_blank'") : Html.Raw("")) class="linked-in"><i class="ion-social-linkedin"></i></a></li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+                @* businesses *@
+                <div class="col-sm-4 margin-bottom-30">
+                    <div class="footer-inner">
+                        <h3>@home.FooterTitleEstablishments</h3>
+                        @foreach (var item in storeList)
+                        {
+                            if (item is BusinessBrand)
+                            {
+                                var store = item as BusinessBrand;
+                                <a href="@store.Url" target="_blank"><p>@(store.Brand.FirstOrDefault().OfType<Brand>().Title) @store.BusinessName | @store.BusinessLocation</p></a>
+                            }
+                            else if (item is BusinessIndependent)
+                            {
+                                var store = item as BusinessIndependent;
+                                if (store.BusinessLink != null)
+                                {
+                                    <a href="@store.BusinessLink.FirstOrDefault().Link" @(store.BusinessLink.FirstOrDefault().NewWindow == true ? Html.Raw("target='_blank'") : Html.Raw(""))><p>@store.BusinessName | @store.BusinessLocation</p></a>
+                                }
+                            }
+                        }
+                    </div>
+                </div>
+            }
+            @* Newsletter *@
+            @if (root is INewsletter)
+            {
+                var newsLetter = root as INewsletter;
+                if (!string.IsNullOrWhiteSpace(newsLetter.CampaignMonitorFormId) && !string.IsNullOrWhiteSpace(newsLetter.CampaignMonitorEmailName))
+                {
+                    <div class="col-sm-4 margin-bottom-30">
+                        <div class="footer-inner">
+                            <h3>@home.FooterTitleNews</h3>
+                            <p>@home.FooterTextNews</p>
+
+                            @*Uses scripts > actions > newsletter.js to show success message*@
+                            <form id="subForm" class="js-cm-form subscribe-form" role="form" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="@newsLetter.CampaignMonitorFormId">
+                                <input id="fieldName" class="form-control margin-bottom-10" name="cm-name" type="text" placeholder="Naam" />
+                                <input id="fieldEmail" class="form-control js-cm-email-input" type="email" name="@newsLetter.CampaignMonitorEmailName" placeholder="E-mailadres" required />
+                        <button id="submit-news" class="btn button-submit" type="submit">@FelixResources.general_completeAction <i class="ion-ios-paperplane"></i></button>
+                            </form>
+                            <script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
+
+                            @*Succes modal after subscribe*@
+                            @if (TempData["NewsStatus"] != null && (bool)TempData["NewsStatus"] == true)
+                            {
+                                <div class="modal fade" id="newsSuccesModal" tabindex="-1" role="dialog" aria-labelledby="newsSuccesModal">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="myModalLabel">@FelixResources.general_success</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row margin-top-40 text-center">
+                                                    <h1 class="margin-bottom-30"><i class="fas fa-check-circle icon-success"></i></h1>
+                                                    <h2 class="margin-bottom-30 text-success">@FelixResources.general_newsletterSuccess</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script type="text/javascript">
+                                    defer(function () {
+                                        $(window).on('load',
+                                            function () {
+                                                $('#newsSuccesModal').modal('show');
+                                            });
+                                    });
+                                </script>
+                            }
+
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+        <hr>
+        <span class="clearfix copyright">
+            &copy; @FelixResources.general_felixGroup @DateTime.Now.Year. @FelixResources.general_allRightsReserved
+        </span>
+    </div>
+</footer>

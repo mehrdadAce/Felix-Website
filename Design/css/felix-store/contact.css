@@ -1,0 +1,89 @@
+.contact-info {
+    background:none;
+    border:1px solid #eee;
+    text-align:center;
+    padding:30px;
+    font-size:14px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.contact-info i {
+	font-size:30px;
+}
+.contact_bg2 {
+    background:linear-gradient(0deg,rgba(154,2,29,0.7),rgba(154,2,29,0.9)),url("../../images/contact.jpg") no-repeat;
+    background-size: cover;
+    padding:60px;
+    height: 413px;
+}
+.contact_bg2 .form-control {
+    border-radius: 0px;
+    box-shadow: none;
+    background: transparent;
+    color: #fff;
+}
+.contact_bg2 textarea.form-control {
+    border-radius: 0px;
+    color: #fff;
+    border-color: #fff;
+    padding-top: 10px;
+    margin-top: 25px;
+    height: 122px;
+}
+.contact_btn {
+    background: transparent;
+    box-shadow: none;
+    border: solid 1px #fff;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    outline: none;
+    padding: 10px 18px;
+}
+.btn-openingsuren {
+    text-transform: uppercase;
+    font-family: 'Roboto', 'sans-serif';
+    padding: 15px;
+    border-radius: 0;
+    background: #cf0227;
+    color: #fff;
+    width: 100%;
+}
+.btn-openingsuren .fa-angle-down {
+    display: none;
+}
+.btn-openingsuren .fa-angle-right {
+    display: inline-block;
+}
+.btn-openingsuren.btn-active .fa-angle-down {
+    display: inline-block;
+}
+.btn-openingsuren.btn-active .fa-angle-right {
+    display: none;
+}
+.btn-active {
+    outline: none;
+    color: #fff;
+    background-color: #97031e;
+}
+.contact-info h5 {
+    margin-bottom: 0px;
+    text-transform: uppercase;
+}
+hr {
+    margin-top: 14px;
+    margin-bottom: 20px;
+}
+#contact a {
+    color: #333;
+}
+@media (min-width: 768px) {
+    .col-xs-offset-6 {
+        margin-left: 0;
+    }
+}
+@media (max-width: 525px) {
+    .contact_bg2 {
+        padding: 30px 10px 30px 10px;
+    }
+}

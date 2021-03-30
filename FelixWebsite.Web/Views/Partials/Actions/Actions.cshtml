@@ -1,0 +1,285 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using FelixWebsite.Core.Helpers;
+@using UmbracoHelper = FelixWebsite.Core.Helpers.UmbracoHelper
+@{
+    var currentPage = Umbraco.AssignedContentItem;
+    var title = "";
+    var background = "";
+    var configLink = "";
+    var hideConfig = false;
+    var hideTest = false;
+    var hideQuotation = false;
+    var hideAppointment = false;
+    var hideSecondHand = false;
+    var hideTransfer = false;
+    var HideBody = false;
+    var hideDashboard = false;
+    var hideDamages = false;
+
+    var felixGroep = (IPublishedContent)CurrentPage.AncestorOrSelf(1);
+    var brandActions = felixGroep.Children.OfType<Brands>().FirstOrDefault();
+    var appointmentUrl = brandActions.AppointmentUrl;
+    if (Model.Content is IActiebeheer)
+    {
+        var actiebeheer = Model.Content as IActiebeheer;
+        if (!string.IsNullOrWhiteSpace(actiebeheer.AppointmentUrl))
+        {
+            appointmentUrl = actiebeheer.AppointmentUrl;
+        }
+    }
+
+    if (currentPage is Brand)
+    {
+        var page = currentPage as Brand;
+        title = page.ActionTitle;
+        background = page.ActionBackground.Url;
+        configLink = page.ConfigLink.FirstOrDefault().Link;
+    }
+    else if (currentPage is BusinessBrand)
+    {
+        var businessBrand = currentPage as BusinessBrand;
+        title = businessBrand.ActionTitle;
+        background = businessBrand.ActionBackground.Url;
+        configLink = businessBrand.Brand.FirstOrDefault().OfType<Brand>().ConfigLink.FirstOrDefault().Link;
+
+        hideConfig = businessBrand.HideConfig;
+        hideTest = businessBrand.HideTest;
+        hideQuotation = businessBrand.HideQuotation;
+        hideAppointment = businessBrand.HideAppointment;
+        hideSecondHand = businessBrand.HideSecondHand;
+        hideTransfer = businessBrand.HideTransfer;
+        HideBody = businessBrand.HideBody;
+        hideDashboard = businessBrand.HideDashboard;
+        hideDamages = businessBrand.HideDamages;
+    }
+    else if (currentPage is BusinessCombined)
+    {
+        var businessCombined = currentPage as BusinessCombined;
+        title = currentPage.OfType<BusinessCombined>().ActionTitle;
+        background = currentPage.OfType<BusinessCombined>().ActionBackground.Url;
+
+        hideConfig = businessCombined.HideConfig;
+        hideTest = businessCombined.HideTest;
+        hideQuotation = businessCombined.HideQuotation;
+        hideAppointment = businessCombined.HideAppointment;
+        hideSecondHand = businessCombined.HideSecondHand;
+        hideTransfer = businessCombined.HideTransfer;
+        HideBody = businessCombined.HideBody;
+        hideDashboard = businessCombined.HideDashboard;
+        hideDamages = businessCombined.HideDamages;
+    }
+    var actionsSettings = new List<bool>
+{
+        hideConfig,
+        hideTest,
+        hideQuotation,
+        hideAppointment,
+        hideSecondHand,
+        hideTransfer,
+        hideDamages,
+        HideBody,
+        hideDashboard
+    };
+    var distribution = actionsSettings.Where(a => !a).DistributeInColumns(3, 2);
+    var actionIndex = 0;
+    var backgroundColor = currentPage.GetSolidBackground();
+    var backgroundGradient = currentPage.GetBackgroundGradient();
+}
+<section id="services" style="background:linear-gradient(@backgroundGradient),url('@background') no-repeat center">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center margin-bottom-40">
+                <div class="section-title">
+                    <h1 class="white center" style="border-bottom: 2px solid @backgroundColor;">@title</h1>
+                </div>
+            </div>
+            @if (!hideConfig)
+            {
+                var config = brandActions.ActionConfig as ActionItem;
+                <div class="@distribution.GetBootstrapClassesForIndex(actionIndex) wow animated fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                    <a class="white" @Html.Raw(GetConfiguratorLink(configLink))>
+                        <div class="service-box text-center" style="background-color:@backgroundColor;">
+                            <img class="margin-bottom-20" src="@config.Icon.Url" height="40" alt="@config.Title" />
+                            <h4>@config.Title</h4>
+                            <p>@config.Text</p>
+                        </div>
+                    </a>
+                </div>
+                actionIndex++;
+            }
+            @if (!hideTest)
+            {
+                var testDrive = brandActions.ActionTest as ActionItem;
+                <div class="@distribution.GetBootstrapClassesForIndex(actionIndex) wow animated fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                    <a class="white" data-toggle="modal" data-target="#testDriveModal" href="#testDriveModal" target="_blank">
+                        <div class="service-box text-center" style="background-color:@backgroundColor;">
+                            <img class="margin-bottom-20" src="@testDrive.Icon.Url" height="40" alt="@testDrive.Title" />
+                            <h4>@testDrive.Title</h4>
+                            <p>@testDrive.Text</p>
+                        </div>
+                    </a>
+                </div>
+                actionIndex++;
+            }
+            @if (!hideQuotation)
+            {
+                var quotation = brandActions.ActionQuotation as ActionItem;
+                <div class="@distribution.GetBootstrapClassesForIndex(actionIndex) wow animated fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                    <a class="white" data-toggle="modal" data-target="#quotationModal" href="#quotationModal">
+                        <div class="service-box text-center" style="background-color:@backgroundColor;">
+                            <img class="margin-bottom-20" src="@quotation.Icon.Url" height="40" alt="@quotation.Title" />
+                            <h4>@quotation.Title</h4>
+                            <p>@quotation.Text</p>
+                        </div>
+                    </a>
+                </div>
+                actionIndex++;
+            }
+            @if (!hideAppointment)
+            {
+                var appointment = brandActions.ActionAppointment as ActionItem;
+                <div class="@distribution.GetBootstrapClassesForIndex(actionIndex) wow animated fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                    <a class="white" href="@appointmentUrl" target="_blank">
+                        <div class="service-box text-center" style="background-color:@backgroundColor;">
+                            <img class="margin-bottom-20" src="@appointment.Icon.Url" height="40" alt="@appointment.Title" />
+                            <h4>@appointment.Title</h4>
+                            <p>@appointment.Text</p>
+                        </div>
+                    </a>
+                </div>
+                actionIndex++;
+            }
+            @if (!hideSecondHand)
+            {
+                var secondHand = brandActions.ActionSecondhand as ActionItem;
+                var secondHandPage = felixGroep.Children.OfType<Tweedehandswagens>().FirstOrDefault();
+                <div class="@distribution.GetBootstrapClassesForIndex(actionIndex) wow animated fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                    <a class="white" href="@(secondHandPage?.Url)">
+                        <div class="service-box text-center" style="background-color:@backgroundColor;">
+                            <img class="margin-bottom-20" src="@secondHand.Icon.Url" height="40" alt="@secondHand.Title" />
+                            <h4>@secondHand.Title</h4>
+                            <p>@secondHand.Text</p>
+                        </div>
+                    </a>
+                </div>
+                actionIndex++;
+            }
+            @if (!hideTransfer)
+            {
+                var transfer = brandActions.ActionTransfer as ActionItem;
+                var transferContent = UmbracoHelper.GetTypedContentFromRoot<Overname>(CurrentPage);
+                if (transferContent != null)
+                {
+                    <div class="@distribution.GetBootstrapClassesForIndex(actionIndex) wow animated fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                        <a class="white" href="@transferContent.Url">
+                            <div class="service-box text-center" style="background-color: @backgroundColor;">
+                                <img class="margin-bottom-20" src="@transfer.Icon.Url" height="40" alt="@transfer.Title" />
+                                <h4>@transfer.Title</h4>
+                                <p>@transfer.Text</p>
+                            </div>
+                        </a>
+                    </div>
+                }
+                actionIndex++;
+            }
+            @if (!hideDamages)
+            {
+                var damages = brandActions.ActionDamages as ActionItem;
+                var transferContent = Umbraco.TypedContentAtRoot().OfType<GroupHome>().FirstOrDefault().Children().OfType<Damage>().FirstOrDefault();
+                if (transferContent != null)
+                {
+                    <div class="@distribution.GetBootstrapClassesForIndex(actionIndex) wow animated fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                        <a class="white" href="@transferContent.Url">
+                            <div class="service-box text-center" style="background-color: @backgroundColor;">
+                                <img class="margin-bottom-20" src="@damages.Icon.Url" height="40" alt="@damages.Title" />
+                                <h4>@damages.Title</h4>
+                                <p>@damages.Text</p>
+                            </div>
+                        </a>
+                    </div>
+                }
+                actionIndex++;
+            }
+            @if (Umbraco.AssignedContentItem is BusinessBrand || Umbraco.AssignedContentItem is BusinessCombined)
+            {
+                var storeActions = felixGroep.Children.OfType<Businesses>().FirstOrDefault();
+
+                if (!HideBody)
+                {
+                    var body = storeActions.ActionBody as ActionItem;
+                    <div class="@distribution.GetBootstrapClassesForIndex(actionIndex) wow animated fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                        <a class="white" href="http://www.carrosserie-felix.be" target="_blank">
+                            <div class="service-box text-center" style="background-color:@backgroundColor;">
+                                <img class="margin-bottom-20" src="@body.Icon.Url" height="40" alt="@body.Title" />
+                                <h4>@body.Title</h4>
+                                <p>@body.Text</p>
+                            </div>
+                        </a>
+                    </div>
+                    actionIndex++;
+                }
+
+                @*var hire = storeActions.ActionRent as ActionItem;
+                    <div class="col-sm-4 col-xs-6 wow animated fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                        <a class="white" href="#" target="_blank">
+                            <div class="service-box text-center" style="background-color:@backgroundColor;">
+                                <img class="margin-bottom-20" src="@hire.Icon.Url" height="40" alt="@hire.Title" />
+                                <h4>@hire.Title</h4>
+                                <p>@hire.Text</p>
+                            </div>
+                        </a>
+                    </div>*@
+
+                if (!hideDashboard)
+                {
+                    var dashBoard = storeActions.ActionDashboard as ActionItem;
+                    <div class="@distribution.GetBootstrapClassesForIndex(actionIndex) wow animated fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                        <a class="white" href="https://customer.felix.be" target="_blank">
+                            <div class="service-box text-center" style="background-color: @backgroundColor;">
+                                <img class="margin-bottom-20" src="@dashBoard.Icon.Url" height="40" alt="@dashBoard.Title" />
+                                <h4>@dashBoard.Title</h4>
+                                <p>@dashBoard.Text</p>
+                            </div>
+                        </a>
+                    </div>
+                    actionIndex++;
+                }
+            }
+        </div>
+    </div>
+    @if (Umbraco.AssignedContentItem is BusinessCombined)
+    {
+        @Html.Partial("Modals/Configurator/Configurator", Model)
+    }
+</section>
+
+@Html.Partial("Modals/TestDrive/TestDrive")
+@Html.Partial("Modals/Quotation/Quotation")
+
+@functions{
+    private string GetConfiguratorLink(string configLink)
+    {
+        if (Umbraco.AssignedContentItem is BusinessCombined)
+        {
+            List<BusinessBrand> businessesList = Umbraco.AssignedContentItem.OfType<BusinessCombined>().BusinessItems.OfType<BusinessBrand>().ToList();
+            List<Brand> brands = new List<Brand>();
+            foreach (var item in businessesList)
+            {
+                brands.Add(item.Brand.OfType<Brand>().FirstOrDefault());
+            }
+            List<int> brandIdList = brands.Select(x => x.Id).Distinct().ToList();
+            if (brandIdList.Count() > 1)
+            {
+                return "data-target='#configModal' data-toggle='modal' href='#configModal'";
+            }
+            else
+            {
+                return "href='" + businessesList[0].Brand.OfType<Brand>().FirstOrDefault().ConfigLink.FirstOrDefault().Link + "' target='_blank'";
+            }
+        }
+        else
+        {
+            return "href='" + configLink + "' target='_blank'";
+        }
+    }
+}

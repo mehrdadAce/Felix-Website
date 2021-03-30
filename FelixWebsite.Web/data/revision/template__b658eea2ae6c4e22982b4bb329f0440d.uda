@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/Tweedehandswagens.cshtml",
+  "Master": null,
+  "Udi": "umb://template/b658eea2ae6c4e22982b4bb329f0440d",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/Tweedehandswagens.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Tweedehandswagens",
+  "Alias": "Tweedehandswagens",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "2.0.14"
+}

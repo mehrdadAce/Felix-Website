@@ -1,0 +1,22 @@
+﻿@using FelixWebsite.Core.Helpers;
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    var root = Session.GetBreadcrumbRoot(Umbraco.AssignedContentItem);
+    if (root is ICrispChat)
+    {
+        var chatId = (root as ICrispChat).CrispChatId;
+        if (!chatId.IsNullOrWhiteSpace())
+        {
+            <script type="text/javascript">
+                window.$crisp = [];
+                window.CRISP_WEBSITE_ID = "@chatId";
+                (function () {
+                    d = document; s = d.createElement("script");
+                    s.src = "https://client.crisp.chat/l.js";
+                    s.async = 1; d.getElementsByTagName("head")[0].appendChild(s);
+                })();
+                $crisp.push(["safe", true]);
+            </script>
+        }
+    }
+}

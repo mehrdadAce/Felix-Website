@@ -1,0 +1,58 @@
+﻿
+    <div class="umb-panel umb-editor-wrapper" ng-controller="FacebookController" data-ng-init="initFunction()">
+        <div class="umb-editor-header umb-panel-header">
+            <div class="umb-panel-header-content-wrapper">
+                <div class="umb-panel-header-content">
+                    <div class="umb-panel-header-left-side">
+                        <div class="umb-panel-header-title-wrapper">
+                            <div class="umb-panel-header-name">Reviews</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="umb-editor-container facebook umb-panel-body">
+            <div class="umb-pane">
+                <div class="form-horizontal tab-content">
+                    <div class="umb-tab-pane tab-pane active">
+                        <div class="umb-tab-pane-inner" ng-if="dataIsLoaded">
+                            <div ng-repeat="review in data track by $index">
+                                <div class="box" ng-class="review.Selected ? 'selected' : 'unselected'">
+                                    <label class="container">
+                                        Review van {{review.FbUser.UserName}}
+                                        <input type="checkbox" ng-model="review.Selected" ng-click="changeSelected($event)" />
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <p>{{ review.Text }}</p>
+                                    <span class="timestamp">Review op {{ review.CreatedTime | date:"dd/MM/yyyy 'om' HH:mm"}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="umb-tab-buttons umb-editor-drawer">
+            <div class="umb-editor-drawer-content">
+                <div class="umb-editor-drawer-content__left-side"></div>
+                <div class="umb-editor-drawer-content__right-side">
+                    <div class="btn-group umb-button-group">
+                        <div class="umb-button">
+                            <div ng-if="!dataIsBeingSaved">
+                                <button class="btn umb-button__button btn-success" ng-click="sendDataToServer($event)">
+                                    <span class="umb-button__content">Opslaan</span>
+                                </button>
+                            </div>
+                            <div ng-if="dataIsBeingSaved">
+                                <button class="btn umb-button__button btn-success">
+                                    <span class="umb-button__content"><img style="width: 60px; height: 20px;" src="/img/sections/LoadingIcon.svg"/></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,89 @@
+﻿@model FelixWebsite.Core.Models.JobApplicationForm
+<section id="contact-modal">
+    <div id="modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title felix"><i class="fas fa-user-tie felix-red"></i> Solliciteer nu</h3>
+                </div>
+                @using (Html.BeginUmbracoForm("SubmitForm", "JobApplication", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    @Html.HiddenFor(m => m.JobTitle)
+                    @Html.HiddenFor(m => m.BrandTitle)
+                    @Html.HiddenFor(m => m.BusinessName)
+                    @Html.HiddenFor(m => m.BusinessLocation)
+                    @Html.HiddenFor(m => m.PageUrl)
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    @Html.EditorFor(m => m.Name, new { htmlAttributes = new { @class = "form-control", placeholder = "voornaam achternaam" } })
+                                    @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    @Html.EditorFor(m => m.Email, new { htmlAttributes = new { @class = "form-control", placeholder = "e-mailadres" } })
+                                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(m => m.Message, new { @class = "form-control message_text", placeholder = "uw bericht" })
+                                    @Html.ValidationMessageFor(m => m.Message, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="file" name="attachment" id="attachment" class="inputfile" accept=".pdf,.docx" />
+                                    <label for="attachment"><i class="fas fa-upload"></i> Upload uw CV (.pdf of .docx)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="btn btn-send"><button id="btn-submit" type="submit" class="btn btn-primary">verzend</button></div>
+                            <div class="btn btn-cancel"><a data-dismiss="modal" aria-label="Close">Annuleer</a></div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .inputfile {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+
+        .inputfile + label {
+            font-weight: 500;
+            color: white;
+            background-color: #cf0227;
+            display: inline-block;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 16px;
+            padding: 12px;
+        }
+
+            .inputfile:focus + label,
+            .inputfile + label:hover {
+                background-color: #ba0022;
+            }
+
+    label i {
+        margin-right: 10px;
+    }
+</style>

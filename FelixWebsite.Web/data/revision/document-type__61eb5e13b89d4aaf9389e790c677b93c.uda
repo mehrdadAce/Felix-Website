@@ -1,0 +1,94 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-coverflow color-red",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": "umb://document-type-container/e9def2683d284c8c83393846d9d63b78",
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "34bfd593-b306-4883-8334-062b14bbc8ce",
+      "Name": "Inhoud",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "2286d299-abfb-45d9-919d-78cfa6598e62",
+          "Alias": "slideDescription",
+          "DataType": "umb://data-type/7f26211f741043c1aa7325fc7b4f7cf6",
+          "Description": "De tekst die onder de titel staat.",
+          "Mandatory": false,
+          "Name": "Beschrijving",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "532a3bba-3f93-4e02-a014-cd160c8c91a8",
+          "Alias": "buttonLinks",
+          "DataType": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+          "Description": "De knoppen op de slider.",
+          "Mandatory": false,
+          "Name": "Knoppen",
+          "SortOrder": 3,
+          "Validation": null
+        },
+        {
+          "Key": "b50032c1-3e46-45b6-b4a8-36f8470d3725",
+          "Alias": "slideImage",
+          "DataType": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+          "Description": "De afbeelding van de slide.",
+          "Mandatory": true,
+          "Name": "Afbeelding",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "fb968c6f-fdd2-40d4-aede-4dd21037ac43",
+          "Alias": "slideTitle",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel van de slide.",
+          "Mandatory": true,
+          "Name": "Titel",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/61eb5e13b89d4aaf9389e790c677b93c",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/7f26211f741043c1aa7325fc7b4f7cf6",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/e9def2683d284c8c83393846d9d63b78",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Slide",
+  "Alias": "slide",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

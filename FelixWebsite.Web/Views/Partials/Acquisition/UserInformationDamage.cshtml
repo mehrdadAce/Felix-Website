@@ -1,0 +1,50 @@
+﻿@using FelixWebsite.Core.App_GlobalResources
+@model FelixWebsite.Bdo.Models.Acquisition.UserDataDamage
+
+<div class="col-md-12 margin-bottom-10 is-user-insured-checkbox">
+    <div class="form-group">
+        @Html.EditorFor(m => m.IsInsured, new { htmlAttributes = new { id = "is-insured", @class = "form-control", placeholder = FelixResources.overname_is_insured, tabindex = Model.TabIndex++ } })
+        @Html.ValidationMessageFor(m => m.IsInsured, "", new { @class = "text-danger" })
+        <label id="label-is-insured" for="is-insured" class="control-label">@FelixResources.overname_is_insured </label>
+    </div>
+</div>
+<div class="hidden-if-not-insured">
+    <div class="makelaar col-sm-12 text-center margin-bottom-20 margin-top-20">
+        <div class="section-title">
+            <h1 class="center">@FelixResources.overname_your_insurance</h1>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group makelaar agent-name-makelaar">
+            <label for="AgentName" class="control-label">@FelixResources.overname_agent_name: </label>
+            @Html.EditorFor(m => m.AgentName, new { htmlAttributes = new { id = "agent-name", @class = "form-control", placeholder = FelixResources.overname_agent_name, tabindex = Model.TabIndex++ } })
+            @Html.ValidationMessageFor(m => m.AgentName, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group makelaar">
+            <label for="AgentCity" class="control-label">@FelixResources.overname_agent_city: </label>
+            @Html.EditorFor(m => m.AgentCity, new { htmlAttributes = new { id = "agent-city", @class = "form-control", placeholder = FelixResources.overname_agent_city, tabindex = Model.TabIndex++ } })
+            @Html.ValidationMessageFor(m => m.AgentCity, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group makelaar">
+            <label for="AgentCellphone" class="control-label">@FelixResources.overname_agent_cellphone: </label>
+            @Html.EditorFor(m => m.AgentCellphone, new { htmlAttributes = new { id = "agent-cellphone", @class = "form-control", placeholder = FelixResources.overname_agent_cellphone, tabindex = Model.TabIndex++ } })
+            @Html.ValidationMessageFor(m => m.AgentCellphone, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group makelaar">
+            <label for="AgentEmail" class="control-label">@FelixResources.overname_agent_email: </label>
+            @Html.EditorFor(m => m.AgentEmail, new { htmlAttributes = new { id = "agent-email", @class = "form-control", placeholder = FelixResources.overname_agent_email, tabindex = Model.TabIndex++ } })
+            @Html.ValidationMessageFor(m => m.AgentEmail, "", new { @class = "text-danger" })
+        </div>
+        <div id="verzekering" class="form-group">
+            <label for="Insurance" class="control-label">@FelixResources.overname_insurance: <span class="requiredColor">*</span></label>
+            <select id="Insurance" name="Insurance" tabindex="@Model.TabIndex" class="form-control paddingDropdowns" data-val="true" data-val-required="@Model.InsuranceErrorMessage">
+            </select>
+            @Html.ValidationMessageFor(m => m.Insurance, "", new { @class = "text-danger" })
+            @{
+                Model.TabIndex++;
+            }
+        </div>
+    </div>
+</div>

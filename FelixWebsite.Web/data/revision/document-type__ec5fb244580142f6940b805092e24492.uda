@@ -1,0 +1,272 @@
+{
+  "DefaultTemplate": "umb://template/d10fe601595d458bb7cd31dd0428bd08",
+  "AllowedTemplates": [
+    "umb://template/d10fe601595d458bb7cd31dd0428bd08"
+  ],
+  "Icon": "icon-store color-pink",
+  "Thumbnail": "folder.png",
+  "Description": "Twee handelszaken gecombineerd in 1 pagina.",
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": null,
+  "AllowedChildContentTypes": [
+    "umb://document-type/dcdceb17db644c8cb864a2045b64cd39"
+  ],
+  "CompositionContentTypes": [
+    "umb://document-type/0aaf0419d41c4ee690cc8a9b4493c2d8",
+    "umb://document-type/452f1054b5dc4c8bac279e10c808c302",
+    "umb://document-type/850f2fb74c8242f9ba5019b6311ec8ce",
+    "umb://document-type/87ec803511384017bcb5b6c4208ed68b",
+    "umb://document-type/9469df909a6e4cffa37cdb516ec418d5",
+    "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9",
+    "umb://document-type/d60a0c7f9d03423fbf62df6682128c81",
+    "umb://document-type/f6f465e85d774bd0a2c2af86117a0587"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "7b5ecb14-43da-4d71-bb4f-3f2ae7b4d75b",
+      "Name": "Handelszaken",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "1fcf1771-9603-491a-9f3e-3a46c11d61a3",
+          "Alias": "businessItems",
+          "DataType": "umb://data-type/9058ac7a4f13480b8ecf7595f8338259",
+          "Description": "Vestigingen die gecombineerd moeten worden tot 1 pagina.",
+          "Mandatory": true,
+          "Name": "Vestigingen",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "94ac30e8-dcff-4f60-b343-83461a7cb7ab",
+      "Name": "Navigatie",
+      "SortOrder": 1,
+      "PropertyTypes": [
+        {
+          "Key": "411f69e4-c0ed-491c-9898-97144f0791e9",
+          "Alias": "logo",
+          "DataType": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+          "Description": "Logo dat wordt weergegeven in de navigatie.",
+          "Mandatory": true,
+          "Name": "logo",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "b422a22f-ae41-4ad7-91c9-991750c3cd93",
+      "Name": "Footer",
+      "SortOrder": 4,
+      "PropertyTypes": [
+        {
+          "Key": "24c9f583-712b-4a7f-9343-0facbe376fd0",
+          "Alias": "footerGoogleLink",
+          "DataType": "umb://data-type/43c470bd01ce4d2b983715cb21174541",
+          "Description": "Link naar de Google pagina.",
+          "Mandatory": false,
+          "Name": "Google link",
+          "SortOrder": 3,
+          "Validation": null
+        },
+        {
+          "Key": "2e40be05-6519-4017-8b85-e648dbbc3846",
+          "Alias": "footerTitleBusinesses",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel die wordt weergegeven boven de vestigingen.",
+          "Mandatory": false,
+          "Name": "Titel vestigingen",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "30ca0da3-910e-43b6-8e81-38593df131c1",
+          "Alias": "footerLinkedInLink",
+          "DataType": "umb://data-type/43c470bd01ce4d2b983715cb21174541",
+          "Description": "Link naar de Linked In pagina.",
+          "Mandatory": false,
+          "Name": "Linked In link",
+          "SortOrder": 4,
+          "Validation": null
+        },
+        {
+          "Key": "4145bf57-9d87-4d5e-91f3-81561e92af73",
+          "Alias": "footerFacebookLink",
+          "DataType": "umb://data-type/43c470bd01ce4d2b983715cb21174541",
+          "Description": "Link naar de Facebook pagina.",
+          "Mandatory": false,
+          "Name": "Facebook link",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "84a52995-1dec-4eb5-b972-323afb375f67",
+          "Alias": "footerLogoText",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Tekst in de footer onder het logo",
+          "Mandatory": false,
+          "Name": "Logo tekst",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "bc33547b-8625-4c12-8915-801327d62069",
+      "Name": "Kleur",
+      "SortOrder": 2,
+      "PropertyTypes": [
+        {
+          "Key": "52532e92-1614-4471-8ebe-faa810984bbc",
+          "Alias": "color",
+          "DataType": "umb://data-type/0225af17b30249cb9176b9f35cab9c17",
+          "Description": "Detailkleur die gebruikt wordt op de pagina.",
+          "Mandatory": true,
+          "Name": "Detail kleur",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "dcaa6eb0-eff7-442c-9abf-373dbc5b0d1e",
+      "Name": "Acties",
+      "SortOrder": 3,
+      "PropertyTypes": [
+        {
+          "Key": "18458e1e-da83-4445-9637-0c645dfad45a",
+          "Alias": "actionTitle",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Titel van de actie sectie.",
+          "Mandatory": true,
+          "Name": "Titel",
+          "SortOrder": 8,
+          "Validation": null
+        },
+        {
+          "Key": "18d5f03d-3456-4cad-93dd-0677c0759a28",
+          "Alias": "actionBackground",
+          "DataType": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+          "Description": "Achtergrond van de actie sectie.",
+          "Mandatory": true,
+          "Name": "Achtergrond",
+          "SortOrder": 9,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "fcd59cd7-dc43-4f36-bd0f-73e6bc03dc51",
+      "Name": "Nieuws & Reviews",
+      "SortOrder": 100,
+      "PropertyTypes": [
+        {
+          "Key": "06e2e4eb-f050-43c9-a0a8-89a67dc6cd6a",
+          "Alias": "reviewsTitle",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel die bij de nieuws sectie",
+          "Mandatory": true,
+          "Name": "Titel reviews",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "dbdd7719-e440-425a-8540-978230f23544",
+          "Alias": "newsTitle",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel die bij de nieuws sectie staat.",
+          "Mandatory": true,
+          "Name": "Titel nieuws",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/ec5fb244580142f6940b805092e24492",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0225af17b30249cb9176b9f35cab9c17",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/43c470bd01ce4d2b983715cb21174541",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/9058ac7a4f13480b8ecf7595f8338259",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/0aaf0419d41c4ee690cc8a9b4493c2d8",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/452f1054b5dc4c8bac279e10c808c302",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/850f2fb74c8242f9ba5019b6311ec8ce",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/87ec803511384017bcb5b6c4208ed68b",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/9469df909a6e4cffa37cdb516ec418d5",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/d60a0c7f9d03423fbf62df6682128c81",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/dcdceb17db644c8cb864a2045b64cd39",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/f6f465e85d774bd0a2c2af86117a0587",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/d10fe601595d458bb7cd31dd0428bd08",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Handelszaak - gecombineerd",
+  "Alias": "businessCombined",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

@@ -1,0 +1,21 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.InformatiePagina>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "Shared/Master.cshtml";
+}
+<link href="~/css/felix-information.css" rel="stylesheet" />
+
+<section id="information-page">
+
+    @Html.Partial("Slider/OptionalSlider", Model.Content)
+
+    <div class="container information-content">
+        <div class="row">
+            <div class="section-title">
+                <h1>@Model.Content.Name</h1>
+            </div>
+
+            @Html.Raw(Model.Content.Content)
+        </div>
+    </div>
+</section>

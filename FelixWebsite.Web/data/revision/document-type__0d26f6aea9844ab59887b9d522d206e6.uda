@@ -1,0 +1,153 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-tags color-red",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": null,
+  "AllowedChildContentTypes": [
+    "umb://document-type/0df6f73c9ad14ef9aee2a33e1edcd413"
+  ],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "32551137-5ae2-4bae-969d-26adb1ecc9a5",
+      "Name": "Navigatie",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "67908d5d-edb4-414a-88e5-4a52c200126c",
+          "Alias": "navBusinesses",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Navigatie item dat verwijst naar alle zaken van dit merk.",
+          "Mandatory": true,
+          "Name": "Handelszaken",
+          "SortOrder": 0,
+          "Validation": null
+        },
+        {
+          "Key": "d3564675-9107-4ab6-830a-73c60f03d31c",
+          "Alias": "navActions",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Navigatie item dat verwijst naar alle acties voor dit merk.",
+          "Mandatory": true,
+          "Name": "Acties",
+          "SortOrder": 1,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "4c91637e-bb3b-43af-bac4-d89dacc2cadb",
+      "Name": "Acties",
+      "SortOrder": 1,
+      "PropertyTypes": [
+        {
+          "Key": "3a2f6f52-896a-40ec-a5bb-7e08d65fdc28",
+          "Alias": "actionDamages",
+          "DataType": "umb://data-type/25a5ed117c7b41a8ba9f5d99348c3f5b",
+          "Description": "De schade aangifte actie",
+          "Mandatory": true,
+          "Name": "Schade aangifte",
+          "SortOrder": 7,
+          "Validation": null
+        },
+        {
+          "Key": "56d04df1-da76-4924-b978-c36ca4d60970",
+          "Alias": "actionAppointment",
+          "DataType": "umb://data-type/25a5ed117c7b41a8ba9f5d99348c3f5b",
+          "Description": "De afspraak actie.",
+          "Mandatory": true,
+          "Name": "Afspraak",
+          "SortOrder": 3,
+          "Validation": null
+        },
+        {
+          "Key": "74110b9c-479e-4d7d-bef3-9071a64d288b",
+          "Alias": "actionConfig",
+          "DataType": "umb://data-type/25a5ed117c7b41a8ba9f5d99348c3f5b",
+          "Description": "De configureer actie.",
+          "Mandatory": true,
+          "Name": "Configureer",
+          "SortOrder": 0,
+          "Validation": null
+        },
+        {
+          "Key": "78ae4a59-d1a4-4199-acca-e085a2eaf624",
+          "Alias": "actionTest",
+          "DataType": "umb://data-type/25a5ed117c7b41a8ba9f5d99348c3f5b",
+          "Description": "De testrit actie.",
+          "Mandatory": true,
+          "Name": "Testrit",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "8fb9e95b-ef31-447a-ade3-8835cfa333e2",
+          "Alias": "appointmentURL",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Standaard link naar de afspraak module",
+          "Mandatory": true,
+          "Name": "Afspraak URL",
+          "SortOrder": 4,
+          "Validation": null
+        },
+        {
+          "Key": "9b5f59c2-8d08-4443-8247-ed0217741a30",
+          "Alias": "actionQuotation",
+          "DataType": "umb://data-type/25a5ed117c7b41a8ba9f5d99348c3f5b",
+          "Description": "De offerte actie.",
+          "Mandatory": true,
+          "Name": "Offerte",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "bdc2dc29-29c1-44ea-992c-38bcb7461251",
+          "Alias": "actionTransfer",
+          "DataType": "umb://data-type/25a5ed117c7b41a8ba9f5d99348c3f5b",
+          "Description": "De overname actie.",
+          "Mandatory": true,
+          "Name": "Overname",
+          "SortOrder": 6,
+          "Validation": null
+        },
+        {
+          "Key": "f42b156e-c36b-4f46-b0a1-d99ea0f107f0",
+          "Alias": "actionSecondhand",
+          "DataType": "umb://data-type/25a5ed117c7b41a8ba9f5d99348c3f5b",
+          "Description": "De tweedehands actie.",
+          "Mandatory": true,
+          "Name": "Tweedehands",
+          "SortOrder": 5,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/0d26f6aea9844ab59887b9d522d206e6",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/25a5ed117c7b41a8ba9f5d99348c3f5b",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/0df6f73c9ad14ef9aee2a33e1edcd413",
+      "Ordering": false,
+      "Mode": 0
+    }
+  ],
+  "Name": "Merken",
+  "Alias": "brands",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

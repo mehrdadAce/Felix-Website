@@ -1,0 +1,86 @@
+{
+  "DefaultTemplate": "umb://template/78e14319065e46cfaeb7cc057de941a0",
+  "AllowedTemplates": [
+    "umb://template/78e14319065e46cfaeb7cc057de941a0"
+  ],
+  "Icon": "icon-book color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Verhaal op de vacature pagina.",
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": null,
+  "AllowedChildContentTypes": [
+    "umb://document-type/fedffca41ef547bc912fc6fded952a8e"
+  ],
+  "CompositionContentTypes": [
+    "umb://document-type/48b7b8b6139145d0b53b751dcba9bab6",
+    "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "5fda0c8a-8c72-43c6-9f6d-98feb0fe07d1",
+      "Name": "Verhaal",
+      "SortOrder": 1,
+      "PropertyTypes": [
+        {
+          "Key": "53c48de2-aa40-42ce-8289-82359d5f16d7",
+          "Alias": "img",
+          "DataType": "umb://data-type/28e7752d754248fbb98ea58af870e41d",
+          "Description": "Deze afbeelding wordt weergegeven op de vacature.",
+          "Mandatory": true,
+          "Name": "Afbeelding",
+          "SortOrder": 0,
+          "Validation": null
+        },
+        {
+          "Key": "54e9883e-c01c-4121-8c6c-06b89198eca1",
+          "Alias": "article",
+          "DataType": "umb://data-type/23eacfd117bf4e1b8cd276bae2cff33b",
+          "Description": "Het artikel van de pagina.",
+          "Mandatory": true,
+          "Name": "Artikel",
+          "SortOrder": 2,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/37eaa7423fb44e4091cde0d367812490",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/23eacfd117bf4e1b8cd276bae2cff33b",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/28e7752d754248fbb98ea58af870e41d",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/48b7b8b6139145d0b53b751dcba9bab6",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/fedffca41ef547bc912fc6fded952a8e",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/78e14319065e46cfaeb7cc057de941a0",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Verhaal",
+  "Alias": "story",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

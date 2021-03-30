@@ -1,0 +1,355 @@
+﻿@model FelixWebsite.Bdo.Models.Acquisition.PhotosModel
+@using FelixWebsite.Bdo.Models.Acquisition
+@using FelixWebsite.Core.Constants
+@using FelixResources = FelixWebsite.Core.App_GlobalResources.FelixResources;
+
+@{
+    var tooltipText = Model.AmountOfDamagePhotos > 0 ?
+        $"{FelixResources.overname_errormessage_hoeveelheid_schade_fotos} {Model.AmountOfDamagePhotos}"
+        : string.Empty;
+}
+
+<section id="transfer" class="margin-top-40">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-12">
+
+                <!-- 4 Buitenkant -->
+                <div id="panel-outside" class="panel panel-default">
+                    <div class="panel-body checkboxes">
+                        <div class="col-sm-12 text-center margin-bottom-20 margin-top-20">
+                            <div class="go-back-arrow position-absolute z-index-99 updateIcon go-arrow">
+                                <i class="fas fa-arrow-left fa-2x"></i>
+                            </div>
+                            <div class="go-forward-arrow position-absolute z-index-99 hidden updateIcon go-arrow" style="left: 90%">
+                                <i class="fas fa-arrow-right fa-2x"></i>
+                            </div>
+                            <div class="section-title">
+                                <h1 class="center">@FelixResources.acquisition_photos_outside</h1>
+                            </div>
+                        </div>
+                        <div id="slider-outside" class="carousel slide margin-bottom-40" data-ride="carousel" data-interval="false">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#slider-outside" class="active"></li>
+                                <li data-target="#slider-outside"></li>
+                                <li data-target="#slider-outside"></li>
+                                <li data-target="#slider-outside"></li>
+                            </ol>
+
+                            <div class="carousel-inner" role="listbox">
+
+                                @Html.Partial("Acquisition/ImageUploaderTemplate", new PhotoModel(
+
+                                    "/img/acquisition/linksvoor.png",
+                                    AcquisitionImageTypes.LEFT_FRONT,
+                                    FelixResources.acquisition_photos_leftFrontTitle,
+                                    FelixResources.acquisition_photos_text,
+                                    "outside",
+                                    true
+                                ))
+                                @Html.Partial("Acquisition/ImageUploaderTemplate", new PhotoModel(
+                                    "/img/acquisition/rechtsvoor.png",
+                                    AcquisitionImageTypes.RIGHT_FRONT,
+                                    FelixResources.acquisition_photos_rightFrontTitle,
+                                    FelixResources.acquisition_photos_text,
+                                    "outside"
+                                ))
+                                @Html.Partial("Acquisition/ImageUploaderTemplate", new PhotoModel(
+                                    "/img/acquisition/linksachter.png",
+                                    AcquisitionImageTypes.LEFT_BACK,
+                                    FelixResources.acquisition_photos_leftBackTitle,
+                                    FelixResources.acquisition_photos_text,
+                                    "outside"
+                                ))
+                                @Html.Partial("Acquisition/ImageUploaderTemplate", new PhotoModel(
+                                  "/img/acquisition/rechtsachter.png",
+                                  AcquisitionImageTypes.RIGHT_BACK,
+                                  FelixResources.acquisition_photos_rightBackTitle,
+                                  FelixResources.acquisition_photos_text,
+                                  "outside"
+                               ))
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 Binnenkant -->
+                @if (Model.IsTakeOver)
+                {
+                    <div id="panel-inside" class="panel panel-default hid">
+                        <div class="panel-body checkboxes">
+                            <div class="col-sm-12 text-center margin-bottom-20 margin-top-20">
+                                <div class="go-back-arrow position-absolute z-index-99 updateIcon go-arrow">
+                                    <i class="fas fa-arrow-left fa-2x"></i>
+                                </div>
+                                <div class="go-forward-arrow position-absolute z-index-99 hidden updateIcon go-arrow" style="left: 90%">
+                                    <i class="fas fa-arrow-right fa-2x"></i>
+                                </div>
+                                <div class="section-title">
+                                    <h1 class="center">@FelixResources.acquisition_photos_inside</h1>
+                                </div>
+                            </div>
+                            <div id="slider-inside" class="carousel slide margin-bottom-40" data-ride="carousel" data-interval="false">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#slider-inside" class="active"></li>
+                                    <li data-target="#slider-inside"></li>
+                                    <li data-target="#slider-inside"></li>
+                                    <li data-target="#slider-inside"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    @Html.Partial("Acquisition/ImageUploaderTemplate", new PhotoModel(
+                                       "/img/acquisition/seats.png",
+                                       AcquisitionImageTypes.FRONTSEATS,
+                                       FelixResources.acquisition_photos_frontseatsTitle,
+                                       FelixResources.acquisition_photos_text,
+                                       "inside",
+                                       true
+                                       ))
+                                    @Html.Partial("Acquisition/ImageUploaderTemplate", new PhotoModel(
+                                       "/img/acquisition/backseat.png",
+                                       AcquisitionImageTypes.BACKSEATS,
+                                       FelixResources.acquisition_photos_backseatsTitle,
+                                       FelixResources.acquisition_photos_text,
+                                       "inside"
+                                       ))
+                                    @Html.Partial("Acquisition/ImageUploaderTemplate", new PhotoModel(
+                                       "/img/acquisition/dash.png",
+                                       AcquisitionImageTypes.DASH,
+                                       FelixResources.acquisition_photos_dashTitle,
+                                       FelixResources.acquisition_photos_text,
+                                       "inside"
+                                       ))
+                                    @Html.Partial("Acquisition/ImageUploaderTemplate", new PhotoModel(
+                                       "/img/acquisition/km.png",
+                                       AcquisitionImageTypes.KM,
+                                       FelixResources.acquisition_photos_kmTitle,
+                                       FelixResources.acquisition_photos_text,
+                                       "inside"
+                                       ))
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2 Schade -->
+                    <div id="panel-damage" class="panel panel-default hid">
+                        <div class="panel-body checkboxes">
+                            <div class="col-sm-12 text-center margin-bottom-20 margin-top-20">
+                                <div class="go-back-arrow position-absolute z-index-99 updateIcon go-arrow">
+                                    <i class="fas fa-arrow-left fa-2x"></i>
+                                </div>
+                                <div class="go-forward-arrow position-absolute z-index-99 hidden updateIcon go-arrow" style="left: 90%">
+                                    <i class="fas fa-arrow-right fa-2x"></i>
+                                </div>
+                                <div class="section-title">
+                                    <h1 class="center">@FelixResources.acquisition_photos_damage</h1>
+                                </div>
+                            </div>
+                            <div id="slider-damage" class="carousel slide margin-bottom-40" data-ride="carousel" data-interval="false">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#slider-damage" class="active"></li>
+                                    <li data-target="#slider-damage"></li>
+                                </ol>
+
+                                <div class="carousel-inner" role="listbox">
+                                    @Html.Partial("Acquisition/ImageUploaderTemplate", new PhotoModel(
+                          "/img/acquisition/dmg-outside.png",
+                          AcquisitionImageTypes.DMG_OUTSIDE,
+                          FelixResources.acquisition_photos_damageOutsideTitle,
+                          FelixResources.acquisition_photos_text,
+                          "damage",
+                          true,
+                          true,
+                          true
+                          ))
+
+                                    @Html.Partial("Acquisition/ImageUploaderTemplate", new PhotoModel(
+                          "/img/acquisition/dmg-inside.png",
+                          AcquisitionImageTypes.DMG_INSIDE,
+                          FelixResources.acquisition_photos_damageInsideTitle,
+                          FelixResources.acquisition_photos_text,
+                          "damage",
+                          false,
+                          true,
+                          true,
+                          tooltipText
+                          ))
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2 Docs -->
+                    <div id="panel-docs" class="panel panel-default hid">
+                        <div class="panel-body checkboxes">
+                            <div class="col-sm-12 text-center margin-bottom-20 margin-top-20">
+                                <div class="go-back-arrow position-absolute z-index-99 updateIcon go-arrow">
+                                    <i class="fas fa-arrow-left fa-2x"></i>
+                                </div>
+                                <div class="go-forward-arrow position-absolute z-index-99 hidden updateIcon go-arrow" style="left: 90%">
+                                    <i class="fas fa-arrow-right fa-2x"></i>
+                                </div>
+                                <div class="section-title">
+                                    <h1 class="center">@FelixResources.acquisition_photos_docs</h1>
+                                </div>
+                            </div>
+                            <div id="slider-docs" class="carousel slide margin-bottom-40" data-ride="carousel" data-interval="false">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#slider-docs" class="active"></li>
+                                    <li data-target="#slider-docs"></li>
+                                    <li data-target="#slider-docs"></li>
+                                </ol>
+
+                                <div class="carousel-inner" role="listbox">
+                                    @Html.Partial("Acquisition/ImageUploaderTemplate", new PhotoModel(
+                          "/img/acquisition/inschrijving.png",
+                          AcquisitionImageTypes.ENROLLMENT_FRONT,
+                          FelixResources.acquisition_photos_frontEnrollmentTitle,
+                          FelixResources.acquisition_photos_text,
+                          "docs",
+                          true
+                          ))
+                                    @Html.Partial("Acquisition/ImageUploaderTemplate", new PhotoModel(
+                          "/img/acquisition/inschrijving.png",
+                          AcquisitionImageTypes.ENROLLMENT_BACK,
+                          FelixResources.acquisition_photos_backEnrollmentTitle,
+                          FelixResources.acquisition_photos_text,
+                          "docs"
+                          ))
+                                    @Html.Partial("Acquisition/ImageUploaderTemplate", new PhotoModel(
+                          "/img/acquisition/keuring.png",
+                          AcquisitionImageTypes.EXAMINATION,
+                          FelixResources.acquisition_photos_examinationProofTitle,
+                          FelixResources.acquisition_photos_text,
+                          "docs",
+                          false,
+                          false,
+                          true
+                          ))
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <!-- Damages -->
+                    <!-- Inside -->
+                    <div id="panel-inside-damage" class="panel panel-default hid">
+                        <div class="panel-body checkboxes">
+                            <div class="col-sm-12 text-center margin-bottom-20 margin-top-20">
+                                <div class="go-back-arrow position-absolute z-index-99 updateIcon go-arrow">
+                                    <i class="fas fa-arrow-left fa-2x"></i>
+                                </div>
+                                <div class="go-forward-arrow position-absolute z-index-99 hidden updateIcon go-arrow" style="left: 90%">
+                                    <i class="fas fa-arrow-right fa-2x"></i>
+                                </div>
+                                <div class="section-title">
+                                    <h1 class="center">@FelixResources.acquisition_photos_inside</h1>
+                                </div>
+                            </div>
+                            <div id="slider-inside-damage" class="carousel slide margin-bottom-40" data-ride="carousel" data-interval="false">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#slider-inside-damage" class="active"></li>
+                                    <li data-target="#slider-inside-damage"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    @Html.Partial("Acquisition/ImageUploaderTemplate", new PhotoModel(
+                                 "/img/acquisition/km.png",
+                                 AcquisitionImageTypes.KM_DAMAGES,
+                                 FelixResources.acquisition_photos_kmTitle,
+                                 FelixResources.acquisition_photos_text,
+                                 "inside",
+                                 true
+                                 ))
+                                    @Html.Partial("Acquisition/ImageUploaderTemplate", new PhotoModel(
+                              "/img/acquisition/chassisnummer.png",
+                              AcquisitionImageTypes.CHASSIS_NUMBER,
+                              FelixResources.acquisition_photos_chassisNumberTitle,
+                              FelixResources.acquisition_photos_text,
+                              "inside"
+                              ))
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Documents -->
+                    <div id="panel-docs-damage" class="panel panel-default hid">
+                        <div class="panel-body checkboxes">
+                            <div class="col-sm-12 text-center margin-bottom-20 margin-top-20">
+                                <div class="go-back-arrow position-absolute z-index-99 updateIcon go-arrow">
+                                    <i class="fas fa-arrow-left fa-2x"></i>
+                                </div>
+                                <div class="go-forward-arrow position-absolute z-index-99 hidden updateIcon go-arrow" style="left: 90%">
+                                    <i class="fas fa-arrow-right fa-2x"></i>
+                                </div>
+                                <div class="section-title">
+                                    <h1 class="center">@FelixResources.acquisition_photos_docs</h1>
+                                </div>
+                            </div>
+                            <div id="slider-docs-damage" class="carousel slide margin-bottom-40" data-ride="carousel" data-interval="false">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#slider-docs-damage" class="active"></li>
+                                    <li data-target="#slider-docs-damage"></li>
+                                    <li data-target="#slider-docs-damage"></li>
+                                    <li data-target="#slider-docs-damage"></li>
+                                </ol>
+
+                                <div class="carousel-inner" role="listbox">
+                                    @Html.Partial("Acquisition/ImageUploaderTemplate", new PhotoModel(
+                                 "/img/acquisition/inschrijving.png",
+                                 AcquisitionImageTypes.ENROLLMENT_FRONT_DAMAGES,
+                                 FelixResources.acquisition_photos_frontEnrollmentTitle,
+                                 FelixResources.acquisition_photos_text,
+                                 "docs",
+                                 true
+                                 ))
+                                    @Html.Partial("Acquisition/ImageUploaderTemplate", new PhotoModel(
+                                 "/img/acquisition/inschrijving.png",
+                                 AcquisitionImageTypes.ENROLLMENT_BACK_DAMAGES,
+                                 FelixResources.acquisition_photos_backEnrollmentTitle,
+                                 FelixResources.acquisition_photos_text,
+                                 "docs"
+                                 ))
+                                    @Html.Partial("Acquisition/ImageUploaderTemplate", new PhotoModel(
+                                 "/img/acquisition/verzekeringsbewijs.png",
+                                 AcquisitionImageTypes.PROOF_OF_INSURANCE,
+                                 FelixResources.acquisition_photos_proofOfInsuranceTitle,
+                                 FelixResources.acquisition_photos_text,
+                                 "docs",
+                                 false,
+                                 false,
+                                 false
+                                 ))
+                                    @Html.Partial("Acquisition/ImageUploaderTemplate", new PhotoModel(
+                                "/img/acquisition/keuring.png",
+                                AcquisitionImageTypes.EXAMINATION,
+                                FelixResources.acquisition_photos_examinationProofTitle,
+                                FelixResources.acquisition_photos_text,
+                                "docs",
+                                false,
+                                false,
+                                true
+                                ))
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+
+</section>
+<input id="amountOfDamagePictures" type="hidden" name="amountOfDamagePictures" value="@Model.AmountOfDamagePhotos" />
+<input id="errormessageAmountOfDamagePictures" type="hidden"
+       name="errormessageAmountOfDamagePictures" value="@FelixResources.overname_errormessage_hoeveelheid_schade_fotos" />

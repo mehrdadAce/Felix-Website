@@ -1,0 +1,241 @@
+﻿@model FelixWebsite.Bdo.Models.Acquisition.SchemeImage[]
+
+@functions{ 
+    string GetOpacity(FelixWebsite.Bdo.Models.Acquisition.SchemeImage image)
+    {
+        return image.IsRed ? "opacity-1" : "opacity-0";
+    }
+}
+
+<div class="scheme-map">
+
+    <div class="scheme-overview">
+        <img id="overzicht" src="~/img/acquisition/scheme/schema-voertuig.png">
+        <div>
+            <img id="colored-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.BumperBack].OrderNumber"
+                 src="~/img/acquisition/scheme/colored-AchterBumper.png" 
+                 class="@GetOpacity(Model[(int)FelixWebsite.Shared.enums.SchemeEntry.BumperBack]) colored-img" />
+
+            <img id="colored-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.BumperFront].OrderNumber"
+                 src="~/img/acquisition/scheme/colored-Bumper.png" 
+                 class="@GetOpacity(Model[(int)FelixWebsite.Shared.enums.SchemeEntry.BumperFront]) colored-img">
+
+            <img id="colored-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Roof].OrderNumber"
+                 src="~/img/acquisition/scheme/colored-Dak.png" 
+                 class="@GetOpacity(Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Roof]) colored-img">
+
+            <img id="colored-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Trunk].OrderNumber"
+                 src="~/img/acquisition/scheme/colored-Koffer.png" 
+                 class="@GetOpacity(Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Trunk]) colored-img">
+
+            <img id="colored-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftWheelBack].OrderNumber"
+                 src="~/img/acquisition/scheme/colored-LinkerAchterband.png" 
+                 class="@GetOpacity(Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftWheelBack]) colored-img">
+
+            <img id="colored-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftWheelCapBack].OrderNumber"
+                 src="~/img/acquisition/scheme/colored-LinkerAchterBandKap.png" 
+                 class="@GetOpacity(Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftWheelCapBack]) colored-img">
+
+            <img id="colored-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftDoorBack].OrderNumber"
+                 src="~/img/acquisition/scheme/colored-LinkerAchterdeur.png" 
+                 class="@GetOpacity(Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftDoorBack]) colored-img">
+
+            <img id="colored-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftWheelCapFront].OrderNumber"
+                 src="~/img/acquisition/scheme/colored-LinkerBandkap.png" 
+                 class="@GetOpacity(Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftWheelCapFront]) colored-img">
+
+            <img id="colored-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftWheelFront].OrderNumber"
+                 src="~/img/acquisition/scheme/colored-LinkerVoorband.png" 
+                 class="@GetOpacity(Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftWheelFront]) colored-img">
+
+            <img id="colored-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftDoorFront].OrderNumber"
+                 src="~/img/acquisition/scheme/colored-LinkerVoordeur.png" 
+                 class="@GetOpacity(Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftDoorFront]) colored-img">
+
+            <img id="colored-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Hood].OrderNumber"
+                 src="~/img/acquisition/scheme/colored-Motorkap.png" 
+                 class="@GetOpacity(Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Hood]) colored-img">
+
+            <img id="colored-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightWheelBack].OrderNumber"
+                 src="~/img/acquisition/scheme/colored-RechterAchterband.png"
+                 class="@GetOpacity(Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightWheelBack]) colored-img">
+
+            <img id="colored-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightWheelCapBack].OrderNumber"
+                 src="~/img/acquisition/scheme/colored-RechterAchterBandkap.png" 
+                 class="@GetOpacity(Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightWheelCapBack]) colored-img">
+
+            <img id="colored-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightDoorBack].OrderNumber"
+                 src="~/img/acquisition/scheme/colored-RechterAchterdeur.png" 
+                 class="@GetOpacity(Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightDoorBack]) colored-img">
+
+            <img id="colored-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightWheelCapFront].OrderNumber"
+                 src="~/img/acquisition/scheme/colored-RechterBandkap.png" 
+                 class="@GetOpacity(Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightWheelCapFront]) colored-img">
+
+            <img id="colored-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightWheelFront].OrderNumber"
+                 src="~/img/acquisition/scheme/colored-RechterVoorband.png" 
+                 class="@GetOpacity(Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightWheelFront]) colored-img">
+
+            <img id="colored-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightDoorFront].OrderNumber"
+                 src="~/img/acquisition/scheme/colored-RechterVoordeur.png" 
+                 class="@GetOpacity(Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightDoorFront]) colored-img">
+
+            <img id="colored-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Windshield].OrderNumber"
+                 src="~/img/acquisition/scheme/colored-Voorruit.png" 
+                 class="@GetOpacity(Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Windshield]) colored-img">
+
+            <img id="colored-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Underneath].OrderNumber"
+                 src="~/img/acquisition/scheme/colored-Onderkant.png" 
+                 class="@GetOpacity(Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Underneath]) colored-img">
+
+            <img id="colored-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Inside].OrderNumber"
+                 src="~/img/acquisition/scheme/colored-Binnenkant.png" 
+                 class="@GetOpacity(Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Inside]) colored-img">
+        </div>
+        <div>
+            <img id="selected-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.BumperBack].OrderNumber"
+                 src="~/img/acquisition/scheme/selected-AchterBumper.png" class="opacity-0 selected-img">
+            <img id="selected-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.BumperFront].OrderNumber"
+                 src="~/img/acquisition/scheme/selected-Bumper.png" class="opacity-0 selected-img">
+            <img id="selected-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Roof].OrderNumber"
+                 src="~/img/acquisition/scheme/selected-Dak.png" class="opacity-0 selected-img">
+            <img id="selected-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Trunk].OrderNumber"
+                 src="~/img/acquisition/scheme/selected-Koffer.png" class="opacity-0 selected-img">
+            <img id="selected-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftWheelBack].OrderNumber"
+                 src="~/img/acquisition/scheme/selected-LinkerAchterband.png" class="opacity-0 selected-img">
+            <img id="selected-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftWheelCapBack].OrderNumber"
+                 src="~/img/acquisition/scheme/selected-LinkerAchterBandKap.png" class="opacity-0 selected-img">
+            <img id="selected-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftDoorBack].OrderNumber"
+                 src="~/img/acquisition/scheme/selected-LinkerAchterdeur.png" class="opacity-0 selected-img">
+            <img id="selected-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftWheelCapFront].OrderNumber"
+                 src="~/img/acquisition/scheme/selected-LinkerBandkap.png" class="opacity-0 selected-img">
+            <img id="selected-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftWheelFront].OrderNumber"
+                 src="~/img/acquisition/scheme/selected-LinkerVoorband.png" class="opacity-0 selected-img">
+            <img id="selected-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftDoorFront].OrderNumber"
+                 src="~/img/acquisition/scheme/selected-LinkerVoordeur.png" class="opacity-0 selected-img">
+            <img id="selected-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Hood].OrderNumber"
+                 src="~/img/acquisition/scheme/selected-Motorkap.png" class="opacity-0 selected-img">
+            <img id="selected-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightWheelBack].OrderNumber"
+                 src="~/img/acquisition/scheme/selected-RechterAchterband.png" class="opacity-0 selected-img">
+            <img id="selected-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightWheelCapBack].OrderNumber"
+                 src="~/img/acquisition/scheme/selected-RechterAchterBandkap.png" class="opacity-0 selected-img">
+            <img id="selected-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightDoorBack].OrderNumber"
+                 src="~/img/acquisition/scheme/selected-RechterAchterdeur.png" class="opacity-0 selected-img">
+            <img id="selected-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightWheelCapFront].OrderNumber"
+                 src="~/img/acquisition/scheme/selected-RechterBandkap.png" class="opacity-0 selected-img">
+            <img id="selected-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightWheelFront].OrderNumber"
+                 src="~/img/acquisition/scheme/selected-RechterVoorband.png" class="opacity-0 selected-img">
+            <img id="selected-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightDoorFront].OrderNumber"
+                 src="~/img/acquisition/scheme/selected-RechterVoordeur.png" class="opacity-0 selected-img">
+            <img id="selected-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Windshield].OrderNumber"
+                 src="~/img/acquisition/scheme/selected-Voorruit.png" class="opacity-0 selected-img">
+            <img id="selected-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Underneath].OrderNumber"
+                 src="~/img/acquisition/scheme/selected-Onderkant.png" class="opacity-0 selected-img">
+            <img id="selected-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Inside].OrderNumber"
+                 src="~/img/acquisition/scheme/selected-Binnenkant.png" class="opacity-0 selected-img high-z-index" usemap="#image-map">
+        </div>
+    </div>
+
+    <map name="image-map">
+        <area id="scheme-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.BumperFront].OrderNumber"
+              alt="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.BumperFront].Name"
+              title="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.BumperFront].ReadableName"
+              href="" coords="632,163,645,166,648,331,635,332,623,346,616,341,602,339,594,300,604,282,604,229,596,221,594,171,620,155" shape="poly">
+
+        <area id="scheme-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Hood].OrderNumber"
+              alt="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Hood].Name"
+              title="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Hood].ReadableName"
+              href="" coords="575,179,580,329,471,330,492,263,471,184" shape="poly">
+
+        <area id="scheme-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftWheelCapFront].OrderNumber"
+              alt="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftWheelCapFront].Name"
+              title="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftWheelCapFront].ReadableName"
+              href="" coords="541,103,546,74,576,72,590,107,568,111,565,125,576,126,544,145,457,152,447,76,463,73,486,111,512,120" shape="poly">
+
+        <area id="scheme-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightWheelCapFront].OrderNumber"
+              alt="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightWheelCapFront].Name"
+              title="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightWheelCapFront].ReadableName"
+              href="" coords="508,393,479,409,471,436,447,441,457,360,531,368,575,383,560,387,566,396,590,401,590,417,577,439,548,437,535,408" shape="poly">
+
+        <area id="scheme-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Roof].OrderNumber"
+              alt="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Roof].Name"
+              title="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Roof].ReadableName"
+              href="" coords="400,315,396,203,330,208,247,203,244,315,324,307" shape="poly">
+
+        <area id="scheme-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftDoorFront].OrderNumber"
+              alt="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftDoorFront].Name"
+              title="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftDoorFront].ReadableName"
+              href="" coords="402,193,455,156,444,76,336,74,333,197" shape="poly">
+
+        <area id="scheme-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightDoorFront].OrderNumber"
+              alt="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightDoorFront].Name"
+              title="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightDoorFront].ReadableName"
+              href="" coords="336,438,444,439,455,354,400,318,334,309,343,371" shape="poly">
+
+        <area id="scheme-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftDoorBack].OrderNumber"
+              alt="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftDoorBack].Name"
+              title="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftDoorBack].ReadableName"
+              href="" coords="263,76,235,123,249,166,275,195,328,195,331,74" shape="poly">
+
+        <area id="scheme-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightDoorBack].OrderNumber"
+              alt="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightDoorBack].Name"
+              title="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightDoorBack].ReadableName"
+              href="" coords="329,435,331,315,275,317,240,360,239,387,261,419,273,438" shape="poly">
+
+        <area id="scheme-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Trunk].OrderNumber"
+              alt="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Trunk].Name"
+              title="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Trunk].ReadableName"
+              href="" coords="244,313,239,209,133,192,126,261,137,329" shape="poly">
+
+        <area id="scheme-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftWheelCapBack].OrderNumber"
+              alt="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftWheelCapBack].Name"
+              title="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftWheelCapBack].ReadableName"
+              href="" coords="236,141,267,192,180,163,144,154,132,141,140,138,145,117,132,116,128,101,144,83,187,82,200,109,226,119" shape="poly">
+
+        <area id="scheme-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightWheelCapBack].OrderNumber"
+              alt="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightWheelCapBack].Name"
+              title="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightWheelCapBack].ReadableName"
+              href="" coords="268,319,241,356,240,383,201,399,190,425,147,431,135,419,133,402,148,399,146,377,137,373,139,359,179,357,229,325" shape="poly">
+
+        <area id="scheme-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.BumperBack].OrderNumber"
+              alt="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.BumperBack].Name"
+              title="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.BumperBack].ReadableName"
+              href="" coords="121,343,116,179,100,163,60,172,58,339,81,354" shape="poly">
+
+        <area id="scheme-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftWheelBack].OrderNumber"
+              alt="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftWheelBack].Name"
+              title="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftWheelBack].ReadableName"
+              href="" coords="225,83,29" shape="circle">
+
+        <area id="scheme-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftWheelFront].OrderNumber"
+              alt="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftWheelFront].Name"
+              title="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.LeftWheelFront].ReadableName"
+              href="" coords="511,86,29" shape="circle">
+
+        <area id="scheme-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightWheelBack].OrderNumber"
+              alt="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightWheelBack].Name"
+              title="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightWheelBack].ReadableName"
+              href="" coords="228,429,28" shape="circle">
+
+        <area id="scheme-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightWheelFront].OrderNumber"
+              alt="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightWheelFront].Name"
+              title="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.RightWheelFront].ReadableName"
+              href="" coords="511,428,28" shape="circle">
+
+        <area id="scheme-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Windshield].OrderNumber"
+              alt="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Windshield].Name"
+              title="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Windshield].ReadableName"
+              href="" coords="402,315,400,208,467,185,486,257,466,330" shape="poly">
+
+        <area id="scheme-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Underneath].OrderNumber"
+              alt="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Underneath].Name"
+              title="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Underneath].ReadableName"
+              href="" coords="90,515,264,515,284,534,283,560,272,574,90,577,67,559,68,530" shape="poly">
+        <area id="scheme-img-@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Inside].OrderNumber"
+              alt="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Inside].Name"
+              title="@Model[(int)FelixWebsite.Shared.enums.SchemeEntry.Inside].ReadableName"
+              href="" coords="441,515,627,517,645,552,616,580,427,576,413,555,417,530" shape="poly">
+
+    </map>
+</div>
+

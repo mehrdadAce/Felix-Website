@@ -1,0 +1,291 @@
+﻿
+.scheme-body {
+    border-radius: 2px;
+
+    .scheme-map {
+        padding: 2%;
+        height: 510px;
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .scheme-overview {
+            img {
+                position: absolute;
+                max-width: 100%;
+                height: auto;
+            }
+
+            .opacity-0 {
+                opacity: 0;
+            }
+
+            .opacity-1 {
+                opacity: 1;
+            }
+
+            .high-z-index {
+                z-index: 89;
+            }
+        }
+    }
+
+    area {
+        cursor: pointer;
+    }
+}
+
+#scheme-in-overview {
+    height: 630px;
+    margin-left: 18%;
+}
+
+#placeholder-scheme-text {
+    margin-top: 20%;
+}
+
+.scheme-text {
+    margin-top: 3%;
+
+    input.check-box {
+        margin-right: 5%;
+    }
+
+    .title-location {
+        font-weight: bold;
+        font-size: 27px;
+        font-weight: 500;
+        color: #363636;
+        padding-bottom: 12px;
+        display: inline-block;
+        margin: 0 auto 21px auto;
+        overflow-wrap: break-word;
+        border-bottom: 2px solid #cf0227;
+
+
+        #brackets-number {
+            font-weight: normal;
+        }
+    }
+
+    .input-fields {
+        padding: 2%;
+
+        .remarks-label {
+            font-weight: bold;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .remarks-width {
+            width: 90%;
+            height: 10vh;
+        }
+
+        .costs-input {
+            padding: 0 !important;
+            border: 1px solid black;
+            width: 70px;
+        }
+
+        #SchemeEntryDamage {
+            width: 24%;
+            opacity: 0;
+            z-index: 0;
+            overflow: auto;
+            position: absolute;
+            padding-bottom: 12% !important;
+        }
+
+        .scheme {
+            .loadingIcon {
+                margin-left: -7px !important;
+            }
+        }
+
+        .setDamageImgHeight {
+            width: auto;
+            height: 80px !important;
+        }
+
+        .updateIcon {
+            margin-top: 30%;
+        }
+
+        .checkboxes {
+            margin-bottom: 20px;
+            .form-group {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+.hidden-above-1000 {
+    display: none;
+}
+
+.hidden-below-1000 {
+    display: block;
+}
+
+.continue-button {
+    margin-right: 30px;
+    float: right;
+}
+
+.go-arrow {
+    float: left;
+}
+
+.section-title {
+    margin-left: 100px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .hidden-above-1000 {
+        display: block;
+    }
+
+    .hidden-below-1000 {
+        display: none;
+    }
+
+    .scheme-body {
+        left: -25px;
+        margin: 3% 0 10% 0;
+
+        .scheme-map {
+            height: 525px;
+
+            img {
+                max-width: 86%;
+            }
+        }
+    }
+
+    #placeholder-scheme-text {
+        margin-top: 10%;
+    }
+
+    .section-title {
+        margin-left: 0px;
+    }
+
+    #scheme-in-overview {
+        margin-left: 0 !important;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .scheme-body {
+        .scheme-map {
+            height: 500px;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .scheme-body {
+        .scheme-map {
+            height: 475px;
+        }
+    }
+
+    #placeholder-scheme-text {
+        margin-top: 25%;
+    }
+
+    .scheme-body {
+        margin-bottom: 20%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .scheme-body {
+        .scheme-map {
+            height: 425px;
+        }
+    }
+
+    #placeholder-scheme-text {
+        margin-top: 20%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .scheme-body {
+        margin: 5% 0 15% 0;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .scheme-body {
+        left: -25px;
+
+        .scheme-map {
+            height: 375px;
+
+            img {
+                max-width: 86%;
+            }
+        }
+    }
+
+    #scheme-in-overview {
+        height: 440px !important;
+        margin-left: 0 !important;
+    }
+
+    .agent-name-makelaar {
+        margin-top: 35px;
+    }
+
+    #placeholder-scheme-text {
+        margin-top: 15%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .scheme-body {
+        .scheme-map {
+            height: 350px;
+        }
+    }
+
+    #placeholder-scheme-text {
+        margin-top: 5%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .scheme-body {
+        margin: 10% 0 5% 0;
+    }
+
+    #placeholder-scheme-text {
+        margin-top: -1%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #placeholder-scheme-text {
+        margin-top: -1%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .scheme-body {
+        margin: 10% 0 -25% 0;
+    }
+
+    #placeholder-scheme-text {
+        margin-top: -20%;
+    }
+}

@@ -1,0 +1,161 @@
+﻿/*=============================================
+=                 Navigation                  =
+=============================================*/
+.navbar-default {
+    margin-bottom: 0px;
+    background-color: #fff;
+    border: 0;
+    padding: 15px 0;
+    /*-webkit-box-shadow: 2px 2px 4px -1px rgba(0,0,0,0.07);
+    -moz-box-shadow: 2px 2px 4px -1px rgba(0,0,0,0.07);
+    box-shadow: 2px 2px 4px -1px rgba(0, 0, 0, 0.07);*/
+}
+
+    .navbar-default .navbar-nav > li > a {
+        font-size: 15px;
+        font-weight: 400;
+        color: #666;
+        transition: none;
+        cursor: pointer;
+        -webkit-transition: none;
+        -moz-transition: none;
+    }
+
+        .navbar-default .navbar-nav > li > a:hover {
+            color: #cf0227;
+        }
+
+    .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+        color: #cf0227;
+        background-color: transparent;
+    }
+
+    .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+        color: #fff;
+        background-color: rgba(0,0,0,0.9);
+    }
+
+        .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+            color: #fff;
+            background-color: #cf0227;
+        }
+
+.navbar-brand img {
+    margin-top: -2px;
+    width: 120px;
+    height: auto;
+}
+.navbar-brand.brand img {
+    padding: 9px;
+    margin-top: 20px;
+    width: 120px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.brand.navbar-brand > .row {
+    margin-top: -50px;
+}
+
+.brand.citroën {
+    background-color: #cf0227;
+}
+
+.brand.peugeot {
+    background-color: #153b6b;
+}
+
+.brand.kia {
+    background-color: #f3f3f3;
+}
+
+.logo.second {
+    width: 170px !important;
+    max-height: 80px;
+}
+
+@media only screen and (max-width: 767px) {
+    /*.brand.navbar-brand img {
+        margin-left: 10px;
+    }*/
+
+    .logo.second {
+        width: 148px !important;
+    }
+    
+}
+
+@media only screen and (min-width: 768px) {
+    .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+}
+/*=============================================
+=         Navigation dropdown submenu         =
+=============================================*/
+.dropdown-submenu {
+    position: relative;
+}
+
+    .dropdown-submenu > .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -6px;
+        margin-left: -1px;
+        -webkit-border-radius: 0 6px 6px 6px;
+        -moz-border-radius: 0 6px 6px 6px;
+        border-radius: 0 6px 6px 6px;
+    }
+
+    .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
+        border-radius: 0px;
+    }
+
+    .dropdown-submenu > a:after {
+        display: block;
+        content: " ";
+        float: right;
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        border-style: solid;
+        border-width: 5px 0 5px 5px;
+        border-left-color: #666;
+        margin-top: 5px;
+        margin-right: -10px;
+    }
+
+    .dropdown-submenu:hover > a:after {
+        border-left-color: #ffffff;
+    }
+
+    .dropdown-submenu.pull-left {
+        float: none;
+    }
+
+        .dropdown-submenu.pull-left > .dropdown-menu {
+            left: -100%;
+            margin-left: 10px;
+            -webkit-border-radius: 6px 0 6px 6px;
+            -moz-border-radius: 6px 0 6px 6px;
+            border-radius: 6px 0 6px 6px;
+        }
+
+.dropdown.root:hover > .dropdown-menu {
+    width: 100%;
+    border-radius: 0;
+    display: block;
+}
+.dropdown.root:hover {
+    background-color: #cf0227 !important;
+}
+.dropdown.root:hover > a {
+    color: #fff !important;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #cf0227;
+}

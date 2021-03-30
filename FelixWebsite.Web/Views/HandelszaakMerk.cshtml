@@ -1,0 +1,30 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.BusinessBrand>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "Shared/Master.cshtml";
+}
+<link rel="stylesheet" type="text/css" href="~/css/felix-business.css">
+@Html.Partial("Slider/OptionalSlider", Model.Content)
+
+@if (!Request.Browser.IsMobileDevice)
+{
+    @Html.Partial("Actions/Actions", Model)
+}
+
+<div id="contact" class="container">
+    @Html.Partial("Handelszaak/Contact", Model)
+    @Html.Partial("Handelszaak/Opening Hours", Model)
+    @if (!Request.Browser.IsMobileDevice)
+    {
+        @Html.Partial("Handelszaak/GoogleMap")
+    }
+</div>
+
+@if (Request.Browser.IsMobileDevice)
+{
+    @Html.Partial("Actions/Actions", Model)
+    @Html.Partial("Handelszaak/GoogleMap")
+}
+
+@Html.Partial("News/News", Model)
+@Html.Partial("Reviews/Reviews", Model)

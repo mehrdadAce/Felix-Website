@@ -1,0 +1,275 @@
+{
+  "DefaultTemplate": "umb://template/98d45282687e42f8b282be3b82eff8cb",
+  "AllowedTemplates": [
+    "umb://template/98d45282687e42f8b282be3b82eff8cb"
+  ],
+  "Icon": "icon-user color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Openstaande vacature.",
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": null,
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [
+    "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "2031a4b4-6064-41a2-9392-c416b26e11de",
+      "Name": "Informatie",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "10911463-c0c0-499e-9ecf-54f52b9ea176",
+          "Alias": "Business",
+          "DataType": "umb://data-type/58bf9287368e442ca581fb260876b2c9",
+          "Description": "Vestiging waar de vacature openstaat.",
+          "Mandatory": true,
+          "Name": "Vestiging",
+          "SortOrder": 3,
+          "Validation": null
+        },
+        {
+          "Key": "197bcec1-d3f7-40df-9d25-10362898e3f2",
+          "Alias": "Languages",
+          "DataType": "umb://data-type/e45447f5b478408e90ee48a5304b3324",
+          "Description": "De talen die gekend moeten zijn door de sollicitant met hun kennis niveau. 5 = moedertaal",
+          "Mandatory": false,
+          "Name": "Talen",
+          "SortOrder": 10,
+          "Validation": null
+        },
+        {
+          "Key": "2e23f174-4bfe-4d1f-86d2-ce6a5f5e4c6e",
+          "Alias": "DriversLicense",
+          "DataType": "umb://data-type/fef5f6b4feed4d89ba700686fe11044d",
+          "Description": "Rijbewijs/ rijbewijzen waarover de sollicitant dient te beschikken.",
+          "Mandatory": true,
+          "Name": "Rijbewijzen",
+          "SortOrder": 9,
+          "Validation": null
+        },
+        {
+          "Key": "73a0f3d0-647b-412a-a361-60f01a0322c9",
+          "Alias": "RequiredQualifications",
+          "DataType": "umb://data-type/92731df5d2864093be6027d09b6db518",
+          "Description": "omschrijving van de kwalificaties die vereist zijn.",
+          "Mandatory": true,
+          "Name": "Kwalificaties beschrijving",
+          "SortOrder": 5,
+          "Validation": null
+        },
+        {
+          "Key": "742553e0-8d79-4582-b52e-cd544215189f",
+          "Alias": "RenumerationDescription",
+          "DataType": "umb://data-type/92731df5d2864093be6027d09b6db518",
+          "Description": "omschrijving van wat de werknemer zal mogen ontvangen.",
+          "Mandatory": true,
+          "Name": "Vergoeding",
+          "SortOrder": 6,
+          "Validation": null
+        },
+        {
+          "Key": "75a26e54-eb8b-4b6c-98c3-e39a8f7b79bb",
+          "Alias": "validTo",
+          "DataType": "umb://data-type/20fcd3993ca74dab8c61b45e19b01038",
+          "Description": "Datum waarop de vacature voor het laatst wordt getoond.",
+          "Mandatory": true,
+          "Name": "Einddatum",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "8e37a517-3a9c-4df9-86b4-0543116fdfd6",
+          "Alias": "uniqeId",
+          "DataType": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+          "Description": "Als dit veld ingevuld is, dan staat de vacature reeds op de website van de VDAB.",
+          "Mandatory": false,
+          "Name": "Id",
+          "SortOrder": 0,
+          "Validation": null
+        },
+        {
+          "Key": "97cf7198-2491-4ce5-a345-6706ed6d32fb",
+          "Alias": "JobDescription",
+          "DataType": "umb://data-type/92731df5d2864093be6027d09b6db518",
+          "Description": "taakomschrijving van een job, functieomschrijving",
+          "Mandatory": true,
+          "Name": "Job beschrijving",
+          "SortOrder": 4,
+          "Validation": null
+        },
+        {
+          "Key": "9b4748dc-467b-4057-9173-09b5c711aeda",
+          "Alias": "CompetenceSearch",
+          "DataType": "umb://data-type/ccce34dc33d1405d9a632058633e4111",
+          "Description": "Zoek op basis van zoektermen (trefwoorden of beroepsnamen),  competentiesjablonen teruggeeft.",
+          "Mandatory": true,
+          "Name": "Competenties",
+          "SortOrder": 7,
+          "Validation": null
+        },
+        {
+          "Key": "a671d220-8104-4df8-8605-e7a8df7b844f",
+          "Alias": "ExperienceInMonths",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Het aantal maanden werkervaring dat een sollicitant dient te hebben.",
+          "Mandatory": true,
+          "Name": "Aantal maanden werkervaring",
+          "SortOrder": 11,
+          "Validation": "^[0-9]*$"
+        },
+        {
+          "Key": "c32feb6f-cbae-4dc4-b921-18a26d7254bd",
+          "Alias": "LaborArrangement",
+          "DataType": "umb://data-type/b3b7d5034b674d398cc6da892af881c3",
+          "Description": "Kies het geschikte arbeidsregime.",
+          "Mandatory": true,
+          "Name": "Voltijds/ Deeltijds",
+          "SortOrder": 13,
+          "Validation": null
+        },
+        {
+          "Key": "c5fb5825-c094-4b3f-898f-be23c44494a1",
+          "Alias": "DiplomaSelector",
+          "DataType": "umb://data-type/a44669969eca44379353e663d748d887",
+          "Description": "Selecteer de diploma's waar sollicitanten dienen over te beschikken. (Gebruik Ctrl + Click om meerdere te selecteren)",
+          "Mandatory": true,
+          "Name": "Diploma's",
+          "SortOrder": 8,
+          "Validation": null
+        },
+        {
+          "Key": "e5806236-2051-45ab-bf41-a2378d99e367",
+          "Alias": "validFrom",
+          "DataType": "umb://data-type/20fcd3993ca74dab8c61b45e19b01038",
+          "Description": "Datum waarop de vacature voor het eerst wordt getoond.",
+          "Mandatory": true,
+          "Name": "Startdatum",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "e81b7a79-8cb7-4541-ae3c-ea4800ad54fa",
+          "Alias": "LaborContract",
+          "DataType": "umb://data-type/41b9cfbbd78b410bbc6a7f0b09529977",
+          "Description": "Selecteer het arbeidscontract dat van toepassing is.",
+          "Mandatory": true,
+          "Name": "Contract",
+          "SortOrder": 12,
+          "Validation": null
+        },
+        {
+          "Key": "fbb8d8d0-b398-4b99-8a78-1ebbbb486e29",
+          "Alias": "LaborSystem",
+          "DataType": "umb://data-type/f67345d7357e44ffbcca6efeeaf5a8fd",
+          "Description": "Kies het arbeidsstelsel dat van toepassing is.",
+          "Mandatory": true,
+          "Name": "Arbeidsstelsel",
+          "SortOrder": 14,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "e8108b00-94bc-46c1-b859-a8bfce53fcac",
+      "Name": "Afbeelding",
+      "SortOrder": 1,
+      "PropertyTypes": [
+        {
+          "Key": "91b7d734-c1eb-4095-9da6-930463b9b49c",
+          "Alias": "img",
+          "DataType": "umb://data-type/50d98020199d4a22b1f54f51325f7be3",
+          "Description": "Afbeelding die wordt weergeven op jobsite.",
+          "Mandatory": true,
+          "Name": "Afbeelding",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/98ef09d225974f64b9618177e0429082",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/20fcd3993ca74dab8c61b45e19b01038",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/41b9cfbbd78b410bbc6a7f0b09529977",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/50d98020199d4a22b1f54f51325f7be3",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/58bf9287368e442ca581fb260876b2c9",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/92731df5d2864093be6027d09b6db518",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/a44669969eca44379353e663d748d887",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/b3b7d5034b674d398cc6da892af881c3",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/ccce34dc33d1405d9a632058633e4111",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/e45447f5b478408e90ee48a5304b3324",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/f67345d7357e44ffbcca6efeeaf5a8fd",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/fef5f6b4feed4d89ba700686fe11044d",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/98d45282687e42f8b282be3b82eff8cb",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Vacature",
+  "Alias": "joboffer",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

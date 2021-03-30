@@ -1,0 +1,15 @@
+{
+  "EditorAlias": "Umbraco.TinyMCEv3",
+  "DatabaseType": 0,
+  "PreValues": {
+    "editor": "{\r\n  \"toolbar\": [\r\n    \"undo\",\r\n    \"redo\",\r\n    \"cut\",\r\n    \"copy\",\r\n    \"paste\",\r\n    \"bold\",\r\n    \"italic\",\r\n    \"underline\",\r\n    \"alignleft\",\r\n    \"aligncenter\",\r\n    \"alignright\",\r\n    \"bullist\",\r\n    \"numlist\",\r\n    \"outdent\",\r\n    \"indent\",\r\n    \"umbmacro\",\r\n    \"umbembeddialog\"\r\n  ],\r\n  \"stylesheets\": [],\r\n  \"dimensions\": {\r\n    \"height\": 250\r\n  },\r\n  \"maxImageSize\": 500\r\n}",
+    "hideLabel": "0"
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/92731df5d2864093be6027d09b6db518",
+  "Dependencies": [],
+  "Name": "_RichTextEditor",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

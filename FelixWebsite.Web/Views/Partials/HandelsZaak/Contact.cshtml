@@ -1,0 +1,50 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<BusinessBrand>
+@{
+    var cssClass = "br" + Model.Content.Brand.OfType<Brand>().FirstOrDefault().Id;
+    var color = Model.Content.Brand.OfType<Brand>().FirstOrDefault().Color.Color;
+    <style>
+        .@(cssClass).border-color {
+            border-color: #@(color);
+        }
+        .@(cssClass).color {
+            color: #@(color);
+        }
+    </style>
+}
+
+<!-- loc, tel, mail, fax -->
+<div class="row margin-top-40">
+    <div class="col-md-12 col-sm-12">
+        <div class="section-title margin-bottom-60 margin-top-30">
+            <h1 class="center @(cssClass != "" ? Html.Raw(cssClass + " border-color") : Html.Raw(""))">@Model.Content.ContactTitle</h1>
+        </div>
+        @if (!Model.Content.IntroText.IsEmpty())
+        {
+            <div class="section-intro">
+                <p class="center">@Model.Content.IntroText</p>
+            </div>
+        }
+    </div>
+    <div class="col-md-4 col-sm-6 wow animated fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+        <a href="https://www.google.com/maps?q=@Model.Content.BusinessStreetName+@Model.Content.BusinessBuildingNumber+@Model.Content.BusinessPostalCode+@Model.Content.BusinessMunicipality+Belgi%C3%AB" target="_blank">
+            <div class="contact-info">
+                <p><i class="icon ion-android-pin @(cssClass != "" ? Html.Raw(cssClass + " color") : Html.Raw(""))"></i></p>@Model.Content.BusinessStreetName @Model.Content.BusinessBuildingNumber, @Model.Content.BusinessPostalCode @Model.Content.BusinessMunicipality
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4 col-sm-6 wow animated fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+        <a href="tel:@Model.Content.BusinessPhone">
+            <div class="contact-info">
+                <p><i class="icon ion-android-call @(cssClass != "" ? Html.Raw(cssClass + " color") : Html.Raw(""))"></i></p>Tel: @Model.Content.BusinessPhone
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4 col-sm-6 wow animated fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+        <a href="mailto:@Model.Content.BusinessMail">
+            <div class="contact-info">
+                <p><i class="icon ion-android-mail @(cssClass != "" ? Html.Raw(cssClass + " color") : Html.Raw(""))"></i></p>
+                @Model.Content.BusinessMail
+            </div>
+        </a>
+    </div>
+</div>

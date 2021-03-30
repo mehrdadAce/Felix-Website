@@ -1,0 +1,180 @@
+﻿.selected {
+    background-color: #ffe8ec;
+}
+.unselected {
+    background-color: #fff;
+}
+
+.setupBorder {
+    border-radius: 15px;
+}
+
+.boxMargins {
+    margin: 10px 0 10px 0;
+}
+.boxInternalMargins {
+    padding: 15px 0 15px 15px;
+}
+
+.setHeight {
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.aTag {
+    cursor: pointer;
+    color: blue;
+}
+
+.box {
+    margin: 10px;
+    padding: 15px;
+    float: left;
+    width: 28%;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 3px 5px 0px rgba(220,220,220,1);
+    -moz-box-shadow: 2px 3px 5px 0px rgba(220,220,220,1);
+    box-shadow: 2px 3px 5px 0px rgba(220,220,220,1);
+    min-height: 135px;
+    max-height: 135px;
+}
+    .box.post {
+        min-height: unset;
+        max-height: unset;
+        width: 28%;
+    }
+    .box p {
+        margin-top: 5px;
+        overflow-y: auto;
+        height: 63px;
+    }
+.post-thumbnail {
+    min-height: 200px;
+    max-height: 200px;
+    margin: auto;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.post-thumbnail.image {
+    object-fit: cover;
+}
+.post-thumbnail.no-image {
+    background-color: #555;
+}
+    .post-thumbnail.no-image > p {
+        margin-top: 0px;
+        color: #9c9c9c;
+        text-align: center;
+        padding-top: 90px;
+    }
+    /* CUSTOM CHECKBOX */
+    /* Customize the label (the container) */
+    .container {
+        max-width: 90%;
+        overflow: hidden;
+        word-break: break-word;
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 27px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    /* Hide the browser's default checkbox */
+    .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.container:hover {
+    cursor: pointer;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #cf0227;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #c9c9c9;
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+.umb-editor-container.facebook {
+    background-color: #f9f9f9;
+}
+
+.timestamp {
+    color: #737373;
+    font-style: italic;
+    font-size: 13px;
+}

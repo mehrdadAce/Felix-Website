@@ -1,0 +1,17 @@
+﻿{   
+    propertyEditors: [      
+        {
+            alias: "Felix.Language",
+            name: "Language",
+            editor: {
+                view: "~/App_Plugins/Languages/Languages.html", "valueType": "JSON"
+            }
+        }
+    ],
+    javascript: [
+        '~/App_Plugins/Languages/Languages.controller.js'
+    ],
+		css:[
+		'~/App_Plugins/Languages/Languages.css'
+	]
+}

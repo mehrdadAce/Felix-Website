@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Wij helpen u om de geschikte tweedehandswagen te vinden">
+        <meta name="keywords" content="Tweedehandswagens, Felix, Brecht, Herentals, Kapellen">
+        <meta name="author" content="Felix Groep">
+        <title>Felix Groep | Overname</title>
+        <!-- favicon -->
+        <link rel="icon" type="image/png" href="images/favicon.png" sizes="16x16">
+        <!-- font awesome --> 
+        <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+        <!-- bootstrap --> 
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+        <!-- ionic icons (footer) --> 
+        <link rel="stylesheet" type="text/css" href="ion-icons/css/ionicons.min.css">    
+        <!-- from x to y slider -->
+        <link rel="stylesheet" type="text/css" href="css/felix-second-hand/nouislider.min.css">
+        <!-- revolution slider settings -->
+        <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css">  
+        <!-- css animations -->    
+        <link rel="stylesheet" type="text/css" href="css/animate.css">                 
+        <!-- google fonts --> 
+        <link rel='stylesheet' type='text/css' href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900">
+        <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Arimo:300,400,700'>
+        <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Oswald:400,300'>
+        <!-- page css --> 
+        <link rel="stylesheet" type="text/css" href="css/shared.css">
+        <link rel="stylesheet" type="text/css" href="css/navigation.css">
+        <link rel="stylesheet" type="text/css" href="css/felix-second-hand/breadcrumb.css">
+        <link rel="stylesheet" type="text/css" href="css/felix-second-hand/transfer.css">
+        <link rel="stylesheet" type="text/css" href="css/footer.css">
+    </head>
+    <body>
+        <header id="header">
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html"><img src="images/felix-logo.svg" alt=""></a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">                
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="second-hand-master.html">OVERNAME WAGEN</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div id="transfer-progress" class="navbar-fixed-top cart-inner margin-top-60">
+            <div class="container margin-top-20 margin-bottom-20">
+                <div class="row">
+                    <div class="col-sm-4 col-xs-4">
+                        <p class="text-center completed">1.&nbsp;gegevens</p> 
+                    </div>
+                    <div class="col-sm-4 col-xs-4">
+                        <p class="text-center active">2.&nbsp;voorbereiding</p> 
+                    </div>
+                    <div class="col-sm-4 col-xs-4">
+                        <p class="text-center">3.&nbsp;afbeeldingen</p> 
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="66.666" aria-valuemin="0" aria-valuemax="100" style="width: 66.666%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="transfer" class="margin-top-60">
+            <div class="container">
+                <div class="row">
+                    <div class="panel panel-default">
+                        <div class="panel-body checkboxes">
+                            <div class="col-sm-12 text-center margin-bottom-20 margin-top-20">
+                                <div class="section-title">
+                                    <h1 class="center">voorbereiding</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                                </div>
+                            </div>
+                            <h4>Foto's wagen</h4>
+                            <div class="row">
+                                <div class="col-md-4">                                
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <label class="checkbox-container">Wagen linksvoor <input type="checkbox"><span class="checkmark"></span></label> 
+                                            <span id="linksvoor" class="badge show-modal"><i class="fas fa-camera"></i></span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <label class="checkbox-container">Wagen rechtsvoor <input type="checkbox"><span class="checkmark"></span></label> 
+                                            <span id="rechtsvoor" class="badge show-modal"><i class="fas fa-camera"></i></span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <label class="checkbox-container">Wagen linksachter <input type="checkbox"><span class="checkmark"></span></label> 
+                                            <span id="linksachter" class="badge show-modal"><i class="fas fa-camera"></i></span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <label class="checkbox-container">Wagen rechtsachter <input type="checkbox"><span class="checkmark"></span></label> 
+                                            <span id="rechtsachter" class="badge show-modal"><i class="fas fa-camera"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <label class="checkbox-container">Voorzetels <input type="checkbox"><span class="checkmark"></span></label> 
+                                            <span class="badge"><i class="fas fa-camera"></i></span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <label class="checkbox-container">Achterzetels <input type="checkbox"><span class="checkmark"></span></label> 
+                                            <span class="badge"><i class="fas fa-camera"></i></span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <label class="checkbox-container">Dashboard <input type="checkbox"><span class="checkmark"></span></label> 
+                                            <span class="badge"><i class="fas fa-camera"></i></span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <label class="checkbox-container">Km stand <input type="checkbox"><span class="checkmark"></span></label> 
+                                            <span class="badge"><i class="fas fa-camera"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <label class="checkbox-container">Schade binnenkant <input type="checkbox"><span class="checkmark"></span></label> 
+                                            <span class="badge"><i class="fas fa-camera"></i></span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <label class="checkbox-container">Schade buitenkant <input type="checkbox"><span class="checkmark"></span></label> 
+                                            <span class="badge"><i class="fas fa-camera"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h4>Documenten</h4>
+                            <div class="row margin-bottom-30"> 
+                                <div class="col-md-4">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <label class="checkbox-container">Inschrijvingsbewijs<input type="checkbox"><span class="checkmark"></span></label> 
+                                            <span class="badge"><i class="fas fa-camera"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <label class="checkbox-container">Keuringsbewijs<input type="checkbox"><span class="checkmark"></span></label> 
+                                            <span class="badge"><i class="fas fa-camera"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="row">     
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <button class="btn felix gray" tabindex="9" onclick="location.href='second-hand-transfer-step-0.html';"><i class="fas fa-angle-left"></i> terug</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 margin-bottom-20">
+                                    <div class="form-group">
+                                        <button class="btn felix red" tabindex="8" onclick="location.href='second-hand-transfer-step-2.html';">verder <i class="fas fa-angle-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <!-- Socials -->
+                    <div class="col-sm-4 margin-bottom-30">
+                        <div class="footer-inner">
+                            <h3><a href="index.html"><img src="images/felix-logo.svg" alt="Logo Felix Groep"></a></h3> 
+                            <p class="margin-bottom-30">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+                            <ul class="social list-inline">
+                                <li><a href="#" class="facebook"><i class="ion-social-facebook"></i></a></li>
+                                <li><a href="#" class="google-plus"><i class="ion-social-googleplus"></i></a></li> 
+                                <li><a href="#" class="linked-in"><i class="ion-social-linkedin"></i></a></li>         
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Establishments -->
+                    <div class="col-sm-4 margin-bottom-30">
+                        <div class="footer-inner">
+                            <h3>Vestigingen</h3>
+                            <a href="store.html"><p>Citroën Felix | Brecht</p></a>
+                            <a href="store.html"><p>Citroën Felix | Herentals</p></a>
+                            <a href="store.html"><p>Citroën Meyvis | Kapellen</p></a>
+                            <a href="store.html"><p>Carressorie Felix | Brecht</p></a>  
+                            <a href="store.html"><p>Peugeot Lavrijsen | Herentals</p></a>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="col-sm-4 margin-bottom-30">
+                        <div class="footer-inner">
+                            <h3>Nieuwsbrief</h3>
+                            <p>Ontvang de Felix Car nieuwsbrief in uw mailbox.</p>
+                            <form role="form" class="subscribe-form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Voeg uw e-mailadres in">
+                                    <button class="btn btn-default" data-toggle="tooltip" title="" data-original-title="Subscribe" type="submit"><i class="ion-ios-paperplane"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <span class="clearfix copyright">&copy; Felix groep <script>document.write(new Date().getFullYear());</script>. Alle rechten voorbehouden.</span>
+            </div>
+        </footer>
+
+      
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Neem de volgende foto van uw wagen</h4>
+                </div>
+                <div class="modal-body">
+                    <img id="modal-image" class="img-responsive" src="images/transfer/linksvoor.png"/>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- template: base scripts -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>        
+        <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/wow.min.js"></script> 
+        <!-- custom: scroll to section -->
+        <script type="text/javascript" src="js/smoothscroll.js"></script>
+        <!-- custom: toggle nav .active & close menu on mobile after selecting -->
+        <script type="text/javascript" src="js/nav-menu-collapser.js"></script>
+        <script>
+            $('.show-modal').click(function(event){
+                event.preventDefault();
+                var e = $(this);
+                var image =  $("#modal-image");
+                switch (e.attr('id')) {
+                    case "linksvoor":
+                        image.attr("src","images/transfer/linksvoor.png");
+                        break;
+                    case "rechtsvoor":
+                        image.attr("src","images/transfer/rechtsvoor.png");
+                        break;
+                    case "linksachter":
+                        image.attr("src","images/transfer/linksachter.png");
+                        break;
+                    case "rechtsachter":
+                        image.attr("src","images/transfer/rechtsachter.png");
+                        break;
+                    default:
+                        break;
+                } 
+                $("#myModal").modal("show");
+            });
+        </script>
+    </body>
+</html>

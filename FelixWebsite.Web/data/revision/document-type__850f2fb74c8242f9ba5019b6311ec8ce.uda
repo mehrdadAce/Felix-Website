@@ -1,0 +1,59 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-newspaper-alt color-red",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "6c9161ce-1811-45b4-bb99-70ed3bc8d8eb",
+      "Name": "Campaign Monitor",
+      "SortOrder": 150,
+      "PropertyTypes": [
+        {
+          "Key": "62de5531-759b-446a-b7fa-e01ca8184673",
+          "Alias": "campaignMOnitorFormId",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "ID van het formulier van Campaign Monitor",
+          "Mandatory": false,
+          "Name": "Form Id",
+          "SortOrder": 0,
+          "Validation": null
+        },
+        {
+          "Key": "6efe5406-2763-4e6d-84b4-b6930367373e",
+          "Alias": "campaignMOnitorEmailName",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Email name attribuut van het Campaign Monitor formulier",
+          "Mandatory": false,
+          "Name": "Email naam",
+          "SortOrder": 1,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/850f2fb74c8242f9ba5019b6311ec8ce",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Newsletter",
+  "Alias": "newsletter",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

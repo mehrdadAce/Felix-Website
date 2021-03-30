@@ -1,0 +1,144 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-wrench color-red",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "778a0289-c594-4a43-8f5d-8522d83d942b",
+      "Name": "Acties",
+      "SortOrder": 3,
+      "PropertyTypes": [
+        {
+          "Key": "298fc1af-19d9-4f6a-863a-8329c9572e81",
+          "Alias": "hideDamages",
+          "DataType": "umb://data-type/c330408705334683a0fbdc562abed0a9",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Schade aangifte verbergen",
+          "SortOrder": 98,
+          "Validation": null
+        },
+        {
+          "Key": "57638898-479a-455e-9750-7d1c465025ca",
+          "Alias": "hideBody",
+          "DataType": "umb://data-type/c330408705334683a0fbdc562abed0a9",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Carrosserie verbergen",
+          "SortOrder": 96,
+          "Validation": null
+        },
+        {
+          "Key": "7843b1a7-e05d-4f55-9322-69e012e21c80",
+          "Alias": "hideDashboard",
+          "DataType": "umb://data-type/c330408705334683a0fbdc562abed0a9",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Dashboard verbergen",
+          "SortOrder": 97,
+          "Validation": null
+        },
+        {
+          "Key": "9940da34-1e25-4b26-b31c-322514df1722",
+          "Alias": "hideQuotation",
+          "DataType": "umb://data-type/c330408705334683a0fbdc562abed0a9",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Offerte verbergen",
+          "SortOrder": 92,
+          "Validation": null
+        },
+        {
+          "Key": "9e587974-6a38-44ff-9749-03b5bc1d3216",
+          "Alias": "hideConfig",
+          "DataType": "umb://data-type/c330408705334683a0fbdc562abed0a9",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Configureer verbergen",
+          "SortOrder": 90,
+          "Validation": null
+        },
+        {
+          "Key": "bac9a535-cfc4-447a-b8ed-2ff00c59a1a4",
+          "Alias": "hideAppointment",
+          "DataType": "umb://data-type/c330408705334683a0fbdc562abed0a9",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Afspraak verbergen",
+          "SortOrder": 93,
+          "Validation": null
+        },
+        {
+          "Key": "c26bf601-8f7a-4d19-a3d0-cdc98d7d201b",
+          "Alias": "hideSecondHand",
+          "DataType": "umb://data-type/c330408705334683a0fbdc562abed0a9",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Tweedehands verbergen",
+          "SortOrder": 94,
+          "Validation": null
+        },
+        {
+          "Key": "ebbf587a-0997-4045-bd9e-f7b42e399b67",
+          "Alias": "hideTransfer",
+          "DataType": "umb://data-type/c330408705334683a0fbdc562abed0a9",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Overname verbergen",
+          "SortOrder": 95,
+          "Validation": null
+        },
+        {
+          "Key": "f6044d69-f21b-4e00-a459-2ca8e6eaa551",
+          "Alias": "appointmentURL",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Link naar de afspraak module",
+          "Mandatory": false,
+          "Name": "Afspraak URL",
+          "SortOrder": 89,
+          "Validation": null
+        },
+        {
+          "Key": "ff2f0188-75b5-455e-81d5-809b186a23dc",
+          "Alias": "hideTest",
+          "DataType": "umb://data-type/c330408705334683a0fbdc562abed0a9",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Testrit verbergen",
+          "SortOrder": 91,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/87ec803511384017bcb5b6c4208ed68b",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/c330408705334683a0fbdc562abed0a9",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "ActionManagement",
+  "Alias": "actiebeheer",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

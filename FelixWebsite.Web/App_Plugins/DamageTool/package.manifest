@@ -1,0 +1,8 @@
+﻿{
+  "javascript": [
+    "~/App_Plugins/DamageTool/backoffice/Controllers/DamageToolController.js"
+  ],
+  "css": [
+    "~/App_Plugins/AcquisitionTool/backoffice/css/AcquisitionStyle.css"
+  ] 
+}

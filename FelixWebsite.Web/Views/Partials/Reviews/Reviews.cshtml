@@ -1,0 +1,89 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using FelixWebsite.Core.App_GlobalResources
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    var page = Umbraco.AssignedContentItem;
+    var title = "reviews";
+    var reviewList = new List<Review>();
+    if (page is BusinessBrand)
+    {
+        var businessBrand = page as BusinessBrand;
+        title = businessBrand.ReviewsTitle;
+        var reviewsNode = businessBrand.Children.OfType<SocialMediaReviews>().FirstOrDefault();
+        if (reviewsNode == null) { return; }
+        reviewList = reviewsNode.Children.OfType<Review>().ToList();
+    }
+    else if(page is BusinessCombined)
+    {
+        var businessCombined = page as BusinessCombined;
+        title = businessCombined.ReviewsTitle;
+        foreach (BusinessBrand businessBrand in businessCombined.BusinessItems)
+        {
+            var reviews = businessBrand.Children.OfType<SocialMediaReviews>().FirstOrDefault();
+            if(reviews == null) { continue; };
+            foreach (Review item in reviews.Children.OfType<Review>())
+            {
+                reviewList.Add(item);
+            }
+        }
+        reviewList = reviewList.DistinctBy(x => x.UserId).ToList();
+    }
+}
+@if (reviewList.Count != 0)
+{
+    var innerCarouselAmount = reviewList.Count / 4 + (reviewList.Count % 4 != 0 ? 1 : 0);
+    <section id="reviews">
+        <div class="container">
+            <div id="carousel">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title margin-bottom-60">
+                            <h1 class="center">@title</h1>
+                        </div>
+                        <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">
+                            <!-- Carousel indicators -->
+                            @if (innerCarouselAmount > 4)
+                            {
+                                <ol class="carousel-indicators">
+                                    @for (var i = 0; i < innerCarouselAmount; i++)
+                                    {
+                                        if (i == 0)
+                                        {
+                                            <li data-target="#fade-quote-carousel" data-slide-to="@i" class="active"></li>
+                                        }
+                                        else
+                                        {
+                                            <li data-target="#fade-quote-carousel" data-slide-to="@i"></li>
+                                        }
+                                    }
+                                </ol>
+                            }
+
+                            <div class="carousel-inner">
+                                @for (var i = 0; i < innerCarouselAmount; i++)
+                                {
+                                    int lengthOfArray;
+                                    if ((i + 1) * 4 <= reviewList.Count)
+                                    {
+                                        lengthOfArray = 4;
+                                    }
+                                    else
+                                    {
+                                        lengthOfArray = reviewList.Count % 4;
+                                    }
+                                    var reviews = reviewList.GetRange(i * 4, lengthOfArray);
+                                    <div class="item @(i == 0 ? "active" : string.Empty)">
+                                        @foreach (var review in reviews)
+                                        {
+                                            @Html.Partial("Reviews/Review", review)
+                                        }
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}

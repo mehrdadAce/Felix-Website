@@ -1,0 +1,71 @@
+{
+  "DefaultTemplate": "umb://template/930b475236904626b3599d8955f5057a",
+  "AllowedTemplates": [
+    "umb://template/930b475236904626b3599d8955f5057a"
+  ],
+  "Icon": "icon-article color-red",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": null,
+  "AllowedChildContentTypes": [
+    "umb://document-type/dcdceb17db644c8cb864a2045b64cd39"
+  ],
+  "CompositionContentTypes": [
+    "umb://document-type/9469df909a6e4cffa37cdb516ec418d5",
+    "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "2c417c34-2ea8-48c5-900d-bdc0d4053bb1",
+      "Name": "Inhoud",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "a04aa14e-b0a0-43f8-8782-01d57851f1be",
+          "Alias": "content",
+          "DataType": "umb://data-type/92731df5d2864093be6027d09b6db518",
+          "Description": null,
+          "Mandatory": true,
+          "Name": "Content",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/dcdceb17db644c8cb864a2045b64cd39",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/92731df5d2864093be6027d09b6db518",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/9469df909a6e4cffa37cdb516ec418d5",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/dcdceb17db644c8cb864a2045b64cd39",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/930b475236904626b3599d8955f5057a",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Informatie pagina",
+  "Alias": "informatiePagina",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

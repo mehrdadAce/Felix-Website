@@ -1,0 +1,11 @@
+﻿@model List<string>
+<div class="row">
+    <div class="col-md-12">
+        <select id="modelName" name="modelName" class="form-control model-selector" required>
+            @foreach (string modelName in Model)
+            {
+                <option id="option-@modelName" value="@modelName" name="@modelName">@modelName</option>
+            }
+        </select>
+    </div>
+</div>

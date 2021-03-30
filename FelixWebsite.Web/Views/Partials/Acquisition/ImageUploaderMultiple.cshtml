@@ -1,0 +1,16 @@
+﻿@using FelixWebsite.Bdo.Models.Acquisition
+@{
+    PhotoModel photoModel = (PhotoModel)Model;
+}
+
+<div class="img-container scrollable" style="overflow:auto">
+    <div class="@photoModel.Value-uploads">
+        <br />
+        <div class="img-item upload">
+            <input id="@photoModel.Value" name="file" type="file" 
+                   class="inputfile @(photoModel.Update ? "updateImage" : string.Empty) multipleImageAdd" accept=".png,.gif,.jpg,.jpeg" multiple>
+            <img src="/img/acquisition/Rolling-1s-200px.svg" alt="loading" class="loadingIcon loadingDamages" style="display:none" />
+        </div>
+    </div>
+</div>
+

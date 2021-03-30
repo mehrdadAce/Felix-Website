@@ -1,0 +1,42 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Carcomparsion>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "Shared/Master.cshtml";
+}
+<link rel="stylesheet" type="text/css" href="~/css/second-hand/shop.css" />
+<link rel="stylesheet" type="text/css" href="~/css/second-hand/compare.css" />
+<link rel="stylesheet" type="text/css" href="https://cfmapistort01.blob.core.windows.net/resources/Styles/lightbox/lightbox.css" />
+<style>
+    tbody {
+        text-align: center
+    }
+    th {
+        text-align: center
+    }
+</style>
+
+<section class="margin-top-80 margin-bottom-60">
+    <!-- >div class="container margin-top-40">
+        <div class="section-title text-center">
+            <h1 class="margin-bottom-20">Wagen vergelijking</h1>
+        </div>
+    </div-->
+    <div class="container-fluid">
+        <div id="vehicle-compare"></div>
+    </div>
+</section>
+
+<script type="text/javascript" src="https://cfmapistorp01.blob.core.windows.net/resources/Scripts/Utils.min.js"></script>
+<script type="text/javascript" src="https://cfmapistorp01.blob.core.windows.net/resources/Scripts/plugin.ui.min.js"></script>
+<script type="text/javascript" src="https://cfmapistorp01.blob.core.windows.net/resources/Scripts/CarComparer.min.js"></script>
+<script type="text/javascript" src="https://cfmapistort01.blob.core.windows.net/resources/Scripts/lightbox/lightbox.js"></script>
+
+<script type="text/javascript">
+    var config = {
+        Environment: CFM.Environment.PROD,
+        Culture: "nl-BE",
+        SpinnerColor: CFM.SpinnerColor.GRAY  //GRAY and BLACK are also available
+    };
+    CFM.API.init(config);
+    CFM.API.enable("f4896cb2-f356-49b8-97c3-7af1a1bb9c2c", "#vehicle-compare");
+</script>

@@ -1,0 +1,27 @@
+﻿<div ng-controller="CompetenceController">
+    <div class="textbox-container">
+        <input type="text" ng-model="keywords" placeholder="Zoek een competentiesjabloon op basis van trefwoorden, beroepsnamen of sjabloon referenties..." name="keywords" class="umb-editor umb-textstring textstring ng-pristine ng-valid ng-valid-required">
+        <button type="button" class="btn umb-button__button btn-success umb-button--" ng-click="GetCompetences()">Zoek</button>
+    </div>
+
+    <h4>Competentiesjablonen voor keyword "{{ selectedcompetences.keyword }}"</h4>
+    <p ng-if="!competencepatterns">Geen sjablonen om weer te geven. Geef een trefwoord in om sjablonen op te zoeken.</p>
+    <ul class="nav nav-pills" ng-if="competencepatterns">
+        <ng-container ng-repeat="(code, object) in competencepatterns.gezochteBeroepSjablonen.beroepsjabloon">
+            <li class="list-item">
+                <h5>{{object.titel}}</h5><button type="button" class="btn umb-button__button btn-success umb-button--" ng-click="GetPattern(object.code, object.titel)">Bekijk competenties</button>
+            </li>
+        </ng-container>
+    </ul>
+    
+    <h4>Competenties voor "{{ selectedcompetences.patternName }}"</h4>
+    <div ng-if="!selectedcompetences.id || !selectedcompetences.patternName">
+        <p>Er is momenteel geen competentiesjabloon geselecteerd.</p>
+    </div>
+
+    <div ng-if="selectedcompetences.id && selectedcompetences.patternName">
+        <div ng-init="GetPattern(selectedcompetences.id, selectedcompetences.patternName)">     
+            <select name="dropDownList" class="umb-editor umb-dropdown custom-select" ng-model="selected" ng-options="competence as competence.Beschrijving for competence in competencepattern.sjabloon.Activiteiten.CompetentieActiviteit track by competence.id" multiple ng-change="localSelectChange()"></select>
+        </div>
+    </div>
+</div>

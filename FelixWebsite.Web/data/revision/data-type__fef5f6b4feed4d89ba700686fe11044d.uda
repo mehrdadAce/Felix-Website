@@ -1,0 +1,12 @@
+{
+  "EditorAlias": "Felix.Driverslicense",
+  "DatabaseType": 0,
+  "PreValues": {},
+  "Parent": null,
+  "Udi": "umb://data-type/fef5f6b4feed4d89ba700686fe11044d",
+  "Dependencies": [],
+  "Name": "_DriversLicense",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

@@ -1,0 +1,12 @@
+{
+  "EditorAlias": "Umbraco.ListView",
+  "DatabaseType": 1,
+  "PreValues": {},
+  "Parent": null,
+  "Udi": "umb://data-type/c0808dd381334e4b8ce8e2bea84a96a4",
+  "Dependencies": [],
+  "Name": "List View - Content",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

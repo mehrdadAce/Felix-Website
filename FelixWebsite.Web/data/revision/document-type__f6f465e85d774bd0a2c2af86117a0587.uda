@@ -1,0 +1,49 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-indent color-red",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "ce5d3936-2f90-4705-9a9d-9f1c6afda7dc",
+      "Name": "Site",
+      "SortOrder": 99,
+      "PropertyTypes": [
+        {
+          "Key": "ce8e83eb-be77-43d0-a63f-4a93ad5ad0f6",
+          "Alias": "extraNavigation",
+          "DataType": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+          "Description": "Voeg hier extra links toe voor in de navigatiebalk",
+          "Mandatory": false,
+          "Name": "Extra navigatie",
+          "SortOrder": 10,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/f6f465e85d774bd0a2c2af86117a0587",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "AdditionalNavigation",
+  "Alias": "additionalNavigation",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

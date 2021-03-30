@@ -1,0 +1,4 @@
+#services.store{
+    background: linear-gradient(0deg,rgba(214, 214, 214, 0.7),rgba(209, 209, 209, 0.9)),url("../../images/road.jpg") no-repeat;
+    background-size: cover;
+}

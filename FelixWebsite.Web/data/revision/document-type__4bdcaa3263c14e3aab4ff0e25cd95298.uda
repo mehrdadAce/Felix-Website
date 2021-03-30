@@ -1,0 +1,81 @@
+{
+  "DefaultTemplate": "umb://template/8af72c291e6c4d72a8ecd07ed371b680",
+  "AllowedTemplates": [
+    "umb://template/8af72c291e6c4d72a8ecd07ed371b680"
+  ],
+  "Icon": "icon-document",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "b9a5625a-6259-404b-8359-cbda6416d934",
+      "Name": "Algemeen",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "9284cf2b-2666-4700-8251-6cc836a7cf81",
+          "Alias": "sendPdfToFelix",
+          "DataType": "umb://data-type/c330408705334683a0fbdc562abed0a9",
+          "Description": "Indien dit aanstaat, wordt bij het voltooien een PDF met de mail verstuurd naar de Felix verantwoordelijke",
+          "Mandatory": false,
+          "Name": "PDF versturen naar Felix verantwoordelijke",
+          "SortOrder": 3,
+          "Validation": null
+        },
+        {
+          "Key": "9ed48a61-103e-421b-88c5-ec1d97107fd7",
+          "Alias": "sendPdfToClient",
+          "DataType": "umb://data-type/c330408705334683a0fbdc562abed0a9",
+          "Description": "Indien dit aanstaat, wordt bij het voltooien een PDF met de mail verstuurd naar de klant",
+          "Mandatory": false,
+          "Name": "PDF versturen naar klant",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "ed8bd000-474c-4594-832d-f5d3f76d9329",
+          "Alias": "takeOverEmailSettings",
+          "DataType": "umb://data-type/10f1e5776f9441e2a6907378e154615f",
+          "Description": "Instellingen voor de overname",
+          "Mandatory": true,
+          "Name": "Email instellingen",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/4bdcaa3263c14e3aab4ff0e25cd95298",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/10f1e5776f9441e2a6907378e154615f",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/c330408705334683a0fbdc562abed0a9",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/8af72c291e6c4d72a8ecd07ed371b680",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "TakeOver main",
+  "Alias": "takeOverMain",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

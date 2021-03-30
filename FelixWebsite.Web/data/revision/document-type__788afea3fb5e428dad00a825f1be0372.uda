@@ -1,0 +1,184 @@
+{
+  "DefaultTemplate": "umb://template/6518d00ff7a24310bb7eb32bee68b677",
+  "AllowedTemplates": [
+    "umb://template/6518d00ff7a24310bb7eb32bee68b677"
+  ],
+  "Icon": "icon-car color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Een type wagen dat verhuurd kan worden.",
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": null,
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [
+    "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9",
+    "umb://document-type/f299762d61be4a09a5a07bd0d16effd4"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "730af1a7-1ebb-4f41-8f4d-e046433e73d4",
+      "Name": "Inhoud",
+      "SortOrder": 3,
+      "PropertyTypes": [
+        {
+          "Key": "0826d4b9-143d-4578-9925-05ef113106bd",
+          "Alias": "titleForm",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel die bij het formulier staat.",
+          "Mandatory": true,
+          "Name": "Titel formulier",
+          "SortOrder": 8,
+          "Validation": null
+        },
+        {
+          "Key": "0d3313a2-bf32-4f1e-87e4-3994b18065b1",
+          "Alias": "modelProperties",
+          "DataType": "umb://data-type/db1b637156384144b6d49349c3b88e1c",
+          "Description": "De technische eigenschappen vandit type verhuur wagen.",
+          "Mandatory": true,
+          "Name": "Technische eigenschappen",
+          "SortOrder": 4,
+          "Validation": null
+        },
+        {
+          "Key": "285c7383-6536-42b2-991c-e6810c8ad729",
+          "Alias": "priceMonth",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De prijs voor deze wagen een maand te huren",
+          "Mandatory": true,
+          "Name": "Prijs per maand",
+          "SortOrder": 7,
+          "Validation": null
+        },
+        {
+          "Key": "5b28741c-a709-443a-ad44-180611018329",
+          "Alias": "milageIncluded",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Aantal KM per dag dat in de prijs is inbegrepen",
+          "Mandatory": true,
+          "Name": "KM inclusief per dag",
+          "SortOrder": 10,
+          "Validation": null
+        },
+        {
+          "Key": "62f8e174-85a4-444c-8c4d-f9ecd731adab",
+          "Alias": "priceWeek",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De prijs voor deze wagen een week te huren.",
+          "Mandatory": true,
+          "Name": "Prijs per week",
+          "SortOrder": 6,
+          "Validation": "^[0-9]*$"
+        },
+        {
+          "Key": "6b02b6db-6837-4ea5-8c3c-fd778cd34c35",
+          "Alias": "modelImages",
+          "DataType": "umb://data-type/9dbbcbbb2327434ab355af1b84e5010a",
+          "Description": "De afbeeldingen die bij een type model horen",
+          "Mandatory": true,
+          "Name": "Afbeeldingen model",
+          "SortOrder": 9,
+          "Validation": null
+        },
+        {
+          "Key": "79e806c0-1be0-4239-b736-36c0f3e8af97",
+          "Alias": "description",
+          "DataType": "umb://data-type/7f26211f741043c1aa7325fc7b4f7cf6",
+          "Description": "De beschrijving van de verhuurwagen.",
+          "Mandatory": true,
+          "Name": "Beschrijving",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "8864e2f7-816f-4d36-bfad-9cf8ef2eb399",
+          "Alias": "title",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De naam van het type voertuig dat kan worden verhuurd.",
+          "Mandatory": true,
+          "Name": "Naam",
+          "SortOrder": 0,
+          "Validation": null
+        },
+        {
+          "Key": "96686a3c-33bf-412d-9f72-c712b6274b75",
+          "Alias": "titleProperties",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel die boven de eigenschappen van een model staat.",
+          "Mandatory": true,
+          "Name": "Titel technische eigenschappen",
+          "SortOrder": 3,
+          "Validation": null
+        },
+        {
+          "Key": "f47682e7-e317-48f1-b0b4-58e27f50d7a4",
+          "Alias": "icon",
+          "DataType": "umb://data-type/79afa8b133014b11b6153b967b7c13aa",
+          "Description": "Afbeelding voor het icoon op de auto verhuur pagina & de foto op de detail pagina.",
+          "Mandatory": true,
+          "Name": "Afbeelding",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "f8af7484-4604-4bca-a72c-eadd55c25185",
+          "Alias": "price",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De prijs voor deze wagen een dag te huren.",
+          "Mandatory": true,
+          "Name": "Prijs per dag",
+          "SortOrder": 5,
+          "Validation": "^[0-9]*$"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/788afea3fb5e428dad00a825f1be0372",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/79afa8b133014b11b6153b967b7c13aa",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/7f26211f741043c1aa7325fc7b4f7cf6",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/9dbbcbbb2327434ab355af1b84e5010a",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/db1b637156384144b6d49349c3b88e1c",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/f299762d61be4a09a5a07bd0d16effd4",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/6518d00ff7a24310bb7eb32bee68b677",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Autoverhuur wagen",
+  "Alias": "carRentalType",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

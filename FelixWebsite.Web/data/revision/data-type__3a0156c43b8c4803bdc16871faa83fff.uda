@@ -1,0 +1,18 @@
+{
+  "EditorAlias": "Umbraco.ListView",
+  "DatabaseType": 1,
+  "PreValues": {
+    "includeProperties": "[{\"alias\":\"updateDate\",\"header\":\"Last edited\",\"isSystem\":1},{\"alias\":\"owner\",\"header\":\"Updated by\",\"isSystem\":1}]",
+    "layouts": "[{\"name\": \"Grid\",\"path\": \"views/propertyeditors/listview/layouts/grid/grid.html\", \"icon\": \"icon-thumbnails-small\", \"isSystem\": 1, \"selected\": true},{\"name\": \"List\",\"path\": \"views/propertyeditors/listview/layouts/list/list.html\",\"icon\": \"icon-list\", \"isSystem\": 1,\"selected\": true}]",
+    "orderBy": "updateDate",
+    "orderDirection": "desc",
+    "pageSize": "100"
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/3a0156c43b8c4803bdc16871faa83fff",
+  "Dependencies": [],
+  "Name": "List View - Media",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

@@ -1,0 +1,19 @@
+{
+  "EditorAlias": "Umbraco.NestedContent",
+  "DatabaseType": 0,
+  "PreValues": {
+    "confirmDeletes": "1",
+    "contentTypes": "[\r\n  {\r\n    \"ncAlias\": \"brand\",\r\n    \"ncTabAlias\": \"Brand\",\r\n    \"nameTemplate\": \"\"\r\n  }\r\n]",
+    "hideLabel": "0",
+    "maxItems": "0",
+    "minItems": "2",
+    "showIcons": "1"
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/391f88f7c7df4792953dbdfd7094cd74",
+  "Dependencies": [],
+  "Name": "_Brands",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

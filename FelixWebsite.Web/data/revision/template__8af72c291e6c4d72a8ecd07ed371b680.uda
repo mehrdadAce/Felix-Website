@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/TakeOverMain.cshtml",
+  "Master": null,
+  "Udi": "umb://template/8af72c291e6c4d72a8ecd07ed371b680",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/TakeOverMain.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "TakeOver main",
+  "Alias": "TakeOverMain",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "2.0.14"
+}

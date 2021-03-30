@@ -1,0 +1,32 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.GroupHome>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@using FelixWebsite.Core.Helpers;
+@{
+    var services = Model.Content.Services.OfType<Service>().ToList();
+    var distribution = services.DistributeInColumns(4, 2);
+}
+<section id="services" class="margin-top-60 margin-bottom-80">
+    <div class="container">
+        <div class="row">
+            @foreach (var service in services)
+            {
+                <div class="@distribution.GetBootstrapClassesForItem(service) margin-bottom-10 margin-top-10">
+
+                    <div class="item">
+                        <div class="service-box wow animated fadeInLeft">
+                            <a target="_blank" href="@service.Link.FirstOrDefault().Link">
+                                <div class="bg">
+                                    <img src="@service.Icon.Url" height="31" alt="@service.Title" />
+                                </div>
+                                <div class="filler-container-20"></div>
+                                <h4>@service.Title</h4>
+                                <p>@service.Intro</p>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            }
+        </div>
+    </div>
+</section>

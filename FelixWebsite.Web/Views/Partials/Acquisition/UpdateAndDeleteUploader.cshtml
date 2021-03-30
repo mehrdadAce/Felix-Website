@@ -1,0 +1,30 @@
+﻿@using FelixWebsite.Bdo.Models.Acquisition
+@model UpdateModel
+@{
+    var updateId = "update" + Model.Value;
+    var deleteId = "overview" + Model.Value;
+}
+
+    <form id="updateUploader" class="photos" enctype="multipart/form-data">
+
+        <div class="thumbnail">
+            <img src="/img/acquisition/Rolling-1s-200px.svg" alt="loading" class="loadingIcon loadingUpdating" style="display:none" />
+            <div class="caption">
+                <div class="updateDamage">
+                    <input id="@updateId" name="file" type="file" class="inputfile update-inputfile" accept=".png,.gif,.jpg,.jpeg">
+                    <h4><label for="@updateId" class="dmgUpdateLabel caption-label overview-label"><i class="fas fa-edit updateIcon overview-icon"></i></label></h4>
+                </div>
+                <div class="deleteDamage">
+                    <input id="@deleteId" name="file" class="inputfile dmgDeleteInput">
+                    <h4><label for="@deleteId" class="dmgDeleteLabel caption-label overview-label"><i class="fas fa-trash updateIcon overview-icon"></i></label></h4>
+                </div>
+            </div>
+            <img id="updateAndDeleteImg-@Model.Value" src="@Model.MediaFile" alt="@Model.Value">
+        </div>
+        <input type="hidden" name="imageType" value="@Model.Value" />
+        <input type="hidden" name="licensePlate" class="inputUserLicensePlate" />
+        <input type="hidden" name="id" class="inputUserId" id="updateImage" />
+        <input type="hidden" name="name" class="inputUserName" />
+        <input type="hidden" name="pictureIndex" class="pictureIndex" value="@Model.Count" />
+        <input type="hidden" name="mediaId" class="mediaId" value="@Model.MediaId" />
+    </form>

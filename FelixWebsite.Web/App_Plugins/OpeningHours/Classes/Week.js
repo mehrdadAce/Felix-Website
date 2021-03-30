@@ -1,0 +1,3 @@
+﻿function Week() {
+    var days;
+}

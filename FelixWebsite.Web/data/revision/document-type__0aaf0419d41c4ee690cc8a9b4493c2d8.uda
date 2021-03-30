@@ -1,0 +1,49 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-chat-active color-red",
+  "Thumbnail": "folder.png",
+  "Description": "De waardes die de crisp chat plugin moet gebruiken.",
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "0b680358-5820-4c1b-999b-384d6f04f310",
+      "Name": "Crisp chat",
+      "SortOrder": 99,
+      "PropertyTypes": [
+        {
+          "Key": "66d554ca-fc4f-488d-974b-ecd888da03b2",
+          "Alias": "crispChatId",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Het website id dat gebruikt moet worden voor deze pagina, afkomstig van crisp.chat. Als dit veld leeg is, wordt er geen chat getoond.",
+          "Mandatory": false,
+          "Name": "Website Id",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/0aaf0419d41c4ee690cc8a9b4493c2d8",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Crisp Chat",
+  "Alias": "crispChat",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

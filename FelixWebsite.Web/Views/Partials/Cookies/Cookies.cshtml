@@ -1,0 +1,29 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    var home = Umbraco.AssignedContentItem.AncestorOrSelf(1).OfType<GroupHome>();
+    var cookies = home.Children.OfType<CookiePolicy>().FirstOrDefault();
+
+}
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+    <script>
+        window.addEventListener("load", function () {
+            window.cookieconsent.initialise({
+                "palette": {
+                    "popup": {
+                        "background": "#252e39"
+                    },
+                    "button": {
+                        "background": "#cf0227"
+                    }
+                },
+                "theme": "classic",
+                "content": {
+                    "message": "Deze website gebruikt cookies zodat je zeker de beste ervaring hebt op onze website",
+                    "dismiss": "Oké!",
+                    "link": "Lees meer",
+                    "href": '@cookies.Url',
+                }
+            })
+        });
+    </script>

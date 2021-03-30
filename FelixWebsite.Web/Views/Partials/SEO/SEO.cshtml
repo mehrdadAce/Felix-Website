@@ -1,0 +1,21 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ISEO>
+
+@if (!Model.MetaTitle.IsNullOrWhiteSpace())
+{
+    <title>@Model.MetaTitle</title>
+}
+
+@if (!Model.MetaDescription.IsNullOrWhiteSpace())
+{
+    <meta name="description" content="@Model.MetaTitle">
+}
+
+@if (Model.MetaTags != null)
+{
+    if (Model.MetaTags.Count() > 0)
+    {
+        <meta name="keywords" content="@foreach (var tag in Model.MetaTags) { @(tag + ", ")}">
+    }
+}
+
+<meta name="author" content="Felix Groep">

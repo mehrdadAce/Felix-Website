@@ -1,0 +1,59 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-message color-red",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "33372800-b0dc-4ddf-b7b7-9e7499720769",
+      "Name": "Emails",
+      "SortOrder": 10,
+      "PropertyTypes": [
+        {
+          "Key": "33a00d27-ca72-4b77-925b-c428e6557323",
+          "Alias": "quotationEmailSettings",
+          "DataType": "umb://data-type/10f1e5776f9441e2a6907378e154615f",
+          "Description": "Instellingen voor offerte email",
+          "Mandatory": true,
+          "Name": "Offerte email",
+          "SortOrder": 30,
+          "Validation": null
+        },
+        {
+          "Key": "98150904-8b35-4de6-b199-751fae847cb1",
+          "Alias": "testEmailSettings",
+          "DataType": "umb://data-type/10f1e5776f9441e2a6907378e154615f",
+          "Description": "Instellingen voor testrit email",
+          "Mandatory": true,
+          "Name": "Testrit email",
+          "SortOrder": 20,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/1dd8d847965a42cc86f645a2a3847ab6",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/10f1e5776f9441e2a6907378e154615f",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "EmailSettingsActions",
+  "Alias": "emailSettingsActions",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

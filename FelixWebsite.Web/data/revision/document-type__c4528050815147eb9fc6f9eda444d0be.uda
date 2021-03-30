@@ -1,0 +1,79 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-store color-orange",
+  "Thumbnail": "folder.png",
+  "Description": "Een handelszaak die niet gekoppeld is aan een automerk.",
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": null,
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [
+    "umb://document-type/0845faccabbb41a4bef8e7aba01ed22d",
+    "umb://document-type/5565ef5a25904a04a10fa6bdf36e0270"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "2db4b0ad-be14-454b-8492-feda91387cc5",
+      "Name": "Informatie",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "6e63d1f3-cf93-4651-ae44-4294a0db1c36",
+          "Alias": "brand",
+          "DataType": "umb://data-type/8794ae7a2f9941c0875608afd84bd059",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Merk (optioneel)",
+          "SortOrder": 10,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "8ee29b4c-1ad0-4437-8a77-7d86c8aff696",
+      "Name": "Link",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "a12f396a-fb7b-42f1-8267-3749def50944",
+          "Alias": "businessLink",
+          "DataType": "umb://data-type/43c470bd01ce4d2b983715cb21174541",
+          "Description": null,
+          "Mandatory": true,
+          "Name": "businessLink",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/c4528050815147eb9fc6f9eda444d0be",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/43c470bd01ce4d2b983715cb21174541",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/8794ae7a2f9941c0875608afd84bd059",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/0845faccabbb41a4bef8e7aba01ed22d",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/5565ef5a25904a04a10fa6bdf36e0270",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Handelszaak - onafhankelijk",
+  "Alias": "businessIndependent",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

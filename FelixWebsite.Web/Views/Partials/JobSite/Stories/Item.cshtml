@@ -1,0 +1,26 @@
+﻿@model Story
+@using FelixWebsite.Core.App_GlobalResources
+
+<div class="story joboffer-card">
+    <div class="row">
+        <div class="col-md-6 col-sm-4 col-xs-12 post-thumbnail">
+            <a href="@Model.Url">
+                <img src="@(Model.Img.Src + Model.Img.GetCropUrl("Story thumbnail"))" class="img-responsive" alt="@Model.Name" width="100%">
+            </a>
+        </div>
+        <div class="col-md-6 col-sm-8 col-xs-12">
+            <h3 class="post-title"><a href="@Model.Url">@Model.Name</a></h3>
+            @if (Model.Article.ToString().Length >= 150)
+            {
+                @Html.Raw(@Model.Article.ToString().Substring(0, 150) + "...")
+            }
+            else
+            {
+                @Html.Raw(@Model.Article.ToString())
+            }
+            <p class="read-more">
+                <a href="@Model.Url" class="felix-red"><b>@FelixResources.general_readmore&nbsp;</b></a>
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+﻿<div ng-controller="OpeningHoursController as ohC">
+    <table class="opHours">
+        <thead>
+            <tr>
+                <th class="heading">Dag</th>
+                <th colspan="3" class="heading">Voormiddag</th>
+                <th colspan="3" class="heading">Namiddag</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th>Open</th>
+                <th class="dateTimePickerLength">Van</th>
+                <th class="dateTimePickerLength">Tot</th>
+                <th>Open</th>
+                <th class="dateTimePickerLength">Van</th>
+                <th class="dateTimePickerLength">Tot</th>
+            </tr>
+        </thead>
+        <tr ng-repeat="day in ohC.week.days">
+            <th>
+                {{day.dayName}}
+            </th>
+            <td colspan="3" ng-repeat="opening in day.openings">
+                <table>
+                    <tr>
+                        <td>
+                            <input type="checkbox" ng-checked="opening.isOpen" ng-click="opening.isOpen = !opening.isOpen" class="checkboxPadding thSetup" />
+                        </td>
+                        <td>
+                            <div class="datepicker thSetup" style="position: relative;">
+                                <div ng-hide="hasTranscludedContent" class="input-append date">
+                                    <my-time-picker ng-model="opening.start" ng-disabled="!opening.isOpen" />
+                                    <span class="add-on">
+                                        <i class="icon-calendar"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="datepicker thSetup" style="position: relative;">
+                                <div ng-hide="hasTranscludedContent" class="input-append date">
+                                    <my-time-picker ng-model="opening.end" ng-disabled="!opening.isOpen" />
+                                    <span class="add-on">
+                                        <i class="icon-calendar"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+<!--<script src="~/App_Plugins/OpeningHours/Classes/Week.js"></script>
+<script src="~/App_Plugins/OpeningHours/Classes/Day.js"></script>
+<script src="~/App_Plugins/OpeningHours/Classes/Openings.js"></script>-->

@@ -1,0 +1,162 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-company color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Felix groep zaak",
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+  "AllowedChildContentTypes": [
+    "umb://document-type/c4528050815147eb9fc6f9eda444d0be",
+    "umb://document-type/c62a998a51f44b7ab64d14f177181f8b"
+  ],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "c5adce44-bcba-4048-ab6b-a8abfcff5c9c",
+      "Name": "Informatie",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "110e0a28-e724-4059-9e97-b43400e62614",
+          "Alias": "businessMunicipality",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Gemeente van de vestiging.",
+          "Mandatory": true,
+          "Name": "Gemeente",
+          "SortOrder": 9,
+          "Validation": null
+        },
+        {
+          "Key": "2c80a110-e399-4fef-a305-7323871c0d5b",
+          "Alias": "businessPostalCode",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Postcode van de vestiging.",
+          "Mandatory": true,
+          "Name": "Postcode",
+          "SortOrder": 8,
+          "Validation": "^[0-9]*$"
+        },
+        {
+          "Key": "30988c49-0ded-4484-afa9-01d104e95760",
+          "Alias": "showOnGroupHome",
+          "DataType": "umb://data-type/c330408705334683a0fbdc562abed0a9",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Tonen op Felix groep",
+          "SortOrder": 3,
+          "Validation": null
+        },
+        {
+          "Key": "3aaac141-0ccd-4003-8041-ed18a329ed51",
+          "Alias": "businessMail",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Het e-mailadres van de handelszaak.",
+          "Mandatory": true,
+          "Name": "E-mailadres",
+          "SortOrder": 4,
+          "Validation": null
+        },
+        {
+          "Key": "5a4fcb28-5a9e-4c87-83cd-7f9f5f41bf81",
+          "Alias": "businessLocation",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Locatie van de handelszaak (bijvoorbeeld: Brecht)",
+          "Mandatory": true,
+          "Name": "Locatie",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "6f3c231a-4fa4-46ba-a034-c6da0361b02f",
+          "Alias": "businessStreetName",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Straatnaam van de vestiging.",
+          "Mandatory": true,
+          "Name": "Straatnaam",
+          "SortOrder": 6,
+          "Validation": null
+        },
+        {
+          "Key": "9c154bf4-9eda-46a3-96ef-901290b478fe",
+          "Alias": "businessImage",
+          "DataType": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+          "Description": "Afbeelding van de handelszaak.",
+          "Mandatory": true,
+          "Name": "Afbeelding",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "dec7a0ef-e012-45d2-b997-481b7bbc5b39",
+          "Alias": "businessName",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Naam van de handelszaak.",
+          "Mandatory": true,
+          "Name": "Naam",
+          "SortOrder": 0,
+          "Validation": null
+        },
+        {
+          "Key": "e2228f69-99b4-41e1-9d8d-33c2871cb843",
+          "Alias": "businessPhone",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Het telefoonnummer van de vestiging.",
+          "Mandatory": true,
+          "Name": "Telefoonnummer",
+          "SortOrder": 5,
+          "Validation": null
+        },
+        {
+          "Key": "e94407b9-f28c-4b83-b3aa-22a1c93172a0",
+          "Alias": "businessBuildingNumber",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Huisnummer van de vestiging.",
+          "Mandatory": true,
+          "Name": "Huisnummer",
+          "SortOrder": 7,
+          "Validation": "^[0-9]*$"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/0845faccabbb41a4bef8e7aba01ed22d",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/c330408705334683a0fbdc562abed0a9",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/c4528050815147eb9fc6f9eda444d0be",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/c62a998a51f44b7ab64d14f177181f8b",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Handelszaak",
+  "Alias": "business",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

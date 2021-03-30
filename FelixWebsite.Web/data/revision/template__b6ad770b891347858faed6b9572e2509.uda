@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/Overname.cshtml",
+  "Master": null,
+  "Udi": "umb://template/b6ad770b891347858faed6b9572e2509",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/Overname.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Overname",
+  "Alias": "Overname",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "2.0.14"
+}

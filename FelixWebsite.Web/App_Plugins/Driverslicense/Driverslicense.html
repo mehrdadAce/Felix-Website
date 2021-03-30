@@ -1,0 +1,9 @@
+﻿<div ng-controller="Driverslicense">
+    <select multiple
+            name="dropDownList" 
+            class="umb-editor umb-dropdown custom-select" 
+            ng-model="selected" 
+            ng-options="license as ('Type: ' + license.code + ' - ' + license.beschrijving) for license in licenses track by license.code"
+    >
+    </select>
+</div>

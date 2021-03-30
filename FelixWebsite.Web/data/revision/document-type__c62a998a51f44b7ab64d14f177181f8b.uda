@@ -1,0 +1,353 @@
+{
+  "DefaultTemplate": "umb://template/16ad1eae30e24911aaa823589f91fd7d",
+  "AllowedTemplates": [
+    "umb://template/16ad1eae30e24911aaa823589f91fd7d"
+  ],
+  "Icon": "icon-store color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Een handelszaak die gekoppeld is aan een automerk.",
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": null,
+  "AllowedChildContentTypes": [
+    "umb://document-type/dcdceb17db644c8cb864a2045b64cd39"
+  ],
+  "CompositionContentTypes": [
+    "umb://document-type/0845faccabbb41a4bef8e7aba01ed22d",
+    "umb://document-type/0aaf0419d41c4ee690cc8a9b4493c2d8",
+    "umb://document-type/179f476facd243d6a31d1413899cf368",
+    "umb://document-type/1dd8d847965a42cc86f645a2a3847ab6",
+    "umb://document-type/452f1054b5dc4c8bac279e10c808c302",
+    "umb://document-type/5565ef5a25904a04a10fa6bdf36e0270",
+    "umb://document-type/850f2fb74c8242f9ba5019b6311ec8ce",
+    "umb://document-type/87ec803511384017bcb5b6c4208ed68b",
+    "umb://document-type/9469df909a6e4cffa37cdb516ec418d5",
+    "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9",
+    "umb://document-type/d60a0c7f9d03423fbf62df6682128c81",
+    "umb://document-type/f6f465e85d774bd0a2c2af86117a0587"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "35221e00-fb52-41fa-aea1-b3ce94963fba",
+      "Name": "Nieuws & Reviews",
+      "SortOrder": 103,
+      "PropertyTypes": [
+        {
+          "Key": "272b308f-aab5-48f1-accc-d77c8f2e3864",
+          "Alias": "reviewsTitle",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel die boven het reviews gedeelte wordt weergegeven.",
+          "Mandatory": true,
+          "Name": "Review titel",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "2cc2786a-c4d2-4675-902a-73be020f4cf7",
+          "Alias": "newsTitle",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel die boven het nieuws gedeelte wordt weergegeven.",
+          "Mandatory": true,
+          "Name": "Nieuws titel",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "7babcb42-8926-4df0-bf3d-1af6bd02e197",
+      "Name": "Merk & Logo",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "14020ac9-eede-49a0-a1a4-bd51974bf1fc",
+          "Alias": "logo",
+          "DataType": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+          "Description": "Logo van de vestiging, indien niet ingevuld wordt het logo van Felix groep getoond.",
+          "Mandatory": false,
+          "Name": "Logo",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "9625c6fe-4cad-46a0-a9cf-4f345b88d056",
+          "Alias": "brand",
+          "DataType": "umb://data-type/8aeb66ff18664a9fac79ec29346cfd29",
+          "Description": "Het merk dat gekoppeld is aan de vestiging.",
+          "Mandatory": true,
+          "Name": "Merk",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "7bd4312c-2588-4963-bd25-81a0280decd7",
+      "Name": "Openings uren",
+      "SortOrder": 101,
+      "PropertyTypes": [
+        {
+          "Key": "0fdc6a99-ae60-4822-af2b-818091b539e6",
+          "Alias": "showroomOpeningsHours",
+          "DataType": "umb://data-type/ac8107ebc1534d61bc30a4d2e8492b7c",
+          "Description": "De openings uren van de toonzaal",
+          "Mandatory": true,
+          "Name": "Toonzaal openings uren",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "abd82dae-792e-4719-bf94-70434886aba4",
+          "Alias": "workplaceOpeningsHours",
+          "DataType": "umb://data-type/ac8107ebc1534d61bc30a4d2e8492b7c",
+          "Description": "De openings uren van de werkplaats",
+          "Mandatory": true,
+          "Name": "Werkplaats openings uren",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "ebc377a3-1a05-45b8-809f-27e3ed0da996",
+          "Alias": "receptionOpeningHours",
+          "DataType": "umb://data-type/ac8107ebc1534d61bc30a4d2e8492b7c",
+          "Description": "De openings uren van de receptie",
+          "Mandatory": true,
+          "Name": "Receptie openings uren",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "b54c2e3b-02bc-4a65-bd58-f96725965565",
+      "Name": "Contact",
+      "SortOrder": 102,
+      "PropertyTypes": [
+        {
+          "Key": "78c72923-f101-4b3b-8979-5cdbb4a18423",
+          "Alias": "introText",
+          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+          "Description": "De introductie onder de titel",
+          "Mandatory": false,
+          "Name": "Intro tekst",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "cae8f3f2-f114-4ba4-89f8-e6c6ccbe5efd",
+          "Alias": "contactTitle",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "De titel van het contact gedeelte",
+          "Mandatory": true,
+          "Name": "Contact titel",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "c4169a8c-4ed5-4aa1-969c-0f56c9eafc1a",
+      "Name": "Informatie",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "19b91519-a307-4976-9965-fb809032ce22",
+          "Alias": "facebookPaginaId",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Het id van de Facebook pagina",
+          "Mandatory": true,
+          "Name": "Facebook pagina id",
+          "SortOrder": 8,
+          "Validation": null
+        },
+        {
+          "Key": "c4391dda-275d-44f5-bb36-1b97bd3e9d50",
+          "Alias": "googlePaginaId",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Het id van de Google plaats",
+          "Mandatory": true,
+          "Name": "Google pagina id",
+          "SortOrder": 11,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "c63d2617-6b76-46d9-8c23-3cd3bf9f9eec",
+      "Name": "Footer",
+      "SortOrder": 100,
+      "PropertyTypes": [
+        {
+          "Key": "b1feab0a-bb57-4318-bd36-485eb75b96b7",
+          "Alias": "footerLinkedInLink",
+          "DataType": "umb://data-type/43c470bd01ce4d2b983715cb21174541",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "LinkedIn Link",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "d653b30d-e32d-40b9-9296-ba7945dbe9b5",
+          "Alias": "footerFacebookLink",
+          "DataType": "umb://data-type/43c470bd01ce4d2b983715cb21174541",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Facebook Link",
+          "SortOrder": 0,
+          "Validation": null
+        },
+        {
+          "Key": "fd77520b-6e52-40b2-93e6-3e85d3fb6f69",
+          "Alias": "footerGoogleLink",
+          "DataType": "umb://data-type/43c470bd01ce4d2b983715cb21174541",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Google Link",
+          "SortOrder": 1,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "de153723-e0d9-4700-8852-4a5b4649ae35",
+      "Name": "Acties",
+      "SortOrder": 3,
+      "PropertyTypes": [
+        {
+          "Key": "a3fbf01a-f826-4bd3-8fd5-e0541188fdaa",
+          "Alias": "actionTitle",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Titel van de actie sectie.",
+          "Mandatory": true,
+          "Name": "Titel",
+          "SortOrder": 8,
+          "Validation": null
+        },
+        {
+          "Key": "bde27e09-8438-4076-a83e-f3d775444f27",
+          "Alias": "actionBackground",
+          "DataType": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+          "Description": "Achtergrond bij de acties.",
+          "Mandatory": true,
+          "Name": "Achtergrond",
+          "SortOrder": 9,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/c62a998a51f44b7ab64d14f177181f8b",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/43c470bd01ce4d2b983715cb21174541",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/8aeb66ff18664a9fac79ec29346cfd29",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/ac8107ebc1534d61bc30a4d2e8492b7c",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/0845faccabbb41a4bef8e7aba01ed22d",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/0aaf0419d41c4ee690cc8a9b4493c2d8",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/179f476facd243d6a31d1413899cf368",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/1dd8d847965a42cc86f645a2a3847ab6",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/452f1054b5dc4c8bac279e10c808c302",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/5565ef5a25904a04a10fa6bdf36e0270",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/850f2fb74c8242f9ba5019b6311ec8ce",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/87ec803511384017bcb5b6c4208ed68b",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/9469df909a6e4cffa37cdb516ec418d5",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/d60a0c7f9d03423fbf62df6682128c81",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/dcdceb17db644c8cb864a2045b64cd39",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/f6f465e85d774bd0a2c2af86117a0587",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/16ad1eae30e24911aaa823589f91fd7d",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Handelszaak - merk",
+  "Alias": "businessBrand",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

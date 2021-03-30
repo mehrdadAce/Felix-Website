@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/Brand.cshtml",
+  "Master": null,
+  "Udi": "umb://template/bccff1fa2d084ab2823876ae663a8fd6",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/Brand.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Brand",
+  "Alias": "Brand",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "2.0.14"
+}

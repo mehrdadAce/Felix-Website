@@ -1,0 +1,18 @@
+{
+  "EditorAlias": "Umbraco.MultiNodeTreePicker2",
+  "DatabaseType": 0,
+  "PreValues": {
+    "filter": "establishment",
+    "maxNumber": null,
+    "minNumber": null,
+    "showOpenButton": "0",
+    "startNode": "{\r\n  \"type\": \"content\",\r\n  \"query\": \"\"\r\n}"
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/1676390465cd4e8eb141f583addad930",
+  "Dependencies": [],
+  "Name": "_EstablishmentPicker",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

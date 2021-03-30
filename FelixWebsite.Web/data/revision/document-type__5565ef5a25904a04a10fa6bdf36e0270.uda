@@ -1,0 +1,59 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-vcard color-red",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "2f9550fb-a6e9-434c-b547-3e71e986824f",
+      "Name": "VDAB & Vacatures",
+      "SortOrder": 5,
+      "PropertyTypes": [
+        {
+          "Key": "694e1204-c5b8-476b-a7f1-4e7ba0383930",
+          "Alias": "vdabName",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Naam waaronder de onderneming geregistreerd is. Bijvoorbeeld: Felix Herentals",
+          "Mandatory": true,
+          "Name": "Ondernemingsnaam",
+          "SortOrder": 0,
+          "Validation": null
+        },
+        {
+          "Key": "c0287a3e-6d47-40ee-ad1d-815e39be63c6",
+          "Alias": "jobEmail",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Het mailadres dat getoond wordt bij een vacature.",
+          "Mandatory": true,
+          "Name": "Vacature mailadres",
+          "SortOrder": 1,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/5565ef5a25904a04a10fa6bdf36e0270",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Business Job Settings",
+  "Alias": "businessJobSettings",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

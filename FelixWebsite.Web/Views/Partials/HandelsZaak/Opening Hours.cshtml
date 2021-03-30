@@ -1,0 +1,163 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<BusinessBrand>
+@using FelixWebsite.Core.App_GlobalResources
+@using FelixWebsite.Core.Models.OpeningHours
+@{
+    var color = Model.Content.Brand.OfType<Brand>().FirstOrDefault().Color.Color;
+    var cssClass = "br" + Model.Content.Brand.OfType<Brand>().FirstOrDefault().Id;
+    <style>
+        .@(cssClass).background-color {
+            background-color: #@(color);
+        }
+        .@(cssClass).background-color-active {
+            background-color: #@(color);
+        }
+    </style>
+}
+
+<div class="row">
+    <div class="col-md-4 col-sm-12 wow animated fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+        <button class="btn btn-openingsuren margin-bottom-20 @(cssClass != "" ? Html.Raw(cssClass + " background-color") : Html.Raw(""))" type="button" data-target="#clpReceptie">@FelixResources.openingsHours_reception <i class="fas fa-angle-right"></i> <i class="fas fa-angle-down"></i></button>
+    </div>
+    <div class="col-md-4 col-sm-12 wow animated fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+        <button class="btn btn-openingsuren margin-bottom-20 @(cssClass != "" ? Html.Raw(cssClass + " background-color") : Html.Raw(""))" type="button" data-target="#clpWerkplaats">@FelixResources.openingsHours_workplace <i class="fas fa-angle-right"></i> <i class="fas fa-angle-down"></i></button>
+    </div>
+    <div class="col-md-4 col-sm-12 wow animated fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+        <button class="btn btn-openingsuren margin-bottom-20 @(cssClass != "" ? Html.Raw(cssClass + " background-color") : Html.Raw(""))" type="button" data-target="#clpToonzaal">@FelixResources.openingsHours_showroom <i class="fas fa-angle-right"></i> <i class="fas fa-angle-down"></i></button>
+    </div>
+</div>
+<div class="row" id="openingsuren">
+    <div class="col-sm-12 collapse" id="clpReceptie">
+        @{
+            var receptionOpeningHours = Model.Content.ReceptionOpeningHours;
+            if (receptionOpeningHours != null && !receptionOpeningHours.ToString().IsNullOrWhiteSpace())
+            {
+                var weekReception = Json.Decode<Week>(receptionOpeningHours.ToString());
+                <div class="contact-info margin-top-20">
+                    @{ var i = 0; }
+                    @foreach (var day in weekReception.Days)
+                    {
+                        if (day != null && day.Openings != null)
+                        {
+                            <div class="row">
+                                @if (i == 0)
+                                {
+                                    <div class="col-sm-12 col-xs-12"><h5>@FelixResources.openingsHours_reception</h5><hr></div>
+                                }
+
+                                <div class="col-sm-4 col-xs-6"><h5>@day.DayName</h5></div>
+                                @{ var openingsList = day.Openings.ToList(); }
+                                @if (openingsList[0].IsOpen)
+                                {
+                                    <div class="col-sm-4 col-xs-6"><h5>@openingsList[0].StartHour.ToString("hh\\:mm") - @openingsList[0].EndHour.ToString("hh\\:mm")</h5></div>
+                                }
+                                else
+                                {
+                                    <div class="col-sm-4 col-xs-6"><h5>@FelixResources.openingsHours_closed</h5></div>
+                                }
+                                @if (openingsList[1].IsOpen)
+                                {
+                                    <div class="col-sm-4 col-xs-6 col-xs-offset-6"><h5>@openingsList[1].StartHour.ToString("hh\\:mm") - @openingsList[1].EndHour.ToString("hh\\:mm")</h5></div>
+                                }
+                                else
+                                {
+                                    <div class="col-sm-4 col-xs-6"><h5>@FelixResources.openingsHours_closed</h5></div>
+                                }
+                            </div>
+                            <hr>
+                        }
+                        i++;
+                    }
+                </div>
+            }
+        }
+    </div>
+    <div class="col-sm-12 collapse" id="clpWerkplaats">
+        @{
+            var workplaceOpeningsHours = Model.Content.WorkplaceOpeningsHours;
+            if (workplaceOpeningsHours != null && !workplaceOpeningsHours.ToString().IsNullOrWhiteSpace())
+            {
+                var weekWorkPlace = Json.Decode<Week>(workplaceOpeningsHours.ToString());
+                <div class="contact-info margin-top-20">
+                    @{ var j = 0; }
+                    @foreach (var day in weekWorkPlace.Days)
+                    {
+                        if (day != null && day.Openings != null)
+                        {
+                            <div class="row">
+                                @if (j == 0)
+                                {
+                                    <div class="col-sm-12 col-xs-12"><h5>@FelixResources.openingsHours_workplace</h5><hr></div>
+                                }
+                                @{ var openingsList = day.Openings.ToList(); }
+                                <div class="col-sm-4 col-xs-6"><h5>@day.DayName</h5></div>
+                                @if (openingsList[0].IsOpen)
+                                {
+                                    <div class="col-sm-4 col-xs-6"><h5>@openingsList[0].StartHour.ToString("hh\\:mm") - @openingsList[0].EndHour.ToString("hh\\:mm")</h5></div>
+                                }
+                                else
+                                {
+                                    <div class="col-sm-4 col-xs-6"><h5>@FelixResources.openingsHours_closed</h5></div>
+                                }
+                                @if (openingsList[1].IsOpen)
+                                {
+                                    <div class="col-sm-4 col-xs-6 col-xs-offset-6"><h5>@openingsList[1].StartHour.ToString("hh\\:mm") - @openingsList[1].EndHour.ToString("hh\\:mm")</h5></div>
+                                }
+                                else
+                                {
+                                    <div class="col-sm-4 col-xs-6"><h5>@FelixResources.openingsHours_closed</h5></div>
+                                }
+                            </div>
+                            <hr>
+                            j++;
+                        }
+                    }
+                </div>
+            }
+        }
+    </div>
+    <div class="col-sm-12 collapse" id="clpToonzaal">
+        @{
+            var showroomOpeningsHours = Model.Content.ShowroomOpeningsHours;
+            if (showroomOpeningsHours != null && !showroomOpeningsHours.ToString().IsNullOrWhiteSpace())
+            {
+                var weekShowRoom = Json.Decode<Week>(showroomOpeningsHours.ToString());
+                <div class="contact-info margin-top-20">
+                    @{ var k = 0; }
+                    @foreach (var day in weekShowRoom.Days)
+                    {
+                        if (day != null && day.Openings != null)
+                        {
+                            var openingsList = day.Openings.ToList();
+                            <div class="row">
+                                @if (k == 0)
+                                {
+                                    <div class="col-sm-12 col-xs-12"><h5>@FelixResources.openingsHours_showroom</h5><hr></div>
+                                }
+
+                                <div class="col-sm-4 col-xs-6"><h5>@day.DayName</h5></div>
+                                @if (openingsList[0].IsOpen)
+                                {
+                                    <div class="col-sm-4 col-xs-6"><h5>@openingsList[0].StartHour.ToString("hh\\:mm") - @openingsList[0].EndHour.ToString("hh\\:mm")</h5></div>
+                                }
+                                else
+                                {
+                                    <div class="col-sm-4 col-xs-6"><h5>@FelixResources.openingsHours_closed</h5></div>
+                                }
+                                @if (openingsList[1].IsOpen)
+                                {
+                                    <div class="col-sm-4 col-xs-6 col-xs-offset-6"><h5>@openingsList[1].StartHour.ToString("hh\\:mm") - @openingsList[1].EndHour.ToString("hh\\:mm")</h5></div>
+                                }
+                                else
+                                {
+                                    <div class="col-sm-4 col-xs-6"><h5>@FelixResources.openingsHours_closed</h5></div>
+                                }
+                            </div>
+                            <hr>
+                            k++;
+                        }
+                    }
+                </div>
+            }
+        }
+    </div>
+</div>

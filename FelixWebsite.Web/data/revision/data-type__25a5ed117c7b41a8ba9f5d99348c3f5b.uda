@@ -1,0 +1,19 @@
+{
+  "EditorAlias": "Umbraco.NestedContent",
+  "DatabaseType": 0,
+  "PreValues": {
+    "confirmDeletes": "1",
+    "contentTypes": "[\r\n  {\r\n    \"ncAlias\": \"actionItem\",\r\n    \"ncTabAlias\": \"Actie\",\r\n    \"nameTemplate\": \"{{title}}\"\r\n  }\r\n]",
+    "hideLabel": "0",
+    "maxItems": "1",
+    "minItems": "1",
+    "showIcons": "1"
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/25a5ed117c7b41a8ba9f5d99348c3f5b",
+  "Dependencies": [],
+  "Name": "_Action",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

@@ -1,0 +1,18 @@
+﻿[
+  {
+    "outputFile": "css/scheme.css",
+    "inputFile": "css/scheme.less"
+  },
+  {
+    "outputFile": "scripts/intl-tel-input-17/src/css/intlTelInput.css",
+    "inputFile": "scripts/intl-tel-input-17/src/css/intlTelInput.scss"
+  },
+  {
+    "outputFile": "scripts/intl-tel-input-17/src/css/demo.css",
+    "inputFile": "scripts/intl-tel-input-17/src/css/demo.scss"
+  },
+  {
+    "outputFile": "scripts/intl-tel-input-17/src/css/sprite.css",
+    "inputFile": "scripts/intl-tel-input-17/src/css/sprite.scss"
+  }
+]

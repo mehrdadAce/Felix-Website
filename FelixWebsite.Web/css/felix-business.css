@@ -1,0 +1,393 @@
+﻿/*=============================================
+=                   Acties                    =
+=============================================*/
+#services {
+    color: #fff;
+    padding: 115px 0;
+}
+
+.service-box {
+    background: #cf0227;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+    .service-box i {
+        font-size: 40px;
+    }
+
+    .service-box h4 {
+        font-family: 'Roboto', 'sans serif';
+        font-weight: 800;
+        font-size: 16px;
+        color: #fff;
+    }
+
+    .service-box p {
+        color: rgba(255, 255, 255,0.6);
+    }
+
+.service-box {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+    .service-box:hover {
+        -ms-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+/*.service-box > img {
+        filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(264deg) brightness(110%) contrast(110%);
+    }*/
+
+#configModal .modal-header {
+    border-bottom: none;
+}
+
+@media only screen and (max-width: 991px) {
+    .service-box {
+        min-height: 197px;
+    }
+}
+
+@media only screen and (max-width: 559px) {
+    .service-box {
+        padding: 25px;
+    }
+}
+
+@media only screen and (max-width: 467px) {
+    .service-box {
+        min-height: 80px;
+        padding: 22px;
+        max-height: 132px;
+    }
+
+        .service-box p {
+            display: none;
+        }
+}
+/*===================================================
+=                   Openingsuren                    =
+===================================================*/
+.weekday {
+    text-align: left
+}
+
+.workhours {
+    float: right;
+}
+
+.contact-info > h3 {
+    border-bottom: 2px solid #cf0227;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.closed {
+    font-weight: bold;
+    color: #cf0328;
+}
+
+/*==============================================
+=                   Contact                    =
+==============================================*/
+
+.contact-info {
+    background: none;
+    border: 1px solid #eee;
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    color: black;
+}
+
+    .contact-info i {
+        font-size: 30px;
+    }
+
+.contact_bg2 {
+    padding: 25px 60px;
+    height: 413px;
+    background-color: rgba(0,0,0,0.05);
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+    .contact_bg2 h4 {
+        color: #fff;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    .contact_bg2 .form-control {
+        border-radius: 0px;
+        box-shadow: none;
+        background: transparent;
+        color: #fff;
+    }
+
+    .contact_bg2 textarea.form-control {
+        border-radius: 0px;
+        color: #fff;
+        border-color: #fff;
+        padding-top: 10px;
+        margin-top: 25px;
+        height: 122px;
+    }
+
+.contact_btn {
+    background: transparent;
+    box-shadow: none;
+    border: solid 1px #fff;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    outline: none;
+    padding: 10px 18px;
+}
+
+.btn-openingsuren {
+    text-transform: uppercase;
+    font-family: 'Roboto', 'sans-serif';
+    padding: 15px;
+    border-radius: 0;
+    background: #cf0227;
+    color: #fff;
+    width: 100%;
+}
+
+    .btn-openingsuren .fa-angle-down {
+        display: none;
+    }
+
+    .btn-openingsuren .fa-angle-right {
+        display: inline-block;
+    }
+
+    .btn-openingsuren.btn-active .fa-angle-down {
+        display: inline-block;
+    }
+
+    .btn-openingsuren.btn-active .fa-angle-right {
+        display: none;
+    }
+
+.btn-active {
+    outline: none;
+    color: #fff;
+    background-color: #97031e;
+}
+
+.contact-info h5 {
+    margin-bottom: 0px;
+    text-transform: uppercase;
+}
+
+hr {
+    margin-top: 14px;
+    margin-bottom: 20px;
+}
+
+#contact a {
+    color: #333;
+}
+
+.modal-content {
+    border: none;
+}
+
+@media (min-width: 768px) {
+    .col-xs-offset-6 {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 525px) {
+    .contact_bg2 {
+        padding: 30px 10px 30px 10px;
+    }
+}
+
+.section-intro {
+    text-align: center;
+}
+
+.custom-placeholder::-webkit-input-placeholder {
+    color: white;
+    opacity: 0.8;
+}
+
+.custom-placeholder:-ms-input-placeholder {
+    color: white;
+    opacity: 0.8;
+}
+
+@media(max-width:440px) {
+    .remarksMinHeight {
+        min-height: 100px;
+    }
+}
+
+.custom-placeholder::placeholder {
+    color: white;
+    opacity: 0.8;
+}
+
+/*==============================================
+=                   Reviews                    =
+==============================================*/
+
+#reviews .row {
+    margin-top: 12px;
+}
+
+#reviews {
+    color: #777777;
+    margin-top: -20px;
+    position: relative;
+    padding-top: 70px;
+    padding-bottom: 115px;
+    background: #fafafa;
+}
+
+    #reviews .carousel-indicators {
+        bottom: -61px !important;
+    }
+
+    #reviews .round_img img {
+        max-width: 50px;
+        max-height: 50px;
+    }
+    #reviews q {
+        min-height: 50px;
+        display: inline-block;
+    }
+
+.carousel-indicators > li.active {
+    border: 1px solid #363636;
+    background: #363636;
+}
+
+.carousel-indicators > li {
+    border: 1px solid #363636;
+    background: transparent;
+}
+
+.rating {
+    font-weight: normal;
+}
+
+    .rating i {
+        padding-right: 8px;
+    }
+
+p.rating {
+    margin-top: 10px;
+    color: #363636
+}
+
+@media only screen and (max-width: 767px) {
+    .item .row:nth-child(2) {
+        display: none;
+    }
+
+    .item .row img {
+        width: 30%;
+    }
+}
+/*=============================================
+=                   Nieuws                    =
+=============================================*/
+section#news {
+    padding: 70px 0px;
+}
+
+.post-title {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+    .post-title > a {
+        color: #333;
+    }
+
+        .post-title > a:hover {
+            color: #333;
+            cursor: default;
+        }
+
+.row.display-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    .row.display-flex > [class*='col-'] {
+        display: flex;
+        flex-direction: column;
+        visibility: visible;
+        animation-delay: 0.2s;
+        animation-name: fadeInUp;
+    }
+
+.news-post-container {
+    background-color: #f2f2f2
+}
+
+    .news-post-container, .news-no-image, .news-post-container > .row, .news-post-container > .row > div, .news-post-container > .row > div > .article-text {
+        height: 100%;
+    }
+
+        .news-post-container > .row > div > .article-text {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .news-post-container > .row > div > .article-text > .post-title {
+                margin: 0;
+                margin-bottom: 15px;
+                margin-top: 15px;
+            }
+
+        .news-post-container .news-brand-background {
+            color: #fff;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            align-content: center;
+        }
+
+.news-brand-background > h3 {
+    margin: auto;
+    font-size: 7rem;
+}
+
+    .news-brand-background > h3 > a {
+        color: #fff;
+        opacity: 1;
+    }
+
+        .news-brand-background > h3 > a:hover {
+            color: #eee;
+            opacity: 0.7;
+        }
+
+@media only screen and (max-width: 991px) {
+    .news-no-image, .news-post-container > .row > div {
+        height: auto;
+    }
+
+    .read-more {
+        margin-top: 0;
+    }
+}

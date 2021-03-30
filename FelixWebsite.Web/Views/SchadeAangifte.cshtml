@@ -1,0 +1,18 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Damage>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+
+@{
+    Layout = "Shared/Master.cshtml";
+    var currentPage = Umbraco.AssignedContentItem;
+}
+
+@Html.Partial("Acquisition/LandingPage", new FelixWebsite.Bdo.Models.Acquisition.TakeOverModel
+{
+    PopupTitle = Model.Content.Titel,
+    PopupText = Model.Content.Tekst,
+    PopupSchemeTitle = Model.Content.SchemeTitle,
+    PopupSchemeText = Model.Content.SchemeText,
+    AmountOfDamagePhotos = Model.Content.AmountOfDamagePhotos,
+    CurrentPage = currentPage,
+    IsTakeOver = false
+})

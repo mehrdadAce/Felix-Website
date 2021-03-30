@@ -1,0 +1,18 @@
+{
+  "EditorAlias": "Umbraco.MultiNodeTreePicker2",
+  "DatabaseType": 0,
+  "PreValues": {
+    "filter": "",
+    "maxNumber": "1",
+    "minNumber": "1",
+    "showOpenButton": "0",
+    "startNode": "{\r\n  \"type\": \"content\",\r\n  \"id\": \"umb://document/c3e0444ca8074b789fa862011c3c7ed8\"\r\n}"
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/8aeb66ff18664a9fac79ec29346cfd29",
+  "Dependencies": [],
+  "Name": "_BrandPicker",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

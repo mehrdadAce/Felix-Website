@@ -1,0 +1,28 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-books color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Node waaronder de verhalen worden ingeladen.",
+  "AllowedAtRoot": false,
+  "IsContainer": true,
+  "Parent": null,
+  "AllowedChildContentTypes": [
+    "umb://document-type/37eaa7423fb44e4091cde0d367812490"
+  ],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/e96d7b270aff4185925409437183375e",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/37eaa7423fb44e4091cde0d367812490",
+      "Ordering": false,
+      "Mode": 0
+    }
+  ],
+  "Name": "Verhalen",
+  "Alias": "stories",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

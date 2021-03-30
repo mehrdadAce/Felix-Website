@@ -1,0 +1,28 @@
+﻿@using ContentModels = Umbraco.Web.PublishedContentModels;
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Review>
+@{
+    var rating = Convert.ToInt16(Model.Content.Rating);
+}
+<div class="col-md-6 col-sm-6 col-xs-12 wow animated fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+    <div class="row">
+        <div class="col-md-3 col-sm-4 col-xs-12">
+            <div class="round_img">
+                <img class="center-block margin-bottom-10 img-circle" src="@Model.Content.UserPictureUrl" style="margin-right:0">
+            </div>
+        </div>
+        <div class="col-md-9 col-sm-8 col-xs-12">
+            <q>@Model.Content.Text</q>
+            <p class="rating">
+            @for (int i = 0; i < rating; i++)
+            {
+                <i class="fa fa-star"></i>
+            }
+            @for (int i = 0; i < 5 - rating; i++)
+            {
+                <i class="far fa-star"></i>
+            }
+            - @Model.Content.Username 
+            </p>
+        </div>
+    </div>
+</div>

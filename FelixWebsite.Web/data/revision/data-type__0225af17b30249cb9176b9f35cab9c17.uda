@@ -1,0 +1,17 @@
+{
+  "EditorAlias": "Umbraco.ColorPickerAlias",
+  "DatabaseType": 1,
+  "PreValues": {
+    "0": "{\"value\":\"cf0227\",\"label\":\"Citroën\",\"sortOrder\":0}",
+    "1": "{\"value\":\"153b6b\",\"label\":\"Peugeot\",\"sortOrder\":1}",
+    "2": "{\"value\":\"bb162b\",\"label\":\"Kia\",\"sortOrder\":2}",
+    "useLabel": "1"
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/0225af17b30249cb9176b9f35cab9c17",
+  "Dependencies": [],
+  "Name": "_BrandColors",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

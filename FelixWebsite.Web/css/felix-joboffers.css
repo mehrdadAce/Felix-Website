@@ -1,0 +1,257 @@
+﻿/*=============================================
+=                  Vacatures                  =
+=============================================*/
+section#news {
+    padding: 70px 0px;
+}
+
+.latest-blog {
+    background: #f1f1f1;
+    margin-bottom: 30px;    
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    text-decoration:none !important;
+}
+
+    .latest-blog img {
+        float: left;
+        margin-right: 16px;
+    }
+
+    .latest-blog:hover {
+        transform: scale(1.05);
+    }
+
+@media only screen and (max-width: 990px) {
+    .latest-blog img {
+        width: 100%;
+    }
+}
+
+.blog-desc {
+    padding: 15px 15px;
+    height: 250px;
+    color: #805b5b;
+}
+
+    .blog-desc small {
+        font-size: 14px;
+        font-weight: 500;
+        color: #cf0227;
+        font-family: 'Roboto', sans-serif;
+        font-style: italic;
+    }
+
+    .blog-desc h5 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #3f2222;
+        line-height: 26px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .blog-desc p {
+        font-size: 14px;
+        font-weight: 400;
+        color: #805b5b;
+        line-height: 26px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .blog-desc span {
+        font-size: 14px;
+        font-weight: 400;
+        color: #f1002c;
+        font-family: 'Roboto', sans-serif;
+        text-decoration: underline;
+    }
+
+        .blog-desc a:hover {
+            color: #cf0227;
+        }
+
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+section#news .border {
+    border-color: #cf0227;
+    margin-left: 0;
+    margin-bottom: 18px;
+    margin-top: 16px;
+}
+
+section#news .border-image {
+    border-color: #cf0227;
+    margin-left: 52%;
+    margin-bottom: 18px;
+    margin-top: 16px;
+}
+
+.border {
+    width: 84px;
+    border-bottom: solid 2px #f1002c;
+    display: block;
+    margin: 30px auto;
+}
+
+.title img {
+    display: block;
+    margin: 0 auto;
+    padding: 20px 0px;
+}
+.list-group-item {
+    font-size: 15px;
+}
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus, .list-group-item.active::selection {
+    background: #cf0227;
+    border-color: #cf0227;
+}
+    .list-group-item.active > h4 {
+        font-family: 'Roboto', sans-serif;
+    }
+
+.competences h4, .competences h3{
+    text-transform: uppercase;
+}
+.competences li {
+    margin-bottom: .5rem;
+}
+.competences img {
+    margin: 4rem;
+}
+
+.img > img {
+    margin: 0;
+}
+
+a.link-button:hover {
+    background: #cf0227;
+}
+
+a.link-button {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    background: #cf0227;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 13px 35px;
+    border-radius: 2px;
+    transition: all 0.65s;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.post-thumbnail {
+    overflow: hidden;
+    position: relative;
+}
+
+.post-title {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    margin: 15px 0;
+}
+
+    .post-title a:hover {
+        color: #cf0227;
+    }
+
+    .post-title a {
+        color: #333;
+    }
+
+.post p {
+    color: #777;
+    font-size: 14px;
+    line-height: 24px;
+    min-height: 75px;
+    max-height: 75px;
+}
+.joboffer-card img {
+    margin-left: auto;
+    margin-right: auto;
+}
+.story p {
+    color: #777;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 10px;
+}
+
+.story img {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.post .read-more {
+    display: block;
+}
+
+    .post .read-more a {
+        font-weight: 600;
+    }
+
+    .post .read-more em {
+        float: left;
+        color: #777;
+    }
+/**single post**/
+.post-detail h1 {
+    font-weight: 400;
+    color: #777;
+    margin-bottom: 20px;
+    line-height: 50px;
+}
+
+.post-detail p.lead {
+    color: #888;
+    font-weight: 300;
+}
+.header-img {
+    width: 100%;
+    display: table;
+    height: 350px;
+    text-align: center;
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+    .header-img h3 {
+    color: white;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 4rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.35);
+    background-color: rgba(93, 93, 93, 0.60);
+}
+.joboffer-card {
+    background-color: #f8f8f8;
+}
+.joboffer-cards {
+    padding: 60px 0;
+}
+
+.joboffer-cards.c-desc {
+    padding: 15px;
+    padding-bottom: 30px;
+    background: #f3f3f3;
+    margin-bottom: 30px;
+}
+
+    .joboffer-cards .c-desc h3 {
+        font-weight: 400;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }

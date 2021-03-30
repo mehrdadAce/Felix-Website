@@ -1,0 +1,94 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-wrench color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Een dienst die wordt weergegeven op de Felix groep pagina.",
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": "umb://document-type-container/e9def2683d284c8c83393846d9d63b78",
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "276798c8-1130-488e-b390-595d115e44f3",
+      "Name": "Dienst",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "306a8ae9-54f6-4684-8bb9-ddd5e60c390a",
+          "Alias": "title",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel van de dienst.",
+          "Mandatory": true,
+          "Name": "Titel",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "c825a4f1-cd75-4014-9a04-744f55eddb61",
+          "Alias": "link",
+          "DataType": "umb://data-type/43c470bd01ce4d2b983715cb21174541",
+          "Description": "Link waar de dienst naar moet verwijzen.",
+          "Mandatory": true,
+          "Name": "Link",
+          "SortOrder": 3,
+          "Validation": null
+        },
+        {
+          "Key": "c92cc362-4ca4-40de-b6ac-78a1316c7d49",
+          "Alias": "intro",
+          "DataType": "umb://data-type/7f26211f741043c1aa7325fc7b4f7cf6",
+          "Description": "Korte beschrijving onder de dienst.",
+          "Mandatory": true,
+          "Name": "Inleiding",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "dbe53304-9aea-4f1a-904a-c7b08c8c5d7b",
+          "Alias": "icon",
+          "DataType": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+          "Description": "Icoon van de dienst.",
+          "Mandatory": true,
+          "Name": "Icoon",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/fde6a11247ef4cc98bca08cb8a99ff59",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/43c470bd01ce4d2b983715cb21174541",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/7f26211f741043c1aa7325fc7b4f7cf6",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/e9def2683d284c8c83393846d9d63b78",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Dienst",
+  "Alias": "service",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

@@ -1,0 +1,15 @@
+{
+  "EditorAlias": "Umbraco.TextboxMultiple",
+  "DatabaseType": 0,
+  "PreValues": {
+    "maxChars": null,
+    "rows": null
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/7f26211f741043c1aa7325fc7b4f7cf6",
+  "Dependencies": [],
+  "Name": "_TextArea",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

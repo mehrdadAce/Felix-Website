@@ -1,0 +1,106 @@
+﻿@using FelixResources = FelixWebsite.Core.App_GlobalResources.FelixResources;
+@using FelixWebsite.Bdo.Models.Acquisition
+@model FelixWebsite.Bdo.Models.Acquisition.SchemeDamageData
+
+<section id="transfer" class="margin-top-60">
+    <div class="container">
+        <div class="row panel panel-default">
+            <div class="panel-body">
+                <div class="scheme-page">
+                    <div class="container">
+                        <div class="row margin-bottom-20 margin-top-20">
+                            <div class="go-back-arrow z-index-100 updateIcon go-back-arrow-scheme go-arrow hidden-below-1000">
+                                <i class="fas fa-arrow-left fa-2x"></i>
+                            </div>
+
+                            <div class="hidden-below-1000 continue-button">
+                                <button type="button" class="btn btn-success hidden scheme-continue">Verdergaan</button>
+                                <button type="button" class="btn btn-danger scheme-skip">Overslaan</button>
+                                <button type="button" class="btn btn-success hidden go-to-overview">Naar overzicht</button>
+                            </div>
+
+                            <div class="section-title text-center">
+                                <h1 class="center">@FelixResources.overname_scheme_title</h1>
+                            </div>
+                        </div>
+                        <div class="row hidden-above-1000">
+                            <div class="go-back-arrow z-index-100 updateIcon go-back-arrow-scheme go-arrow ">
+                                <i class="fas fa-arrow-left fa-2x"></i>
+                            </div>
+
+                            <div class="continue-button">
+                                <button type="button" class="btn btn-success hidden scheme-continue">Verdergaan</button>
+                                <button type="button" class="btn btn-danger scheme-skip">Overslaan</button>
+                                <button type="button" class="btn btn-success hidden go-to-overview">Naar overzicht</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="scheme-body col-sm-12 col-md-6"></div>
+                            <div id="placeholder-scheme-text" class="col-sm-12 col-md-6">
+                                Gelieve op een van de onderdelen te klikken
+                            </div>
+                            <div id="scheme-text" class="scheme-text setHidden col-sm-12 col-md-6">
+                                <div class="title col-12">
+                                    <label for="title" class="title-location">
+                                        @FelixResources.acquisition_photos_damage
+                                        <span id="local-name">
+                                        </span>
+                                        <span id="brackets-number">
+                                            (<span id="local-number"></span>)
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="input-fields">
+                                    <div class="col-6 checkboxes">
+                                        @Html.EditorFor(m => m.IsSelected, new { htmlAttributes = new { id = "scheme-image-has-damage", style = "display:none;", disabled = "disabled" } })
+                                        <div class="form-group ">
+                                            @Html.EditorFor(m => m.Damage, new { htmlAttributes = new { id = "scheme-damage", @class = "angleLeft", tabindex = "1" } })
+                                            <label for="scheme-damage" class="control-label"> @FelixResources.overname_scheme_damage_light</label>
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.EditorFor(m => m.HeavyDamage, new { htmlAttributes = new { id = "scheme-heavy-damage", @class = "angleLeft", tabindex = "2" } })
+                                            <label for="scheme-heavy-damage" class="control-label"> @FelixResources.overname_scheme_damage_heavy</label>
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.EditorFor(m => m.Dent, new { htmlAttributes = new { id = "scheme-dent", @class = "angleLeft", tabindex = "3" } })
+                                            <label for="scheme-dent" class="control-label"> @FelixResources.overname_scheme_damage</label>
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.EditorFor(m => m.Marks, new { htmlAttributes = new { id = "scheme-marks", @class = "", tabindex = "4" } })
+                                            <label for="scheme-marks" class="control-label"> @FelixResources.overname_scheme_marks</label>
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.EditorFor(m => m.HailDamage, new { htmlAttributes = new { id = "scheme-hail-damage", @class = "", tabindex = "5" } })
+                                            <label for="scheme-hail-damage" class="control-label"> @FelixResources.overname_scheme_hail_damage</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="scheme-remarks" class="control-label remarks-label"> @FelixResources.overname_scheme_remarks:</label>
+                                            <textarea id="scheme-remarks" class="form-control textareaStyle robotoStyle remarks-width" name="remarks" value="remarks"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <form id="imageUploader" class="scheme" enctype="multipart/form-data" action="@Url.Action("PostPhotos", "AcquisitionTool")" method="POST">
+                                            @Html.Partial("Acquisition/ImageUploaderMultiple", new PhotoModel(
+                                              string.Empty,
+                                              "SchemeEntryDamage",
+                                              string.Empty,
+                                              string.Empty,
+                                              string.Empty))
+
+                                            <input id="scheme-image-type" type="hidden" name="imageType" value="" class="imageType" />
+                                            <input type="hidden" name="licensePlate" class="inputUserLicensePlate" />
+                                            <input type="hidden" name="id" class="inputUserId" />
+                                            <input type="hidden" name="name" class="inputUserName" />
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

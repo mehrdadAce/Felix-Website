@@ -1,0 +1,76 @@
+﻿@model FelixWebsite.Bdo.Models.Acquisition.TakeOverModel
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@using FelixWebsite.Core.Helpers;
+@using FelixWebsite.Bdo.Models.Acquisition;
+@{
+    var currentPage = Model.CurrentPage;
+    var businessPageId = Session.GetBreadcrumbRoot(currentPage);
+}
+
+<link rel="stylesheet" type="text/css" href="~/css/acquisition.css">
+<link rel="stylesheet" type="text/css" href="~/css/scheme.css">
+<link rel="stylesheet" href="~/scripts/intl-tel-input-17/src/css/intlTelInput.css">
+
+<input type="hidden" id="mainUserId" />
+<input type="hidden" id="isInsured" />
+<input type="hidden" id="businessPageId" name="businessPageId" value="@businessPageId" />
+@Html.Partial("Acquisition/ProgressBar")
+<div id="userdataScreen" class="marginTopBreadCrumb">
+    @Html.Partial("Acquisition/UserInformation", new UserData())
+</div>
+<div id="schemeScreen" class="marginTopBreadCrumb">
+    @Html.Partial("Acquisition/Scheme", new FelixWebsite.Bdo.Models.Acquisition.SchemeDamageData())
+</div>
+<div id="photosScreen" class="marginTopBreadCrumb">
+    @Html.Partial("Acquisition/Photos", new PhotosModel(Model.AmountOfDamagePhotos, Model.IsTakeOver))
+</div>
+
+<div id="overviewScreen" class="marginTopBreadCrumb">
+    @* View gets loaded by ajax call *@
+</div>
+<div id="successScreen" class="marginTopBreadCrumb">
+    @Html.Partial("Acquisition/Success")
+</div>
+
+<div class="modal fade" id="information-modal" tabindex="-1" role="dialog" aria-labelledby="information-modal" style="top: 20%">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">@Model.PopupTitle</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row margin-x-20">
+                    @Html.Raw(Model.PopupText)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="scheme-modal" tabindex="-1" role="dialog" aria-labelledby="scheme-modal" style="top: 20%">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">@Model.PopupSchemeTitle</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row margin-x-20">
+                    @Html.Raw(Model.PopupSchemeText)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@Scripts.Render("~/Js/ImageMap")
+@Scripts.Render("~/Js/Acquisition")
+
+<script type="text/javascript" defer>
+    $(window).on('load',
+        function () {
+            $('#information-modal').modal('show');
+        });
+</script>

@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/PdfInstellingen.cshtml",
+  "Master": null,
+  "Udi": "umb://template/79ed185e7ff1403c9b29dcba46ab21f3",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/PdfInstellingen.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Pdf instellingen",
+  "Alias": "PdfInstellingen",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "2.0.14"
+}

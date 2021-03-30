@@ -1,0 +1,14 @@
+{
+  "EditorAlias": "Umbraco.Textbox",
+  "DatabaseType": 1,
+  "PreValues": {
+    "maxChars": null
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+  "Dependencies": [],
+  "Name": "_TextString",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

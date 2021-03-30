@@ -1,0 +1,11 @@
+﻿@using FelixWebsite.Bdo.Models.Acquisition
+@model PhotoModel
+
+<img id="img-@Model.Value" class="img-@Model.Value" src="@Model.MediaFile" alt="@Model.Value" style="position: absolute">
+<div class="overlay">
+    <div class="text">
+        <input id="@Model.Value" name="file" type="file" class="inputfile" accept=".png,.gif,.jpg,.jpeg">
+        <label for="@Model.Value"><i class="fas fa-plus"></i></label>
+    </div>
+</div>
+<img src="/img/acquisition/Rolling-1s-200px.svg" alt="loading" class="loadingIcon" style="display:none" />

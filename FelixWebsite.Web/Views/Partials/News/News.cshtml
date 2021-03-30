@@ -1,0 +1,81 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@using FelixWebsite.Core.App_GlobalResources
+
+@{
+    var page = Umbraco.AssignedContentItem;
+    var articleNodes = new List<SocialMediaArticle>();
+    var newsTitle = FelixResources.general_news;
+    var color = "CF0227";
+    if (page is BusinessBrand)
+    {
+        var businessBrand = page as BusinessBrand;
+        var newsNode = Umbraco.AssignedContentItem.Children.OfType<SocialMediaNews>().FirstOrDefault();
+        color = businessBrand.Brand.OfType<Brand>().FirstOrDefault().Color.Color;
+        newsTitle = !string.IsNullOrWhiteSpace(businessBrand.NewsTitle) ? businessBrand.NewsTitle : newsTitle;
+        if (newsNode == null) { return; }
+        articleNodes = newsNode.Children.OfType<SocialMediaArticle>().ToList();
+        articleNodes = articleNodes.OrderBy(x => x.CreateDate).Take(6).ToList();
+    }
+    else if (page is BusinessCombined)
+    {
+        var combinedBusiness = page as BusinessCombined;
+        newsTitle = !string.IsNullOrWhiteSpace(combinedBusiness.NewsTitle) ? combinedBusiness.NewsTitle : newsTitle;
+        color = combinedBusiness.Color.Color;
+        foreach (BusinessBrand business in combinedBusiness.BusinessItems)
+        {
+            var newsNode = business.Children.OfType<SocialMediaNews>().FirstOrDefault();
+            if (newsNode == null) { continue; }
+            foreach (SocialMediaArticle article in newsNode.Children.OfType<SocialMediaArticle>().OrderBy(x => x.CreateDate).Take(3))
+            {
+                articleNodes.Add(article);
+            }
+        }
+        articleNodes = articleNodes.DistinctBy(x => x.PostId).OrderBy(x => x.CreateDate).ToList();
+    }
+    else if (page is GroupHome)
+    {
+        var groupHome = page as GroupHome;
+        var businesses = groupHome.Children().OfType<Businesses>()?.FirstOrDefault().Children.OfType<BusinessBrand>()?.Where(brand => brand.ShowOnGroupHome);
+        newsTitle = !string.IsNullOrWhiteSpace(groupHome.NewsTitle) ? groupHome.NewsTitle : newsTitle;
+        foreach (BusinessBrand business in businesses)
+        {
+            var newsNode = business.Children.OfType<SocialMediaNews>().FirstOrDefault();
+            if (newsNode == null) { continue; }
+            foreach (SocialMediaArticle article in newsNode.Children.OfType<SocialMediaArticle>().OrderBy(x => x.CreateDate))
+            {
+                if (!articleNodes.Any() || articleNodes.Any(node => !node.Name.Equals(article.Name)))
+                {
+                    articleNodes.Add(article);
+                    break;
+                }
+            }
+        }
+        articleNodes = articleNodes.DistinctBy(x => x.PostId).OrderBy(x => x.CreateDate).ToList();
+    }
+}
+@if (articleNodes.Any())
+{
+    <style>.news-brand-background { background-color: #@(color);} .news-brand-color { color:#@(color);} a.news-brand-color:hover {color:#@(color); opacity: 0.7;}</style>
+    <section id="news">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="section-title margin-bottom-40">
+                        <h1 class="center">@newsTitle</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row display-flex">
+
+                @foreach (var article in articleNodes)
+                {
+                    <div class="col-xs-12 wow animated fadeInUp margin-bottom-30" data-wow-delay="0.2s">
+                        @Html.Partial("News/NewsArticle", article)
+                    </div>
+                }
+
+            </div>
+        </div>
+    </section>
+}

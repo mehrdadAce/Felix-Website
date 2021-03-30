@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/CarRentalType.cshtml",
+  "Master": null,
+  "Udi": "umb://template/6518d00ff7a24310bb7eb32bee68b677",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/CarRentalType.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Wagenverhuur - type wagen",
+  "Alias": "CarRentalType",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "2.0.14"
+}

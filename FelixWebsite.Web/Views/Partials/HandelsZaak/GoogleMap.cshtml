@@ -1,0 +1,38 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<BusinessBrand>
+@using FelixWebsite.Core.Models
+@{
+    var streetName = Model.Content.BusinessStreetName;
+    var number = Model.Content.BusinessBuildingNumber;
+    var postalCode = Model.Content.BusinessPostalCode;
+    var municipality = Model.Content.BusinessMunicipality;
+    var companyName = (Model.Content.BusinessName + " " + Model.Content.BusinessLocation).Replace(" ", "%20");
+
+    var color = Model.Content.Brand.OfType<Brand>().FirstOrDefault().Color.Color;
+    var cssClass = "br" + Model.Content.Brand.OfType<Brand>().FirstOrDefault().Id;
+    <style>
+        .@(cssClass).background-color {
+            background-color: #@(color);
+        }
+    </style>
+}
+
+<div class="row">
+    <div class="col-md-12 col-sm-12">
+        @if (Request.Browser.IsMobileDevice)
+        {
+        <div class="col-md-6 col-sm-12 @(cssClass) background-color" style="height: 413px">
+            @Html.Partial("HandelsZaak/ContactForm", new ContactForm())
+        </div>
+
+        }
+        <div class="form-group col-md-6 col-sm-12 no-padding map wow animated fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+            <iframe width="100%" height="413" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%&amp;height=413&amp;hl=en&amp;q=@(streetName)%20@(number)%2C%20@(postalCode)%20@(municipality)+(@companyName)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"></iframe>
+        </div>
+        @if (!Request.Browser.IsMobileDevice)
+        {
+            <div class="col-md-6 col-sm-12 @(cssClass) background-color" style="height: 413px">
+                @Html.Partial("HandelsZaak/ContactForm", new ContactForm())
+            </div>
+        }
+    </div>
+</div>       

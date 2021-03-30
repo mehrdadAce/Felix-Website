@@ -1,0 +1,133 @@
+﻿@using FelixWebsite.Core.App_GlobalResources
+@model FelixWebsite.Bdo.Models.Acquisition.OverviewModel
+@{ }
+
+<div class="row">
+    <div class="makelaar col-sm-12 text-center margin-bottom-20 margin-top-20">
+        <h3 class="display-flex justify-center">
+            @FelixResources.general_data
+            <span id="edit-userinformation">
+                <i class="fas fa-edit"></i>
+            </span>
+        </h3>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="col-md-6 col-sm-6 col-xs-6 label-form-group-left">
+            <div class="form-group">
+                <p for="name">@FelixResources.general_first_lastname:</p>
+            </div>
+            <div class="form-group">
+                <p for="email">@FelixResources.general_email:</p>
+            </div>
+            <div class="form-group">
+                <p for="gsm">@FelixResources.general_cellNumber:</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-6 label-form-group-right">
+            <div class="form-group">
+                <p>@Model.UserInformation.Name</p>
+            </div>
+            <div class="form-group">
+                <p>@Model.UserInformation.Email</p>
+            </div>
+            <div class="form-group">
+                <p>@Model.UserInformation.Gsm</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="col-md-6 col-sm-6 col-xs-6 label-form-group-left">
+            <div class="form-group">
+                <p for="name">@FelixResources._2dehands_licenseplate:</p>
+            </div>
+            @if (Model.IsTakeOver)
+            {
+                <div class="form-group">
+                    <p for="logbook-state">@FelixResources._2dehands_manual: </p>
+                </div>
+                <div class="form-group">
+                    <p for="logbook-state">@FelixResources._2dehands_tyrestate: </p>
+                </div>
+            }
+            else
+            {
+                <div class="form-group">
+                    <p for="name">@FelixResources._2dehands_chassisnumber:</p>
+                </div>
+            }
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-6 label-form-group-right">
+            <div class="form-group">
+                <p>@Model.UserInformation.LicensePlate</p>
+            </div>
+            @if (Model.IsTakeOver)
+            {
+                <div class="form-group">
+                    <p>@Model.UserInformation.ManualString</p>
+                </div>
+                <div class="form-group">
+                    <p>@Model.UserInformation.TyreStateString</p>
+                </div>
+            }
+            else
+            {
+                <div class="form-group">
+                    <p>@FelixWebsite.Core.Helpers.StringHtmlExtensions.GetPresentableString(Model.UserInformation.Chassisnumber)</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@if (Model.UserInformation.IsInsured)
+{
+    <div class="row">
+        <div class="makelaar col-sm-12 text-center margin-bottom-20 margin-top-20">
+            <h3 class="center">@FelixResources.overname_your_insurance</h3>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="col-md-6 col-sm-6 col-xs-6 label-form-group-left">
+                <div class="form-group">
+                    <p for="AgentName" class="control-p">@FelixResources.overname_agent_name: </p>
+                </div>
+                <div class="form-group">
+                    <p for="AgentCity" class="control-p">@FelixResources.overname_agent_city: </p>
+                </div>
+                <div class="form-group">
+                    <p for="AgentCellphone" class="control-p">@FelixResources.overname_agent_cellphone: </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6 label-form-group-right">
+                <div class="form-group">
+                    <p>@FelixWebsite.Core.Helpers.StringHtmlExtensions.GetPresentableString(Model.UserInformation.AgentName)</p>
+                </div>
+                <div class="form-group">
+                    <p>@FelixWebsite.Core.Helpers.StringHtmlExtensions.GetPresentableString(Model.UserInformation.AgentCity)</p>
+                </div>
+                <div class="form-group">
+                    <p>@FelixWebsite.Core.Helpers.StringHtmlExtensions.GetPresentableString(Model.UserInformation.AgentCellphone)</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="col-md-6 col-sm-6 col-xs-6 label-form-group-left">
+                <div class="form-group">
+                    <p for="AgentEmail" class="control-p">@FelixResources.overname_agent_email: </p>
+                </div>
+                <div class="form-group">
+                    <p for="Insurance" class="control-p">@FelixResources.overname_insurance:</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6 label-form-group-right">
+                <div class="form-group">
+                    <p>@FelixWebsite.Core.Helpers.StringHtmlExtensions.GetPresentableString(Model.UserInformation.AgentEmail)</p>
+                </div>
+                <div class="form-group">
+                    <p>@Model.UserInformation.Insurance</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+}

@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/HandelszaakMerk.cshtml",
+  "Master": null,
+  "Udi": "umb://template/16ad1eae30e24911aaa823589f91fd7d",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/HandelszaakMerk.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Handelszaak - merk",
+  "Alias": "HandelszaakMerk",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "2.0.14"
+}

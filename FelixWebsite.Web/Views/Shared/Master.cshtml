@@ -1,0 +1,66 @@
+﻿@using FelixWebsite.Core.Helpers
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    var currentPage = Umbraco.AssignedContentItem;
+    var faviconUrl = "/favicon.png";
+    var scripts = string.Empty;
+    if (CurrentPage is IHomepage)
+    {
+        var site = CurrentPage as IHomepage;
+        if (site.Favicon != null)
+        {
+            faviconUrl = site.Favicon.Url;
+            scripts = site.Scripts;
+        }
+    }
+    else
+    {
+        var root = Session.GetBreadcrumbRoot(Model.Content);
+        if (root is IHomepage)
+        {
+            var site = root as IHomepage;
+            if (site.Favicon != null)
+            {
+                faviconUrl = site.Favicon.Url;
+                scripts = site.Scripts;
+            }
+        }
+    }
+}
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="@faviconUrl" sizes="16x16">
+    @Html.Partial("SEO/SEO", Model.Content)
+    @Html.Partial("Fonts/Fonts")
+    @Styles.Render("~/Content/CSS")
+    @Scripts.Render("~/Js/JQuery")
+    @Html.Raw(Umbraco.AssignedContentItem.AncestorOrSelf(1).OfType<GroupHome>().GlobalScriptsHeader)
+    <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.js"></script>
+</head>
+<body>
+    @Html.Raw(Umbraco.AssignedContentItem.AncestorOrSelf(1).OfType<GroupHome>().GlobalScriptsBody)
+    @Html.Partial("Cookies/Cookies")
+    @Html.Partial("Navigation/Navigation", Model)
+    @if (!currentPage.IsHomePage())
+    {
+        @Html.Partial("Breadcrumbs/Breadcrumbs", Model)
+    }
+
+    @RenderBody()
+
+    @Html.Partial("Footer/Footer", Model)
+    @Scripts.Render("~/Js/Shared")
+    @Scripts.Render("~/Js/Slider")
+    @Scripts.Render("~/Js/Actions")
+
+    @Html.Partial("Notifications/Notifications")
+    @Html.Partial("CrispChat/CrispChat", Model)
+    @Html.Raw(scripts)
+
+</body>
+</html>

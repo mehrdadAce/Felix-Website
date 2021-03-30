@@ -1,0 +1,24 @@
+﻿@model IPublishedContent
+@using FelixWebsite.Core.Helpers
+@{
+    var page = Model as IAdditionalNavigation;
+    var rootBreadcrumb = Session.GetBreadcrumbRoot(page);
+    if (!Model.IsHomePage())
+    {
+        page = rootBreadcrumb as IAdditionalNavigation;
+    }
+}
+
+@if (page != null && page.ExtraNavigation != null)
+{
+    foreach (var relatedLink in page.ExtraNavigation)
+    {
+        <li class="@(relatedLink.Content.Id == Model.Id || Model.IsDescendant(relatedLink.Content) ? "active" : "")">
+            <a href="@relatedLink.Link"
+               target="@(relatedLink.NewWindow ? "_blank" : "_self")"
+            >
+                @relatedLink.Caption
+            </a>
+        </li>
+    }
+}

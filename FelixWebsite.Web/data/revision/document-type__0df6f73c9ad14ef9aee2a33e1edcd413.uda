@@ -1,0 +1,177 @@
+{
+  "DefaultTemplate": "umb://template/bccff1fa2d084ab2823876ae663a8fd6",
+  "AllowedTemplates": [
+    "umb://template/bccff1fa2d084ab2823876ae663a8fd6"
+  ],
+  "Icon": "icon-tag color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Merk pagina met alle vestigingen & acties van het merk.",
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": null,
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [
+    "umb://document-type/1dd8d847965a42cc86f645a2a3847ab6",
+    "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9",
+    "umb://document-type/f299762d61be4a09a5a07bd0d16effd4"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "26dcd53f-5223-4b76-8cfb-cb52e0068a59",
+      "Name": "Merk",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "11c7795f-a9d4-44c5-af44-74721bd8f04a",
+          "Alias": "modellen",
+          "DataType": "umb://data-type/3e6df4bfb2e749f780f709326c6dc75e",
+          "Description": "Alle modellen die opgevraagd kunnen worden voor een testrit/ offerte",
+          "Mandatory": false,
+          "Name": "Modellen",
+          "SortOrder": 6,
+          "Validation": null
+        },
+        {
+          "Key": "4e1101f3-0f65-466b-a1e5-039b37e40405",
+          "Alias": "color",
+          "DataType": "umb://data-type/0225af17b30249cb9176b9f35cab9c17",
+          "Description": "De kleur van het merk.",
+          "Mandatory": true,
+          "Name": "Kleur",
+          "SortOrder": 5,
+          "Validation": null
+        },
+        {
+          "Key": "765a07df-3200-4c52-98cc-d877e2a123e9",
+          "Alias": "title",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De naam van het merk.",
+          "Mandatory": true,
+          "Name": "Naam",
+          "SortOrder": 0,
+          "Validation": null
+        },
+        {
+          "Key": "77ae8d60-9810-480a-b368-4bf5e32fa436",
+          "Alias": "image",
+          "DataType": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+          "Description": "Afbeelding die als voorbeeld van het merk wordt getoond.",
+          "Mandatory": true,
+          "Name": "Afbeelding",
+          "SortOrder": 4,
+          "Validation": null
+        },
+        {
+          "Key": "842c2dc7-a3ca-457e-bfb6-7d0fed709284",
+          "Alias": "logo",
+          "DataType": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+          "Description": "Het logo van het merk.",
+          "Mandatory": true,
+          "Name": "Logo",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "9e66c98f-cf68-484f-870c-93cd824b4dc5",
+          "Alias": "configLink",
+          "DataType": "umb://data-type/43c470bd01ce4d2b983715cb21174541",
+          "Description": "Link naar de configurator van dat merk.",
+          "Mandatory": true,
+          "Name": "Link naar de configurator van dit merk",
+          "SortOrder": 3,
+          "Validation": null
+        },
+        {
+          "Key": "a36ffac6-20ee-4130-8541-7b1a92adc597",
+          "Alias": "secondLogo",
+          "DataType": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+          "Description": "Optioneel tweede logo, als dit niet wordt toegevoegd wordt het logo van Felix groep weergegeven.",
+          "Mandatory": false,
+          "Name": "Tweede logo",
+          "SortOrder": 2,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "d76abb4b-3a42-4db4-aa24-b636fcc39c24",
+      "Name": "Acties",
+      "SortOrder": 11,
+      "PropertyTypes": [
+        {
+          "Key": "80d0aa94-7a67-4aa7-b6c5-75ba547d9227",
+          "Alias": "actionBackground",
+          "DataType": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+          "Description": "De achtergrond van het actie onderdeel.",
+          "Mandatory": true,
+          "Name": "Achtergrond",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "c7a342cc-b245-4512-a15b-c60ad4387dca",
+          "Alias": "actionTitle",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel van het actie onderdeel.",
+          "Mandatory": true,
+          "Name": "Titel",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/0df6f73c9ad14ef9aee2a33e1edcd413",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0225af17b30249cb9176b9f35cab9c17",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/3e6df4bfb2e749f780f709326c6dc75e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/43c470bd01ce4d2b983715cb21174541",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/1dd8d847965a42cc86f645a2a3847ab6",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/f299762d61be4a09a5a07bd0d16effd4",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/bccff1fa2d084ab2823876ae663a8fd6",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Merk",
+  "Alias": "brand",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

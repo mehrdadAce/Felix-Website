@@ -1,0 +1,68 @@
+﻿/*=============================================
+=                   Acties                    =
+=============================================*/
+#services {
+    color: #fff;
+    padding: 115px 0;
+}
+
+.service-box {
+    background: #cf0227;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+    .service-box i {
+        font-size: 40px;
+    }
+
+    .service-box h4 {
+        font-family: 'Roboto', 'sans serif';
+        font-weight: 800;
+        font-size: 16px;
+        color: #fff;
+    }
+
+    .service-box p {
+        color: rgba(255, 255, 255,0.6);
+    }
+
+.service-box {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+    .service-box:hover {
+        transform: scale(1.1);
+    }
+
+/*.service-box > img {
+    filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(264deg) brightness(110%) contrast(110%);
+}*/
+
+@media only screen and (max-width: 991px) {
+    .service-box {
+        min-height: 197px;
+    }
+}
+
+@media only screen and (max-width: 559px) {
+    .service-box {
+        padding: 25px;
+    }
+}
+
+@media only screen and (max-width: 467px) {
+    .service-box {
+        min-height: 80px;
+        padding: 22px;
+    }
+
+        .service-box p {
+            display: none;
+        }
+}
+

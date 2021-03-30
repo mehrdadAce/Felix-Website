@@ -1,0 +1,188 @@
+﻿@using FelixWebsite.Bdo.Models.Acquisition
+@using FelixWebsite.Core.Constants
+@using FelixWebsite.Core.Helpers;
+@using FelixWebsite.Core.App_GlobalResources
+@model FelixWebsite.Bdo.Models.Acquisition.OverviewModel
+@{
+}
+
+<section id="transfer" class="margin-top-40">
+    <div class="container">
+        <div class="row">
+            <!-- Buitenkant -->
+            <div id="panel-outside" class="panel panel-default">
+                <div class="panel-body checkboxes">
+                    <div class="col-sm-12 text-center margin-bottom-20 margin-top-20">
+                        <div class="section-title">
+                            <h1 class="center">@FelixResources.general_overview</h1>
+                        </div>
+                        <div>
+                            @Html.Raw(Model.OverviewText)
+                        </div>
+                        @Html.Partial("Acquisition/OverviewUserInformation", Model)
+                        <!-- 4 -->
+                        <div class="row">
+                            <div class="col-md-6 overview-outside">
+                                <div class="col-md-12 margin-bottom-10 margin-top-10">
+                                    <h3>@FelixResources._2dehands_overview_photosOutside</h3>
+                                </div>
+                                <div class="col-md-6 ">
+                                    @Html.Partial("Acquisition/UpdateImageLoader", new UpdateModel(
+                                        Model.LeftFrontUrl + "?width=230&height=154&mode=crop&anchor=center",
+                                        AcquisitionImageTypes.LEFT_FRONT
+                                        ))
+                                </div>
+
+                                <div class="col-md-6">
+                                    @Html.Partial("Acquisition/UpdateImageLoader", new UpdateModel(
+                                        Model.RightFrontUrl + "?width=230&height=154&mode=crop&anchor=center",
+                                        AcquisitionImageTypes.RIGHT_FRONT
+                                        ))
+                                </div>
+                                <div class="col-md-6">
+                                    @Html.Partial("Acquisition/UpdateImageLoader", new UpdateModel(
+                                        Model.LeftBackUrl + "?width=230&height=154&mode=crop&anchor=center",
+                                        AcquisitionImageTypes.LEFT_BACK
+                                        ))
+                                </div>
+                                <div class="col-md-6">
+                                    @Html.Partial("Acquisition/UpdateImageLoader", new UpdateModel(
+                                        Model.RightBackUrl + "?width=230&height=154&mode=crop&anchor=center",
+                                        AcquisitionImageTypes.RIGHT_BACK
+                                        ))
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 overview-inside">
+                                <div class="col-md-12 margin-bottom-10 margin-top-10">
+                                    <h3>@FelixResources._2dehands_overview_photosInside</h3>
+                                </div>
+                                <div class="col-md-6">
+                                    @Html.Partial("Acquisition/UpdateImageLoader", new UpdateModel(
+                                        Model.DashboardUrl + "?width=230&height=154&mode=crop&anchor=center",
+                                        AcquisitionImageTypes.DASH
+                                        ))
+                                </div>
+                                <div class="col-md-6">
+                                    @Html.Partial("Acquisition/UpdateImageLoader", new UpdateModel(
+                                        Model.KmUrl + "?width=230&height=154&mode=crop&anchor=center",
+                                        AcquisitionImageTypes.KM
+                                        ))
+                                </div>
+
+                                <div class="col-md-6">
+                                    @Html.Partial("Acquisition/UpdateImageLoader", new UpdateModel(
+                                              Model.FrontseatsUrl + "?width=230&height=154&mode=crop&anchor=center",
+                                              AcquisitionImageTypes.FRONTSEATS
+                                              ))
+                                </div>
+                                <div class="col-md-6">
+                                    @Html.Partial("Acquisition/UpdateImageLoader", new UpdateModel(
+                                        Model.BackseatsUrl + "?width=230&height=154&mode=crop&anchor=center",
+                                        AcquisitionImageTypes.BACKSEATS
+                                        ))
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="row overview-damage">
+                            <div class="col-md-6">
+                                <div class="col-md-12 margin-bottom-10 margin-top-10">
+                                    <h3>@FelixResources.acquisition_overview_photosDamageOutside</h3>
+                                </div>
+
+                                @foreach (var dmgOutside in Model.DmgOutsideUrls)
+                                {
+                                    <div class="col-md-6 dmgOverview damage-modifier">
+                                        @Html.Partial("Acquisition/UpdateAndDeleteUploader", new UpdateModel(
+                                            dmgOutside.DamageUrl + "?width=230&height=154&mode=crop&anchor=center",
+                                            dmgOutside.ImageName,
+                                            dmgOutside.MediaId
+                                            ))
+                                    </div>
+                                }
+                                <br>
+                                <div class="col-md-12">
+                                    @Html.Partial("Acquisition/AddImageUploader", new UpdateModel(
+                                        "/img/acquisition/add.svg?width=50&mode=crop&anchor=center",
+                                        AcquisitionImageTypes.DMG_OUTSIDE
+                                        ))
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="col-md-12 margin-bottom-10 margin-top-10">
+                                    <h3>@FelixResources.acquisition_overview_photosDamageInside</h3>
+                                </div>
+                                @foreach (var dmgInside in Model.DmgInsideUrls)
+                                {
+                                    <div class="col-md-6 dmgOverview damage-modifier">
+                                        @Html.Partial("Acquisition/UpdateAndDeleteUploader", new UpdateModel(
+                                            dmgInside.DamageUrl + "?width=230&height=154&mode=crop&anchor=center",
+                                            dmgInside.ImageName,
+                                            dmgInside.MediaId
+                                            ))
+                                    </div>
+                                }
+                                <br>
+                                <div class="col-md-12">
+                                    @Html.Partial("Acquisition/AddImageUploader", new UpdateModel(
+                                        "/img/acquisition/add.svg?width=50&mode=crop&anchor=center",
+                                        AcquisitionImageTypes.DMG_INSIDE
+                                        ))
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 overview-doc">
+                                <div class="col-md-12 margin-bottom-10 margin-top-10">
+                                    <h3>@FelixResources._2dehands_overview_photosDocuments</h3>
+                                </div>
+                                <div class="col-md-4">
+                                    @Html.Partial("Acquisition/UpdateImageLoader", new UpdateModel(
+                                        Model.EnrollmentFrontUrl + "?width=230&height=154&mode=crop&anchor=center",
+                                        AcquisitionImageTypes.ENROLLMENT_FRONT
+                                        ))
+                                </div>
+                                <div class="col-md-4">
+                                    @Html.Partial("Acquisition/UpdateImageLoader", new UpdateModel(
+                                        Model.EnrollmentBackUrl + "?width=230&height=154&mode=crop&anchor=center",
+                                        AcquisitionImageTypes.ENROLLMENT_BACK
+                                        ))
+                                </div>
+                                <div class="col-md-4">
+                                    @Html.Partial("Acquisition/UpdateImageLoader", new UpdateModel(
+                                        Model.ExaminationUrl + "?width=230&height=154&mode=crop&anchor=center",
+                                        AcquisitionImageTypes.EXAMINATION
+                                        ))
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="col-md-12 margin-bottom-10 margin-top-10">
+                                    <h3>@FelixResources.acquisition_overview_remarksTitle</h3>
+                                </div>
+                                <div class="col-md-12">
+                                    <textarea id="userRemarks" class="form-control textareaStyle robotoStyle" name="message" value="message"></textarea>
+                                    <p class="robotoStyle">@FelixResources.acquisition_overview_remarksText</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-6 margin-top-40">
+                                <div class="form-group">
+                                    <button id="finishOverviewButton" type="submit" class="btn felix red" tabindex="8">
+                                        @FelixResources.general_completeAction
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<input id="amountOfDamagePicturesOverview" type="hidden" name="amountOfDamagePicturesOverview" value="@Model.AmountOfDamagePictures" />

@@ -1,0 +1,171 @@
+{
+  "DefaultTemplate": "umb://template/3edfbae254a94cf188f7f2991e451a2b",
+  "AllowedTemplates": [
+    "umb://template/3edfbae254a94cf188f7f2991e451a2b"
+  ],
+  "Icon": "icon-briefcase color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Alle vacatures die momenteel openstaan.",
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": null,
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [
+    "umb://document-type/48b7b8b6139145d0b53b751dcba9bab6",
+    "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9",
+    "umb://document-type/f299762d61be4a09a5a07bd0d16effd4"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "40a54bf9-f33d-474e-9eca-f544d3d93933",
+      "Name": "Verhalen",
+      "SortOrder": 5,
+      "PropertyTypes": [
+        {
+          "Key": "5cd3a218-0a21-43c4-82c1-a80f53ea2d2d",
+          "Alias": "storyTitle",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel van de verhalen sectie.",
+          "Mandatory": true,
+          "Name": "Titel",
+          "SortOrder": 0,
+          "Validation": null
+        },
+        {
+          "Key": "c5d7ca85-7d81-43d4-bbed-45d81121b9ab",
+          "Alias": "storyText",
+          "DataType": "umb://data-type/7f26211f741043c1aa7325fc7b4f7cf6",
+          "Description": "Korte tekst boven de verhalen.",
+          "Mandatory": true,
+          "Name": "Tekst",
+          "SortOrder": 1,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "4fc07dd3-a4b8-4b03-bd6c-67555419a4e6",
+      "Name": "Sollicitatie",
+      "SortOrder": 100,
+      "PropertyTypes": [
+        {
+          "Key": "4639d60c-1bf6-49e5-b0f5-dea878ffa463",
+          "Alias": "sollicitationEmailSettings",
+          "DataType": "umb://data-type/10f1e5776f9441e2a6907378e154615f",
+          "Description": "Instellingen voor de sollicitatie email",
+          "Mandatory": true,
+          "Name": "Email instellingen",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "5ba13067-aeec-4339-b4f4-481e643917f6",
+      "Name": "Artikels",
+      "SortOrder": 3,
+      "PropertyTypes": [
+        {
+          "Key": "942a1eac-0de6-4820-9724-55d482e54e10",
+          "Alias": "articleTitle",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel van de vacature artikels sectie.",
+          "Mandatory": true,
+          "Name": "Titel",
+          "SortOrder": 0,
+          "Validation": null
+        },
+        {
+          "Key": "a6b80220-c70b-4548-b5d1-a3af355a3f0a",
+          "Alias": "articleText",
+          "DataType": "umb://data-type/7f26211f741043c1aa7325fc7b4f7cf6",
+          "Description": "Korte tekst onder de vacature artikels.",
+          "Mandatory": true,
+          "Name": "Tekst",
+          "SortOrder": 1,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "be1a730c-38c0-4a6a-9dee-91b72adc4b2b",
+      "Name": "Vacatures",
+      "SortOrder": 4,
+      "PropertyTypes": [
+        {
+          "Key": "31725c46-fabb-48f5-bed1-98af229cf51e",
+          "Alias": "text",
+          "DataType": "umb://data-type/7f26211f741043c1aa7325fc7b4f7cf6",
+          "Description": "Korte tekst boven de vacatures.",
+          "Mandatory": true,
+          "Name": "Tekst",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "678b740f-5ffc-4ec9-97c2-d637c1db424e",
+          "Alias": "noResult",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Tekst die wordt weergegeven wanneer er geen openstaande vacatures werden gevonden.",
+          "Mandatory": true,
+          "Name": "Geen openstaande vacatures melding",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "da78df0d-25a2-42d4-80eb-60836a497c54",
+          "Alias": "title",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel van de vacature sectie.",
+          "Mandatory": true,
+          "Name": "Titel",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/01a9b6ef7f7d4b7d8b2efa82a78c76cf",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/10f1e5776f9441e2a6907378e154615f",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/7f26211f741043c1aa7325fc7b4f7cf6",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/48b7b8b6139145d0b53b751dcba9bab6",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/f299762d61be4a09a5a07bd0d16effd4",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/3edfbae254a94cf188f7f2991e451a2b",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Jobsite",
+  "Alias": "joboffers",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

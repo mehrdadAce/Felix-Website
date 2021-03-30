@@ -1,0 +1,67 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.GroupHome>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    List<ItemAbout> infoItems = Model.Content.ItemsAbout.OfType<ItemAbout>().ToList();
+}
+<section id="who-we-are">
+    <div class="container our_services">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-12 wow animated fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                <div class="section-title margin-bottom-40">
+                    <h1>@Model.Content.TitleAbout</h1>
+                </div>
+
+                <!-- item 1 -->
+                @if (infoItems.Count >= 1 && infoItems[0] != null)
+                {
+                    <div class="about box-bottom margin-bottom-40">
+                        <img src="@(@infoItems[0].Image.Url + "?width=30&height=30&mode=crop&anchor=center")" width="30" height="30" alt="@infoItems[0].Title">
+                        <h4>@infoItems[0].Title</h4>
+                        <p>@infoItems[0].Text</p>
+                    </div>
+                }
+
+                <!-- item 3 -->
+                @if (infoItems.Count >= 3 && infoItems[2] != null)
+                {
+                    <div class="about box-bottom margin-bottom-40">
+                        <img src="@(@infoItems[2].Image.Url + "?width=30&height=30&mode=crop&anchor=center")" width="30" height="30" alt="@infoItems[0].Title">
+                        <h4>@infoItems[2].Title</h4>
+                        <p>@infoItems[2].Text</p>
+                    </div>
+                }
+            </div>
+
+            <div class="col-md-4 col-sm-4 col-xs-12 middle wow animated fadeInRight" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInRight;">
+                <img src="@(Model.Content.ImageAbout.Url + "?width=525&height=788&mode=crop&anchor=center")" class="img-responsive" alt="Felix Groep">
+            </div>
+
+            <div class="col-md-4 col-sm-4 col-xs-12 margin-t-90 wow animated fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+
+                <div class="section-title margin-bottom-40">
+                    <h1 class="no-background no-border"> &nbsp; </h1>
+                </div>
+
+                <!-- item 2 -->
+                @if (infoItems.Count >= 2 && infoItems[1] != null)
+                {
+                    <div class="about box-bottom margin-bottom-40">
+                        <img src="@(@infoItems[1].Image.Url + "?width=30&height=30&mode=crop&anchor=center")" width="30" height="30" alt="@infoItems[0].Title">
+                        <h4>@infoItems[1].Title</h4>
+                        <p>@infoItems[1].Text</p>
+                    </div>
+                }
+
+                <!-- item 4 -->
+                @if (infoItems.Count >= 4 && infoItems[3] != null)
+                {
+                    <div class="about box-bottom margin-bottom-40">
+                        <img src="@(@infoItems[3].Image.Url + "?width=30&height=30&mode=crop&anchor=center")" width="30" height="30" alt="@infoItems[0].Title">
+                        <h4>@infoItems[3].Title</h4>
+                        <p>@infoItems[3].Text</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>

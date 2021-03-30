@@ -1,0 +1,48 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Tweedehandswagen>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@using FelixWebsite.Core.Models;
+@{
+    Layout = "Shared/Master.cshtml";
+}
+<link rel="stylesheet" type="text/css" href="~/css/second-hand/shop.css" />
+<link rel="stylesheet" type="text/css" href="~/css/second-hand/detail.css" />
+<link rel="stylesheet" type="text/css" href="https://cfmapistort01.blob.core.windows.net/resources/Styles/lightbox/lightbox.css" />
+<link rel="stylesheet" type="text/css" href="https://cfmapistorp01.blob.core.windows.net/resources/Styles/bootstrap/slider.min.css" />
+<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5cecee6790e94700129832b4&product=' inline-share-buttons' async='async'></script>
+
+<section id="collection" class="margin-top-80 margin-bottom-60">
+    <div class="container">
+        <div id="vehicle-details"></div>
+    </div>
+</section>
+
+@Html.Partial("Modals/TestDrive/TestDrive", Model)
+@Html.Partial("Modals/Contact/Contact", new ContactForm())
+
+<script type="text/javascript" src="https://cfmapistorp01.blob.core.windows.net/resources/Scripts/Utils.min.js"></script>
+<script type="text/javascript" src="https://cfmapistorp01.blob.core.windows.net/resources/Scripts/plugin.ui.min.js"></script>
+<script type="text/javascript" src="https://cfmapistort01.blob.core.windows.net/resources/Scripts/lightbox/lightbox.js"></script>
+<script type="text/javascript" src="https://cfmapistorp01.blob.core.windows.net/resources/Scripts/bootstrap/bootstrap-slider.min.js"></script>
+
+<script type="text/javascript" src="https://cfmapistorp01.blob.core.windows.net/resources/Scripts/Stock.min.js"></script>
+<script type="text/javascript" src="https://cfmapistorp01.blob.core.windows.net/resources/Scripts/Financing.min.js"></script>
+<script type="text/javascript" src="https://cfmapistorp01.blob.core.windows.net/resources/Scripts/CarDetails.min.js"></script>
+
+@Scripts.Render("~/Js/CarDetails")
+
+<script type="text/javascript">
+    var shareThisLoaded = false;
+    function toggleShareSection() {
+        var shareSection = $("#share-section");
+        if (shareSection.is(":visible")) {
+            shareSection.slideUp();
+        }
+        else {
+            shareSection.slideDown();
+            if (!shareThisLoaded) {
+                window.__sharethis__.initialize();
+                shareThisLoaded = true;
+            }
+        }
+    }
+</script>

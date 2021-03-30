@@ -1,0 +1,51 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-newspaper color-red",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": null,
+  "AllowedChildContentTypes": [
+    "umb://document-type/20c064efb2d74901a87d5a621bb13155"
+  ],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "193ac954-e960-4328-860f-36d0e5214f84",
+      "Name": "Algemeen",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "019b6c03-d7fa-4bea-a2f5-9d64c7b33a6e",
+          "Alias": "sectionTitle",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "De titel van de nieuws sectie",
+          "Mandatory": true,
+          "Name": "Sectie titel",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/569db1a5fe024e8b985ed2b611b70fa3",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/20c064efb2d74901a87d5a621bb13155",
+      "Ordering": false,
+      "Mode": 0
+    }
+  ],
+  "Name": "Nieuws",
+  "Alias": "news",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

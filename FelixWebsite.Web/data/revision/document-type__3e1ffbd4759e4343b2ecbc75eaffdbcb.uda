@@ -1,0 +1,397 @@
+{
+  "DefaultTemplate": "umb://template/d5877e38171944b3828cab0b38910050",
+  "AllowedTemplates": [
+    "umb://template/d5877e38171944b3828cab0b38910050"
+  ],
+  "Icon": "icon-home color-red",
+  "Thumbnail": "folder.png",
+  "Description": "De Felix Groep pagina",
+  "AllowedAtRoot": true,
+  "IsContainer": false,
+  "Parent": null,
+  "AllowedChildContentTypes": [
+    "umb://document-type/11d52f4987d94d5399f51219aed0dfc0",
+    "umb://document-type/351c62e4b2f846cdb36dfbbb8a2b279d",
+    "umb://document-type/dcdceb17db644c8cb864a2045b64cd39"
+  ],
+  "CompositionContentTypes": [
+    "umb://document-type/0aaf0419d41c4ee690cc8a9b4493c2d8",
+    "umb://document-type/179f476facd243d6a31d1413899cf368",
+    "umb://document-type/850f2fb74c8242f9ba5019b6311ec8ce",
+    "umb://document-type/a251528e8ae949b0984f3cea6c2a8451",
+    "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9",
+    "umb://document-type/d60a0c7f9d03423fbf62df6682128c81",
+    "umb://document-type/f299762d61be4a09a5a07bd0d16effd4"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "0b85ceea-9d5e-4b35-a198-00e0d28cd1aa",
+      "Name": "Vestigingen",
+      "SortOrder": 6,
+      "PropertyTypes": [
+        {
+          "Key": "192aa014-15d4-47ce-9e0f-2558b72552fc",
+          "Alias": "storesTitle",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel die wordt getoond boven de vestigingen.",
+          "Mandatory": true,
+          "Name": "Titel",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "2ac174a6-0873-460c-bc95-5b5b37db3817",
+      "Name": "Diensten",
+      "SortOrder": 4,
+      "PropertyTypes": [
+        {
+          "Key": "a81b8591-9224-4198-b0ef-3225570a7437",
+          "Alias": "services",
+          "DataType": "umb://data-type/e9e8c5437b4c4f3f8f6b1e009d31f322",
+          "Description": "De verschillende diensten die worden aangeboden.",
+          "Mandatory": true,
+          "Name": "Diensten",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "6509544d-f08b-4e97-b3d0-9d760fc6202f",
+      "Name": "Site",
+      "SortOrder": 99,
+      "PropertyTypes": [
+        {
+          "Key": "1f259f4a-ac5c-4e6d-97e4-7f461ad98672",
+          "Alias": "GlobalScriptsHeader",
+          "DataType": "umb://data-type/7f26211f741043c1aa7325fc7b4f7cf6",
+          "Description": "Voorziet de  functionaliteit om scripts in te laden in de head tag. Hiervoor moeten <script> tags zelf worden voorzien.",
+          "Mandatory": false,
+          "Name": "Globale scripts",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "a2dd9f5b-1858-43ff-8732-1d9d9558e3a7",
+          "Alias": "GlobalScriptsBody",
+          "DataType": "umb://data-type/7f26211f741043c1aa7325fc7b4f7cf6",
+          "Description": "Voorziet de  functionaliteit om scripts in te laden in de body tag. Hiervoor moeten <script> tags zelf worden voorzien.",
+          "Mandatory": false,
+          "Name": "Globale scripts body",
+          "SortOrder": 3,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "af3c612b-9489-4982-a098-98463bed4bff",
+      "Name": "Nieuws",
+      "SortOrder": 9,
+      "PropertyTypes": [
+        {
+          "Key": "8172da74-6153-4d40-8d08-b8d16c679257",
+          "Alias": "newsTitle",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel die bij de nieuws sectie wordt getoond.",
+          "Mandatory": true,
+          "Name": "Titel",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "d1f023a0-88c9-4ff3-b98c-1085d61c2c9b",
+      "Name": "Werk bij Felix",
+      "SortOrder": 7,
+      "PropertyTypes": [
+        {
+          "Key": "22d4e2f0-cd66-4bc0-bcd8-3a55561b192a",
+          "Alias": "title",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel van dit onderdeel.",
+          "Mandatory": true,
+          "Name": "Titel",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "259f7ea4-f972-439b-8258-76cf7015092f",
+          "Alias": "image",
+          "DataType": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+          "Description": "Afbeelding links.",
+          "Mandatory": true,
+          "Name": "Afbeelding",
+          "SortOrder": 0,
+          "Validation": null
+        },
+        {
+          "Key": "346ed355-b6e2-496d-812a-042833155dc1",
+          "Alias": "background",
+          "DataType": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+          "Description": "Achtergrond die subtiel te zien is op de witte achtergrond.",
+          "Mandatory": true,
+          "Name": "Achtergrond",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "51c9056d-413e-498e-9590-6ba675ed5384",
+          "Alias": "intro",
+          "DataType": "umb://data-type/7f26211f741043c1aa7325fc7b4f7cf6",
+          "Description": "Een korte inleiding onder de titel.",
+          "Mandatory": true,
+          "Name": "Inleiding",
+          "SortOrder": 4,
+          "Validation": null
+        },
+        {
+          "Key": "b882cfd3-2d53-4dd8-9918-95bec8199f31",
+          "Alias": "buttonLink",
+          "DataType": "umb://data-type/43c470bd01ce4d2b983715cb21174541",
+          "Description": "De pagina die getoond wordt wanneer er op de knop wordt gedrukt.",
+          "Mandatory": true,
+          "Name": "Link van de knop",
+          "SortOrder": 6,
+          "Validation": null
+        },
+        {
+          "Key": "d79bee67-edd9-4abd-9fe4-f8da844052a9",
+          "Alias": "text",
+          "DataType": "umb://data-type/7f26211f741043c1aa7325fc7b4f7cf6",
+          "Description": "De hoofdzakelijke tekst van dit onderdeel.",
+          "Mandatory": true,
+          "Name": "Tekst",
+          "SortOrder": 5,
+          "Validation": null
+        },
+        {
+          "Key": "f121fa9d-1dcc-42bf-a32a-7ff514bbcd27",
+          "Alias": "subtitle",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Deze geeft een korte beschrijving vooraf.",
+          "Mandatory": false,
+          "Name": "Boventitel",
+          "SortOrder": 3,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "d24d81fc-4644-4f6b-bfb1-a98166520afd",
+      "Name": "Merken",
+      "SortOrder": 5,
+      "PropertyTypes": [
+        {
+          "Key": "4edf4797-0a5a-420b-9804-5721a921c37f",
+          "Alias": "backgroundBrands",
+          "DataType": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+          "Description": "Deze achtergrond wordt getoond wanneer niet alle merken op 1 rij passen.",
+          "Mandatory": true,
+          "Name": "Achtergrond",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "d7e7c625-e7f8-4aaa-a4f9-b1be86fe8403",
+      "Name": "Wie zijn wij",
+      "SortOrder": 8,
+      "PropertyTypes": [
+        {
+          "Key": "568df127-616e-4c6a-a3f1-8305e4195108",
+          "Alias": "itemsAbout",
+          "DataType": "umb://data-type/a3ff2f87868e408dbd67fb6964a342a9",
+          "Description": "Punten die informatie tonen over het bedrijf.",
+          "Mandatory": true,
+          "Name": "Informatie punten",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "9fef14f0-2438-4d55-9e1e-e795dc32d4fb",
+          "Alias": "imageAbout",
+          "DataType": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+          "Description": "Afbeelding die in het midden van dit onderdeel wordt getoond.",
+          "Mandatory": true,
+          "Name": "Afbeelding",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "b8e33911-d05c-4421-9334-e9b617b55e9c",
+          "Alias": "titleAbout",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel bovenaan dit onderdeel.",
+          "Mandatory": true,
+          "Name": "Titel",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "ee2838f9-6dba-4515-bed0-887d52148a45",
+      "Name": "Navigatie",
+      "SortOrder": 3,
+      "PropertyTypes": [
+        {
+          "Key": "42d89ab1-779e-4cfe-8ef7-fa6ad80aa80b",
+          "Alias": "navItem5",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Navigatie titel van onderdeel contact.",
+          "Mandatory": true,
+          "Name": "Contact",
+          "SortOrder": 5,
+          "Validation": null
+        },
+        {
+          "Key": "6b1188f3-d32b-4887-a53a-a53f96e655c5",
+          "Alias": "navLogo",
+          "DataType": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+          "Description": "Het logo in de navigatie bovenaan.",
+          "Mandatory": true,
+          "Name": "Logo",
+          "SortOrder": 0,
+          "Validation": null
+        },
+        {
+          "Key": "6c9cf1da-2c56-46cc-bb32-8a9cd1ed4d07",
+          "Alias": "navItem1",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Navigatie titel van onderdeel  vestigingen.",
+          "Mandatory": true,
+          "Name": "Vestigingen",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "8323b4ba-3eba-4362-a4ad-7ce8273dbb0c",
+          "Alias": "navItem2",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Navigatie titel van onderdeel  werken bij Felix.",
+          "Mandatory": true,
+          "Name": "Werken bij Felix",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "ae46a3f3-216a-496f-b6a9-8b64c3c703ab",
+          "Alias": "navItem3",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Navigatie titel van onderdeel wie zijn wij.",
+          "Mandatory": true,
+          "Name": "Wie zijn wij?",
+          "SortOrder": 3,
+          "Validation": null
+        },
+        {
+          "Key": "c875d6f8-f743-4858-bd5c-76033f97e450",
+          "Alias": "navItem4",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "Navigatie titel van onderdeel nieuws.",
+          "Mandatory": true,
+          "Name": "Nieuws",
+          "SortOrder": 4,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/3e1ffbd4759e4343b2ecbc75eaffdbcb",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/43c470bd01ce4d2b983715cb21174541",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/7f26211f741043c1aa7325fc7b4f7cf6",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/a3ff2f87868e408dbd67fb6964a342a9",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/e9e8c5437b4c4f3f8f6b1e009d31f322",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/0aaf0419d41c4ee690cc8a9b4493c2d8",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/11d52f4987d94d5399f51219aed0dfc0",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/179f476facd243d6a31d1413899cf368",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/351c62e4b2f846cdb36dfbbb8a2b279d",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/850f2fb74c8242f9ba5019b6311ec8ce",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/a251528e8ae949b0984f3cea6c2a8451",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/d60a0c7f9d03423fbf62df6682128c81",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/dcdceb17db644c8cb864a2045b64cd39",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/f299762d61be4a09a5a07bd0d16effd4",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/d5877e38171944b3828cab0b38910050",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Groep home",
+  "Alias": "groupHome",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

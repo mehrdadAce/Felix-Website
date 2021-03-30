@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/JobOffer.cshtml",
+  "Master": null,
+  "Udi": "umb://template/98d45282687e42f8b282be3b82eff8cb",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/JobOffer.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Vacature",
+  "Alias": "JobOffer",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "2.0.14"
+}

@@ -1,0 +1,126 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-article color-red",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": null,
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "4694ade7-7bb2-485a-9f32-96f96a382520",
+      "Name": "Afbeelding",
+      "SortOrder": 1,
+      "PropertyTypes": [
+        {
+          "Key": "0bfd2ee7-98a1-4fba-96d9-25d36b8e1411",
+          "Alias": "image",
+          "DataType": "umb://data-type/48c41f7434d046bb8230014d4e21281c",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Afbeelding",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "a615a4e5-263f-4e00-8c47-becafcde9de7",
+      "Name": "Algemeen",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "093a434c-25af-4fd4-9f33-59771f365f3f",
+          "Alias": "store",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "De handelszaak waarvan dit artikel afkomstig is",
+          "Mandatory": true,
+          "Name": "Handelszaak",
+          "SortOrder": 1,
+          "Validation": null
+        },
+        {
+          "Key": "2aa55899-a48e-4e57-b2a3-92803bc6307f",
+          "Alias": "title",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "De titel van het artikel",
+          "Mandatory": true,
+          "Name": "Titel",
+          "SortOrder": 0,
+          "Validation": null
+        },
+        {
+          "Key": "474745a4-aace-4ea7-b55c-6c03e1ef22ec",
+          "Alias": "message",
+          "DataType": "umb://data-type/ca90c9500aff4e72b976a30b1ac57dad",
+          "Description": null,
+          "Mandatory": true,
+          "Name": "Boodschap",
+          "SortOrder": 5,
+          "Validation": null
+        },
+        {
+          "Key": "529288cb-ea11-410c-88ad-6a1806552744",
+          "Alias": "author",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "De auteur van het artikel",
+          "Mandatory": true,
+          "Name": "Auteur",
+          "SortOrder": 3,
+          "Validation": null
+        },
+        {
+          "Key": "8923a71c-37de-4202-901e-87270592e320",
+          "Alias": "link",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "De link naar het artikel",
+          "Mandatory": true,
+          "Name": "Link",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "ed792ad7-6de7-4736-9eab-de3d4889f1de",
+          "Alias": "storesToShow",
+          "DataType": "umb://data-type/0203e1bdac3044249acdb9635dc9cb11",
+          "Description": null,
+          "Mandatory": true,
+          "Name": "Te tonen op volgende handelszaken",
+          "SortOrder": 4,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/20c064efb2d74901a87d5a621bb13155",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0203e1bdac3044249acdb9635dc9cb11",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/48c41f7434d046bb8230014d4e21281c",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/ca90c9500aff4e72b976a30b1ac57dad",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Nieuws artikel",
+  "Alias": "newsArticle",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

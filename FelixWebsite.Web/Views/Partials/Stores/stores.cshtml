@@ -1,0 +1,152 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using FelixWebsite.Core.Helpers;
+@{
+    var currentPage = Umbraco.AssignedContentItem;
+    var felixGroep = (IPublishedContent)CurrentPage.AncestorOrSelf(1);
+    var home = Umbraco.AssignedContentItem.AncestorOrSelf(1).OfType<GroupHome>();
+    var stores = felixGroep.Children.OfType<Businesses>().FirstOrDefault();
+    // enkel business indepentend & business brand
+    var storeList = stores.Children().OfTypes(BusinessBrand.ModelTypeAlias, BusinessIndependent.ModelTypeAlias).ToList();
+    if (currentPage is GroupHome)
+    {
+        storeList = storeList
+            .Where(s => (s is BusinessBrand && (s as BusinessBrand).ShowOnGroupHome) ||
+                        (s is BusinessIndependent && (s as BusinessIndependent).ShowOnGroupHome))
+            .ToList();
+    }
+    else if (currentPage is Brand)
+    {
+        storeList = stores.Children().OfType<BusinessBrand>().ToList().FindAll(x => x.Brand.FirstOrDefault()?.Id == Model.Content.Id).ToList<IPublishedContent>();
+        storeList.AddRange(stores.Children().OfType<BusinessIndependent>().ToList().FindAll(x => x.Brand?.Id == Model.Content.Id).ToList<IPublishedContent>());
+        var brand = currentPage as Brand;
+        <style>
+            .@("br" + brand.Id).border-color {
+                border-color: #@brand.Color.Color;
+            }
+        </style>
+    }
+    else if (currentPage is BusinessCombined)
+    {
+        var page = currentPage as BusinessCombined;
+        storeList = page.BusinessItems.ToList();
+    }
+
+    foreach (var item in storeList)
+    {
+        if (item is BusinessBrand)
+        {
+            var store = item as BusinessBrand;
+            var brand = store.Brand.FirstOrDefault() as Brand;
+            <style>
+                .@("br" + brand.Id).text {
+                    color: #@brand.Color.Color;
+                }
+                .@("br" + brand.Id).background :hover {
+                    color: #fff;
+                    background-color: #@brand.Color.Color;
+                }
+                .@("br" + brand.Id).title {
+                    border-bottom: 2px solid #@brand.Color.Color;
+                }
+                .@("br" + brand.Id).overlay {
+                    background-color: @brand.Color.Color.ConvertHexToRgba(5);
+                }
+            </style>
+        }
+    }
+    var distribution = storeList.DistributeInColumns(3, 2);
+}
+<script type="text/javascript">
+    var arrEstablishments = [];
+</script>
+@if (storeList.Count() > 0)
+{
+    <section id="establishments" class="margin-top-60">
+        <div class="container">
+            <div class="row margin-bottom-40">
+                <div class="col-sm-12 section-title margin-top-20">
+                    <h1 class="@(currentPage is Brand ? Html.Raw("br" + currentPage.Id + "  border-color") : Html.Raw(""))">@home.StoresTitle</h1>
+                </div>
+            </div>
+            <div class="row margin-bottom-40">
+                @foreach (var item in storeList)
+                {
+                    if (item is BusinessBrand)
+                    {
+                        var business = item as BusinessBrand;
+                        var brand = business.Brand.FirstOrDefault() as Brand;
+                        <div class="@distribution.GetBootstrapClassesForItem(business) margin-bottom-20">
+                            <div class="row contact-icons">
+                                <div class="col-sm-12 margin-bottom-20">
+                                    <div class="img">
+                                        <img class="img-responsive set-height" src="@(business.BusinessImage.Url + "?width=800&height=533&mode=crop&anchor=center")" alt="@business.BusinessName @business.BusinessLocation">
+                                        <a target="_blank" href="@business.Url" class="over @("br" + brand.Id) overlay">
+                                            <div class="img-desc section-title">
+                                                <h1 class="white @("br" + brand.Id) title">@brand.Title @business.BusinessName</h1>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <h3 class="text-uppercase">
+                                        <b class="felix-red @("br" + brand.Id) text">@business.BusinessLocation</b>
+                                        <span>
+                                            <a href="mailto:@business.BusinessMail" class="@("br" + brand.Id) background">
+                                                <i class="fas fa-envelope @("br" + brand.Id) text" data-toggle="tooltip" data-placement="top" title="@business.BusinessMail"></i>
+                                            </a>
+                                            <a href="tel:@business.BusinessPhone" class="@("br" + brand.Id) background">
+                                                <i class="fas fa-phone @("br" + brand.Id) text" data-toggle="tooltip" data-placement="top" title="@business.BusinessPhone"></i>
+                                            </a>
+                                        </span>
+                                    </h3>
+                                </div>
+                                <div class="col-sm-12">
+                                    <h3 class="text-uppercase">@brand.Title @business.BusinessName</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            @{var loc = @business.BusinessStreetName + " " + @business.BusinessBuildingNumber + " " + @business.BusinessPostalCode + " " + @business.BusinessMunicipality;}
+                            arrEstablishments.push(JSON.parse('{"name": "@business.BusinessName" , "loc": "@loc", "tel": "@business.BusinessPhone"}'));
+                        </script>
+                    }
+                    else if (item is BusinessIndependent)
+                    {
+                        var business = item as BusinessIndependent;
+                        <div class="@distribution.GetBootstrapClassesForItem(business) margin-bottom-20">
+                            <div class="row contact-icons">
+                                <div class="col-sm-12 margin-bottom-20">
+                                    <div class="img">
+                                        <img class="img-responsive set-height" src="@(business.BusinessImage.Url + "?width=800&height=533&mode=crop&anchor=center")" alt="@business.BusinessName @business.BusinessLocation">
+                                        <a @(business.BusinessLink.FirstOrDefault().NewWindow == true ? Html.Raw("target='_blank'") : Html.Raw("")) href="@business.BusinessLink.FirstOrDefault().Link" class="over independent">
+                                            <div class="img-desc section-title">
+                                                <h1 class="white">@business.BusinessName</h1>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <h3 class="text-uppercase">
+                                        <b class="felix-red">@business.BusinessLocation</b>
+                                        <span>
+                                            <a href="mailto:@business.BusinessMail"><i class="fas fa-envelope" data-toggle="tooltip" data-placement="top" title="@business.BusinessMail"></i></a>
+                                            <a href="tel:@business.BusinessPhone"><i class="fas fa-phone" data-toggle="tooltip" data-placement="top" title="@business.BusinessPhone"></i></a>
+                                        </span>
+                                    </h3>
+                                </div>
+                                <div class="col-sm-12">
+                                    <h3 class="text-uppercase">@business.BusinessName</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            @{var loc = @business.BusinessStreetName + " " + @business.BusinessBuildingNumber + " " + @business.BusinessPostalCode + " " + @business.BusinessMunicipality;}
+                            arrEstablishments.push(JSON.parse('{"name": "@business.BusinessName" , "loc": "@loc", "tel": "@business.BusinessPhone"}'));
+                        </script>
+                    }
+                }
+            </div>
+        </div>
+        <div id="map-canvas"></div>
+    </section>
+}

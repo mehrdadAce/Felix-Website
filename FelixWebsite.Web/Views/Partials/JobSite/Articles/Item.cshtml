@@ -1,0 +1,21 @@
+﻿@model JobArticle
+@using FelixWebsite.Core.App_GlobalResources
+<div class="post">
+    <div class="post-thumbnail">
+        <a href="@Model.Url">
+            <img src="@(Model.Img.Src + Model.Img.GetCropUrl("Article thumbnail"))" class="img-responsive" alt="" width="100%">
+        </a>
+    </div>
+    <h3 class="post-title"><a href="@Model.Url">@Model.Name</a></h3>
+    @if (Model.Article.ToString().Length >= 150)
+    {
+        @Html.Raw(@Model.Article.ToString().Substring(0, 150) + "...")
+    }
+    else
+    {
+        @Html.Raw(@Model.Article.ToString())
+    }
+    <span class="read-more">
+        <a href="@Model.Url" class="felix-red">@FelixResources.general_readmore&nbsp;...</a>
+    </span>
+</div>

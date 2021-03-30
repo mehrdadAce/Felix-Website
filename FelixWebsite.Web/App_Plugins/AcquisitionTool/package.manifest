@@ -1,0 +1,8 @@
+﻿{
+  "javascript": [
+    "~/App_Plugins/AcquisitionTool/backoffice/Controllers/AcquisitionToolController.js"
+  ],
+  "css": [
+    "~/App_Plugins/AcquisitionTool/backoffice/css/AcquisitionStyle.css"
+  ] 
+}

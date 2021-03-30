@@ -1,0 +1,129 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.CarRentalType>
+@using FelixWebsite.Core.App_GlobalResources
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@using FelixWebsite.Core.Models.ViewModels;
+@{
+    Layout = "Shared/Master.cshtml";
+}
+<link rel="stylesheet" type="text/css" href="~/css/second-hand/detail.css" />
+<link rel="stylesheet" type="text/css" href="~/css/car-rental/car-rental-details.css" />
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+<section id="car-details" style="margin-top: -9px">
+    @Html.Partial("Slider/Slider", Model.Content)
+    @*<div class="container  margin-top-60 margin-bottom-80">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3 class="heading">@Model.Content.Title</h3>
+                    <p class="car-type-description">@Model.Content.Description</p>
+                </div>
+            </div>
+        </div>*@
+    <div class="container margin-top-80 margin-bottom-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3 class="heading margin-top-10 margin-bottom-30">@Model.Content.TitleProperties</h3>
+                    <div class="col-sm-6">
+                        <ul class="list-group">
+                            @{
+                                var x = 1;
+                                foreach (var item in Model.Content.ModelProperties)
+                                {
+                                    if (item.IsNullOrWhiteSpace()) { x++; continue; };
+                                    if (x % 2 != 0)
+                                    {
+                                        <li class="list-group-item"><h5>@item</h5></li>
+                                    }
+                                    x++;
+                                }
+                            }
+                        </ul>
+                    </div>
+                    <div class="col-sm-6">
+                        <ul class="list-group">
+                            @{
+                                var y = 1;
+                                foreach (var item in Model.Content.ModelProperties)
+                                {
+                                    if (item.IsNullOrWhiteSpace()) { y++; continue; };
+                                    if (y % 2 == 0)
+                                    {
+                                        <li class="list-group-item"><h5>@item</h5></li>
+                                    }
+                                    y++;
+                                }
+                            }
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div id="carCarousel" class="carousel slide" data-ride="carousel">
+                        <div id="carousel-container" class="carousel-inner" role="listbox">
+                            @{
+                                var index = 0;
+                                foreach (var item in Model.Content.ModelImages)
+                                {
+                                    <div class="item @(index == 0 ? Html.Raw("active") : Html.Raw(""))">
+                                        <a href="@item.Url" data-lightbox="image">
+                                            <img src="@(item.Url + "?width=1220&height=750&mode=crop&anchor=center")" alt="" />
+                                        </a>
+                                    </div>
+                                    index++;
+                                }
+                            }
+                            <a class="left carousel-control" href="#carCarousel" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+
+                            <a class="right carousel-control" href="#carCarousel" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid price-properties">
+        <div class="col-sm-8 col-sm-offset-2">
+            <div class="row">
+                <a class="col-lg-4 col-md-4 col-sm-12" href="#car-rental-from">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h3 class="text-center margin-top-10"> @FelixResources.car_rental_from <span class="felix-red">€ @Model.Content.Price</span> /&nbsp;@FelixResources.general_day</h3>
+                        </div>
+                    </div>
+                </a>
+                <a class="col-lg-4 col-md-4 col-sm-12" href="#car-rental-from">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h3 class="text-center margin-top-10"> @FelixResources.car_rental_from <span class="felix-red">€ @Model.Content.PriceWeek</span> /&nbsp;@FelixResources.general_week</h3>
+                        </div>
+                    </div>
+                </a>
+                <a class="col-lg-4 col-md-4 col-sm-12" href="#car-rental-from">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h3 class="text-center margin-top-10"> @FelixResources.car_rental_from <span class="felix-red">€ @Model.Content.PriceMonth</span> /&nbsp;@FelixResources.general_month</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="car-rental-from">
+        <div class="row margin-top-40 margin-bottom-60">
+            <div class="col-sm-12">
+                <h3 class="heading margin-top-30 margin-bottom-40">@Model.Content.TitleForm</h3>
+            </div>
+            <div class="col-sm-12 form-container">
+                @Html.Partial("CarRental/CarRentalForm", new CarRentalForm(Model.Content))
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>

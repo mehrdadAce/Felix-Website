@@ -1,0 +1,19 @@
+{
+  "EditorAlias": "Umbraco.NestedContent",
+  "DatabaseType": 0,
+  "PreValues": {
+    "confirmDeletes": "1",
+    "contentTypes": "[\r\n  {\r\n    \"ncAlias\": \"slide\",\r\n    \"ncTabAlias\": \"Inhoud\",\r\n    \"nameTemplate\": \"{{slideTitle}}\"\r\n  }\r\n]",
+    "hideLabel": "0",
+    "maxItems": "5",
+    "minItems": "0",
+    "showIcons": "1"
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/56296539d51c49ccb7babd6ad02c134a",
+  "Dependencies": [],
+  "Name": "_OptionalSlider",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

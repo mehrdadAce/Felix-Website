@@ -1,0 +1,49 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-message color-red",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "6aa15fca-d614-4a0f-beee-2c5e383b6d10",
+      "Name": "Emails",
+      "SortOrder": 10,
+      "PropertyTypes": [
+        {
+          "Key": "1391ac22-fe02-4697-aa0d-63b3e4477bdb",
+          "Alias": "contactEmailSettings",
+          "DataType": "umb://data-type/10f1e5776f9441e2a6907378e154615f",
+          "Description": "Instellingen voor contact email",
+          "Mandatory": true,
+          "Name": "Contact email",
+          "SortOrder": 10,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/179f476facd243d6a31d1413899cf368",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/10f1e5776f9441e2a6907378e154615f",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "EmailSettingsContact",
+  "Alias": "emailSettingsContact",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

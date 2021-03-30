@@ -1,0 +1,46 @@
+﻿@using FelixWebsite.Core.Helpers
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    var currentPage = Umbraco.AssignedContentItem;
+    var ancestorList = new List<IPublishedContent>();
+    var breadcrumbStart = Session.GetBreadcrumbRoot(currentPage);
+    foreach (var ancestorpage in currentPage.Ancestors())
+    {
+        if (!ancestorpage.IsHomePage() && ancestorpage.GetTemplateAlias() != "")
+        {
+            ancestorList.Add(ancestorpage);
+        }
+    }
+    
+    ancestorList.Reverse();
+}
+
+@if (!currentPage.IsHomePage())
+{
+    <div id="breadcrumb" class="navbar-fixed-top cart-inner">
+        <div class="container margin-top-10 margin-bottom-10">
+            <div class="row">
+                <p class="no-margin">
+                    @if (breadcrumbStart != null)
+                    {
+                        <a class="breadcrumb-item" href="@breadcrumbStart.UrlAbsolute()">
+                            @breadcrumbStart.Name <span>&rsaquo;</span>
+                        </a>
+                    }
+
+                    @foreach (var page in ancestorList)
+                    {
+                        <a class="breadcrumb-item" href="@page.Url">
+                            @page.Name <span>&rsaquo;</span>
+                        </a>
+                    }
+
+                    <a class="breadcrumb-item" href="@currentPage.Url">
+                        @currentPage.Name
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+}
+

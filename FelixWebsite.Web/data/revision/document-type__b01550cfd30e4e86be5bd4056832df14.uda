@@ -1,0 +1,115 @@
+{
+  "DefaultTemplate": "umb://template/d3dfe597a7b1481f93468384c5f9c4e3",
+  "AllowedTemplates": [
+    "umb://template/d3dfe597a7b1481f93468384c5f9c4e3"
+  ],
+  "Icon": "icon-truck color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Verzameling van wagens die verhuurd kunnen worden.",
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": null,
+  "AllowedChildContentTypes": [
+    "umb://document-type/788afea3fb5e428dad00a825f1be0372"
+  ],
+  "CompositionContentTypes": [
+    "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "022552b9-f1cb-4c20-b6f0-ec00a06feedf",
+      "Name": "Inhoud",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "241b2edb-48c7-4c83-9b63-af83daa560ff",
+          "Alias": "btnRent",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De tekst die op de knoppen wordt weergegeven.",
+          "Mandatory": true,
+          "Name": "Tekst knoppen",
+          "SortOrder": 4,
+          "Validation": null
+        },
+        {
+          "Key": "5093f61d-b76c-4abc-b1a4-1d99e855a0f3",
+          "Alias": "titleModels",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel die bij de modellen sectie staat.",
+          "Mandatory": true,
+          "Name": "Modellen titel",
+          "SortOrder": 3,
+          "Validation": null
+        },
+        {
+          "Key": "95c604d2-eda6-4941-8524-0861fbc17eb8",
+          "Alias": "description",
+          "DataType": "umb://data-type/92731df5d2864093be6027d09b6db518",
+          "Description": "Een korte beschrijving die onder de titel wordt weergegeven.",
+          "Mandatory": true,
+          "Name": "Beschrijving",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "9fc44019-710e-48e0-b22b-e012077d1ee6",
+          "Alias": "banner",
+          "DataType": "umb://data-type/20eff70975ff4f80935dcbdede481487",
+          "Description": "De banner die bovenaan de pagina wordt weergegeven.",
+          "Mandatory": true,
+          "Name": "Afbeelding",
+          "SortOrder": 0,
+          "Validation": null
+        },
+        {
+          "Key": "eff492a1-42ee-43bd-9bd1-edf7c62e8777",
+          "Alias": "title",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel van de pagina.",
+          "Mandatory": true,
+          "Name": "Titel",
+          "SortOrder": 1,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/b01550cfd30e4e86be5bd4056832df14",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/20eff70975ff4f80935dcbdede481487",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/92731df5d2864093be6027d09b6db518",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/788afea3fb5e428dad00a825f1be0372",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/d3dfe597a7b1481f93468384c5f9c4e3",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Autoverhuur",
+  "Alias": "carRental",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

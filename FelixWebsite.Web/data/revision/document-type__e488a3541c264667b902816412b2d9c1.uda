@@ -1,0 +1,48 @@
+{
+  "DefaultTemplate": "umb://template/b658eea2ae6c4e22982b4bb329f0440d",
+  "AllowedTemplates": [
+    "umb://template/b658eea2ae6c4e22982b4bb329f0440d"
+  ],
+  "Icon": "icon-sync color-red",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": null,
+  "AllowedChildContentTypes": [
+    "umb://document-type/70e654ded43c4f8f91b3a7a0b6c0af10",
+    "umb://document-type/ec10c2b39c274ade8c1705e133af424e"
+  ],
+  "CompositionContentTypes": [
+    "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/e488a3541c264667b902816412b2d9c1",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/70e654ded43c4f8f91b3a7a0b6c0af10",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/ec10c2b39c274ade8c1705e133af424e",
+      "Ordering": false,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/b658eea2ae6c4e22982b4bb329f0440d",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Tweedehandswagens",
+  "Alias": "tweedehandswagens",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

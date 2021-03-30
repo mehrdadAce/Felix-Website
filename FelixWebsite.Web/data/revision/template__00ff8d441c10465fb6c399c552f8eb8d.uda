@@ -1,0 +1,16 @@
+{
+  "File": "umb://template-file/tweedehandswagensVergelijk.cshtml",
+  "Master": null,
+  "Udi": "umb://template/00ff8d441c10465fb6c399c552f8eb8d",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/tweedehandswagensVergelijk.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Tweedehandswagens-vergelijk",
+  "Alias": "tweedehandswagensVergelijk",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.TemplateArtifact",
+  "__version": "2.0.14"
+}

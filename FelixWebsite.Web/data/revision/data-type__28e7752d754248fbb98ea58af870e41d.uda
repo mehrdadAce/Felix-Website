@@ -1,0 +1,14 @@
+{
+  "EditorAlias": "Umbraco.ImageCropper",
+  "DatabaseType": 0,
+  "PreValues": {
+    "crops": "[\r\n  {\r\n    \"alias\": \"Full width banner\",\r\n    \"width\": 1920,\r\n    \"height\": 350\r\n  },\r\n  {\r\n    \"alias\": \"Article thumbnail\",\r\n    \"width\": 360,\r\n    \"height\": 258\r\n  },\r\n  {\r\n    \"alias\": \"Story thumbnail\",\r\n    \"width\": 250,\r\n    \"height\": 300\r\n  }\r\n]"
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/28e7752d754248fbb98ea58af870e41d",
+  "Dependencies": [],
+  "Name": "_ImageCropper",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

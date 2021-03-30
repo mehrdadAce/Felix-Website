@@ -1,0 +1,83 @@
+{
+  "DefaultTemplate": "umb://template/172b4e72cb2248b5883dc09cec954911",
+  "AllowedTemplates": [
+    "umb://template/172b4e72cb2248b5883dc09cec954911"
+  ],
+  "Icon": "icon-alert color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Pagina die wordt getoond wanneer de gebruiker naar een pagina surft die niet bestaat.",
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": null,
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [
+    "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "4aa8c02c-ce17-423c-965e-eed908e32910",
+      "Name": "Algemeen",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "2a57d496-d2dc-4fb5-9b3d-1986fd3cea4c",
+          "Alias": "subtitle",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De ondertitel van de pagina.",
+          "Mandatory": true,
+          "Name": "Ondertitel",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "784ae8e4-b0d6-475c-bb44-1b9e05277194",
+          "Alias": "background",
+          "DataType": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+          "Description": "De afbeelding die op de achtergrond wordt getoond.",
+          "Mandatory": true,
+          "Name": "Achtergrond",
+          "SortOrder": 0,
+          "Validation": null
+        },
+        {
+          "Key": "f763c17e-7cd4-40b2-9ffc-9c1f84ffefc9",
+          "Alias": "title",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel van de error pagina.",
+          "Mandatory": true,
+          "Name": "Titel",
+          "SortOrder": 1,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/042c4a9de7c8432ea602fd36893baf9c",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type/a29ae0dba101473cb8fd4e1641f521d9",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/172b4e72cb2248b5883dc09cec954911",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Error pagina",
+  "Alias": "errorpage",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

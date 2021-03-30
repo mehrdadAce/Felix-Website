@@ -1,0 +1,79 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-info color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Pijler met informatie over het bedrijf.",
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": "umb://document-type-container/e9def2683d284c8c83393846d9d63b78",
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "7a406971-5dc7-459f-aae1-65157437b583",
+      "Name": "Pijler",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "2c7a7965-e3fc-448b-942d-179ffdee690d",
+          "Alias": "text",
+          "DataType": "umb://data-type/7f26211f741043c1aa7325fc7b4f7cf6",
+          "Description": "De tekst van de pijler.",
+          "Mandatory": true,
+          "Name": "Tekst",
+          "SortOrder": 2,
+          "Validation": null
+        },
+        {
+          "Key": "b185afcc-36da-49e9-bd5f-c51bc722368d",
+          "Alias": "image",
+          "DataType": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+          "Description": "Het icoon dat links naast de tekst wordt weergegeven.",
+          "Mandatory": true,
+          "Name": "Icoon",
+          "SortOrder": 0,
+          "Validation": null
+        },
+        {
+          "Key": "e2dc2918-cc8e-487e-8b31-23a0397efc9b",
+          "Alias": "title",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel van de pijler.",
+          "Mandatory": true,
+          "Name": "Titel",
+          "SortOrder": 1,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/6c38e302ca3f447d913d1dcedf362ed4",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/135d60e064d949edab08893c9ba44ae5",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/7f26211f741043c1aa7325fc7b4f7cf6",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/e9def2683d284c8c83393846d9d63b78",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Informatie pijler",
+  "Alias": "itemAbout",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

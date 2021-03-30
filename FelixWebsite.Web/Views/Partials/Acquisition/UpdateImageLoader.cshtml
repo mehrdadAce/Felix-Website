@@ -1,0 +1,21 @@
+﻿@using FelixWebsite.Bdo.Models.Acquisition
+@model UpdateModel
+@{
+    var id = "update" + Model.Value;
+}
+
+    <form id="updateUploader" class="photos" enctype="multipart/form-data">
+
+        <div class="thumbnail loadingOverviewThumbnail">
+            <img src="/img/acquisition/Rolling-1s-200px.svg" alt="loading" class="loadingIcon loadingOverview" />
+            <div class="caption">
+                <input id="@id" name="file" type="file" class="inputfile update-inputfile" accept=".png,.gif,.jpg,.jpeg">
+                <h4><label for="@id" class="caption-label updateLabel overview-label"><i class="fas fa-edit updateIcon overview-icon"></i></label></h4>
+            </div>
+            <img id="updateImg-@Model.Value" src="@Model.MediaFile" alt="@Model.Value">
+        </div>
+        <input type="hidden" name="imageType" value="@Model.Value" />
+        <input type="hidden" name="licensePlate" class="inputUserLicensePlate" />
+        <input type="hidden" name="id" class="inputUserId" id="updateImage" />
+        <input type="hidden" name="name" class="inputUserName" />
+    </form>

@@ -1,0 +1,21 @@
+﻿.heading {
+    padding-top: 10px;
+}
+
+
+.opHours input.datepickerinput {
+    max-width: 75px;
+}
+
+.thSetup {
+    float: left;
+    padding: 5px;
+}
+
+.dateTimePickerLength {
+    width: 116px;
+}
+.checkboxPadding {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+}

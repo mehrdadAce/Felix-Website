@@ -1,0 +1,14 @@
+{
+  "EditorAlias": "Umbraco.ImageCropper",
+  "DatabaseType": 0,
+  "PreValues": {
+    "crops": "[\r\n  {\r\n    \"alias\": \"Vacature\",\r\n    \"width\": 250,\r\n    \"height\": 300\r\n  },\r\n  {\r\n    \"width\": 1920,\r\n    \"height\": 350,\r\n    \"alias\": \"Vacature banner\"\r\n  }\r\n]"
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/50d98020199d4a22b1f54f51325f7be3",
+  "Dependencies": [],
+  "Name": "_vacatureCropper",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

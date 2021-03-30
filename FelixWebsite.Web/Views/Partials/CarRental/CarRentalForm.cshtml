@@ -1,0 +1,197 @@
+﻿@model FelixWebsite.Core.Models.ViewModels.CarRentalForm
+@using FelixWebsite.Core.App_GlobalResources
+@using (Html.BeginUmbracoForm("SubmitForm", "CarRental", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-group margin-bottom-30">
+        <div class="row">
+            <div class="col-md-6 margin-bottom-20">
+                @Html.HiddenFor(m => m.CarType)
+                <label>type wagen <span class="heading">@Model.CarType.Title</span></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 margin-bottom-20">
+                @Html.LabelFor(m => m.FirstName, "voornaam:", new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(m => m.FirstName, new { htmlAttributes = new { @class = "form-control", placeholder = "voornaam" } })
+                @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-6 margin-bottom-20">
+                @Html.LabelFor(m => m.LastName, "achternaam:", new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(m => m.LastName, new { htmlAttributes = new { @class = "form-control", placeholder = "achternaam" } })
+                @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 margin-bottom-20">
+                @Html.LabelFor(m => m.Emailadress, "e-mailadres:", new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(m => m.Emailadress, new { htmlAttributes = new { @class = "form-control", placeholder = "e-mailadres" } })
+                @Html.ValidationMessageFor(m => m.Emailadress, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-6 margin-bottom-20">
+                @Html.LabelFor(m => m.PhoneNumber, "telefoonnummer:", new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(m => m.PhoneNumber, new { htmlAttributes = new { @class = "form-control", placeholder = "telefoonnummer of gsm-nummer" } })
+                @Html.ValidationMessageFor(m => m.PhoneNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 margin-bottom-30">
+                @Html.LabelFor(m => m.BusinessId, "vestiging:", new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownListFor(m => m.BusinessId, Model.Businesses, "selecteer een vestiging...")
+                @Html.ValidationMessageFor(m => m.BusinessId, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-6 margin-bottom-30">
+                <label for="StartDate">Huurtermijn:</label>
+                <div class="input-daterange input-group" id="datepicker">
+                    <input type="text" id="DateRange" name="DateRange" class="datepicker" value="" />
+                    <span class="input-group-addon"><i class="fas fa-calendar"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="row margin-top-30">
+            <div class="col-md-6 margin-bottom-10">
+                <div class="calculated-total">
+                    <p class="price-calculation">Totaalprijs: <span class="total-price felix-red">€ @Model.CarType.Price</span> *</p>
+                    <p class="km-calculation">* <span class="total-km">@Model.CarType.MilageIncluded km</span> @FelixResources.car_rental_included_in_price.</p>
+                </div>
+            </div>
+            <div class="col-md-6 margin-bottom-10">
+                <div class="btn-send">
+                    <button id="btn-submit" type="submit" class="btn btn-primary pull-right">@FelixResources.general_completeAction</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<style>
+    .daterangepicker td.in-range {
+        background-color: rgba(207, 2, 39, 0.07);
+    }
+
+    .daterangepicker td.active, .daterangepicker td.active:hover {
+        background-color: #cf0227;
+    }
+
+    .daterangepicker .drp-buttons .btn {
+        border-radius: 0;
+        text-transform: uppercase;
+        padding: 13px;
+        font-family: 'Roboto';
+    }
+
+        .daterangepicker .drp-buttons .btn.applyBtn {
+            background-color: #cf0227;
+        }
+
+        .daterangepicker .drp-buttons .btn.cancelBtn:hover {
+            color: #000000;
+        }
+
+    .daterangepicker .drp-selected {
+        display: none;
+    }
+
+    .daterangepicker td.available:hover, .daterangepicker th.available:hover {
+        background-color: rgb(255, 180, 195);
+    }
+
+    .daterangepicker td.active.today {
+        background-color: #fff;
+        color: #333;
+    }
+
+    .datepicker {
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 0;
+        cursor: pointer;
+        width: 100%;
+    }
+</style>
+<script type="text/javascript">
+    $(function () {
+        var dayPrice = @Model.CarType.Price;
+        var weekPrice = @Model.CarType.PriceWeek;
+        var monthPrice = @Model.CarType.PriceMonth;
+        var includedKms = @Model.CarType.MilageIncluded;
+
+        const today = moment(new Date()).format('DD/MM/YYYY');
+        $('input[name="DateRange"]').daterangepicker(
+            {
+                "locale": {
+                    "format": "DD/MM/YYYY",
+                    "separator": " TOT ",
+                    "applyLabel": "Toepassen",
+                    "cancelLabel": "Annuleren",
+                    "fromLabel": "Van",
+                    "toLabel": " tot ",
+                    "customRangeLabel": "Custom",
+                    "weekLabel": "W",
+                    "daysOfWeek": [
+                        "Zo",
+                        "Ma",
+                        "Di",
+                        "Wo",
+                        "Do",
+                        "Vr",
+                        "Za"
+                    ],
+                    "monthNames": [
+                        "Januari",
+                        "Februari",
+                        "Maart",
+                        "April",
+                        "Mei",
+                        "Juni",
+                        "Juli",
+                        "Augustus",
+                        "September",
+                        "Oktober",
+                        "November",
+                        "December"
+                    ],
+                    "firstDay": 1
+                },
+                "minDate": today
+            },
+            function (start, end, label) {
+                console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+                var difference = getDateDifference(start, end);
+                var price = difference.months * monthPrice + difference.weeks * weekPrice + difference.days * dayPrice;
+                $(".calculated-total .total-price").html("€ " + price);
+                var daysDifference = getDateDifferenceInDays(start, end);
+                var totalIncludedKms = daysDifference * includedKms;
+                $(".calculated-total .total-km").html(totalIncludedKms + " km");
+            }
+        );
+
+        function getDateDifference(date1, date2) {
+            var b = moment(date1),
+                a = moment(date2).add(1, "days"), //last day inclusive
+                out = {};
+
+            var interval = 'months';
+            var diff = a.diff(b, interval);
+            b.add(diff, interval);
+            out.months = diff;
+
+            interval = 'weeks';
+            diff = a.diff(b, interval);
+            b.add(diff, interval);
+            out.weeks = diff;
+
+            interval = 'days';
+            diff = a.diff(b, interval);
+            b.add(diff, interval);
+            out.days = diff;
+
+            return out;
+        };
+
+        function getDateDifferenceInDays(date1, date2) {
+            var b = moment(date1),
+                a = moment(date2).add(1, "days"); //last day inclusive
+           return a.diff(b, 'days');
+        };
+    });
+</script>           

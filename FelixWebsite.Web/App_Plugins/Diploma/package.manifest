@@ -1,0 +1,17 @@
+﻿{   
+    propertyEditors: [      
+        {
+            alias: "Felix.Diploma",
+            name: "Diploma",
+            editor: {
+                view: "~/App_Plugins/Diploma/Diploma.html", "valueType": "JSON"
+            }
+        }
+    ],
+    javascript: [
+        '~/App_Plugins/Diploma/Diploma.controller.js'
+    ],
+		css:[
+		'~/App_Plugins/Diploma/Diploma.css'
+	]
+}

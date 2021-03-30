@@ -1,0 +1,81 @@
+{
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "Icon": "icon-window-popin color-red",
+  "Thumbnail": "folder.png",
+  "Description": "De pop-up tekst en de uitleg van het overzicht",
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "159f4c9c-cbb3-4eaf-91a0-4bfde6eb2e2f",
+      "Name": "Pop up info",
+      "SortOrder": 1,
+      "PropertyTypes": [
+        {
+          "Key": "2a04afd1-306c-47bb-8664-07c46b517072",
+          "Alias": "titel",
+          "DataType": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+          "Description": "De titel van de pop-up",
+          "Mandatory": true,
+          "Name": "Titel",
+          "SortOrder": 0,
+          "Validation": null
+        },
+        {
+          "Key": "b6f444bd-46d2-4038-b955-ad543d0e7034",
+          "Alias": "tekst",
+          "DataType": "umb://data-type/fb7f00e75ed14e5f95474cc68f15e06f",
+          "Description": "De tekst van de pop-up",
+          "Mandatory": true,
+          "Name": "Tekst",
+          "SortOrder": 1,
+          "Validation": null
+        }
+      ]
+    },
+    {
+      "Key": "bd4aabeb-aaf8-4ec9-9d14-8bfa4a9406d7",
+      "Name": "Overzicht uitleg",
+      "SortOrder": 2,
+      "PropertyTypes": [
+        {
+          "Key": "d40a5e17-c37a-42dc-b6cb-9508112cff67",
+          "Alias": "overviewText",
+          "DataType": "umb://data-type/fb7f00e75ed14e5f95474cc68f15e06f",
+          "Description": "De uitleg die op het overzicht verschijnt",
+          "Mandatory": true,
+          "Name": "Tekst",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/38dd2539e3d6439f9a2f6d249c5875c0",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/3eae0213e79b4408a653a6c009aca93e",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://data-type/fb7f00e75ed14e5f95474cc68f15e06f",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/482fbee22c9448ca8dc6ccc6c0d7f1be",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Extra info velden",
+  "Alias": "popUp",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

@@ -1,0 +1,14 @@
+{
+  "EditorAlias": "Umbraco.ImageCropper",
+  "DatabaseType": 0,
+  "PreValues": {
+    "crops": "[\r\n  {\r\n    \"alias\": \"Full Width Banner\",\r\n    \"width\": 1920,\r\n    \"height\": 350\r\n  }\r\n]"
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/20eff70975ff4f80935dcbdede481487",
+  "Dependencies": [],
+  "Name": "_PageBannerCropper",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}
