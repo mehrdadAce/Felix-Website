@@ -62,5 +62,13 @@
     @Html.Partial("CrispChat/CrispChat", Model)
     @Html.Raw(scripts)
 
+    @if (TempData["UmbracoForms"] != null)
+    {
+        foreach (var form in (List<Guid>)TempData["UmbracoForms"])
+        {
+            Html.RenderAction("RenderFormScripts", "umbracoForms", new { formid = form, theme = "default" });
+        }
+    }
+
 </body>
 </html>

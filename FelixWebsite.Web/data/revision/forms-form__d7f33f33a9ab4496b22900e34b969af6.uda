@@ -1,0 +1,170 @@
+{
+  "Alias": "Test-M",
+  "Created": "2021-03-31T08:33:47.1253265+02:00",
+  "Pages": [
+    {
+      "FieldSets": [
+        {
+          "Caption": "General Information",
+          "SortOrder": 0,
+          "Id": "3cdb59f7-1c9b-48ae-a7c2-7d725edccded",
+          "Page": "00000000-0000-0000-0000-000000000000",
+          "Containers": [
+            {
+              "Caption": null,
+              "Width": 12,
+              "Fields": [
+                {
+                  "Caption": "Name",
+                  "ToolTip": "Enter your first name",
+                  "Placeholder": null,
+                  "CssClass": null,
+                  "Alias": "name",
+                  "Id": "c7c2731f-385b-4d09-bda8-aa57299f3b68",
+                  "FieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "PreValueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "DataSourceFieldKey": null,
+                  "Mandatory": true,
+                  "RegEx": null,
+                  "RequiredErrorMessage": "You need to add your name",
+                  "InvalidErrorMessage": null,
+                  "Condition": {
+                    "Id": "00000000-0000-0000-0000-000000000000",
+                    "Enabled": false,
+                    "ActionType": 0,
+                    "LogicType": 0,
+                    "Rules": []
+                  },
+                  "Settings": {},
+                  "PreValues": []
+                },
+                {
+                  "Caption": "Message",
+                  "ToolTip": "Add your message here",
+                  "Placeholder": null,
+                  "CssClass": null,
+                  "Alias": "message",
+                  "Id": "ae516a9d-df97-4a9a-b2df-008a4a231f5c",
+                  "FieldTypeId": "023f09ac-1445-4bcb-b8fa-ab49f33bd046",
+                  "PreValueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "DataSourceFieldKey": null,
+                  "Mandatory": false,
+                  "RegEx": null,
+                  "RequiredErrorMessage": null,
+                  "InvalidErrorMessage": null,
+                  "Condition": {
+                    "Id": "00000000-0000-0000-0000-000000000000",
+                    "Enabled": false,
+                    "ActionType": 0,
+                    "LogicType": 0,
+                    "Rules": []
+                  },
+                  "Settings": {},
+                  "PreValues": []
+                },
+                {
+                  "Caption": "Email",
+                  "ToolTip": "Add your email here",
+                  "Placeholder": null,
+                  "CssClass": null,
+                  "Alias": "email",
+                  "Id": "01788f66-b605-4986-c477-cd40b76547e8",
+                  "FieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "PreValueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "DataSourceFieldKey": null,
+                  "Mandatory": false,
+                  "RegEx": "[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+",
+                  "RequiredErrorMessage": null,
+                  "InvalidErrorMessage": "email@domain.com",
+                  "Condition": {
+                    "Id": "00000000-0000-0000-0000-000000000000",
+                    "Enabled": false,
+                    "ActionType": 0,
+                    "LogicType": 0,
+                    "Rules": []
+                  },
+                  "Settings": {},
+                  "PreValues": []
+                },
+                {
+                  "Caption": "Phone",
+                  "ToolTip": "Add your phone number here",
+                  "Placeholder": null,
+                  "CssClass": null,
+                  "Alias": "phone",
+                  "Id": "0ac63be8-6498-4c8c-c800-d94bfef7349d",
+                  "FieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "PreValueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "DataSourceFieldKey": null,
+                  "Mandatory": false,
+                  "RegEx": null,
+                  "RequiredErrorMessage": null,
+                  "InvalidErrorMessage": null,
+                  "Condition": {
+                    "Id": "00000000-0000-0000-0000-000000000000",
+                    "Enabled": false,
+                    "ActionType": 0,
+                    "LogicType": 0,
+                    "Rules": []
+                  },
+                  "Settings": {},
+                  "PreValues": []
+                }
+              ]
+            }
+          ],
+          "Condition": null
+        }
+      ],
+      "Caption": "Page 1",
+      "SortOrder": 0,
+      "Id": "00000000-0000-0000-0000-000000000000",
+      "Form": "00000000-0000-0000-0000-000000000000"
+    }
+  ],
+  "Id": "d7f33f33-a9ab-4496-b229-00e34b969af6",
+  "FieldIndicationType": 1,
+  "Indicator": "*",
+  "ShowValidationSummary": false,
+  "HideFieldValidation": false,
+  "RequiredErrorMessage": "Please provide a value for {0}",
+  "InvalidErrorMessage": "Please provide a valid value for {0}",
+  "MessageOnSubmit": "Thank you",
+  "GoToPageOnSubmit": null,
+  "XPathOnSubmit": null,
+  "ManualApproval": false,
+  "StoreRecordsLocally": true,
+  "CssClass": null,
+  "DisableDefaultStylesheet": false,
+  "UseClientDependency": false,
+  "WorkflowIds": [
+    "131b8ebf-cff3-4c2a-991e-c938d0274c8f"
+  ],
+  "DataSource": null,
+  "SubmitLabel": "Submit",
+  "NextLabel": "Next",
+  "PrevLabel": "Previous",
+  "Workflows": [
+    {
+      "Id": "131b8ebf-cff3-4c2a-991e-c938d0274c8f",
+      "Name": "Send template email to Mehrdad.Kazemi@ac-e.be",
+      "Form": "d7f33f33-a9ab-4496-b229-00e34b969af6",
+      "Active": true,
+      "WorkflowTypeId": "17c61629-d984-4e86-b43b-a8407b3efea9",
+      "ExecutesOn": 3,
+      "Settings": {
+        "Email": "Mehrdad.Kazemi@ac-e.be",
+        "SenderEmail": "",
+        "Subject": "The Form '{form_name}' was submitted",
+        "RazorViewFilePath": "",
+        "Attachment": ""
+      },
+      "SortOrder": 1
+    }
+  ],
+  "Udi": "umb://forms-form/d7f33f33a9ab4496b22900e34b969af6",
+  "Dependencies": [],
+  "Name": "Test-M",
+  "__type": "Umbraco.Deploy.Forms,Umbraco.Deploy.Forms.Artifacts.FormArtifact",
+  "__version": "2.0.14"
+}

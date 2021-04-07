@@ -120,6 +120,19 @@
                     </a>
                 </div>
                 actionIndex++;
+
+                var testDrive2 = brandActions.ActionTest as ActionItem;
+                <div class="@distribution.GetBootstrapClassesForIndex(actionIndex) wow animated fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                    <a class="white" data-toggle="modal" data-target="#testDriveModal" href="#testDriveModal" target="_blank">
+                        <div class="service-box text-center" style="background-color:@backgroundColor;">
+                            <img class="margin-bottom-20" src="@testDrive2.Icon.Url" height="40" alt="@testDrive2.Title" />
+                            <h4>@testDrive2.Title</h4>
+                            <p>@testDrive2.Text</p>
+                        </div>
+                    </a>
+                </div>
+                actionIndex++;
+
             }
             @if (!hideQuotation)
             {

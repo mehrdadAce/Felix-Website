@@ -1,0 +1,15 @@
+{
+  "EditorAlias": "Umbraco.Grid",
+  "DatabaseType": 0,
+  "PreValues": {
+    "items": "{\r\n  \"styles\": [\r\n    {\r\n      \"label\": \"Set a background image\",\r\n      \"description\": \"Set a row background\",\r\n      \"key\": \"background-image\",\r\n      \"view\": \"imagepicker\",\r\n      \"modifier\": \"url({0})\"\r\n    }\r\n  ],\r\n  \"config\": [\r\n    {\r\n      \"label\": \"Class\",\r\n      \"description\": \"Set a css class\",\r\n      \"key\": \"class\",\r\n      \"view\": \"textstring\"\r\n    }\r\n  ],\r\n  \"columns\": 12,\r\n  \"templates\": [\r\n    {\r\n      \"name\": \"1 column layout\",\r\n      \"sections\": [\r\n        {\r\n          \"grid\": 12\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"name\": \"2 column layout\",\r\n      \"sections\": [\r\n        {\r\n          \"grid\": 4\r\n        },\r\n        {\r\n          \"grid\": 8\r\n        }\r\n      ]\r\n    }\r\n  ],\r\n  \"layouts\": [\r\n    {\r\n      \"label\": \"Headline\",\r\n      \"name\": \"Headline\",\r\n      \"areas\": [\r\n        {\r\n          \"grid\": 12,\r\n          \"editors\": [\r\n            \"headline\"\r\n          ]\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"label\": \"Article\",\r\n      \"name\": \"Article\",\r\n      \"areas\": [\r\n        {\r\n          \"grid\": 4\r\n        },\r\n        {\r\n          \"grid\": 8\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+    "rte": "{\r\n  \"toolbar\": [\r\n    \"code\",\r\n    \"styleselect\",\r\n    \"bold\",\r\n    \"italic\",\r\n    \"alignleft\",\r\n    \"aligncenter\",\r\n    \"alignright\",\r\n    \"bullist\",\r\n    \"numlist\",\r\n    \"outdent\",\r\n    \"indent\",\r\n    \"link\",\r\n    \"umbmediapicker\",\r\n    \"umbmacro\",\r\n    \"umbembeddialog\"\r\n  ],\r\n  \"stylesheets\": [],\r\n  \"dimensions\": {\r\n    \"height\": 500\r\n  },\r\n  \"maxImageSize\": 500\r\n}"
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/0dab068b965349e8b4308c2118ef9ca0",
+  "Dependencies": [],
+  "Name": "Form Page - Test - Grid Editor - Grid layout",
+  "Alias": null,
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DataTypeArtifact",
+  "__version": "2.0.14"
+}

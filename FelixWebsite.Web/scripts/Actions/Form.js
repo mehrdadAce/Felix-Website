@@ -1,5 +1,6 @@
 ﻿$(document).ready(function () {
     InitSelectSectionToggle();
+    InitTestDriveDateTime();
 });
 function InitSelectSectionToggle() {
     const IdSelectbox = "storeId";
@@ -48,3 +49,11 @@ function InitSelectSectionToggle() {
         ToggleSectionWithSelectbox(IdTestDriveModal, ("modelSection-" + selectedValue));
     });
 }
+
+function InitTestDriveDateTime() {
+    documnt.
+}
+
+//window.onload = function () {
+//    console.log("on page load - mehrdad");
+//};

@@ -1,0 +1,12 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.FormPageTest>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = null;
+	
+	var felixGroep = (IPublishedContent)CurrentPage.AncestorOrSelf(1);
+	var brandActions = felixGroep.Children.OfType<Brands>().FirstOrDefault();
+
+	var str = string.Empty;
+}   
+
+<p>Test </p>

@@ -1,0 +1,51 @@
+{
+  "DefaultTemplate": "umb://template/ed9ae0bd827f4ce8a4ea295020a433fc",
+  "AllowedTemplates": [
+    "umb://template/ed9ae0bd827f4ce8a4ea295020a433fc"
+  ],
+  "Icon": "icon-forms-libreoffice color-black",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "AllowedAtRoot": false,
+  "IsContainer": false,
+  "Parent": null,
+  "AllowedChildContentTypes": [],
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "15a2124b-372e-4ad8-950b-ed34f9a0a169",
+      "Name": "RTE",
+      "SortOrder": 0,
+      "PropertyTypes": [
+        {
+          "Key": "a4d60e49-c8d8-4bde-a5f8-666bbc98a0b7",
+          "Alias": "textEditor",
+          "DataType": "umb://data-type/dbebc3920c9f41269822d56f65308be6",
+          "Description": null,
+          "Mandatory": false,
+          "Name": "Text Editor",
+          "SortOrder": 0,
+          "Validation": null
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/17cf1c0804e541299d961c69a0188e47",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/dbebc3920c9f41269822d56f65308be6",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://template/ed9ae0bd827f4ce8a4ea295020a433fc",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "Name": "Form Page - Test",
+  "Alias": "formPageTest",
+  "__type": "Umbraco.Deploy,Umbraco.Deploy.Artifacts.DocumentTypeArtifact",
+  "__version": "2.0.14"
+}

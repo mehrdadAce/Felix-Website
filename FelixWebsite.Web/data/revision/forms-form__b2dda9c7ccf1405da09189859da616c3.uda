@@ -1,0 +1,575 @@
+{
+  "Alias": "Plan uw testrit",
+  "Created": "2019-09-06T13:09:34.2193587+02:00",
+  "Pages": [
+    {
+      "FieldSets": [
+        {
+          "Caption": "Uw gegevens",
+          "SortOrder": 0,
+          "Id": "1d4fa11c-f990-4d11-f744-7bda593239f8",
+          "Page": "00000000-0000-0000-0000-000000000000",
+          "Containers": [
+            {
+              "Caption": "",
+              "Width": 12,
+              "Fields": [
+                {
+                  "Caption": "Naam",
+                  "ToolTip": null,
+                  "Placeholder": null,
+                  "CssClass": null,
+                  "Alias": "naam",
+                  "Id": "1620735d-938c-4430-ef45-7ca5da80514f",
+                  "FieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "PreValueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "DataSourceFieldKey": null,
+                  "Mandatory": true,
+                  "RegEx": null,
+                  "RequiredErrorMessage": null,
+                  "InvalidErrorMessage": null,
+                  "Condition": {
+                    "Id": "00000000-0000-0000-0000-000000000000",
+                    "Enabled": false,
+                    "ActionType": 0,
+                    "LogicType": 0,
+                    "Rules": []
+                  },
+                  "Settings": {
+                    "DefaultValue": "",
+                    "Placeholder": ""
+                  },
+                  "PreValues": []
+                },
+                {
+                  "Caption": "e-mail",
+                  "ToolTip": null,
+                  "Placeholder": null,
+                  "CssClass": null,
+                  "Alias": "eMail",
+                  "Id": "6999638d-3b6f-4906-fc57-3e6c9ddc2433",
+                  "FieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "PreValueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "DataSourceFieldKey": null,
+                  "Mandatory": true,
+                  "RegEx": "[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+",
+                  "RequiredErrorMessage": null,
+                  "InvalidErrorMessage": "gelieve een correct mailadres in te geven",
+                  "Condition": {
+                    "Id": "00000000-0000-0000-0000-000000000000",
+                    "Enabled": false,
+                    "ActionType": 0,
+                    "LogicType": 0,
+                    "Rules": []
+                  },
+                  "Settings": {
+                    "DefaultValue": "",
+                    "Placeholder": ""
+                  },
+                  "PreValues": []
+                },
+                {
+                  "Caption": "Telefoonnummer",
+                  "ToolTip": null,
+                  "Placeholder": null,
+                  "CssClass": null,
+                  "Alias": "telefoonnummer",
+                  "Id": "698fb7c0-08a3-4f5f-d776-6c5fd982bf00",
+                  "FieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "PreValueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "DataSourceFieldKey": null,
+                  "Mandatory": true,
+                  "RegEx": "^[0-9]*$",
+                  "RequiredErrorMessage": null,
+                  "InvalidErrorMessage": "gelieve enkel cijfers in te geven",
+                  "Condition": {
+                    "Id": "00000000-0000-0000-0000-000000000000",
+                    "Enabled": false,
+                    "ActionType": 0,
+                    "LogicType": 0,
+                    "Rules": []
+                  },
+                  "Settings": {
+                    "DefaultValue": "",
+                    "Placeholder": ""
+                  },
+                  "PreValues": []
+                }
+              ]
+            }
+          ],
+          "Condition": null
+        },
+        {
+          "Caption": "Kies uw voertuig",
+          "SortOrder": 0,
+          "Id": "35911e36-fb8c-4ac2-836d-ce8d50dacef1",
+          "Page": "00000000-0000-0000-0000-000000000000",
+          "Containers": [
+            {
+              "Caption": "",
+              "Width": 12,
+              "Fields": [
+                {
+                  "Caption": "Welk merk wil u testen",
+                  "ToolTip": null,
+                  "Placeholder": null,
+                  "CssClass": null,
+                  "Alias": "welkMerkWilUTesten",
+                  "Id": "9e042e78-ec7e-41be-abc8-46355df0ebf8",
+                  "FieldTypeId": "0dd29d42-a6a5-11de-a2f2-222256d89593",
+                  "PreValueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "DataSourceFieldKey": null,
+                  "Mandatory": false,
+                  "RegEx": null,
+                  "RequiredErrorMessage": null,
+                  "InvalidErrorMessage": null,
+                  "Condition": {
+                    "Id": "00000000-0000-0000-0000-000000000000",
+                    "Enabled": false,
+                    "ActionType": 0,
+                    "LogicType": 0,
+                    "Rules": []
+                  },
+                  "Settings": {
+                    "DefaultValue": ""
+                  },
+                  "PreValues": [
+                    "Citroën",
+                    "Kia",
+                    "Peugeot"
+                  ]
+                },
+                {
+                  "Caption": "Welk model wil u testen?",
+                  "ToolTip": null,
+                  "Placeholder": null,
+                  "CssClass": null,
+                  "Alias": "welkeWagenWilUTesten",
+                  "Id": "1636ead5-b4c6-442f-e58e-ab5dea2a4411",
+                  "FieldTypeId": "0dd29d42-a6a5-11de-a2f2-222256d89593",
+                  "PreValueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "DataSourceFieldKey": null,
+                  "Mandatory": true,
+                  "RegEx": null,
+                  "RequiredErrorMessage": null,
+                  "InvalidErrorMessage": null,
+                  "Condition": {
+                    "Id": "00000000-0000-0000-0000-000000000000",
+                    "Enabled": true,
+                    "ActionType": 0,
+                    "LogicType": 0,
+                    "Rules": [
+                      {
+                        "Id": "00000000-0000-0000-0000-000000000000",
+                        "Field": "9e042e78-ec7e-41be-abc8-46355df0ebf8",
+                        "Operator": 0,
+                        "Value": "Citroën"
+                      }
+                    ]
+                  },
+                  "Settings": {
+                    "DefaultValue": ""
+                  },
+                  "PreValues": [
+                    "C1",
+                    "C3",
+                    "C3 Aircross",
+                    "C4 Spacetourer",
+                    "New C4",
+                    "Grand C4 Spacetourer",
+                    "C5 Aircross",
+                    "C5 Aircross Hybride",
+                    "Jumpy Spacetourer",
+                    "Berlingo",
+                    "Andere"
+                  ]
+                },
+                {
+                  "Caption": "Waar wenst u de testrit te laten doorgaan?",
+                  "ToolTip": null,
+                  "Placeholder": null,
+                  "CssClass": null,
+                  "Alias": "waarWenstUDeTestritTeLatenDoorgaan",
+                  "Id": "1ddbde0c-f7bb-492f-b38a-67b208b4e51a",
+                  "FieldTypeId": "0dd29d42-a6a5-11de-a2f2-222256d89593",
+                  "PreValueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "DataSourceFieldKey": null,
+                  "Mandatory": true,
+                  "RegEx": null,
+                  "RequiredErrorMessage": null,
+                  "InvalidErrorMessage": null,
+                  "Condition": {
+                    "Id": "00000000-0000-0000-0000-000000000000",
+                    "Enabled": true,
+                    "ActionType": 0,
+                    "LogicType": 0,
+                    "Rules": [
+                      {
+                        "Id": "00000000-0000-0000-0000-000000000000",
+                        "Field": "9e042e78-ec7e-41be-abc8-46355df0ebf8",
+                        "Operator": 0,
+                        "Value": "Citroën"
+                      }
+                    ]
+                  },
+                  "Settings": {
+                    "DefaultValue": ""
+                  },
+                  "PreValues": [
+                    "Brecht",
+                    "Ekeren",
+                    "Herentals"
+                  ]
+                },
+                {
+                  "Caption": "Kies uw model",
+                  "ToolTip": null,
+                  "Placeholder": null,
+                  "CssClass": null,
+                  "Alias": "kiesUwModel",
+                  "Id": "71917091-9efd-40fc-d1de-8466b4c3cf8f",
+                  "FieldTypeId": "0dd29d42-a6a5-11de-a2f2-222256d89593",
+                  "PreValueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "DataSourceFieldKey": null,
+                  "Mandatory": true,
+                  "RegEx": null,
+                  "RequiredErrorMessage": null,
+                  "InvalidErrorMessage": null,
+                  "Condition": {
+                    "Id": "00000000-0000-0000-0000-000000000000",
+                    "Enabled": true,
+                    "ActionType": 0,
+                    "LogicType": 0,
+                    "Rules": [
+                      {
+                        "Id": "00000000-0000-0000-0000-000000000000",
+                        "Field": "9e042e78-ec7e-41be-abc8-46355df0ebf8",
+                        "Operator": 0,
+                        "Value": "Peugeot"
+                      }
+                    ]
+                  },
+                  "Settings": {
+                    "DefaultValue": ""
+                  },
+                  "PreValues": [
+                    "108",
+                    "208",
+                    "e-208",
+                    "308",
+                    "508",
+                    "508 Hybride",
+                    "2008",
+                    "e-2008",
+                    "3008",
+                    "3008 Hybride",
+                    "5008",
+                    "Rifter",
+                    "Andere"
+                  ]
+                },
+                {
+                  "Caption": "Kies uw vestiging",
+                  "ToolTip": null,
+                  "Placeholder": null,
+                  "CssClass": null,
+                  "Alias": "kiesUwVestiging",
+                  "Id": "f648e4c2-6fed-44e4-e0ef-67d6012e64a5",
+                  "FieldTypeId": "0dd29d42-a6a5-11de-a2f2-222256d89593",
+                  "PreValueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "DataSourceFieldKey": null,
+                  "Mandatory": true,
+                  "RegEx": null,
+                  "RequiredErrorMessage": null,
+                  "InvalidErrorMessage": null,
+                  "Condition": {
+                    "Id": "00000000-0000-0000-0000-000000000000",
+                    "Enabled": true,
+                    "ActionType": 0,
+                    "LogicType": 0,
+                    "Rules": [
+                      {
+                        "Id": "00000000-0000-0000-0000-000000000000",
+                        "Field": "9e042e78-ec7e-41be-abc8-46355df0ebf8",
+                        "Operator": 0,
+                        "Value": "Peugeot"
+                      }
+                    ]
+                  },
+                  "Settings": {
+                    "DefaultValue": ""
+                  },
+                  "PreValues": [
+                    "Antwerpen (Noorderlaan 85)",
+                    "Ekeren (Leugenberg 105)",
+                    "Herentals (Hemeldonk 4)"
+                  ]
+                },
+                {
+                  "Caption": "Selecteer uw model",
+                  "ToolTip": null,
+                  "Placeholder": null,
+                  "CssClass": null,
+                  "Alias": "selecteerUwModel",
+                  "Id": "4cc3d395-4458-4a7f-f83e-11b65d544bee",
+                  "FieldTypeId": "0dd29d42-a6a5-11de-a2f2-222256d89593",
+                  "PreValueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "DataSourceFieldKey": null,
+                  "Mandatory": true,
+                  "RegEx": null,
+                  "RequiredErrorMessage": null,
+                  "InvalidErrorMessage": null,
+                  "Condition": {
+                    "Id": "00000000-0000-0000-0000-000000000000",
+                    "Enabled": true,
+                    "ActionType": 0,
+                    "LogicType": 0,
+                    "Rules": [
+                      {
+                        "Id": "00000000-0000-0000-0000-000000000000",
+                        "Field": "9e042e78-ec7e-41be-abc8-46355df0ebf8",
+                        "Operator": 0,
+                        "Value": "Kia"
+                      }
+                    ]
+                  },
+                  "Settings": {
+                    "DefaultValue": ""
+                  },
+                  "PreValues": [
+                    "Picanto",
+                    "Rio",
+                    "Stonic",
+                    "Ceed",
+                    "Ceed PHEV",
+                    "Xceed",
+                    "Xceed PHEV",
+                    "ProCeed",
+                    "Niro",
+                    "e-Niro",
+                    "e-Soul",
+                    "Sportage",
+                    "Sorento",
+                    "Andere"
+                  ]
+                },
+                {
+                  "Caption": "Selecteer uw vestiging",
+                  "ToolTip": null,
+                  "Placeholder": null,
+                  "CssClass": null,
+                  "Alias": "selecteerUwVestiging",
+                  "Id": "41efec50-a687-4a09-c9d4-ab1ea844ea7e",
+                  "FieldTypeId": "0dd29d42-a6a5-11de-a2f2-222256d89593",
+                  "PreValueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "DataSourceFieldKey": null,
+                  "Mandatory": true,
+                  "RegEx": null,
+                  "RequiredErrorMessage": null,
+                  "InvalidErrorMessage": null,
+                  "Condition": {
+                    "Id": "00000000-0000-0000-0000-000000000000",
+                    "Enabled": true,
+                    "ActionType": 0,
+                    "LogicType": 0,
+                    "Rules": [
+                      {
+                        "Id": "00000000-0000-0000-0000-000000000000",
+                        "Field": "9e042e78-ec7e-41be-abc8-46355df0ebf8",
+                        "Operator": 0,
+                        "Value": "Kia"
+                      }
+                    ]
+                  },
+                  "Settings": {
+                    "DefaultValue": ""
+                  },
+                  "PreValues": [
+                    "Antwerpen (Noorderlaan)",
+                    "Ekeren (Leugenberg)"
+                  ]
+                }
+              ]
+            }
+          ],
+          "Condition": null
+        },
+        {
+          "Caption": "Wanneer wil u testrijden?",
+          "SortOrder": 0,
+          "Id": "3933ad8d-4224-4def-aa09-a5665e9ea344",
+          "Page": "00000000-0000-0000-0000-000000000000",
+          "Containers": [
+            {
+              "Caption": "",
+              "Width": 12,
+              "Fields": [
+                {
+                  "Caption": "Kies een datum",
+                  "ToolTip": null,
+                  "Placeholder": null,
+                  "CssClass": null,
+                  "Alias": "wanneerWilUTestrijden",
+                  "Id": "6089af3f-c78c-4497-cdd3-5a9f75c3f3df",
+                  "FieldTypeId": "f8b4c3b8-af28-11de-9dd8-ef5956d89593",
+                  "PreValueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "DataSourceFieldKey": null,
+                  "Mandatory": true,
+                  "RegEx": null,
+                  "RequiredErrorMessage": "kies een datum",
+                  "InvalidErrorMessage": null,
+                  "Condition": {
+                    "Id": "00000000-0000-0000-0000-000000000000",
+                    "Enabled": false,
+                    "ActionType": 0,
+                    "LogicType": 0,
+                    "Rules": []
+                  },
+                  "Settings": {},
+                  "PreValues": []
+                },
+                {
+                  "Caption": "Kies een tijdstip",
+                  "ToolTip": null,
+                  "Placeholder": null,
+                  "CssClass": null,
+                  "Alias": "kiesEenTijdstip",
+                  "Id": "2c4ad7e3-296a-4ee4-afdf-9976e63647f5",
+                  "FieldTypeId": "0dd29d42-a6a5-11de-a2f2-222256d89593",
+                  "PreValueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "DataSourceFieldKey": null,
+                  "Mandatory": false,
+                  "RegEx": null,
+                  "RequiredErrorMessage": null,
+                  "InvalidErrorMessage": null,
+                  "Condition": {
+                    "Id": "00000000-0000-0000-0000-000000000000",
+                    "Enabled": false,
+                    "ActionType": 0,
+                    "LogicType": 0,
+                    "Rules": []
+                  },
+                  "Settings": {
+                    "DefaultValue": ""
+                  },
+                  "PreValues": [
+                    "9:00",
+                    "10:00",
+                    "11:00",
+                    "12:00",
+                    "13:00",
+                    "14:00",
+                    "15:00",
+                    "16:00",
+                    "17:00"
+                  ]
+                },
+                {
+                  "Caption": "Opmerkingen",
+                  "ToolTip": null,
+                  "Placeholder": null,
+                  "CssClass": null,
+                  "Alias": "opmerkingen",
+                  "Id": "118c44c7-d9f7-4a18-d81b-9a612bbac294",
+                  "FieldTypeId": "023f09ac-1445-4bcb-b8fa-ab49f33bd046",
+                  "PreValueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "DataSourceFieldKey": null,
+                  "Mandatory": false,
+                  "RegEx": null,
+                  "RequiredErrorMessage": null,
+                  "InvalidErrorMessage": null,
+                  "Condition": {
+                    "Id": "00000000-0000-0000-0000-000000000000",
+                    "Enabled": false,
+                    "ActionType": 0,
+                    "LogicType": 0,
+                    "Rules": []
+                  },
+                  "Settings": {
+                    "DefaultValue": "",
+                    "Placeholder": ""
+                  },
+                  "PreValues": []
+                }
+              ]
+            }
+          ],
+          "Condition": null
+        }
+      ],
+      "Caption": "",
+      "SortOrder": 0,
+      "Id": "00000000-0000-0000-0000-000000000000",
+      "Form": "00000000-0000-0000-0000-000000000000"
+    }
+  ],
+  "Id": "b2dda9c7-ccf1-405d-a091-89859da616c3",
+  "FieldIndicationType": 1,
+  "Indicator": "*",
+  "ShowValidationSummary": false,
+  "HideFieldValidation": false,
+  "RequiredErrorMessage": "Please provide a value for {0}",
+  "InvalidErrorMessage": "Please provide a valid value for {0}",
+  "MessageOnSubmit": "Bedankt voor uw testrit aanvraag. Onze verkoper neemt spoedig contact op om te bevestigen.",
+  "GoToPageOnSubmit": "umb://document/4f37f4be36e0497ba18ea919e50d187f",
+  "XPathOnSubmit": null,
+  "ManualApproval": false,
+  "StoreRecordsLocally": true,
+  "CssClass": null,
+  "DisableDefaultStylesheet": false,
+  "UseClientDependency": false,
+  "WorkflowIds": [
+    "565e0bfb-80e5-4d5b-9a87-f12a5d495fdb",
+    "d6978223-757d-4053-8777-37a319f7e794"
+  ],
+  "DataSource": null,
+  "SubmitLabel": "Submit",
+  "NextLabel": "Next",
+  "PrevLabel": "Previous",
+  "Workflows": [
+    {
+      "Id": "565e0bfb-80e5-4d5b-9a87-f12a5d495fdb",
+      "Name": "Send template email to mehrdad.kazemi@ac-e.be",
+      "Form": "b2dda9c7-ccf1-405d-a091-89859da616c3",
+      "Active": true,
+      "WorkflowTypeId": "17c61629-d984-4e86-b43b-a8407b3efea9",
+      "ExecutesOn": 3,
+      "Settings": {
+        "Email": "mehrdad.kazemi@ac-e.be",
+        "SenderEmail": "",
+        "Subject": "The Form '{form_name}' was submitted",
+        "RazorViewFilePath": "Forms/Emails/Default-template.cshtml",
+        "Attachment": ""
+      },
+      "SortOrder": 0
+    },
+    {
+      "Id": "d6978223-757d-4053-8777-37a319f7e794",
+      "Name": "Mail to customer",
+      "Form": "b2dda9c7-ccf1-405d-a091-89859da616c3",
+      "Active": true,
+      "WorkflowTypeId": "17c61629-d984-4e86-b43b-a8407b3efea9",
+      "ExecutesOn": 3,
+      "Settings": {
+        "Email": "{email}",
+        "SenderEmail": "tim@felix.be",
+        "Subject": "Bedankt voor uw aanvraag",
+        "RazorViewFilePath": "Forms/Emails/Default-template.cshtml",
+        "Attachment": ""
+      },
+      "SortOrder": 1
+    }
+  ],
+  "Udi": "umb://forms-form/b2dda9c7ccf1405da09189859da616c3",
+  "Dependencies": [
+    {
+      "Udi": "umb://document/4f37f4be36e0497ba18ea919e50d187f",
+      "Ordering": false,
+      "Mode": 1
+    }
+  ],
+  "Name": "Plan uw testrit",
+  "__type": "Umbraco.Deploy.Forms,Umbraco.Deploy.Forms.Artifacts.FormArtifact",
+  "__version": "2.0.14"
+}
